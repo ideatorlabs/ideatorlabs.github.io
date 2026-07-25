@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+    
+<defs>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+   <stop offset="0" stop-color="#F6E3A8"/><stop offset=".48" stop-color="#E7C878"/><stop offset="1" stop-color="#B4883A"/>
+ </linearGradient>
+ <linearGradient id="goldv" x1="0" y1="0" x2="0" y2="1">
+   <stop offset="0" stop-color="#F6E3A8"/><stop offset="1" stop-color="#B4883A"/>
+ </linearGradient>
+ <radialGradient id="glow" cx="78%" cy="16%" r="72%">
+   <stop offset="0" stop-color="#E7C878" stop-opacity=".16"/>
+   <stop offset="45%" stop-color="#E7C878" stop-opacity=".05"/>
+   <stop offset="100%" stop-color="#E7C878" stop-opacity="0"/>
+ </radialGradient>
+</defs>
+    <rect width="1080" height="1080" fill="#060607"/>
+    <rect width="1080" height="1080" fill="url(#glow)"/>
+    <path d="M42 68 L42 42 L68 42" stroke="#E7C878" stroke-width="2" fill="none" opacity=".55"/><path d="M1038 68 L1038 42 L1012 42" stroke="#E7C878" stroke-width="2" fill="none" opacity=".55"/><path d="M42 1012 L42 1038 L68 1038" stroke="#E7C878" stroke-width="2" fill="none" opacity=".55"/><path d="M1038 1012 L1038 1038 L1012 1038" stroke="#E7C878" stroke-width="2" fill="none" opacity=".55"/>
+    <g transform="translate(88,92) scale(0.82)">
+      <path d="M29 2 L54 11 V32 C54 48 43 59 29 64 C15 59 4 48 4 32 V11 Z" stroke="url(#goldv)" stroke-width="2.6" fill="rgba(231,200,120,.06)" stroke-linejoin="round"/>
+      <path d="M18 32 L26 40 L41 23" stroke="url(#goldv)" stroke-width="3.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </g><text x="161.56" y="130" font-family="DejaVu Sans Mono" font-weight="bold" font-size="27" fill="#F4F5F7" letter-spacing="3">IDEATOR LABS</text><text x="161.56" y="158" font-family="DejaVu Sans Mono" font-size="12" fill="#E7C878" letter-spacing="2">AI &amp; DATA CONSULTING · TECHNOLOGY ADVISORY</text>
+    <text x="88" y="300" font-family="DejaVu Sans Mono" font-size="17" fill="#E7C878" letter-spacing="5">POINT OF VIEW</text><text x="88" y="430" font-family="DejaVu Sans" font-weight="bold" font-size="66" fill="#F4F5F7">AI won't fix a broken</text><text x="88" y="512" font-family="DejaVu Sans" font-weight="bold" font-size="66" fill="#F4F5F7">process. It'll just run it</text><text x="88" y="594" font-family="DejaVu Sans" font-weight="bold" font-size="66" fill="url(#gold)">faster.</text><text x="88" y="716" font-family="DejaVu Sans" font-weight="normal" font-size="28" fill="#AEB3BE" text-anchor="start">Measure it, fix it, then automate what's left. Automation</text><text x="88" y="758" font-family="DejaVu Sans" font-weight="normal" font-size="28" fill="#AEB3BE" text-anchor="start">amplifies whatever you point it at — point it at something</text><text x="88" y="800" font-family="DejaVu Sans" font-weight="normal" font-size="28" fill="#AEB3BE" text-anchor="start">clean.</text>
+    <line x1="88" y1="958" x2="992" y2="958" stroke="#FFFFFF" stroke-opacity=".12" stroke-width="1"/><text x="88" y="994" font-family="DejaVu Sans Mono" font-size="19" fill="#E7C878" letter-spacing="1">ideatorlabs.github.io</text><text x="992" y="994" text-anchor="end" font-family="DejaVu Sans Mono" font-size="14.5" fill="#8A8F9B" letter-spacing="3">CONSULTING · AI · DATA · SOFTWARE</text>
+    </svg>

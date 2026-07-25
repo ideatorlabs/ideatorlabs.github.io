@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ideator Labs — Diagnostic Sprint</title>
+<style>
+@page { size: A4; margin: 0; }
+:root{ --ink:#1a1c22; --muted:#5b6070; --gold:#B98F3E; --gold2:#8a5f1e; --black:#0b0c10; --line:#e6e3da; --soft:#faf9f5; }
+*{box-sizing:border-box;margin:0}
+body{font:15px/1.6 "Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#d8d8d2;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;min-height:297mm;margin:0 auto;background:#fff;display:flex;flex-direction:column}
+/* header band — brand dark/gold */
+.hdr{background:var(--black);color:#fff;padding:30px 42px 26px;position:relative;overflow:hidden}
+.hdr .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:34px 34px}
+.hdr .row{position:relative;display:flex;align-items:center;gap:14px}
+.hdr svg{display:block}
+.hdr .nm{font-weight:700;font-size:20px;letter-spacing:.12em;color:#fff}
+.hdr .sub{font-family:ui-monospace,Menlo,monospace;font-size:9.5px;letter-spacing:.24em;color:#E7C878;margin-top:3px}
+.hdr h1{position:relative;font-size:30px;font-weight:700;margin:22px 0 4px;letter-spacing:-.01em}
+.hdr h1 em{font-style:normal;color:#E7C878}
+.hdr .tag{position:relative;color:#c9cdd6;font-size:14px}
+.body{padding:30px 42px;flex:1}
+.lead{font-size:15.5px;color:var(--muted);max-width:60ch;margin-bottom:22px}
+h2{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold2);margin:22px 0 10px;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px}
+ul{list-style:none;padding:0}
+li{padding:5px 0 5px 22px;position:relative;font-size:14px}
+li::before{content:"→";position:absolute;left:0;color:var(--gold);font-weight:700}
+.wk{display:flex;gap:0;margin:8px 0 4px}
+.wk div{flex:1;border-left:2px solid var(--gold);padding:0 12px 8px}
+.wk div:first-child{border-left:none;padding-left:0}
+.wk b{display:block;font-family:ui-monospace,Menlo,monospace;font-size:10px;color:var(--gold2);letter-spacing:.1em;margin-bottom:3px}
+.wk span{font-size:13px;color:var(--ink)}
+.invest{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:8px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.invest .p{font-size:24px;font-weight:700;color:var(--ink)}
+.invest .p small{font-size:13px;color:var(--muted);font-weight:400}
+.promise{border-left:3px solid var(--gold);background:linear-gradient(90deg,rgba(185,143,62,.07),transparent);padding:12px 18px;margin:16px 0;font-size:14px}
+.promise b{color:var(--gold2)}
+.cta{margin-top:auto;background:var(--black);color:#fff;padding:20px 42px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.cta .big{font-size:16px;font-weight:600}
+.cta .c{color:#E7C878;font-size:14px}
+.fine{font-size:11px;color:var(--muted);padding:10px 42px 22px}
+@media print{ body{background:#fff} .page{box-shadow:none} }
+</style></head>
+<body>
+<div class="page">
+  <div class="hdr">
+    <div class="grid"></div>
+    <div class="row">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F4DFA4"/><stop offset=".5" stop-color="#E7C878"/><stop offset="1" stop-color="#B98F3E"/></linearGradient></defs><path d="M17 2 L30 9.5 V24.5 L17 32 L4 24.5 V9.5 Z" stroke="url(#g)" stroke-width="2" fill="none" stroke-linejoin="round"/><circle cx="12" cy="13" r="2.1" fill="url(#g)"/><circle cx="22" cy="12" r="2.1" fill="url(#g)"/><circle cx="17" cy="22" r="2.1" fill="url(#g)"/><path d="M12 13 L22 12 M12 13 L17 22 M22 12 L17 22" stroke="url(#g)" stroke-width="1" opacity=".6"/></svg>
+      <div><div class="nm">IDEATOR LABS</div><div class="sub">AI &amp; DATA CONSULTING · TECHNOLOGY ADVISORY</div></div>
+    </div>
+    <h1>The Diagnostic Sprint — <em>we find the number.</em></h1>
+    <div class="tag">A fixed-scope engagement that turns "we think we're losing money somewhere" into a proven figure and a prioritized plan.</div>
+  </div>
+
+  <div class="body">
+    <p class="lead">Ideator Labs is an AI, data and technology consulting studio — strategy backed by real engineering. In 2–3 weeks we instrument one part of your business, find where time, money and margin are leaking, and hand you a priced opportunity map: the specific fixes, ranked by payback, with the KPI each one moves. You own it whether or not we build after — and when you do build, it is the same team that scoped it.</p>
+
+    <h2>What we look at (pick your focus)</h2>
+    <div class="grid2">
+      <ul>
+        <li>Profitability — margin per customer / product / job</li>
+        <li>Manual work — where staff hours actually go</li>
+        <li>Pricing strategy — leakage &amp; unexercised pricing power</li>
+        <li>Data &amp; analytics — messy, siloed or underused pipelines</li>
+      </ul>
+      <ul>
+        <li>Cash — the conversion cycle &amp; trapped working capital</li>
+        <li>AI-readiness — the highest-ROI automation targets</li>
+        <li>Systems — what you pay for vs. what you use</li>
+        <li>Industry focus — law, accounting, healthcare, manufacturing</li>
+      </ul>
+    </div>
+
+    <h2>What you get</h2>
+    <ul>
+      <li><b>The number</b> — the annual value at stake, defensibly calculated from your data and tied to one KPI</li>
+      <li><b>An opportunity map</b> — every fix priced and ranked by impact vs. effort</li>
+      <li><b>A 90-day action plan</b> — what to do first, with expected payback</li>
+      <li><b>A readout session</b> — walked through with your team; the report is yours to keep</li>
+    </ul>
+
+    <h2>How it runs — 2 to 3 weeks</h2>
+    <div class="wk">
+      <div><b>WEEK 1</b><span>Baseline — data pull, interviews, map how it really works</span></div>
+      <div><b>WEEK 2</b><span>Diagnose &amp; quantify — test each leak, price it</span></div>
+      <div><b>WEEK 3</b><span>Design &amp; readout — the ranked plan, delivered</span></div>
+    </div>
+    <p style="font-size:13px;color:var(--muted);margin-top:6px">We need ~3 hours of your team's time across the sprint. That's it.</p>
+
+    <h2>Investment</h2>
+    <div class="invest">
+      <div class="p">₹75,000 – ₹2,00,000 <small>/ fixed fee · scope-dependent · 50% to start</small></div>
+      <div style="font-size:13px;color:var(--muted);max-width:34ch">Priced to the focus area and business size — confirmed before we begin. International engagements quoted in USD. No hourly meters, no surprises.</div>
+    </div>
+    <div class="promise"><svg width="16" height="18" viewBox="0 0 24 27" fill="none" style="vertical-align:-3px;margin-right:6px"><path d="M12 1.5 L21.5 5 V13 C21.5 19.5 17 23.5 12 25.5 C7 23.5 2.5 19.5 2.5 13 V5 Z" stroke="#B98F3E" stroke-width="1.7" fill="rgba(185,143,62,.08)" stroke-linejoin="round"/><path d="M7.5 13 L10.7 16.2 L16.5 9.5" stroke="#B98F3E" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><b>The Ideator Promise:</b> the readout is built only from your data — no inflated findings, no manufactured urgency. If we don't surface opportunities worth acting on, we'll tell you plainly, and the readout workshop is on us.</div>
+  </div>
+
+  <div class="cta">
+    <div class="big">Start with a free 25-minute capacity review.</div>
+    <div class="c">ideatorlabs.ai@gmail.com · ideatorlabs.github.io</div>
+  </div>
+  <div class="fine">Ideator Labs · management &amp; technology consulting — AI, data &amp; software · remote worldwide, based in Hyderabad. This document is an offer summary, not a contract; scope and fee are confirmed in a short engagement letter before work begins.</div>
+</div>
+</body></html>
