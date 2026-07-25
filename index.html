@@ -1,7 +1,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ideator Labs — Operations Research & AI Advisory</title>
+<title>Ideator Labs — AI & Data Consulting · Technology Advisory</title>
 <meta name="color-scheme" content="dark">
+<meta name="description" content="Ideator Labs is an AI, data and technology consulting studio. We help professional-services and operations-heavy firms — law, accounting & finance, healthcare, manufacturing and distribution — find where margin leaks, then build the AI, data and software that recovers it. Fixed-fee, senior-only, remote worldwide.">
 <style>
 /* ============ IDEATOR LABS — piano black / champagne ============ */
 :root{
@@ -18,7 +19,7 @@ html{scroll-behavior:smooth}
 body{
   background:var(--bg);color:var(--ink);
   font:16px/1.68 "Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;
-  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;
 }
 /* glossy sheen ground */
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
@@ -44,12 +45,12 @@ section{padding:88px 0 0}
 .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
 
 /* ---------- nav ---------- */
-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
-    padding:22px 0;border-bottom:1px solid var(--hair)}
+.topbar{position:sticky;top:0;z-index:60;width:100%;border-bottom:1px solid var(--hair);background:rgba(9,10,12,.55);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
+nav{max-width:1080px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
 .logo .lname{font-weight:700;font-size:15.5px;letter-spacing:.09em}
-.logo .lsub{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.28em;color:var(--muted);font-weight:500;margin-top:3px}
-.navlinks{display:flex;gap:28px;font-size:14px;font-weight:600;letter-spacing:.02em}
+.logo .lsub{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--gold);font-weight:600;margin-top:3px}
+.navlinks{display:flex;gap:24px;font-size:14px;font-weight:600;letter-spacing:.02em}
 .navlinks a{color:var(--silver);transition:color .2s}
 .navlinks a:hover{color:var(--gold)}
 
@@ -226,7 +227,15 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-
 .readout .rtotal b{font-family:var(--mono);background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .readout .rnote{font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.5}
 /* footer */
-footer{margin-top:100px;border-top:1px solid var(--hair);padding:40px 0 70px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--silver);font-size:14px}
+footer{margin-top:100px;border-top:1px solid var(--hair);padding:54px 0 60px;color:var(--silver);font-size:14px}
+.f-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.1fr;gap:34px}
+.f-col h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.f-col a{display:block;color:var(--silver);font-size:13.5px;padding:4px 0;transition:color .2s}
+.f-col a:hover{color:var(--gold)}
+.f-tag{font-size:12.5px;color:var(--muted);max-width:52ch;line-height:1.6}
+.f-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid var(--hair)}
+@media(max-width:820px){.f-top{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.f-top{grid-template-columns:1fr}}
 footer .motto{font-family:var(--mono);font-size:13.5px;letter-spacing:.14em;font-weight:600;
   background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
@@ -238,11 +247,19 @@ footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:v
   .on .fbar i,.fbar i{width:var(--w)}
   .cta::after{display:none}
 }
+section[id]{scroll-margin-top:92px}
+.cta.sm{padding:10px 22px;font-size:13.5px;box-shadow:0 6px 20px rgba(231,200,120,.10)}
+.cta.sm::after{display:none}
+.vas-hint{font-size:13.5px;color:var(--gold);font-family:var(--mono);letter-spacing:.03em;margin:2px 0 0}
+.vaspill{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;flex-direction:column;gap:3px;padding:12px 18px;border-radius:13px;background:rgba(6,6,8,.82);border:1px solid rgba(231,200,120,.42);backdrop-filter:blur(12px) saturate(140%);-webkit-backdrop-filter:blur(12px) saturate(140%);box-shadow:0 12px 36px rgba(0,0,0,.45);text-decoration:none;opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .45s ease,transform .45s ease}
+.vaspill.show{opacity:1;transform:none;pointer-events:auto}
+.vaspill:hover{border-color:var(--gold);transform:translateY(-2px)}
+.vp-k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted)}
+.vp-v{font-family:var(--mono);font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media(max-width:520px){.vaspill{right:12px;bottom:12px;padding:10px 14px}.vp-v{font-size:14px}}
 </style>
 
-<div class="wrap">
-
-<nav>
+<div class="topbar"><nav>
   <div class="logo">
     <svg width="36" height="36" viewBox="0 0 34 34" fill="none" aria-label="Ideator Labs">
       <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
@@ -252,23 +269,27 @@ footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:v
       <circle cx="12" cy="13" r="2.1" fill="url(#lg)"/><circle cx="22" cy="12" r="2.1" fill="url(#lg)"/><circle cx="17" cy="22" r="2.1" fill="url(#lg)"/>
       <path d="M12 13 L22 12 M12 13 L17 22 M22 12 L17 22" stroke="url(#lg)" stroke-width="1" opacity=".55"/>
     </svg>
-    <div><span class="lname">IDEATOR LABS</span><span class="lsub">OPERATIONS RESEARCH · AI ADVISORY</span></div>
+    <div><span class="lname">IDEATOR LABS</span><span class="lsub">AI &amp; DATA CONSULTING · TECHNOLOGY ADVISORY</span></div>
   </div>
   <div class="navlinks">
-    <a href="#findings">Findings</a>
-    <a href="#method">Method</a>
+    <a href="#capabilities">What we do</a>
+    <a href="#industries">Industries</a>
+    <a href="#icp">Who we're for</a>
+    <a href="#outcomes">Outcomes</a>
     <a href="#services">Services</a>
     <a href="#lab">The Lab</a>
     <a href="#contact">Contact</a>
   </div>
-</nav>
+</nav></div>
+
+<div class="wrap">
 
 <header class="hero">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <span class="hcrumb"><span class="dot"></span>ACCEPTING DIAGNOSTIC ENGAGEMENTS · Q3 2026</span>
-    <h1>Your business is leaking profit. We <em>measure exactly where</em>.</h1>
-    <p>Ideator Labs applies the scientific method to mid-market operations — hypothesis, instrumentation, measurement, verdict. In three weeks we put a defensible number on the margin hiding in your workflows, then engineer the AI systems that recover it.</p>
+    <h1>Your business is leaking profit. We <em>find it — then build the fix</em>.</h1>
+    <p>Ideator Labs is an AI, data and technology consulting studio. We help professional-services and operations-heavy firms — in law, accounting &amp; finance, healthcare, manufacturing and distribution — find where margin leaks, put a defensible number on it, then build the AI, data and software systems that recover it. Fixed-fee, senior-only, delivered remotely worldwide.</p>
     <div class="cta-row">
       <a class="cta" href="#contact">Request a capacity review</a>
       <a class="cta2" href="#method">Read the method</a>
@@ -282,13 +303,38 @@ footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:v
   </div>
 </header>
 
+<section id="capabilities">
+  <div class="sec-tag rv">What we do</div>
+  <h2 class="rv">Consulting-grade strategy — engineered and shipped.</h2>
+  <p class="lede rv">One studio across the whole arc: the thinking, the building, and the running of it. AI and data are our core strength — but the job is the outcome, not the acronym.</p>
+  <div class="svc">
+    <div class="svc-card gcard rv"><span class="rn">01 · CONSULT</span><h3>Strategy &amp; Management Consulting</h3><p>Operating-model and process diagnostics, profitability &amp; margin analysis, <b style="color:var(--silver);font-weight:600">pricing strategy</b>, AI-readiness and data strategy — plus the sequenced, costed roadmap for what to fix first.</p><div class="pr">advisory · <b>fixed-fee</b></div></div>
+    <div class="svc-card gcard rv d1"><span class="rn">02 · ENGINEER</span><h3>Data &amp; AI Engineering</h3><p><b style="color:var(--silver);font-weight:600">Data engineering consulting</b> — pipelines, warehouses, analytics &amp; BI — plus LLM agents, RAG, document AI and workflow automation. Measured against a baseline.</p><div class="pr">build · <b>measured</b></div></div>
+    <div class="svc-card gcard rv d2"><span class="rn">03 · SHIP</span><h3>B2B SaaS &amp; Software Services</h3><p>Custom software, product builds, integrations, dashboards and copilots — engineered to production and adopted with training, not left as slides.</p><div class="pr">software · <b>product</b></div></div>
+    <div class="svc-card gcard rv d3"><span class="rn">04 · SPECIALIZE</span><h3>Industry AI Synthesis</h3><p>Vertical solutions tuned to how specific firms really operate — law, accounting &amp; finance, and healthcare first, with the same engineering underneath.</p><div class="pr">law · finance · <b>health</b></div></div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="sec-tag rv">Why now</div>
+  <h2 class="rv">The gap is value, not technology.</h2>
+  <p class="lede rv">The tools are ready and cheap. What's missing is knowing where to point them — and someone who can wire them in and prove the number. That's the gap we work in.</p>
+  <div class="strip rv">
+    <div><b>5.5%</b><span>of firms capture real profit from AI — though 79% have adopted it (McKinsey, The State of AI 2025)</span></div>
+    <div><b>$490B</b><span>potential annual AI lift to India's MSMEs, with a 30–35% profitability gain (Google · NASSCOM)</span></div>
+    <div><b>15–30%</b><span>of customers are quietly unprofitable in a typical business — because margin is rarely measured per account</span></div>
+    <div><b>72%</b><span>of firms lack in-house AI expertise; 59% cite budget — the bottleneck is delivery, not the model (NASSCOM)</span></div>
+  </div>
+</section>
+
 <section id="findings">
-  <div class="sec-tag rv">Field Findings</div>
-  <h2 class="rv">What the data keeps showing</h2>
-  <p class="lede rv">The same patterns appear in nearly every operations-heavy business we study — especially in professional services, logistics &amp; distribution, manufacturing, and multi-site healthcare. Each one is measurable, and each one is money. <b style="color:var(--ink)">Answer the six signals below and this page will estimate your own leak — live, on-device, nothing sent anywhere.</b></p>
+  <div class="sec-tag rv">Value at stake</div>
+  <h2 class="rv">Where mid-market margin leaks — size it to your business.</h2>
+  <p class="lede rv">Value concentrates in the same six levers across operations-, document- and data-heavy firms. Set your revenue band, flag the levers you recognise, and the model sizes the value at stake — directional, from published benchmarks. A three-week diagnostic turns the ones that matter into your real number.</p>
+  <p class="vas-hint rv">↓ Interactive — select a revenue band, then tap the levers.</p>
 
   <div class="revsel rv" id="revsel">
-    <span class="rlabel">STEP 1 · CALIBRATE THE INSTRUMENT — YOUR ANNUAL REVENUE</span>
+    <span class="rlabel">STEP 1 — YOUR ANNUAL REVENUE BAND</span>
     <div class="rchips">
       <button data-rev="3000000">$1–5M</button>
       <button data-rev="12000000">$5–25M</button>
@@ -301,32 +347,55 @@ footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:v
     <div class="finding gcard rv" style="--w:30%" data-sig="margin" data-lo="100" data-hi="300" data-name="Customer profitability blindness">
       <span class="fidx">F-01 / PROFITABILITY</span><div class="fv"><span data-count="15">15</span>–<span data-count="30">30</span><small>%</small></div>
       <div class="fl">of customers are typically <b>unprofitable</b> — invisible until margin is measured per customer, per SKU, per job.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Can you see profit per customer today?</span><div class="qb"><button data-a="yes">Yes</button><button data-a="no">No</button><button data-a="unsure">Not sure</button></div><span class="verdict"></span></div>
+      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
     </div>
     <div class="finding gcard rv d1" style="--w:40%" data-sig="manual" data-lo="150" data-hi="300" data-name="Manual work AI could do">
       <span class="fidx">F-02 / CAPACITY</span><div class="fv"><span data-count="20">20</span>–<span data-count="40">40</span><small>%</small></div>
       <div class="fl">of admin payroll goes to <b>manual work AI can now do</b> — document handling, rekeying, status-chasing, reconciliation.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Do you know where your team's hours actually go?</span><div class="qb"><button data-a="yes">Yes</button><button data-a="no">No</button><button data-a="unsure">Not sure</button></div><span class="verdict"></span></div>
+      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
     </div>
     <div class="finding gcard rv d2" style="--w:85%" data-sig="pricing" data-lo="100" data-hi="200" data-name="Unmanaged pricing">
       <span class="fidx">F-03 / PRICING</span><div class="fv">1<small>%</small> → <span data-count="12">12</span><small>%</small></div>
       <div class="fl">one point of <b>unmanaged pricing</b> moves profit 8–12% in a typical mid-market P&amp;L — the highest-ROI fix that exists.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Have you repriced systematically in the last 18 months?</span><div class="qb"><button data-a="yes">Yes</button><button data-a="no">No</button><button data-a="unsure">Not sure</button></div><span class="verdict"></span></div>
+      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
     </div>
     <div class="finding gcard rv" style="--w:55%" data-sig="service" data-lo="50" data-hi="100" data-name="Repeat-work in customer service">
       <span class="fidx">F-04 / SERVICE</span><div class="fv"><span data-count="30">30</span>–<span data-count="60">60</span><small>%</small></div>
-      <div class="fl">reduction in <b>cost per customer contact</b> with AI deflection, drafting, and triage — CSAT held or improved.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Is AI already handling your repeat questions?</span><div class="qb"><button data-a="yes">Yes</button><button data-a="no">No</button><button data-a="unsure">Not sure</button></div><span class="verdict"></span></div>
+      <div class="fl">reduction in <b>cost per customer contact</b> with AI deflection, drafting and triage — CSAT held or improved.</div><div class="fbar"><i></i></div>
+      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
     </div>
     <div class="finding gcard rv d1" style="--w:45%" data-sig="cash" data-lo="30" data-hi="80" data-name="Cash-conversion drag">
       <span class="fidx">F-05 / CASH</span><div class="fv">$<span data-count="500">500</span>k–$<span data-count="5">5</span>M</div>
       <div class="fl">of cash routinely freed from the <b>cash-conversion cycle</b> — billing lag, collections cadence, over-ordered inventory.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Do you run a rolling 13-week cash forecast?</span><div class="qb"><button data-a="yes">Yes</button><button data-a="no">No</button><button data-a="unsure">Not sure</button></div><span class="verdict"></span></div>
+      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
     </div>
     <div class="finding gcard rv d2" style="--w:20%" data-sig="systems" data-lo="30" data-hi="70" data-name="Underused systems + workarounds">
       <span class="fidx">F-06 / SYSTEMS</span><div class="fv"><span data-count="20">20</span><small>%</small></div>
       <div class="fl">is how much of their <b>ERP/CRM</b> most companies actually use — while paying for the software <em>and</em> the workarounds.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does your team use your ERP/CRM beyond the basics?</span><div class="qb"><button data-a="yes">Yes</button><button data-a="no">No</button><button data-a="unsure">Not sure</button></div><span class="verdict"></span></div>
+      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
+    </div>
+  </div>
+
+  <div class="readout rv" id="vas" hidden>
+    <div class="rh" id="vashead">INDICATIVE VALUE AT STAKE</div>
+    <ul id="vaslist"></ul>
+    <div class="rtotal"><span>Indicative annual value at stake</span><b id="vastotal">—</b></div>
+    <p class="rnote">Directional only — your revenue band × published benchmarks, weighted by what you flagged. Not a promise about your P&amp;L. The three-week diagnostic replaces this with a number built from your own data.</p>
+    <div style="margin-top:14px"><a href="#contact" class="cta sm">Request a diagnostic →</a></div>
+  </div>
+  <div class="gbox rv" style="margin-top:22px">
+    <div class="sig" aria-hidden="true">
+      <svg width="58" height="66" viewBox="0 0 58 66" fill="none">
+        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#F4DFA4"/><stop offset=".5" stop-color="#E7C878"/><stop offset="1" stop-color="#B98F3E"/>
+        </linearGradient></defs>
+        <path d="M29 2 L54 11 V32 C54 48 43 59 29 64 C15 59 4 48 4 32 V11 Z" stroke="url(#sg)" stroke-width="2.6" fill="rgba(231,200,120,.07)" stroke-linejoin="round"/>
+        <path d="M18 32 L26 40 L41 23" stroke="url(#sg)" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div>
+      <b>THE IDEATOR PROMISE</b>
+      <p>Every diagnostic ends with a priced opportunity map built from your data — no inflated findings, no manufactured urgency. If we don't find opportunities meaningful enough to act on, we'll tell you plainly, and the roadmap workshop is on us. The numbers have to defend themselves.</p>
     </div>
   </div>
 </section>
@@ -354,21 +423,43 @@ footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:v
     <div class="svc-card gcard rv d2"><span class="rn">03 · DELIVER</span><h3>Build Retainer</h3><p>We implement monthly: document AI, workflow automation, KPI dashboards, AI copilots — shipped in sprints, adopted with training, measured against baseline.</p><div class="pr">monthly · <b>3–12 mo</b></div></div>
     <div class="svc-card gcard rv d3"><span class="rn">04 · DRIVE</span><h3>Advisory</h3><p>Quarterly business reviews, an operating rhythm, and a standing seat at your table — accountable to the cumulative value number, not to slides.</p><div class="pr">monthly · <b>ongoing</b></div></div>
   </div>
-  <div class="gbox rv">
-    <div class="sig" aria-hidden="true">
-      <svg width="58" height="66" viewBox="0 0 58 66" fill="none">
-        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#F4DFA4"/><stop offset=".5" stop-color="#E7C878"/><stop offset="1" stop-color="#B98F3E"/>
-        </linearGradient></defs>
-        <path d="M29 2 L54 11 V32 C54 48 43 59 29 64 C15 59 4 48 4 32 V11 Z" stroke="url(#sg)" stroke-width="2.6" fill="rgba(231,200,120,.07)" stroke-linejoin="round"/>
-        <path d="M18 32 L26 40 L41 23" stroke="url(#sg)" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    <div>
-      <b>THE IDEATOR PROMISE</b>
-      <p>Every diagnostic ends with a priced opportunity map built from your data — no inflated findings, no manufactured urgency. If we don't find opportunities meaningful enough to act on, we'll tell you plainly, and the roadmap workshop is on us. The numbers have to defend themselves.</p>
-    </div>
+</section>
+
+<section id="industries">
+  <div class="sec-tag rv">Industries</div>
+  <h2 class="rv">Built for firms with real operations, real data, and real margin to protect.</h2>
+  <p class="lede rv">Wherever the work is manual, the data is messy or underused, or the pricing and margin are leaking — we start with one problem, prove the number, then expand.</p>
+  <div class="svc">
+    <div class="svc-card gcard rv"><span class="rn">LEGAL</span><h3>Law firms &amp; legal teams</h3><p>Intake, drafting, discovery triage, matter status and billing. We surface where associate hours quietly leak and automate the repetitive path around them.</p><div class="pr">focus · <b>AI + automation</b></div></div>
+    <div class="svc-card gcard rv d1"><span class="rn">FINANCE</span><h3>Accounting &amp; CA firms</h3><p>GST reconciliation, document chasing, Tally and portal re-keying — often 15–20 recoverable hours a week per team, turned back into billable capacity.</p><div class="pr">focus · <b>AI + automation</b></div></div>
+    <div class="svc-card gcard rv d2"><span class="rn">HEALTHCARE</span><h3>Hospitals, clinics &amp; diagnostics</h3><p>Patient intake, records, scheduling, coding and billing. We cut the manual handoffs that pile up across multi-site operations.</p><div class="pr">focus · <b>AI + automation</b></div></div>
+    <div class="svc-card gcard rv d3"><span class="rn">INDUSTRY</span><h3>Manufacturing &amp; distribution</h3><p>Quotations, production scheduling, inventory, dispatch and collections — where mid-market manufacturers, distributors and logistics firms leave margin on the table.</p><div class="pr">focus · <b>AI + automation</b></div></div>
   </div>
+</section>
+
+<section id="icp">
+  <div class="sec-tag rv">Who we're for</div>
+  <h2 class="rv">A clear ideal client — so the work is always a fit.</h2>
+  <p class="lede rv">We do our best work for established, profitable firms with something real to optimise. If that's you, we'll find a number worth chasing. If it isn't, we'll say so.</p>
+  <div class="svc">
+    <div class="svc-card gcard rv"><span class="rn">PROFILE</span><h3>Established mid-market</h3><p>Roughly ₹25–500 Cr (~$3–60M) revenue, ~20–500 staff. Operations-, document- or data-heavy. Profitable, founder- or partner-run. Delivered remotely, worldwide.</p><div class="pr">size · <b>₹25–500 Cr</b></div></div>
+    <div class="svc-card gcard rv d1"><span class="rn">SECTORS</span><h3>Where we go deep</h3><p>Law, accounting &amp; CA firms, healthcare; manufacturing, distribution &amp; logistics — and data-rich firms whose analytics or pipelines are messy, siloed or underused.</p><div class="pr">beachhead · <b>CA firms</b></div></div>
+    <div class="svc-card gcard rv d2"><span class="rn">BUYER</span><h3>Who says yes</h3><p>The person with authority to act: owner, founder, managing or owning partner, COO or CFO. Authority beats activity beats title.</p><div class="pr">decision · <b>owner-level</b></div></div>
+    <div class="svc-card gcard rv d3"><span class="rn">NOT FOR</span><h3>Where we're not a fit</h3><p>Pre-seed startups burning runway, or anyone shopping for hourly bodyshop work. We sell measurable outcomes on fixed fees — not hours.</p><div class="pr">honest · <b>outcomes, not hours</b></div></div>
+  </div>
+</section>
+
+<section id="outcomes">
+  <div class="sec-tag rv">The numbers we move</div>
+  <h2 class="rv">Every engagement is judged on one KPI — yours.</h2>
+  <p class="lede rv">We don't bill for activity; we commit to a number. These are the outcomes we target — the exact figure always comes from your own data.</p>
+  <div class="strip rv">
+    <div><b>15–20 hrs</b><span>back-office time we target to recover per team, per week</span></div>
+    <div><b>20–40%</b><span>of admin work is rule-based and automatable — we quantify it, then remove it</span></div>
+    <div><b>8–12%</b><span>profit swing from a single point of pricing — we find where it's left on the table</span></div>
+    <div><b>~3 wks</b><span>to a priced, defensible opportunity map you own either way</span></div>
+  </div>
+  <p class="labnote rv"><b>Honest math:</b> the ranges above are industry benchmarks, not promises about your business. Your KPI — hours, margin, cost-to-serve, DSO, pricing uplift, or data reliability — is set from your baseline, and we're measured against it.</p>
 </section>
 
 <section id="lab">
@@ -418,136 +509,116 @@ footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:v
   <div class="contact-card gcard rv">
     <h2 style="margin-top:0">Start with a free 25-minute capacity review</h2>
     <p class="lede">Bring one broken process or one suspicious number. In 25 minutes we'll tell you whether there's a figure worth finding — and if there isn't, we'll say so and point you somewhere useful.</p>
-    <div class="readout" id="readout" hidden>
-      <div class="rh">YOUR SESSION READOUT — <span id="rosig">0</span>/6 SIGNALS</div>
-      <ul id="rolist"></ul>
-      <div class="rtotal"><span>Estimated annual leak</span><b id="rototal">—</b></div>
-      <p class="rnote">A napkin model from six one-tap signals and industry base rates — illustrative, not a promise, and it never leaves your browser. The 3-week diagnostic replaces it with a number built from your actual data.</p>
-    </div>
     <div class="contact-row">
       <a class="cta" href="mailto:ideatorlabs.ai@gmail.com">ideatorlabs.ai@gmail.com</a>
-      <a class="cta2" href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="cta2" href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="cta2" href="https://github.com/ideatorlabs" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div>
-    <div class="logo" style="margin-bottom:10px">
-      <svg width="20" height="20" viewBox="0 0 34 34" fill="none"><path d="M17 2 L30 9.5 V24.5 L17 32 L4 24.5 V9.5 Z" stroke="#C09A4A" stroke-width="2.4" fill="none"/><circle cx="12" cy="13" r="2.6" fill="#C09A4A"/><circle cx="22" cy="12" r="2.6" fill="#C09A4A"/><circle cx="17" cy="22" r="2.6" fill="#C09A4A"/></svg>
-      <span class="lname" style="font-size:12.5px">IDEATOR LABS</span>
+  <div class="f-top">
+    <div class="f-brand">
+      <div class="logo" style="margin-bottom:12px">
+        <svg width="22" height="22" viewBox="0 0 34 34" fill="none"><path d="M17 2 L30 9.5 V24.5 L17 32 L4 24.5 V9.5 Z" stroke="#C09A4A" stroke-width="2.4" fill="none"/><circle cx="12" cy="13" r="2.6" fill="#C09A4A"/><circle cx="22" cy="12" r="2.6" fill="#C09A4A"/><circle cx="17" cy="22" r="2.6" fill="#C09A4A"/></svg>
+        <span class="lname" style="font-size:13px">IDEATOR LABS</span>
+      </div>
+      <span class="motto">FIND → PROVE → BUILD → COMPOUND</span>
+      <p class="f-tag" style="margin-top:14px">Management &amp; technology consulting — AI, data &amp; software. Remote worldwide, based in Hyderabad.</p>
+      <a href="mailto:ideatorlabs.ai@gmail.com" style="display:inline-block;margin-top:10px;color:var(--gold);font-size:13.5px">ideatorlabs.ai@gmail.com</a>
     </div>
-    <span class="motto">MEASURE → PROVE → BUILD → COMPOUND</span>
+    <div class="f-col">
+      <h4>Services</h4>
+      <a href="#capabilities">Management Consulting</a>
+      <a href="#capabilities">AI &amp; Data Engineering</a>
+      <a href="#capabilities">B2B SaaS &amp; Software</a>
+      <a href="#industries">Industry AI</a>
+    </div>
+    <div class="f-col">
+      <h4>Company</h4>
+      <a href="#capabilities">What we do</a>
+      <a href="#method">How we work</a>
+      <a href="#icp">Who we're for</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="f-col">
+      <h4>Trust</h4>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="security.html">Security &amp; Confidentiality</a>
+    </div>
   </div>
-  <div class="copy" style="align-self:flex-end">© 2026 IDEATOR LABS</div>
+  <div class="f-bot">
+    <span class="copy">© 2026 IDEATOR LABS</span>
+    <span class="f-tag">Honest by design — every number is built from your data, and if there's nothing worth fixing, we say so.</span>
+  </div>
 </footer>
 
 </div>
 
-<div class="instrument" id="inst" role="status" aria-live="polite">
-  <span class="isig">SIGNALS <b id="isig">0/6</b></span>
-  <a class="ileak" href="#contact"><span class="ilab">EST. ANNUAL LEAK</span><span class="ival" id="ileak">calibrate ↑</span></a>
-</div>
+<a class="vaspill" id="vaspill" href="#findings" aria-label="Size your value at stake">
+  <span class="vp-k">VALUE AT STAKE</span>
+  <span class="vp-v" id="vpv">Size yours →</span>
+</a>
 
 <script>
-/* ---------- live leak estimator ---------- */
+/* ---------- value-at-stake model (interactive) ---------- */
 (function(){
-  var rev = 0, answers = {}; // sig -> {w, lo, hi, name}
-  var inst = document.getElementById('inst');
-  var fmt = function(n){
-    if(n >= 950000) return '$' + (n/1000000).toFixed(1).replace(/\.0$/,'') + 'M';
-    if(n >= 1000) return '$' + Math.round(n/1000) + 'k';
-    return '$' + Math.round(n);
-  };
-  function totals(){
-    var lo = 0, hi = 0, hits = [];
-    Object.keys(answers).forEach(function(k){
-      var a = answers[k];
-      if(a.w > 0){ lo += rev*a.lo/10000*a.w; hi += rev*a.hi/10000*a.w; hits.push(a); }
-    });
-    return {lo:lo, hi:hi, hits:hits};
-  }
-  function paintVerdict(card){
-    var a = answers[card.dataset.sig], verdict = card.querySelector('.verdict');
-    if(!a) return;
-    if(a.w > 0){
-      verdict.className = 'verdict leak';
-      verdict.textContent = 'SIGNAL ' + (a.w===1?'CONFIRMED':'UNVERIFIED — half weight') +
-        (rev ? ' · adds ~' + fmt(rev*a.lo/10000*a.w) + '–' + fmt(rev*a.hi/10000*a.w) + '/yr' : ' · set revenue to price it');
-    } else {
-      verdict.className = 'verdict ok';
-      verdict.textContent = 'CONTROLLED · no leak added';
-    }
-  }
+  var rev=0, picks={};
+  var vas=document.getElementById('vas'); if(!vas) return;
+  var pill=document.getElementById('vaspill'), pv=document.getElementById('vpv');
+  var fmt=function(n){ if(n>=950000) return '$'+(n/1000000).toFixed(1).replace(/\.0$/,'')+'M'; if(n>=1000) return '$'+Math.round(n/1000)+'k'; return '$'+Math.round(n); };
+  function totals(){ var lo=0,hi=0,hits=[]; Object.keys(picks).forEach(function(k){ var a=picks[k]; if(a.w>0){ lo+=rev*a.lo/10000*a.w; hi+=rev*a.hi/10000*a.w; hits.push(a);} }); return {lo:lo,hi:hi,hits:hits}; }
+  function paint(card){ var a=picks[card.dataset.sig], v=card.querySelector('.verdict'); if(!a||!v) return;
+    if(a.w>0){ v.className='verdict leak'; v.textContent = rev ? ('AT STAKE · ~'+fmt(rev*a.lo/10000*a.w)+'–'+fmt(rev*a.hi/10000*a.w)+'/yr') : 'set a revenue band to size it'; }
+    else { v.className='verdict ok'; v.textContent='UNDER CONTROL · nothing added'; } }
   function render(){
-    var n = Object.keys(answers).length, t = totals();
-    document.getElementById('isig').textContent = n + '/6';
-    var ileak = document.getElementById('ileak');
-    if(!rev){ ileak.textContent = n ? 'set revenue →' : 'calibrate →'; }
-    else if(!t.hits.length){ ileak.textContent = n ? 'controlled ✓' : fmt(0); }
-    else { ileak.textContent = '≈ ' + fmt(t.lo) + '–' + fmt(t.hi) + '/yr'; }
-    /* readout card */
-    var ro = document.getElementById('readout');
-    if(rev && n > 0){
-      ro.hidden = false;
-      document.getElementById('rosig').textContent = n;
-      var list = document.getElementById('rolist');
-      list.innerHTML = '';
-      t.hits.sort(function(a,b){ return (b.hi*b.w)-(a.hi*a.w); }).forEach(function(a){
-        var li = document.createElement('li');
-        var s = document.createElement('span'); s.textContent = a.name + (a.w<1 ? ' (unverified — half weight)' : '');
-        var b = document.createElement('b'); b.textContent = fmt(rev*a.lo/10000*a.w) + '–' + fmt(rev*a.hi/10000*a.w) + '/yr';
+    var n=Object.keys(picks).length, t=totals();
+    if(rev && n>0){
+      vas.hidden=false;
+      document.getElementById('vashead').textContent='INDICATIVE VALUE AT STAKE — '+t.hits.length+' of 6 levers';
+      var list=document.getElementById('vaslist'); list.innerHTML='';
+      t.hits.sort(function(a,b){return (b.hi*b.w)-(a.hi*a.w);}).forEach(function(a){
+        var li=document.createElement('li');
+        var s=document.createElement('span'); s.textContent=a.name+(a.w<1?' (unsure — half weight)':'');
+        var b=document.createElement('b'); b.textContent=fmt(rev*a.lo/10000*a.w)+'–'+fmt(rev*a.hi/10000*a.w)+'/yr';
         li.appendChild(s); li.appendChild(b); list.appendChild(li);
       });
-      if(!t.hits.length){
-        var li2 = document.createElement('li');
-        li2.textContent = 'No leak signals confirmed yet — either impressively tight, or worth a second look.';
-        list.appendChild(li2);
-      }
-      document.getElementById('rototal').textContent = t.hits.length ? ('≈ ' + fmt(t.lo) + ' – ' + fmt(t.hi) + ' / yr') : '$0 confirmed';
+      if(!t.hits.length){ var li=document.createElement('li'); li.textContent='Nothing flagged yet — either impressively tight, or worth a second look.'; list.appendChild(li); }
+      var tot = t.hits.length ? ('≈ '+fmt(t.lo)+' – '+fmt(t.hi)+' / yr') : '—';
+      document.getElementById('vastotal').textContent = tot;
+      if(pv) pv.textContent = t.hits.length ? ('≈ '+fmt(t.lo)+'–'+fmt(t.hi)+'/yr') : 'under control ✓';
+    } else {
+      vas.hidden=true;
+      if(pv) pv.textContent='Size yours →';
     }
   }
-  /* revenue chips */
   document.querySelectorAll('#revsel .rchips button').forEach(function(btn){
     btn.addEventListener('click', function(){
-      document.querySelectorAll('#revsel .rchips button').forEach(function(b){ b.classList.remove('sel'); });
-      btn.classList.add('sel');
-      rev = parseInt(btn.dataset.rev,10);
-      inst.classList.add('show');
-      document.querySelectorAll('.finding[data-sig]').forEach(paintVerdict);
-      render();
+      document.querySelectorAll('#revsel .rchips button').forEach(function(b){b.classList.remove('sel');});
+      btn.classList.add('sel'); rev=parseInt(btn.dataset.rev,10);
+      document.querySelectorAll('.finding[data-sig]').forEach(paint); render();
     });
   });
-  /* leak pill: no revenue yet -> jump to calibration and pulse it */
-  document.querySelector('#inst .ileak').addEventListener('click', function(e){
-    if(!rev){
-      e.preventDefault();
-      var rs = document.getElementById('revsel');
-      rs.scrollIntoView({behavior:'smooth', block:'center'});
-      rs.classList.remove('flash'); void rs.offsetWidth; rs.classList.add('flash');
-    }
-  });
-  /* signal questions */
   document.querySelectorAll('.finding[data-sig]').forEach(function(card){
-    var qrow = card.querySelector('.qrow');
+    var qrow=card.querySelector('.qrow'); if(!qrow) return;
     qrow.querySelectorAll('.qb button').forEach(function(btn){
       btn.addEventListener('click', function(){
-        var a = btn.dataset.a, w = a==='no' ? 1 : (a==='unsure' ? .5 : 0);
-        answers[card.dataset.sig] = {w:w, lo:+card.dataset.lo, hi:+card.dataset.hi, name:card.dataset.name};
-        qrow.classList.add('answered');
-        if(w > 0){ card.classList.add('leakon'); }
-        paintVerdict(card);
-        inst.classList.add('show');
-        render();
+        var a=btn.dataset.a, w = a==='yes'?1:(a==='unsure'?0.5:0);
+        picks[card.dataset.sig]={w:w,lo:+card.dataset.lo,hi:+card.dataset.hi,name:card.dataset.name};
+        qrow.classList.add('answered'); card.classList.toggle('leakon', w>0);
+        paint(card); render();
       });
     });
   });
-  /* reveal the bar once the findings are on screen */
-  var f = document.getElementById('findings');
-  if(f){ new IntersectionObserver(function(es){
-    if(es[0].isIntersecting){ inst.classList.add('show'); }
-  },{threshold:.1}).observe(f); }
+  /* floating pill: visible from load, everywhere */
+  if(pill){
+    pill.classList.add('show');
+    pill.addEventListener('click', function(){
+      if(!rev){ var rs=document.getElementById('revsel'); if(rs){ setTimeout(function(){ rs.classList.remove('flash'); void rs.offsetWidth; rs.classList.add('flash'); }, 420); } }
+    });
+  }
 })();
 
 (function(){
