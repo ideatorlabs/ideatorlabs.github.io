@@ -79,6 +79,19 @@ nav{max-width:1080px;margin:0 auto;padding:14px 28px;display:flex;align-items:ce
 .navlinks{display:flex;gap:24px;font-size:14px;font-weight:600;letter-spacing:.02em}
 .navlinks a{color:var(--silver);transition:color .2s}
 .navlinks a:hover{color:var(--gold)}
+.navtoggle{display:none;background:none;border:1px solid var(--hair2);border-radius:9px;padding:9px 10px;cursor:pointer;line-height:0}
+.navtoggle span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px;transition:.25s}
+.topbar.open .navtoggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+.topbar.open .navtoggle span:nth-child(2){opacity:0}
+.topbar.open .navtoggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+@media(max-width:760px){
+  nav{flex-wrap:nowrap;position:relative}
+  .navtoggle{display:inline-block}
+  .navlinks{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(9,10,12,.97);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);border-bottom:1px solid var(--hair);max-height:0;overflow:hidden;transition:max-height .32s ease;padding:0 28px}
+  .navlinks a{padding:15px 0;border-bottom:1px solid var(--hair);font-size:15px;color:var(--ink)}
+  .navlinks a:last-child{border-bottom:none}
+  .topbar.open .navlinks{max-height:75vh;padding:4px 28px 14px}
+}
 
 /* ---------- hero ---------- */
 .hero{position:relative;padding:96px 0 0;min-height:540px}
@@ -282,7 +295,13 @@ section[id]{scroll-margin-top:92px}
 .vaspill:hover{border-color:var(--gold);transform:translateY(-2px)}
 .vp-k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted)}
 .vp-v{font-family:var(--mono);font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-@media(max-width:520px){.vaspill{right:12px;bottom:12px;padding:10px 14px}.vp-v{font-size:14px}}
+@media(max-width:620px){
+  .instrument{display:none!important}
+  .vaspill{left:50%;right:auto;bottom:14px;transform:translate(-50%,18px);flex-direction:row;align-items:center;gap:9px;padding:11px 18px}
+  .vaspill.show{transform:translateX(-50%)}
+  .vaspill .vp-k{font-size:9px}
+  .vaspill .vp-v{font-size:14px}
+}
 </style>
 
 <div class="topbar"><nav>
@@ -297,6 +316,7 @@ section[id]{scroll-margin-top:92px}
     </svg>
     <div><span class="lname">IDEATOR LABS</span><span class="lsub">AI &amp; DATA CONSULTING · TECHNOLOGY ADVISORY</span></div>
   </div>
+  <button class="navtoggle" id="navtoggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <div class="navlinks">
     <a href="#capabilities">What we do</a>
     <a href="#industries">Industries</a>
@@ -307,13 +327,18 @@ section[id]{scroll-margin-top:92px}
     <a href="#contact">Contact</a>
   </div>
 </nav></div>
+<script>
+(function(){var tb=document.querySelector('.topbar'),nt=document.getElementById('navtoggle');if(!tb||!nt)return;
+nt.addEventListener('click',function(){var o=tb.classList.toggle('open');nt.setAttribute('aria-expanded',o);});
+document.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){tb.classList.remove('open');nt.setAttribute('aria-expanded','false');});});})();
+</script>
 
 <div class="wrap">
 
 <header class="hero">
   <canvas id="net" aria-hidden="true"></canvas>
   <div class="hero-inner">
-    <span class="hcrumb"><span class="dot"></span>ACCEPTING DIAGNOSTIC ENGAGEMENTS · Q3 2026</span>
+    <span class="hcrumb"><span class="dot"></span>THE DIAGNOSTIC IS FREE — AND YOURS TO KEEP</span>
     <h1>Your business is leaking profit. We <em>find it — then build the fix</em>.</h1>
     <p>Ideator Labs is an AI, data and technology consulting studio. We help professional-services and operations-heavy firms — in law, accounting &amp; finance, healthcare, manufacturing and distribution — find where margin leaks, put a defensible number on it, then build the AI, data and software systems that recover it. Fixed-fee, senior-only, delivered remotely worldwide.</p>
     <div class="cta-row">
