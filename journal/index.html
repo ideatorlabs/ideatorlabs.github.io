@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ideator Journal: AI and data, in plain words | Ideator Labs</title>
+  <meta name="description" content="Plain-language articles from Ideator Labs on where firms lose time and margin, and how AI and data can help. For CA firms, D2C brands and shop owners.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/journal/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="Ideator Journal: AI and data, in plain words">
+  <meta property="og:description" content="Plain-language articles from Ideator Labs on where firms lose time and margin, and how AI and data can help. For CA firms, D2C brands and shop owners.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/journal/">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ideator Journal: AI and data, in plain words">
+  <meta name="twitter:description" content="Plain-language articles from Ideator Labs on where firms lose time and margin, and how AI and data can help. For CA firms, D2C brands and shop owners.">
+  <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261117d">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://ideatorlabs.github.io/journal/#blog",
+        "name": "Ideator Journal",
+        "url": "https://ideatorlabs.github.io/journal/",
+        "description": "Plain-language articles from Ideator Labs on where firms lose time and margin, and how AI and data can help.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Ideator Labs",
+          "url": "https://ideatorlabs.github.io/"
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Where CA firms lose hours every week, and how AI gives them back",
+            "url": "https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html",
+            "datePublished": "2026-07-27",
+            "dateModified": "2026-11-17"
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Your D2C brand's real problem isn't ads, it's true margin per order",
+            "url": "https://ideatorlabs.github.io/blog/d2c-true-margin-per-order.html",
+            "datePublished": "2026-07-27",
+            "dateModified": "2026-11-17"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ideatorlabs.github.io/" },
+          { "@type": "ListItem", "position": 2, "name": "Journal", "item": "https://ideatorlabs.github.io/journal/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOPBAR NAVIGATION
+       ========================================================================= -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <div class="brand-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span>Ideator Labs</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="/products/">Products</a>
+        <a href="/solutions/">Advisory</a>
+        <a href="/industries/">Sectors</a>
+        <a href="/research/">Research</a>
+        <a href="/open-source/">Open Source</a>
+        <a href="/journal/" class="active">Journal</a>
+        <a href="/about/">About</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="/products/">Products</a>
+    <a href="/solutions/">Advisory</a>
+    <a href="/industries/">Sectors</a>
+    <a href="/research/">Research</a>
+    <a href="/open-source/">Open Source</a>
+    <a href="/journal/" class="active">Journal</a>
+    <a href="/about/">About</a>
+    <a href="/contact/" style="color:var(--accent-purple)">Talk to us &rarr;</a>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section style="background:var(--bg-secondary);border-bottom:1px solid var(--border-light);padding:72px 0 60px;">
+      <div class="container reveal">
+        <span class="sub-eyebrow">THE IDEATOR JOURNAL</span>
+        <h1 class="sec-headline" style="max-width:24ch;margin-bottom:18px;">Plain answers for owners who run real businesses.</h1>
+        <p class="sec-lead" style="max-width:720px;">
+          Short articles on where time and money slip away in a business, and what to do about it. Every fact links to its source. Where we use example numbers, we say so.
+        </p>
+      </div>
+    </section>
+
+    <!-- Journal Cards Grid -->
+    <section style="padding:72px 0;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr));gap:32px;">
+
+          <!-- Article 1: Furniture showrooms -->
+          <article class="journal-card reveal" style="background:#FFFFFF;border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;">
+            <div class="journal-thumb" style="height:210px;overflow:hidden;background:#F1F5F9;">
+              <svg viewBox="0 0 560 210" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Furniture showroom follow-up illustration" style="display:block;width:100%;height:100%;">
+                <defs>
+                  <linearGradient id="g-energy" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2FF"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
+                  <pattern id="d-energy" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#CBD5E1"/></pattern>
+                </defs>
+                <rect width="560" height="210" fill="url(#g-energy)"/>
+                <rect width="560" height="210" fill="url(#d-energy)" opacity=".55"/>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M110 150v-38a14 14 0 0 1 14-14h132a14 14 0 0 1 14 14v38" stroke="#6366F1" stroke-width="3"/>
+                  <path d="M96 128h28v34h136v-34h28v40H96z" stroke="#6366F1" stroke-width="3"/>
+                  <path d="M112 168v14M272 168v14" stroke="#6366F1" stroke-width="3"/>
+                  <path d="M318 120h34" stroke="#94A3B8" stroke-width="2.5" stroke-dasharray="6 7"/>
+                  <rect x="366" y="62" width="122" height="96" rx="16" stroke="#3B82F6" stroke-width="2.5"/>
+                  <path d="M386 168l-6 16 22-10" stroke="#3B82F6" stroke-width="2.5"/>
+                  <path d="M388 90h78M388 110h58M388 130h68" stroke="#94A3B8" stroke-width="2.5"/></g>
+              </svg>
+            </div>
+            <div style="padding:28px;flex:1;display:flex;flex-direction:column;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span class="status-badge status-prod" style="font-size:11.5px;">Furniture retail</span>
+                <span style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);">In draft</span>
+              </div>
+              <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:12px;line-height:1.35;">
+                Why furniture showrooms lose walk-in buyers, and how to follow up
+              </h2>
+              <p style="font-size:14px;color:var(--text-secondary);line-height:1.65;margin-bottom:20px;flex:1;">
+                Most people who walk into a showroom leave without buying and without leaving a number. What to capture at the door, what to send them, and when.
+              </p>
+              <div>
+                <a href="/contact/" class="demo-card-link" style="font-weight:600;">Tell me when it&rsquo;s out &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 2: Data Pipelines -->
+          <article class="journal-card reveal delay-1" style="background:#FFFFFF;border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;">
+            <div class="journal-thumb" style="height:210px;overflow:hidden;background:#F1F5F9;">
+              <svg viewBox="0 0 560 210" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Real-time data pipeline illustration" style="display:block;width:100%;height:100%;">
+                <defs>
+                  <linearGradient id="g-pipeline" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2FF"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
+                  <pattern id="d-pipeline" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#CBD5E1"/></pattern>
+                </defs>
+                <rect width="560" height="210" fill="url(#g-pipeline)"/>
+                <rect width="560" height="210" fill="url(#d-pipeline)" opacity=".55"/>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="70" y="80" width="78" height="50" rx="10" stroke="#94A3B8" stroke-width="2.5"/>
+                  <rect x="241" y="56" width="78" height="50" rx="10" stroke="#6366F1" stroke-width="3"/>
+                  <rect x="241" y="122" width="78" height="50" rx="10" stroke="#6366F1" stroke-width="3"/>
+                  <rect x="412" y="80" width="78" height="50" rx="10" stroke="#3B82F6" stroke-width="3"/>
+                  <path d="M148 105h40c18 0 18-24 36-24h17M148 105h40c18 0 18 42 36 42h17M319 81h22c18 0 18 24 36 24h35M319 147h22c18 0 18-42 36-42" stroke="#94A3B8" stroke-width="2.5"/>
+                  <path d="M436 105l10 10 20-20" stroke="#3B82F6" stroke-width="3"/>
+                  <path d="M92 98h34M92 112h22" stroke="#94A3B8" stroke-width="2.5"/></g>
+              </svg>
+            </div>
+            <div style="padding:28px;flex:1;display:flex;flex-direction:column;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span class="status-badge status-res" style="font-size:11.5px;">Technical Deep Dive</span>
+                <span style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);">In draft</span>
+              </div>
+              <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:12px;line-height:1.35;">
+                Building reliable data pipelines for real-time analytics
+              </h2>
+              <p style="font-size:14px;color:var(--text-secondary);line-height:1.65;margin-bottom:20px;flex:1;">
+                Why business reports quietly go wrong when a data feed breaks, and simple checks that catch it before someone makes a decision on bad numbers.
+              </p>
+              <div>
+                <a href="/products/#reflex" class="demo-card-link" style="font-weight:600;">See Reflex &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 3: Evaluating Tech -->
+          <article class="journal-card reveal" style="background:#FFFFFF;border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;">
+            <div class="journal-thumb" style="height:210px;overflow:hidden;background:#F1F5F9;">
+              <svg viewBox="0 0 560 210" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Technology evaluation framework illustration" style="display:block;width:100%;height:100%;">
+                <defs>
+                  <linearGradient id="g-evaluate" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2FF"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
+                  <pattern id="d-evaluate" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#CBD5E1"/></pattern>
+                </defs>
+                <rect width="560" height="210" fill="url(#g-evaluate)"/>
+                <rect width="560" height="210" fill="url(#d-evaluate)" opacity=".55"/>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="150" y="40" width="260" height="140" rx="14" stroke="#94A3B8" stroke-width="2.5"/>
+                  <path d="M180 78l9 9 17-17M180 118l9 9 17-17" stroke="#6366F1" stroke-width="3"/>
+                  <path d="M184 152l14 14M198 152l-14 14" stroke="#94A3B8" stroke-width="3"/>
+                  <path d="M228 79h104M228 119h150M228 159h70" stroke="#94A3B8" stroke-width="2.5"/>
+                  <path d="M332 79h40" stroke="#6366F1" stroke-width="5"/><path d="M338 119h40" stroke="#6366F1" stroke-width="5"/>
+                  <circle cx="452" cy="150" r="26" stroke="#3B82F6" stroke-width="3"/><path d="M471 169l22 22" stroke="#3B82F6" stroke-width="3"/></g>
+              </svg>
+            </div>
+            <div style="padding:28px;flex:1;display:flex;flex-direction:column;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span class="status-badge status-demo" style="font-size:11.5px;">Business &amp; Operations</span>
+                <span style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);">In draft</span>
+              </div>
+              <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:12px;line-height:1.35;">
+                How to evaluate technology for your business
+              </h2>
+              <p style="font-size:14px;color:var(--text-secondary);line-height:1.65;margin-bottom:20px;flex:1;">
+                A simple way to tell whether a new tool will save real time and money in your business, measured against how things work today.
+              </p>
+              <div>
+                <a href="/about/#method" class="demo-card-link" style="font-weight:600;">See our method &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 4: CA Firms Reclaim Hours -->
+          <article class="journal-card reveal delay-1" style="background:#FFFFFF;border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;">
+            <div class="journal-thumb" style="height:210px;overflow:hidden;background:#F1F5F9;">
+              <svg viewBox="0 0 560 210" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Accounting practice hours illustration" style="display:block;width:100%;height:100%;">
+                <defs>
+                  <linearGradient id="g-ca" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2FF"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
+                  <pattern id="d-ca" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#CBD5E1"/></pattern>
+                </defs>
+                <rect width="560" height="210" fill="url(#g-ca)"/>
+                <rect width="560" height="210" fill="url(#d-ca)" opacity=".55"/>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="170" cy="105" r="52" stroke="#6366F1" stroke-width="3"/>
+                  <path d="M170 70v35l24 16" stroke="#6366F1" stroke-width="3"/>
+                  <rect x="262" y="50" width="210" height="112" rx="12" stroke="#94A3B8" stroke-width="2.5"/>
+                  <path d="M262 82h210M262 112h210M262 142h210M330 50v112" stroke="#94A3B8" stroke-width="2"/>
+                  <path d="M350 67h50M350 97h88M350 127h66" stroke="#3B82F6" stroke-width="3"/>
+                  <path d="M282 97l7 7 13-13M282 127l7 7 13-13" stroke="#3B82F6" stroke-width="2.5"/></g>
+              </svg>
+            </div>
+            <div style="padding:28px;flex:1;display:flex;flex-direction:column;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span class="status-badge status-prod" style="font-size:11.5px;">Practice Operations</span>
+                <span style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);">5 min read &middot; Jul 2026</span>
+              </div>
+              <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:12px;line-height:1.35;">
+                Where CA firms lose hours every week, and how AI gives them back
+              </h2>
+              <p style="font-size:14px;color:var(--text-secondary);line-height:1.65;margin-bottom:20px;flex:1;">
+                Where the hours really go &mdash; GST reconciliation, document chasing, Tally re-keying &mdash; and the practical way to automate them without adding headcount.
+              </p>
+              <div>
+                <a href="/blog/ca-firms-reclaim-hours-with-ai.html" class="btn-card-action">Read Full Article &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Article 5: D2C True Margin -->
+          <article class="journal-card reveal" style="background:#FFFFFF;border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;">
+            <div class="journal-thumb" style="height:210px;overflow:hidden;background:#F1F5F9;">
+              <svg viewBox="0 0 560 210" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Margin per order illustration" style="display:block;width:100%;height:100%;">
+                <defs>
+                  <linearGradient id="g-d2c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#EEF2FF"/><stop offset="1" stop-color="#F8FAFC"/></linearGradient>
+                  <pattern id="d-d2c" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#CBD5E1"/></pattern>
+                </defs>
+                <rect width="560" height="210" fill="url(#g-d2c)"/>
+                <rect width="560" height="210" fill="url(#d-d2c)" opacity=".55"/>
+                <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M120 92l60-26 60 26v62l-60 26-60-26z" stroke="#94A3B8" stroke-width="2.5"/>
+                  <path d="M120 92l60 26 60-26M180 118v62" stroke="#94A3B8" stroke-width="2.5"/>
+                  <path d="M264 122h34" stroke="#94A3B8" stroke-width="2.5"/><path d="M290 114l8 8-8 8" stroke="#94A3B8" stroke-width="2.5"/>
+                  <rect x="322" y="70" width="170" height="26" rx="6" stroke="#94A3B8" stroke-width="2.5"/>
+                  <rect x="322" y="108" width="170" height="26" rx="6" stroke="#94A3B8" stroke-width="2.5"/>
+                  <rect x="322" y="146" width="170" height="26" rx="6" stroke="#6366F1" stroke-width="3"/>
+                  <path d="M322 83h120M322 121h88" stroke="#3B82F6" stroke-width="8" opacity=".35"/>
+                  <path d="M322 159h44" stroke="#6366F1" stroke-width="8" opacity=".55"/></g>
+              </svg>
+            </div>
+            <div style="padding:28px;flex:1;display:flex;flex-direction:column;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+                <span class="status-badge status-demo" style="font-size:11.5px;">E-commerce Economics</span>
+                <span style="font-size:12px;color:var(--text-muted);font-family:var(--font-mono);">5 min read &middot; Jul 2026</span>
+              </div>
+              <h2 style="font-size:20px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:12px;line-height:1.35;">
+                Your D2C brand's real problem isn't ads &mdash; it's true margin per order
+              </h2>
+              <p style="font-size:14px;color:var(--text-secondary);line-height:1.65;margin-bottom:20px;flex:1;">
+                Why growth stalls when attribution is fuzzy and contribution margin is unknown, and how one clean data layer changes which channels you scale.
+              </p>
+              <div>
+                <a href="/blog/d2c-true-margin-per-order.html" class="btn-card-action">Read Full Article &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial Policy -->
+    <section style="background:var(--bg-secondary);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:60px 0;">
+      <div class="container reveal">
+        <div style="max-width:700px;border-left:3px solid var(--accent-purple);padding:8px 24px;">
+          <span class="sub-eyebrow" style="margin-bottom:6px;">HOW WE WRITE</span>
+          <h3 style="font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Facts with sources, or we leave them out</h3>
+          <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin:0;">
+            Every outside fact links to where it came from, with the date we checked it. Example numbers are marked as examples. We show when a post was published and when it was last updated. We never invent customers, quotes or results.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA (Matches Mockup) -->
+    <section class="cta-banner-wrap" style="padding-top:40px;padding-bottom:80px;">
+      <div class="container">
+        <div class="cta-aura-box reveal reveal-scale">
+          <div class="cta-box-eyebrow">SUGGEST A TOPIC</div>
+          <h2 class="cta-box-title">Want us to write about your problem?</h2>
+          <p class="cta-box-sub">
+            Tell us what slows your business down. If it helps other owners too, we&rsquo;ll research it and write it up.
+          </p>
+          <div style="margin-top:28px;">
+            <a href="/contact/" class="btn-hero-primary" style="display:inline-flex;">
+              Suggest a topic &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Matches Mockup)
+       ========================================================================= -->
+  <footer class="site-footer-sec">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <a href="/" class="brand-area" style="font-size:15px;margin-bottom:6px;">
+            <div class="brand-bars" aria-hidden="true" style="height:18px;">
+              <span style="height:10px;"></span><span style="height:18px;"></span><span style="height:7px;"></span>
+            </div>
+            <span>Ideator Labs</span>
+          </a>
+          <div style="font-size:12px;color:var(--text-muted);">A product studio. One sector at a time.</div>
+        </div>
+
+        <nav class="footer-nav-links" aria-label="Footer Navigation">
+          <a href="/products/">Products</a>
+          <a href="/solutions/">Advisory</a>
+          <a href="/industries/">Sectors</a>
+          <a href="/research/">Research</a>
+          <a href="/open-source/">Open Source</a>
+          <a href="/journal/">Journal</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+
+        <div class="footer-social-icons">
+          <a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Ideator Labs. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/security.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, journal… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js?v=20261117d"></script>
+</body>
+</html>

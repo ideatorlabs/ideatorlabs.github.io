@@ -1,765 +1,592 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ideator Labs — AI & Data Consulting · Technology Advisory</title>
-<meta name="color-scheme" content="dark">
-<meta name="description" content="Ideator Labs is an AI, data and technology consulting studio. We help professional-services and operations-heavy firms — law, accounting & finance, healthcare, manufacturing and distribution — find where margin leaks, then build the AI, data and software that recovers it. Fixed-fee, senior-only, remote worldwide.">
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ideator Labs — Product studio and AI and data advisory</title>
+  <meta name="description" content="Ideator Labs builds ready-to-run software for one sector at a time, starting with furniture showrooms, and helps firms put AI and data to work.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/">
 
-<!-- Open Graph / link preview (WhatsApp, LinkedIn, iMessage, etc.) -->
-<link rel="canonical" href="https://ideatorlabs.github.io/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Ideator Labs">
-<meta property="og:title" content="Ideator Labs — AI, Data & Technology Consulting">
-<meta property="og:description" content="We find where a business leaks time, money and margin — then build the AI, data engineering and software that recovers it. Fixed-fee, senior-only, remote worldwide.">
-<meta property="og:url" content="https://ideatorlabs.github.io/">
-<meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
-<meta property="og:image:secure_url" content="https://ideatorlabs.github.io/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Ideator Labs — AI, Data & Technology Consulting">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ideator Labs — AI, Data & Technology Consulting">
-<meta name="twitter:description" content="We find where a business leaks time, money and margin — then build the AI and data engineering that recovers it.">
-<meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="Ideator Labs — Software for one sector at a time">
+  <meta property="og:description" content="Ideator Labs builds ready-to-run software for one sector at a time, starting with furniture showrooms, and helps firms put AI and data to work.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
 
-<!-- Favicon / add-to-home-screen -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#050506">
-<meta name="apple-mobile-web-app-title" content="Ideator Labs">
-<style>
-/* ============ IDEATOR LABS — piano black / champagne ============ */
-:root{
-  --bg:#050506; --ink:#F4F5F7; --silver:#AEB3BE; --muted:#8A8F9B; --faint:#5B606C;
-  --glass:rgba(255,255,255,.035); --glass2:rgba(255,255,255,.055);
-  --hair:rgba(255,255,255,.09); --hair2:rgba(255,255,255,.16);
-  --gold:#E7C878; --gold2:#C09A4A; --gold-dim:rgba(231,200,120,.14);
-  --gold-grad:linear-gradient(135deg,#F4DFA4 0%,#E7C878 45%,#B98F3E 100%);
-  --metal:linear-gradient(180deg,#FFFFFF 0%,#C9CDD6 55%,#9BA0AC 100%);
-  --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,monospace;
-}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);color:var(--ink);
-  font:16px/1.68 "Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;
-  overflow-x:clip;-webkit-font-smoothing:antialiased;
-}
-/* glossy sheen ground */
-body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
-  background:
-    radial-gradient(900px 420px at 70% -8%, rgba(231,200,120,.07), transparent 62%),
-    radial-gradient(1200px 600px at 18% -12%, rgba(255,255,255,.05), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,.022), transparent 300px);
-}
-.wrap{max-width:1080px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
-a{color:var(--gold);text-decoration:none}
-h1,h2,h3{line-height:1.14;letter-spacing:-.018em;text-wrap:balance;font-weight:650}
-h2{font-size:clamp(27px,3.6vw,38px);margin:10px 0 14px;
-   background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
-.mono{font-family:var(--mono)}
-.sec-tag{font-family:var(--mono);font-size:11.5px;letter-spacing:.26em;color:var(--gold);text-transform:uppercase}
-.sec-tag::after{content:"";display:inline-block;width:44px;height:1px;background:var(--gold2);margin:0 0 4px 14px;vertical-align:middle;opacity:.6}
-.lede{color:var(--silver);max-width:64ch;font-size:16.5px}
-section{padding:88px 0 0}
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#FFFFFF">
 
-/* reveal */
-.rv{opacity:0;transform:translateY(24px);transition:opacity .75s cubic-bezier(.16,.7,.2,1),transform .75s cubic-bezier(.16,.7,.2,1)}
-.rv.on{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/main.css?v=20261117d">
 
-/* ---------- nav ---------- */
-.topbar{position:sticky;top:0;z-index:60;width:100%;border-bottom:1px solid var(--hair);background:rgba(9,10,12,.55);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%)}
-nav{max-width:1080px;margin:0 auto;padding:14px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
-.logo .lname{font-weight:700;font-size:15.5px;letter-spacing:.09em}
-.logo .lsub{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;color:var(--gold);font-weight:600;margin-top:3px}
-.navlinks{display:flex;gap:24px;font-size:14px;font-weight:600;letter-spacing:.02em}
-.navlinks a{color:var(--silver);transition:color .2s}
-.navlinks a:hover{color:var(--gold)}
-.navtoggle{display:none;background:none;border:1px solid var(--hair2);border-radius:9px;padding:9px 10px;cursor:pointer;line-height:0}
-.navtoggle span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0;border-radius:2px;transition:.25s}
-.topbar.open .navtoggle span:nth-child(1){transform:translateY(6px) rotate(45deg)}
-.topbar.open .navtoggle span:nth-child(2){opacity:0}
-.topbar.open .navtoggle span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
-@media(max-width:760px){
-  nav{flex-wrap:nowrap;position:relative}
-  .navtoggle{display:inline-block}
-  .navlinks{position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:rgba(9,10,12,.97);backdrop-filter:blur(16px) saturate(150%);-webkit-backdrop-filter:blur(16px) saturate(150%);border-bottom:1px solid var(--hair);max-height:0;overflow:hidden;transition:max-height .32s ease;padding:0 28px}
-  .navlinks a{padding:15px 0;border-bottom:1px solid var(--hair);font-size:15px;color:var(--ink)}
-  .navlinks a:last-child{border-bottom:none}
-  .topbar.open .navlinks{max-height:75vh;padding:4px 28px 14px}
-}
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/",
+        "logo": "https://ideatorlabs.github.io/icon-512.png",
+        "email": "ideatorlabs.ai@gmail.com",
+        "description": "Product studio and AI and data advisory. Ideator Labs builds ready-to-run software for one sector at a time and helps firms put AI and data to work.",
+        "sameAs": [
+          "https://www.linkedin.com/company/ideator-labs",
+          "https://github.com/ideatorlabs"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ideatorlabs.github.io/#website",
+        "url": "https://ideatorlabs.github.io/",
+        "name": "Ideator Labs",
+        "description": "Ready-to-run software for one sector at a time, and AI and data advisory for firms.",
+        "inLanguage": "en",
+        "publisher": { "@id": "https://ideatorlabs.github.io/#organization" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
 
-/* ---------- hero ---------- */
-.hero{position:relative;padding:96px 0 0;min-height:540px}
-#net{position:absolute;top:-40px;right:-120px;width:620px;height:620px;max-width:88vw;z-index:0;opacity:.85}
-.hero-inner{position:relative;z-index:2;max-width:660px}
-/* hero signal — terminal/scan line (not the usual status pill) */
-.hsignal{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);position:relative;padding-bottom:13px;min-height:15px}
-.hsig-p{color:var(--gold)}
-.hsig-t{white-space:nowrap}
-.hsig-cur{display:inline-block;width:8px;height:14px;background:var(--gold);transform:translateY(2px);animation:sigblink 1.05s steps(1) infinite}
-@keyframes sigblink{50%{opacity:0}}
-.hsignal::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold) 44%,#FFF 50%,var(--gold) 56%,transparent);
-  background-size:130px 100%;background-repeat:no-repeat;animation:sigscan 2.8s linear infinite}
-@keyframes sigscan{0%{background-position:-130px 0}100%{background-position:calc(100% + 130px) 0}}
-@media(max-width:520px){.hsignal{font-size:10px;letter-spacing:.1em}}
-@media (prefers-reduced-motion: reduce){.hsignal::after,.hsig-cur{animation:none}}
-.hero h1{font-size:clamp(38px,6.2vw,66px);margin:26px 0 20px;font-weight:700;
-  background:var(--metal);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero h1 em{font-style:normal;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:18px;color:var(--silver);max-width:57ch}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
-.cta{position:relative;display:inline-block;background:var(--gold-grad);color:#141005;font-weight:700;
-  padding:14px 30px;border-radius:10px;font-size:15px;overflow:hidden;
-  box-shadow:0 1px 0 rgba(255,255,255,.35) inset, 0 10px 30px rgba(231,200,120,.12);
-  transition:transform .18s,box-shadow .18s}
-.cta:hover{transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.35) inset, 0 14px 38px rgba(231,200,120,.22)}
-.cta::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;
-  background:linear-gradient(105deg,transparent,rgba(255,255,255,.5),transparent);
-  transform:skewX(-20deg);animation:shine 4.5s ease-in-out infinite}
-@keyframes shine{0%,72%{left:-80%}100%{left:160%}}
-.cta2{display:inline-block;color:var(--ink);font-weight:600;padding:14px 26px;border-radius:10px;font-size:15px;
-  border:1px solid var(--hair2);background:var(--glass);box-shadow:inset 0 1px 0 rgba(255,255,255,.09);
-  transition:border-color .2s,transform .18s,background .2s}
-.cta2:hover{border-color:var(--gold);transform:translateY(-2px);background:var(--glass2)}
+  <!-- =========================================================================
+       TOPBAR NAVIGATION
+       ========================================================================= -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <div class="brand-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span>Ideator Labs</span>
+      </a>
 
-/* instrument strip */
-.strip{display:grid;grid-template-columns:repeat(4,1fr);margin-top:72px;border:1px solid var(--hair);border-radius:14px;
-  background:linear-gradient(180deg,var(--glass2),var(--glass));overflow:hidden;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.1), 0 24px 60px rgba(0,0,0,.5)}
-.strip>div{padding:24px 26px;border-left:1px solid var(--hair)}
-.strip>div:first-child{border-left:none}
-.strip b{display:block;font-family:var(--mono);font-size:27px;font-weight:700;letter-spacing:-.01em;font-variant-numeric:tabular-nums;
-  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.strip span{font-size:12.5px;color:var(--muted);line-height:1.5;display:block;margin-top:6px}
-@media (max-width:820px){.strip{grid-template-columns:1fr 1fr}.strip>div:nth-child(3){border-left:none}.strip>div:nth-child(n+3){border-top:1px solid var(--hair)}}
-@media (max-width:460px){.strip{grid-template-columns:1fr}.strip>div{border-left:none!important}.strip>div+div{border-top:1px solid var(--hair)}}
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="/products/">Products</a>
+        <a href="/solutions/">Advisory</a>
+        <a href="/industries/">Sectors</a>
+        <a href="/research/">Research</a>
+        <a href="/open-source/">Open Source</a>
+        <a href="/journal/">Journal</a>
+        <a href="/about/">About</a>
+      </nav>
 
-/* ---------- glass card base ---------- */
-.gcard{position:relative;background:linear-gradient(180deg,var(--glass2),var(--glass));
-  border:1px solid var(--hair);border-radius:14px;overflow:hidden;
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.1), 0 18px 44px rgba(0,0,0,.42);
-  transition:transform .22s cubic-bezier(.2,.7,.2,1),border-color .22s,box-shadow .22s}
-.gcard:hover{transform:translateY(-5px);border-color:rgba(231,200,120,.45);
-  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 26px 60px rgba(0,0,0,.55), 0 0 0 1px rgba(231,200,120,.12)}
-.gcard::before{content:"";position:absolute;top:0;left:-70%;width:45%;height:100%;pointer-events:none;
-  background:linear-gradient(105deg,transparent,rgba(255,255,255,.06),transparent);transform:skewX(-18deg);transition:left .7s ease}
-.gcard:hover::before{left:130%}
-
-/* findings */
-.findings{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:38px 0 0}
-@media (max-width:900px){.findings{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.findings{grid-template-columns:1fr}}
-.finding{padding:26px 26px 22px;display:flex;flex-direction:column}
-.finding .fidx{font-family:var(--mono);font-size:11.5px;letter-spacing:.2em;color:var(--muted);margin-bottom:16px}
-.finding .fv{font-family:var(--mono);font-size:34px;font-weight:700;line-height:1.05;font-variant-numeric:tabular-nums;
-  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.finding .fv small{font-size:19px}
-.finding .fl{font-size:13.5px;color:var(--muted);margin-top:10px;line-height:1.55;flex:1}
-.finding .fl b{color:var(--ink);font-weight:600}
-.fbar{height:2px;background:rgba(255,255,255,.08);border-radius:2px;margin-top:18px;overflow:hidden}
-.fbar i{display:block;height:100%;width:0;background:var(--gold-grad);transition:width 1.4s cubic-bezier(.2,.7,.2,1) .25s}
-.on .fbar i{width:var(--w)}
-
-/* method */
-.protocol{margin:44px 0 0;display:grid;gap:0}
-.pstep{display:grid;grid-template-columns:150px 1fr;gap:26px;padding:26px 4px;border-top:1px solid var(--hair)}
-.pstep:last-child{border-bottom:1px solid var(--hair)}
-.pstep .pid{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--gold);padding-top:5px}
-.pstep .pid small{display:block;color:var(--faint);margin-top:5px;letter-spacing:.12em}
-.pstep h3{font-size:17.5px;margin-bottom:6px;color:var(--ink)}
-.pstep p{color:var(--muted);font-size:14.5px;max-width:62ch}
-@media (max-width:620px){.pstep{grid-template-columns:1fr;gap:8px}}
-
-/* services */
-.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:38px 0 0}
-@media (max-width:980px){.svc{grid-template-columns:1fr 1fr}}
-@media (max-width:540px){.svc{grid-template-columns:1fr}}
-.svc-card{padding:26px;display:flex;flex-direction:column}
-.svc-card .rn{font-family:var(--mono);font-size:11.5px;letter-spacing:.24em;color:var(--gold)}
-.svc-card h3{font-size:17px;margin:12px 0 8px;color:var(--ink)}
-.svc-card p{color:var(--muted);font-size:13.5px;flex:1;line-height:1.6}
-.svc-card .pr{font-family:var(--mono);font-size:12px;color:var(--silver);border-top:1px solid var(--hair);padding-top:14px;margin-top:18px;letter-spacing:.03em}
-.svc-card .pr b{color:var(--gold);font-weight:600}
-
-/* guarantee */
-.gbox{position:relative;border-radius:16px;padding:34px 38px;margin:44px 0 0;display:flex;gap:28px;align-items:center;flex-wrap:wrap;
-  background:linear-gradient(135deg,rgba(231,200,120,.1),rgba(231,200,120,.02) 55%),linear-gradient(180deg,var(--glass2),var(--glass));
-  border:1px solid rgba(231,200,120,.35);box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 24px 60px rgba(0,0,0,.5)}
-.gbox .sig{font-size:52px;line-height:1;filter:drop-shadow(0 4px 14px rgba(231,200,120,.25))}
-.gbox b{color:var(--gold)}
-.gbox p{margin-top:6px;color:var(--silver);font-size:15px;max-width:58ch}
-
-/* lab */
-.lab{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:38px 0 0}
-@media (max-width:980px){.lab{grid-template-columns:1fr 1fr}}
-@media (max-width:540px){.lab{grid-template-columns:1fr}}
-.vents{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 0}
-@media (max-width:900px){.vents{grid-template-columns:1fr}}
-.exp.flag{border:1px solid rgba(231,200,120,.35);border-style:solid;padding:28px;
-  background:linear-gradient(135deg,rgba(231,200,120,.08),rgba(231,200,120,.015) 55%),linear-gradient(180deg,var(--glass2),var(--glass))}
-.exp.flag .eid{color:var(--gold)}
-.exp.flag h3{font-size:20px}
-.exp.flag .tagline{font-size:14px;color:var(--ink);font-weight:600;margin:0 0 8px}
-.exp.flag p{font-size:14px;max-width:70ch}
-.rsch-tag{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin:40px 0 0}
-.labic{width:18px;height:18px;vertical-align:-4px;margin-right:9px;filter:drop-shadow(0 2px 8px rgba(231,200,120,.3))}
-.pipe{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:16px 0 4px}
-.pipe span{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--silver);
-  border:1px solid var(--hair2);border-radius:99px;padding:5px 13px;background:rgba(255,255,255,.03)}
-.pipe i{color:var(--gold);font-style:normal;font-weight:700}
-.exp{padding:24px;display:flex;flex-direction:column}
-.exp .eid{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--silver)}
-.exp h3{font-size:16px;margin:12px 0 6px;color:var(--ink)}
-.exp p{color:var(--muted);font-size:13px;flex:1;line-height:1.6}
-.exp .est{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.14em;margin-top:16px;border-top:1px solid var(--hair);padding-top:12px}
-.exp .est i{font-style:normal;color:var(--gold)}
-.labnote{font-size:16px;color:var(--silver);border-left:2px solid var(--gold);padding:10px 18px;margin-top:28px;font-style:italic}
-.labnote b{color:var(--gold);font-style:normal}
-
-/* contact */
-.contact-card{padding:44px;text-align:center;margin-top:38px}
-.contact-card .lede{margin:0 auto}
-.contact-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:30px}
-
-/* ---------- live diagnostic instrument ---------- */
-.revsel{margin:26px 0 6px;padding:18px 20px;border:1px solid var(--hair2);border-radius:12px;
-  background:linear-gradient(180deg,var(--glass2),var(--glass));box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}
-.revsel .rlabel{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--gold);margin-bottom:12px}
-.revsel .rchips{display:flex;gap:10px;flex-wrap:wrap}
-.revsel button{font:600 13.5px/1 "Avenir Next","Segoe UI",system-ui,sans-serif;color:var(--silver);cursor:pointer;
-  background:rgba(255,255,255,.04);border:1px solid var(--hair2);border-radius:99px;padding:10px 18px;transition:all .18s}
-.revsel button:hover{border-color:var(--gold);color:var(--ink)}
-.revsel button.sel{background:var(--gold-grad);color:#141005;border-color:transparent;font-weight:700}
-@keyframes revpulse{0%,100%{box-shadow:inset 0 1px 0 rgba(255,255,255,.09)}50%{box-shadow:0 0 0 4px rgba(231,200,120,.35), inset 0 1px 0 rgba(255,255,255,.09)}}
-.revsel.flash{border-color:var(--gold);animation:revpulse 1s ease 2}
-.qrow{margin-top:16px;border-top:1px solid var(--hair);padding-top:13px}
-.qrow .qt{display:block;font-size:13px;color:var(--ink);font-weight:600;margin-bottom:9px}
-.qrow .qb{display:flex;gap:8px;flex-wrap:wrap}
-.qrow .qb button{font:600 12px/1 "Avenir Next","Segoe UI",system-ui,sans-serif;color:var(--silver);cursor:pointer;
-  background:rgba(255,255,255,.04);border:1px solid var(--hair2);border-radius:8px;padding:8px 14px;transition:all .15s}
-.qrow .qb button:hover{border-color:var(--gold);color:var(--ink)}
-.qrow .verdict{display:none;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em}
-.qrow.answered .qb{display:none}
-.qrow.answered .verdict{display:block}
-.qrow .verdict.leak{color:var(--gold)}
-.qrow .verdict.ok{color:var(--silver)}
-.finding.leakon{border-color:rgba(231,200,120,.5)}
-.instrument{position:fixed;left:50%;bottom:18px;transform:translate(-50%,140%);z-index:50;
-  display:flex;align-items:center;gap:22px;padding:13px 22px;border-radius:99px;
-  background:rgba(12,12,14,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
-  border:1px solid rgba(231,200,120,.4);box-shadow:0 14px 44px rgba(0,0,0,.6), inset 0 1px 0 rgba(255,255,255,.1);
-  transition:transform .5s cubic-bezier(.2,.7,.2,1);max-width:calc(100vw - 32px)}
-.instrument.show{transform:translate(-50%,0)}
-.instrument .isig{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--muted);white-space:nowrap}
-.instrument .isig b{color:var(--ink);font-weight:700}
-.instrument .ileak{display:flex;align-items:baseline;gap:9px;white-space:nowrap;cursor:pointer}
-.instrument .ilab{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--muted)}
-.instrument .ival{font-family:var(--mono);font-size:17px;font-weight:700;font-variant-numeric:tabular-nums;
-  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-@media (max-width:620px){.instrument{gap:12px;padding:11px 16px}.instrument .isig{display:none}}
-.readout{margin:30px auto 6px;max-width:560px;text-align:left;border:1px solid rgba(231,200,120,.4);border-radius:12px;
-  padding:20px 24px;background:linear-gradient(135deg,rgba(231,200,120,.08),transparent 60%)}
-.readout .rh{font-family:var(--mono);font-size:11px;letter-spacing:.2em;color:var(--gold);margin-bottom:10px}
-.readout ul{list-style:none;padding:0;margin:0 0 12px}
-.readout li{display:flex;justify-content:space-between;gap:14px;font-size:13.5px;color:var(--silver);padding:5px 0;border-bottom:1px dashed var(--hair)}
-.readout li b{font-family:var(--mono);color:var(--gold);font-weight:600;white-space:nowrap}
-.readout .rtotal{display:flex;justify-content:space-between;font-size:14.5px;color:var(--ink);font-weight:700;padding-top:4px}
-.readout .rtotal b{font-family:var(--mono);background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.readout .rnote{font-size:11.5px;color:var(--muted);margin-top:12px;line-height:1.5}
-/* footer */
-footer{margin-top:100px;border-top:1px solid var(--hair);padding:54px 0 60px;color:var(--silver);font-size:14px}
-.f-top{display:grid;grid-template-columns:1.7fr 1fr 1fr 1.1fr;gap:34px}
-.f-col h4{font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;font-weight:700;margin-bottom:12px}
-.f-col a{display:block;color:var(--silver);font-size:13.5px;padding:4px 0;transition:color .2s}
-.f-col a:hover{color:var(--gold)}
-.f-tag{font-size:12.5px;color:var(--muted);max-width:52ch;line-height:1.6}
-.f-bot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:40px;padding-top:22px;border-top:1px solid var(--hair)}
-@media(max-width:820px){.f-top{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.f-top{grid-template-columns:1fr}}
-footer .motto{font-family:var(--mono);font-size:13.5px;letter-spacing:.14em;font-weight:600;
-  background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-footer .copy{font-family:var(--mono);font-size:12px;letter-spacing:.12em;color:var(--muted)}
-
-@media (max-width:640px){.hero{padding-top:56px}#net{opacity:.3}}
-@media (prefers-reduced-motion: reduce){
-  *{animation:none!important;transition:none!important}
-  .rv{opacity:1;transform:none}
-  .on .fbar i,.fbar i{width:var(--w)}
-  .cta::after{display:none}
-}
-section[id]{scroll-margin-top:92px}
-.cta.sm{padding:10px 22px;font-size:13.5px;box-shadow:0 6px 20px rgba(231,200,120,.10)}
-.cta.sm::after{display:none}
-.vas-hint{font-size:13.5px;color:var(--gold);font-family:var(--mono);letter-spacing:.03em;margin:2px 0 0}
-.vaspill{position:fixed;right:22px;bottom:22px;z-index:70;display:flex;flex-direction:column;gap:3px;padding:12px 18px;border-radius:13px;background:rgba(6,6,8,.82);border:1px solid rgba(231,200,120,.42);backdrop-filter:blur(12px) saturate(140%);-webkit-backdrop-filter:blur(12px) saturate(140%);box-shadow:0 12px 36px rgba(0,0,0,.45);text-decoration:none;opacity:0;transform:translateY(18px);pointer-events:none;transition:opacity .45s ease,transform .45s ease}
-.vaspill.show{opacity:1;transform:none;pointer-events:auto}
-.vaspill:hover{border-color:var(--gold);transform:translateY(-2px)}
-.vp-k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:var(--muted)}
-.vp-v{font-family:var(--mono);font-size:16px;font-weight:700;font-variant-numeric:tabular-nums;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-@media(max-width:620px){
-  .instrument{display:none!important}
-  .vaspill{left:50%;right:auto;bottom:14px;transform:translate(-50%,18px);flex-direction:row;align-items:center;gap:9px;padding:11px 18px}
-  .vaspill.show{transform:translateX(-50%)}
-  .vaspill .vp-k{font-size:9px}
-  .vaspill .vp-v{font-size:14px}
-}
-</style>
-
-<div class="topbar"><nav>
-  <div class="logo">
-    <svg width="36" height="36" viewBox="0 0 34 34" fill="none" aria-label="Ideator Labs">
-      <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0" stop-color="#F4DFA4"/><stop offset=".5" stop-color="#E7C878"/><stop offset="1" stop-color="#B98F3E"/>
-      </linearGradient></defs>
-      <path d="M17 2 L30 9.5 V24.5 L17 32 L4 24.5 V9.5 Z" stroke="url(#lg)" stroke-width="2" fill="none" stroke-linejoin="round"/>
-      <circle cx="12" cy="13" r="2.1" fill="url(#lg)"/><circle cx="22" cy="12" r="2.1" fill="url(#lg)"/><circle cx="17" cy="22" r="2.1" fill="url(#lg)"/>
-      <path d="M12 13 L22 12 M12 13 L17 22 M22 12 L17 22" stroke="url(#lg)" stroke-width="1" opacity=".55"/>
-    </svg>
-    <div><span class="lname">IDEATOR LABS</span><span class="lsub">AI &amp; DATA CONSULTING · TECHNOLOGY ADVISORY</span></div>
-  </div>
-  <button class="navtoggle" id="navtoggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
-  <div class="navlinks">
-    <a href="#capabilities">What we do</a>
-    <a href="#industries">Industries</a>
-    <a href="#icp">Who we're for</a>
-    <a href="#outcomes">Outcomes</a>
-    <a href="#services">Services</a>
-    <a href="#lab">The Lab</a>
-    <a href="/blog/">Insights</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav></div>
-<script>
-(function(){var tb=document.querySelector('.topbar'),nt=document.getElementById('navtoggle');if(!tb||!nt)return;
-nt.addEventListener('click',function(){var o=tb.classList.toggle('open');nt.setAttribute('aria-expanded',o);});
-document.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click',function(){tb.classList.remove('open');nt.setAttribute('aria-expanded','false');});});})();
-</script>
-
-<div class="wrap">
-
-<header class="hero">
-  <canvas id="net" aria-hidden="true"></canvas>
-  <div class="hero-inner">
-    <div class="hsignal"><span class="hsig-p">▸</span><span class="hsig-t" id="hsigt">the diagnostic is free — yours to keep</span><span class="hsig-cur"></span></div>
-    <h1>Your business is leaking profit. We <em>find it — then build the fix</em>.</h1>
-    <p>Ideator Labs is an AI, data and technology consulting studio. We help professional-services and operations-heavy firms — in law, accounting &amp; finance, healthcare, manufacturing and distribution — find where margin leaks, put a defensible number on it, then build the AI, data and software systems that recover it. Fixed-fee, senior-only, delivered remotely worldwide.</p>
-    <div class="cta-row">
-      <a class="cta" href="#contact">Request a capacity review</a>
-      <a class="cta2" href="#method">Read the method</a>
-    </div>
-  </div>
-  <div class="strip rv">
-    <div><b data-count="21" data-suffix=" days">0 days</b><span>from kickoff to a priced opportunity map</span></div>
-    <div><b>value-first</b><span>if we find nothing worth fixing, we say so — and the roadmap session is on us</span></div>
-    <div><b data-count="100" data-suffix="%">0%</b><span>fixed fees — no hourly meters, no scope surprises</span></div>
-    <div><b>senior-only</b><span>the analyst who scopes it is the one who builds it</span></div>
-  </div>
-</header>
-
-<section id="capabilities">
-  <div class="sec-tag rv">What we do</div>
-  <h2 class="rv">Consulting-grade strategy — engineered and shipped.</h2>
-  <p class="lede rv">One studio across the whole arc: the thinking, the building, and the running of it. AI and data are our core strength — but the job is the outcome, not the acronym.</p>
-  <div class="svc">
-    <div class="svc-card gcard rv"><span class="rn">01 · CONSULT</span><h3>Strategy &amp; Management Consulting</h3><p>Operating-model and process diagnostics, profitability &amp; margin analysis, <b style="color:var(--silver);font-weight:600">pricing strategy</b>, AI-readiness and data strategy — plus the sequenced, costed roadmap for what to fix first.</p><div class="pr">advisory · <b>fixed-fee</b></div></div>
-    <div class="svc-card gcard rv d1"><span class="rn">02 · ENGINEER</span><h3>Data &amp; AI Engineering</h3><p><b style="color:var(--silver);font-weight:600">Data engineering consulting</b> — pipelines, warehouses, analytics &amp; BI — plus LLM agents, RAG, document AI and workflow automation. Measured against a baseline.</p><div class="pr">build · <b>measured</b></div></div>
-    <div class="svc-card gcard rv d2"><span class="rn">03 · SHIP</span><h3>B2B SaaS &amp; Software Services</h3><p>Custom software, product builds, integrations, dashboards and copilots — engineered to production and adopted with training, not left as slides.</p><div class="pr">software · <b>product</b></div></div>
-    <div class="svc-card gcard rv d3"><span class="rn">04 · SPECIALIZE</span><h3>Industry AI Synthesis</h3><p>Vertical solutions tuned to how specific firms really operate — law, accounting &amp; finance, and healthcare first, with the same engineering underneath.</p><div class="pr">law · finance · <b>health</b></div></div>
-  </div>
-</section>
-
-<section id="why">
-  <div class="sec-tag rv">Why now</div>
-  <h2 class="rv">The gap is value, not technology.</h2>
-  <p class="lede rv">The tools are ready and cheap. What's missing is knowing where to point them — and someone who can wire them in and prove the number. That's the gap we work in.</p>
-  <div class="strip rv">
-    <div><b>5.5%</b><span>of firms capture real profit from AI — though 79% have adopted it (McKinsey, The State of AI 2025)</span></div>
-    <div><b>$490B</b><span>potential annual AI lift to India's MSMEs, with a 30–35% profitability gain (Google · NASSCOM)</span></div>
-    <div><b>15–30%</b><span>of customers are quietly unprofitable in a typical business — because margin is rarely measured per account</span></div>
-    <div><b>72%</b><span>of firms lack in-house AI expertise; 59% cite budget — the bottleneck is delivery, not the model (NASSCOM)</span></div>
-  </div>
-</section>
-
-<section id="findings">
-  <div class="sec-tag rv">Value at stake</div>
-  <h2 class="rv">Where mid-market margin leaks — size it to your business.</h2>
-  <p class="lede rv">Value concentrates in the same six levers across operations-, document- and data-heavy firms. Set your revenue band, flag the levers you recognise, and the model sizes the value at stake — directional, from published benchmarks. A three-week diagnostic turns the ones that matter into your real number.</p>
-  <p class="vas-hint rv">Pick your revenue band, then flag the ones that sound like you.</p>
-
-  <div class="revsel rv" id="revsel">
-    <span class="rlabel">STEP 1 — YOUR ANNUAL REVENUE BAND</span>
-    <div class="rchips">
-      <button data-rev="3000000">$1–5M</button>
-      <button data-rev="12000000">$5–25M</button>
-      <button data-rev="50000000">$25–100M</button>
-      <button data-rev="150000000">$100M+</button>
-    </div>
-  </div>
-
-  <div class="findings">
-    <div class="finding gcard rv" style="--w:30%" data-sig="margin" data-lo="100" data-hi="300" data-name="Customer profitability blindness">
-      <span class="fidx">PROFITABILITY</span><div class="fv"><span data-count="15">15</span>–<span data-count="30">30</span><small>%</small></div>
-      <div class="fl">of customers are typically <b>unprofitable</b> — invisible until margin is measured per customer, per SKU, per job.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
-    </div>
-    <div class="finding gcard rv d1" style="--w:40%" data-sig="manual" data-lo="150" data-hi="300" data-name="Manual work AI could do">
-      <span class="fidx">CAPACITY</span><div class="fv"><span data-count="20">20</span>–<span data-count="40">40</span><small>%</small></div>
-      <div class="fl">of admin payroll goes to <b>manual work AI can now do</b> — document handling, rekeying, status-chasing, reconciliation.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
-    </div>
-    <div class="finding gcard rv d2" style="--w:85%" data-sig="pricing" data-lo="100" data-hi="200" data-name="Unmanaged pricing">
-      <span class="fidx">PRICING</span><div class="fv">1<small>%</small> → <span data-count="12">12</span><small>%</small></div>
-      <div class="fl">one point of <b>unmanaged pricing</b> moves profit 8–12% in a typical mid-market P&amp;L — the highest-ROI fix that exists.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
-    </div>
-    <div class="finding gcard rv" style="--w:55%" data-sig="service" data-lo="50" data-hi="100" data-name="Repeat-work in customer service">
-      <span class="fidx">SERVICE</span><div class="fv"><span data-count="30">30</span>–<span data-count="60">60</span><small>%</small></div>
-      <div class="fl">reduction in <b>cost per customer contact</b> with AI deflection, drafting and triage — CSAT held or improved.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
-    </div>
-    <div class="finding gcard rv d1" style="--w:45%" data-sig="cash" data-lo="30" data-hi="80" data-name="Cash-conversion drag">
-      <span class="fidx">CASH</span><div class="fv">$<span data-count="500">500</span>k–$<span data-count="5">5</span>M</div>
-      <div class="fl">of cash routinely freed from the <b>cash-conversion cycle</b> — billing lag, collections cadence, over-ordered inventory.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
-    </div>
-    <div class="finding gcard rv d2" style="--w:20%" data-sig="systems" data-lo="30" data-hi="70" data-name="Underused systems + workarounds">
-      <span class="fidx">SYSTEMS</span><div class="fv"><span data-count="20">20</span><small>%</small></div>
-      <div class="fl">is how much of their <b>ERP/CRM</b> most companies actually use — while paying for the software <em>and</em> the workarounds.</div><div class="fbar"><i></i></div>
-      <div class="qrow"><span class="qt">Does this apply to your business?</span><div class="qb"><button data-a="yes">This is us</button><button data-a="unsure">Not sure</button><button data-a="no">Under control</button></div><span class="verdict"></span></div>
-    </div>
-  </div>
-
-  <div class="readout rv" id="vas" hidden>
-    <div class="rh" id="vashead">INDICATIVE VALUE AT STAKE</div>
-    <ul id="vaslist"></ul>
-    <div class="rtotal"><span>Indicative annual value at stake</span><b id="vastotal">—</b></div>
-    <p class="rnote">Directional only — your revenue band × published benchmarks, weighted by what you flagged. Not a promise about your P&amp;L. The three-week diagnostic replaces this with a number built from your own data.</p>
-    <div style="margin-top:14px"><a href="#contact" class="cta sm">Request a diagnostic →</a></div>
-  </div>
-  <div class="gbox rv" style="margin-top:22px">
-    <div class="sig" aria-hidden="true">
-      <svg width="58" height="66" viewBox="0 0 58 66" fill="none">
-        <defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stop-color="#F4DFA4"/><stop offset=".5" stop-color="#E7C878"/><stop offset="1" stop-color="#B98F3E"/>
-        </linearGradient></defs>
-        <path d="M29 2 L54 11 V32 C54 48 43 59 29 64 C15 59 4 48 4 32 V11 Z" stroke="url(#sg)" stroke-width="2.6" fill="rgba(231,200,120,.07)" stroke-linejoin="round"/>
-        <path d="M18 32 L26 40 L41 23" stroke="url(#sg)" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </div>
-    <div>
-      <b>THE IDEATOR PROMISE</b>
-      <p>Every diagnostic ends with a priced opportunity map built from your data — no inflated findings, no manufactured urgency. If we don't find opportunities meaningful enough to act on, we'll tell you plainly, and the roadmap workshop is on us. The numbers have to defend themselves.</p>
-    </div>
-  </div>
-</section>
-
-<section id="method">
-  <div class="sec-tag rv">The Method</div>
-  <h2 class="rv">VALUE OS™ — diagnosis as an experiment</h2>
-  <p class="lede rv">Every engagement runs one disciplined protocol. No opinions without instruments; no recommendations without a number attached.</p>
-  <div class="protocol rv">
-    <div class="pstep"><div class="pid">STAGE 01<small>DAYS 1–5</small></div><div><h3>Baseline — observe the system</h3><p>Stakeholder interviews, systems inventory, data extraction. We establish what is actually happening — not what the org chart says should happen.</p></div></div>
-    <div class="pstep"><div class="pid">STAGE 02<small>DAYS 5–12</small></div><div><h3>Diagnose — form and test hypotheses</h3><p>Every suspected leak becomes a hypothesis we can actually test. Each one gets a data check and a clear verdict — confirmed, ruled out, or worth a closer look.</p></div></div>
-    <div class="pstep"><div class="pid">STAGE 03<small>DAYS 10–15</small></div><div><h3>Quantify — price every finding</h3><p>Margin waterfalls, time-and-volume studies, cohort analysis. Each confirmed issue is expressed in currency per year — the value map.</p></div></div>
-    <div class="pstep"><div class="pid">STAGE 04<small>DAYS 12–21</small></div><div><h3>Design — sequence the fixes</h3><p>Impact-versus-effort prioritization, a 12-month roadmap, a business case per initiative — owners, dates, payback periods.</p></div></div>
-    <div class="pstep"><div class="pid">STAGE 05<small>ONGOING</small></div><div><h3>Drive — measure realization</h3><p>We stay to build: automation, dashboards, AI workflows — tracked against the baseline we measured, reported as cumulative value realized.</p></div></div>
-  </div>
-</section>
-
-<section id="services">
-  <div class="sec-tag rv">Services</div>
-  <h2 class="rv">Four ways to engage</h2>
-  <p class="lede rv">Every relationship starts small and fixed-fee. We earn the next step by finding money in the current one.</p>
-  <div class="svc">
-    <div class="svc-card gcard rv"><span class="rn">01 · DIAGNOSE</span><h3>Diagnostic Sprint</h3><p>AI-readiness, profitability, or operations deep-dive. Three weeks, ~3 hours of your team's time, ends with a priced opportunity map you own either way.</p><div class="pr">fixed fee · <b>2–4 wks</b></div></div>
-    <div class="svc-card gcard rv d1"><span class="rn">02 · DESIGN</span><h3>Roadmap &amp; Business Case</h3><p>The sequenced 12-month plan: quick wins first, every initiative costed with its payback period, ready for board or lender scrutiny.</p><div class="pr">fixed fee · <b>3–8 wks</b></div></div>
-    <div class="svc-card gcard rv d2"><span class="rn">03 · DELIVER</span><h3>Build Retainer</h3><p>We implement monthly: document AI, workflow automation, KPI dashboards, AI copilots — shipped in sprints, adopted with training, measured against baseline.</p><div class="pr">monthly · <b>3–12 mo</b></div></div>
-    <div class="svc-card gcard rv d3"><span class="rn">04 · DRIVE</span><h3>Advisory</h3><p>Quarterly business reviews, an operating rhythm, and a standing seat at your table — accountable to the cumulative value number, not to slides.</p><div class="pr">monthly · <b>ongoing</b></div></div>
-  </div>
-</section>
-
-<section id="industries">
-  <div class="sec-tag rv">Industries</div>
-  <h2 class="rv">Built for firms with real operations, real data, and real margin to protect.</h2>
-  <p class="lede rv">Wherever the work is manual, the data is messy or underused, or the pricing and margin are leaking — we start with one problem, prove the number, then expand.</p>
-  <div class="svc">
-    <div class="svc-card gcard rv"><span class="rn">LEGAL</span><h3>Law firms &amp; legal teams</h3><p>Intake, drafting, discovery triage, matter status and billing. We surface where associate hours quietly leak and automate the repetitive path around them.</p><div class="pr">focus · <b>AI + automation</b></div></div>
-    <div class="svc-card gcard rv d1"><span class="rn">FINANCE</span><h3>Accounting &amp; CA firms</h3><p>GST reconciliation, document chasing, Tally and portal re-keying — often 15–20 recoverable hours a week per team, turned back into billable capacity.</p><div class="pr">focus · <b>AI + automation</b></div></div>
-    <div class="svc-card gcard rv d2"><span class="rn">HEALTHCARE</span><h3>Hospitals, clinics &amp; diagnostics</h3><p>Patient intake, records, scheduling, coding and billing. We cut the manual handoffs that pile up across multi-site operations.</p><div class="pr">focus · <b>AI + automation</b></div></div>
-    <div class="svc-card gcard rv d3"><span class="rn">INDUSTRY</span><h3>Manufacturing &amp; distribution</h3><p>Quotations, production scheduling, inventory, dispatch and collections — where mid-market manufacturers, distributors and logistics firms leave margin on the table.</p><div class="pr">focus · <b>AI + automation</b></div></div>
-  </div>
-</section>
-
-<section id="icp">
-  <div class="sec-tag rv">Who we're for</div>
-  <h2 class="rv">A clear ideal client — so the work is always a fit.</h2>
-  <p class="lede rv">We do our best work for established, profitable firms with something real to optimise. If that's you, we'll find a number worth chasing. If it isn't, we'll say so.</p>
-  <div class="svc">
-    <div class="svc-card gcard rv"><span class="rn">PROFILE</span><h3>Established mid-market</h3><p>Roughly ₹25–500 Cr (~$3–60M) revenue, ~20–500 staff. Operations-, document- or data-heavy. Profitable, founder- or partner-run. Delivered remotely, worldwide.</p><div class="pr">size · <b>₹25–500 Cr</b></div></div>
-    <div class="svc-card gcard rv d1"><span class="rn">SECTORS</span><h3>Where we go deep</h3><p>Law, accounting &amp; CA firms, healthcare; manufacturing, distribution &amp; logistics — and data-rich firms whose analytics or pipelines are messy, siloed or underused.</p><div class="pr">we start with · <b>CA firms</b></div></div>
-    <div class="svc-card gcard rv d2"><span class="rn">BUYER</span><h3>Who says yes</h3><p>The person with authority to act: owner, founder, managing or owning partner, COO or CFO. Authority beats activity beats title.</p><div class="pr">decision · <b>owner-level</b></div></div>
-    <div class="svc-card gcard rv d3"><span class="rn">NOT FOR</span><h3>Where we're not a fit</h3><p>Pre-seed startups burning runway, or anyone shopping for hourly bodyshop work. We sell measurable outcomes on fixed fees — not hours.</p><div class="pr">honest · <b>outcomes, not hours</b></div></div>
-  </div>
-</section>
-
-<section id="outcomes">
-  <div class="sec-tag rv">The numbers we move</div>
-  <h2 class="rv">Every engagement is judged on one KPI — yours.</h2>
-  <p class="lede rv">We don't bill for activity; we commit to a number. These are the outcomes we target — the exact figure always comes from your own data.</p>
-  <div class="strip rv">
-    <div><b>15–20 hrs</b><span>back-office time we target to recover per team, per week</span></div>
-    <div><b>20–40%</b><span>of admin work is rule-based and automatable — we quantify it, then remove it</span></div>
-    <div><b>8–12%</b><span>profit swing from a single point of pricing — we find where it's left on the table</span></div>
-    <div><b>~3 wks</b><span>to a priced, defensible opportunity map you own either way</span></div>
-  </div>
-  <p class="labnote rv"><b>Honest math:</b> the ranges above are industry benchmarks, not promises about your business. Your KPI — hours, margin, cost-to-serve, DSO, pricing uplift, or data reliability — is set from your baseline, and we're measured against it.</p>
-</section>
-
-<section id="lab">
-  <div class="sec-tag rv"><svg class="labic" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <defs><linearGradient id="fg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#F4DFA4"/><stop offset=".5" stop-color="#E7C878"/><stop offset="1" stop-color="#B98F3E"/>
-    </linearGradient></defs>
-    <path d="M9 2.5 H15 M10.2 2.5 V8.2 L4.9 18.6 A1.9 1.9 0 0 0 6.6 21.5 H17.4 A1.9 1.9 0 0 0 19.1 18.6 L13.8 8.2 V2.5"
-      stroke="url(#fg)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M7.6 14.5 H16.4" stroke="url(#fg)" stroke-width="1.7" stroke-linecap="round"/>
-    <circle cx="10.5" cy="17.6" r="1" fill="url(#fg)"/>
-    <circle cx="13.8" cy="18.9" r=".7" fill="url(#fg)"/>
-  </svg>The Lab</div>
-  <h2 class="rv">Ventures &amp; research</h2>
-  <p class="lede rv">Advisory is the practice. The Lab is the venture side of the studio — independent products being incubated with the same engineering we bring to client work, plus the open research underneath them. Each venture is built to stand on its own; the advisory practice is how its lessons reach clients early.</p>
-
-  <div class="vents">
-    <div class="exp gcard flag rv">
-      <span class="eid">VENTURE 01 · AI MARKETPLACE 2.0</span>
-      <h3>LeadHive</h3>
-      <p class="tagline">A Growth OS for service businesses — an outcome engine, not a directory.</p>
-      <p>Mines buyer-intent signals from public sources into a live intent graph, reasons over them with LLMs, and drives agents that write the outreach, draft the proposal, and track the close — one pipeline from first signal to signed deal.</p>
-      <div class="pipe"><span>SIGNALS</span><i>→</i><span>INTENT GRAPH</span><i>→</i><span>AGENTS</span><i>→</i><span>OUTCOMES</span></div>
-      <span class="est">STATUS: <i>ACTIVE BUILD</i> · incubated at Ideator Labs, built to stand alone</span>
-    </div>
-    <div class="exp gcard flag rv d1">
-      <span class="eid">VENTURE 02 · AUTONOMOUS DATA ENGINE</span>
-      <h3>Reflex</h3>
-      <p class="tagline">Pipelines with reflexes — they fix themselves.</p>
-      <p>Declare the outcome you need from your data — how fresh, how clean, at what cost — and the engine plans the pipeline, runs it, recovers from failures on its own, and gets sharper with every cycle. Autonomy is earned: it starts as a copilot and proves competence before it acts alone.</p>
-      <div class="pipe"><span>DECLARE</span><i>→</i><span>PLAN</span><i>→</i><span>RUN</span><i>→</i><span>HEAL</span><i>→</i><span>LEARN</span></div>
-      <span class="est">STATUS: <i>EARLY BUILD</i> · incubated at Ideator Labs, built to stand alone</span>
-    </div>
-  </div>
-
-  <p class="rsch-tag rv">Open research — the shared foundations</p>
-  <div class="lab">
-    <div class="exp gcard rv"><span class="eid">EXP-001 · AGENTS</span><h3>CORTEX</h3><p>Open research into composable orchestration for LLM agents and tools — schema-driven execution and agent-to-agent exchange.</p><span class="est">STATUS: <i>OPEN RESEARCH</i></span></div>
-    <div class="exp gcard rv d1"><span class="eid">EXP-002 · TOOLING</span><h3>YAMCP</h3><p>A lightweight multi-transport framework for scaling Model Context Protocol tool servers across HTTP, WebSocket, and CLI.</p><span class="est">STATUS: <i>v0.1 TESTING</i></span></div>
-    <div class="exp gcard rv d2"><span class="eid">EXP-003 · MEMORY</span><h3>Brain</h3><p>Context-aware memory for AI assistants: automatic project classification, privacy tiers, and persistent retrieval across sessions.</p><span class="est">STATUS: <i>EARLY RESEARCH</i></span></div>
-  </div>
-  <p class="labnote rv">Everything we recommend to clients has <b>survived our own lab first</b> — the ventures run on the research, and the advisory work runs on both.</p>
-</section>
-
-<section id="contact">
-  <div class="sec-tag rv">Contact</div>
-  <div class="contact-card gcard rv">
-    <h2 style="margin-top:0">Start with a free 25-minute capacity review</h2>
-    <p class="lede">Bring one broken process or one suspicious number. In 25 minutes we'll tell you whether there's a figure worth finding — and if there isn't, we'll say so and point you somewhere useful.</p>
-    <div class="contact-row">
-      <a class="cta" href="mailto:ideatorlabs.ai@gmail.com">ideatorlabs.ai@gmail.com</a>
-      <a class="cta2" href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="cta2" href="https://github.com/ideatorlabs" target="_blank" rel="noopener">GitHub ↗</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="f-top">
-    <div class="f-brand">
-      <div class="logo" style="margin-bottom:12px">
-        <svg width="22" height="22" viewBox="0 0 34 34" fill="none"><path d="M17 2 L30 9.5 V24.5 L17 32 L4 24.5 V9.5 Z" stroke="#C09A4A" stroke-width="2.4" fill="none"/><circle cx="12" cy="13" r="2.6" fill="#C09A4A"/><circle cx="22" cy="12" r="2.6" fill="#C09A4A"/><circle cx="17" cy="22" r="2.6" fill="#C09A4A"/></svg>
-        <span class="lname" style="font-size:13px">IDEATOR LABS</span>
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <span class="motto">FIND → PROVE → BUILD → COMPOUND</span>
-      <p class="f-tag" style="margin-top:14px">Management &amp; technology consulting — AI, data &amp; software. Remote worldwide, based in Hyderabad.</p>
-      <a href="mailto:ideatorlabs.ai@gmail.com" style="display:inline-block;margin-top:10px;color:var(--gold);font-size:13.5px">ideatorlabs.ai@gmail.com</a>
     </div>
-    <div class="f-col">
-      <h4>Services</h4>
-      <a href="#capabilities">Management Consulting</a>
-      <a href="#capabilities">AI &amp; Data Engineering</a>
-      <a href="#capabilities">B2B SaaS &amp; Software</a>
-      <a href="#industries">Industry AI</a>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="/products/">Products</a>
+    <a href="/solutions/">Advisory</a>
+    <a href="/industries/">Sectors</a>
+    <a href="/research/">Research</a>
+    <a href="/open-source/">Open Source</a>
+    <a href="/journal/">Journal</a>
+    <a href="/about/">About</a>
+    <a href="/contact/" style="color:var(--accent-purple)">Talk to us &rarr;</a>
+  </div>
+
+  <main>
+    <!-- =======================================================================
+         HERO SECTION
+         ======================================================================= -->
+    <section class="hero-wrap">
+      <div class="container hero-columns">
+        <div class="hero-left reveal reveal-left">
+          <div class="hero-tag" style="font-size:11px;">
+            Product studio &middot; AI and data advisory
+          </div>
+          <h1 class="hero-headline">
+            We build ready-to-run software for one <span class="accent-tech">sector</span> at a time.
+          </h1>
+          <p class="hero-subtext">
+            We pick one kind of business, learn how its day really runs, and build software that fits it. Our first product, FurniTrail, is for furniture showrooms. We also help firms see where AI and data can save them time or margin, and what to fix first.
+          </p>
+          <div class="hero-actions">
+            <a href="/products/" class="btn-hero-primary">
+              See our products <span class="arrow-slide">&rarr;</span>
+            </a>
+            <a href="/contact/" class="btn-hero-secondary">
+              Talk to us
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-graphic-wrap reveal reveal-scale delay-1">
+          <img src="assets/images/hero-3d-retina.png" alt="Illustration of a software workbench with the steps research, prototype and product" width="540" height="326">
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         HOW WE WORK (Research → Prototype → Product)
+         ======================================================================= -->
+    <section class="approach-sec" id="approach">
+      <div class="container approach-columns">
+        <div class="approach-left reveal reveal-left">
+          <span class="section-tag" style="font-size:11px;">How we work</span>
+          <h2 class="section-heading">From research to a product</h2>
+          <p class="section-lede">
+            We start small. We learn one sector first, test a working version with owners, and only then build it out.
+          </p>
+          <a href="/industries/#next-sector" class="arrow-link">
+            How we pick a sector <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="steps-row reveal reveal-right delay-1">
+          <div class="step-item delay-1">
+            <div class="step-icon-bubble">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">1. Research</h3>
+            <p>We talk to owners in one sector and learn where their time goes and where sales slip away.</p>
+          </div>
+
+          <div class="step-divider-arrow" aria-hidden="true">&rarr;</div>
+
+          <div class="step-item delay-2">
+            <div class="step-icon-bubble">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">2. Prototype</h3>
+            <p>We build a small working version and test it with a few owners before adding more.</p>
+          </div>
+
+          <div class="step-divider-arrow" aria-hidden="true">&rarr;</div>
+
+          <div class="step-item delay-3">
+            <div class="step-icon-bubble">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">3. Product</h3>
+            <p>What works becomes ready-to-run software for that sector, so a business can start using it without a big IT project.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         SECTORS (3 real sectors + suggest the next one)
+         ======================================================================= -->
+    <section class="industries-sec" id="sectors">
+      <div class="container">
+        <div class="ind-top-row reveal">
+          <div>
+            <span class="section-tag" style="font-size:11px;">Sectors</span>
+            <h2 class="section-heading">The sectors we work in today</h2>
+            <p class="section-lede" style="margin-bottom:0;max-width:58ch;">
+              We work in a few sectors at a time so we can learn each one properly. One has a product in build; two get our advisory work.
+            </p>
+          </div>
+          <a href="/industries/" class="arrow-link">
+            See all sectors <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="industries-6-grid" style="grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr));">
+          <!-- 1. Furniture retail -->
+          <a href="/industries/#furniture" class="ind-compact-card reveal reveal-scale delay-1">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M4 18v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"></path><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"></path><line x1="3" y1="18" x2="21" y2="18"></line><line x1="5" y1="18" x2="5" y2="21"></line><line x1="19" y1="18" x2="19" y2="21"></line>
+                </svg>
+                <span class="pill-badge pill-proto">Building</span>
+              </div>
+              <div class="ind-title">Furniture retail</div>
+              <div class="ind-desc">FurniTrail, our first product, for furniture showrooms. Not launched yet.</div>
+            </div>
+          </a>
+
+          <!-- 2. Accounting and CA firms -->
+          <a href="/industries/#accounting" class="ind-compact-card reveal reveal-scale delay-2">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="11" x2="10" y2="11"></line><line x1="14" y1="11" x2="16" y2="11"></line><line x1="8" y1="15" x2="10" y2="15"></line><line x1="14" y1="15" x2="16" y2="15"></line>
+                </svg>
+                <span class="pill-badge pill-demo">Advisory</span>
+              </div>
+              <div class="ind-title">Accounting and CA firms</div>
+              <div class="ind-desc">Finding the hours lost to bill matching, re-typing and chasing documents.</div>
+            </div>
+          </a>
+
+          <!-- 3. D2C brands -->
+          <a href="/industries/#d2c" class="ind-compact-card reveal reveal-scale delay-3">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span class="pill-badge pill-demo">Advisory</span>
+              </div>
+              <div class="ind-title">D2C brands</div>
+              <div class="ind-desc">Working out the real margin on each order, after returns, shipping and fees.</div>
+            </div>
+          </a>
+
+          <!-- 4. Suggest the next sector -->
+          <a href="/contact/" class="ind-compact-card reveal reveal-scale delay-4" style="border-style:dashed;">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line>
+                </svg>
+                <span class="ind-arrow-svg">&rarr;</span>
+              </div>
+              <div class="ind-title">Suggest the next sector</div>
+              <div class="ind-desc">We pick new sectors one at a time. Tell us which kind of business should be next.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         PRODUCTS (FurniTrail featured + PollenRev + Reflex research)
+         ======================================================================= -->
+    <section class="products-sec" id="products">
+      <div class="container prod-split-grid">
+        <!-- Left text block -->
+        <div class="prod-left-text reveal reveal-left">
+          <span class="section-tag" style="font-size:11px;">Products</span>
+          <h2 class="section-heading">What we're building</h2>
+          <p class="section-lede">
+            Each product gets its own name, its own site and a clear status. Here is where each one stands.
+          </p>
+          <a href="/products/" class="btn-hero-primary" style="margin-top:12px;">
+            See all products <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+
+        <!-- Middle featured card: FurniTrail -->
+        <div class="prod-featured-box reveal reveal-scale delay-1">
+          <div class="prod-featured-img-wrap" style="background:#EEF2FF;">
+            <svg viewBox="0 0 400 140" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of a sofa and a phone showing a shortlist of three pieces">
+              <rect x="0" y="0" width="400" height="140" fill="#EEF2FF"/>
+              <rect x="60" y="54" width="130" height="42" rx="10" fill="#6366F1"/>
+              <rect x="74" y="40" width="102" height="30" rx="8" fill="#818CF8"/>
+              <rect x="48" y="62" width="22" height="40" rx="8" fill="#4F46E5"/>
+              <rect x="180" y="62" width="22" height="40" rx="8" fill="#4F46E5"/>
+              <line x1="66" y1="102" x2="66" y2="114" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+              <line x1="184" y1="102" x2="184" y2="114" stroke="#94A3B8" stroke-width="4" stroke-linecap="round"/>
+              <path d="M214 78 C 240 78, 248 70, 266 70" fill="none" stroke="#3B82F6" stroke-width="2" stroke-dasharray="5 5"/>
+              <rect x="272" y="14" width="76" height="120" rx="12" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+              <rect x="282" y="30" width="56" height="24" rx="5" fill="#E0E7FF"/>
+              <rect x="282" y="60" width="56" height="24" rx="5" fill="#DBEAFE"/>
+              <rect x="282" y="90" width="56" height="24" rx="5" fill="#E0E7FF"/>
+              <rect x="286" y="35" width="14" height="14" rx="3" fill="#6366F1"/>
+              <rect x="286" y="65" width="14" height="14" rx="3" fill="#3B82F6"/>
+              <rect x="286" y="95" width="14" height="14" rx="3" fill="#6366F1"/>
+              <line x1="306" y1="40" x2="332" y2="40" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+              <line x1="306" y1="70" x2="328" y2="70" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+              <line x1="306" y1="100" x2="330" y2="100" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+            <span class="badge-float-left" style="background:rgba(79,70,229,0.92);">Building &middot; not launched yet</span>
+          </div>
+          <div class="prod-featured-body">
+            <h3>FurniTrail</h3>
+            <p>Software for furniture showrooms. It records walk-in visitors, sends each one a shortlist link with 3 pieces, lets them view those pieces in 3D, follows up on WhatsApp and gives the owner a daily summary.</p>
+            <a href="/products/furnitrail/" class="btn-hero-primary" style="padding:9px 20px;font-size:12.5px;">
+              See FurniTrail <span class="arrow-slide">&rarr;</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right side cards: research -->
+        <div class="prod-side-column reveal reveal-right delay-2">
+          <!-- Reflex -->
+          <a href="/products/#reflex" class="prod-mini-card">
+            <div class="prod-mini-thumb" style="display:flex;align-items:center;justify-content:center;background:#F3E8FF;color:#6366F1;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+              </svg>
+            </div>
+            <div class="prod-mini-info">
+              <div class="prod-mini-header">
+                <span class="prod-mini-title">Reflex</span>
+                <span class="pill-badge pill-res">Research</span>
+              </div>
+              <p class="prod-mini-desc">An open idea for a data engine that runs itself in five stages: declare, plan, run, heal, learn.</p>
+            </div>
+          </a>
+
+          <!-- PollenRev -->
+          <a href="/products/pollenrev/" class="prod-mini-card">
+            <div class="prod-mini-thumb" style="display:flex;align-items:center;justify-content:center;background:#FEF3C7;color:#D97706;">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><circle cx="4" cy="6" r="1"></circle><circle cx="4" cy="12" r="1"></circle><circle cx="4" cy="18" r="1"></circle>
+              </svg>
+            </div>
+            <div class="prod-mini-info">
+              <div class="prod-mini-header">
+                <span class="prod-mini-title">PollenRev</span>
+                <span class="pill-badge pill-res">Sales &amp; marketing &middot; private beta</span>
+              </div>
+              <p class="prod-mini-desc">Sales software for small businesses: finds leads, writes the first message and tracks every deal.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         RESEARCH AND OPEN SOURCE (CORTEX, YAMCP, Brain)
+         ======================================================================= -->
+    <section class="research-sec" id="research" style="padding:68px 0 40px;background:var(--bg-secondary);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);">
+      <div class="container">
+        <div class="reveal" style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px;flex-wrap:wrap;gap:16px;">
+          <div>
+            <span class="section-tag" style="font-size:11px;">Research and open source</span>
+            <h2 class="section-heading" style="margin-bottom:8px;">What we share, and what we keep private</h2>
+            <p class="section-lede" style="margin-bottom:0;max-width:62ch;">
+              Some of the code we write while building goes up on GitHub for anyone to use. Some stays private until it's ready.
+            </p>
+          </div>
+          <a href="/research/" class="arrow-link">
+            See our research <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:24px;">
+          <!-- CORTEX -->
+          <a href="/open-source/#cortex" class="step-card reveal reveal-scale delay-1" style="padding:28px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;">
+                <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:0.08em;">PUBLIC ON GITHUB</span>
+                <span class="badge-pill badge-open">Open source</span>
+              </div>
+              <h3 style="font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">CORTEX</h3>
+              <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px;">
+                An open-source toolkit for connecting AI agents and the tools they use, so they can work together.
+              </p>
+            </div>
+            <div style="font-size:13px;font-weight:600;color:var(--accent-purple);display:flex;align-items:center;gap:4px;">
+              About CORTEX <span class="arrow-slide">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- YAMCP -->
+          <a href="/open-source/#yamcp" class="step-card reveal reveal-scale delay-2" style="padding:28px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;">
+                <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:0.08em;">PART OF CORTEX</span>
+                <span class="badge-pill badge-open">Open source</span>
+              </div>
+              <h3 style="font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">YAMCP</h3>
+              <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px;">
+                A framework for building Model Context Protocol (MCP) servers, the open standard that lets AI assistants call outside tools.
+              </p>
+            </div>
+            <div style="font-size:13px;font-weight:600;color:var(--accent-purple);display:flex;align-items:center;gap:4px;">
+              About YAMCP <span class="arrow-slide">&rarr;</span>
+            </div>
+          </a>
+
+          <!-- Brain -->
+          <a href="/research/#brain" class="step-card reveal reveal-scale delay-3" style="padding:28px;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;">
+            <div>
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;gap:8px;flex-wrap:wrap;">
+                <span style="font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--text-muted);letter-spacing:0.08em;">NOT PUBLIC</span>
+                <span class="badge-pill badge-res">Private research</span>
+              </div>
+              <h3 style="font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Brain</h3>
+              <p style="font-size:13.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:16px;">
+                Private research on how AI assistants can remember the context of a project. Nothing to share publicly yet.
+              </p>
+            </div>
+            <div style="font-size:13px;font-weight:600;color:var(--accent-purple);display:flex;align-items:center;gap:4px;">
+              About our research <span class="arrow-slide">&rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         JOURNAL (the two published posts)
+         ======================================================================= -->
+    <section class="journal-sec" id="journal">
+      <div class="container journal-split-grid">
+        <div class="journal-left-text reveal reveal-left">
+          <span class="section-tag" style="font-size:11px;">Journal</span>
+          <h2 class="section-heading">Short reads for owners</h2>
+          <p class="section-lede">
+            Plain, practical pieces on where firms lose time and margin, and what can be done about it.
+          </p>
+          <a href="/journal/" class="btn-hero-primary" style="margin-top:12px;">
+            Read the Journal <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="journal-3-cards" style="grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));">
+          <!-- CA firms post -->
+          <a href="/blog/ca-firms-reclaim-hours-with-ai.html" class="journal-compact-card reveal reveal-scale delay-1">
+            <div class="journal-card-img" style="background:#EFF6FF;">
+              <svg viewBox="0 0 300 110" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="300" height="110" fill="#EFF6FF"/>
+                <rect x="40" y="18" width="70" height="80" rx="6" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+                <line x1="52" y1="36" x2="98" y2="36" stroke="#3B82F6" stroke-width="3" stroke-linecap="round"/>
+                <line x1="52" y1="52" x2="90" y2="52" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+                <line x1="52" y1="66" x2="94" y2="66" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+                <line x1="52" y1="80" x2="84" y2="80" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+                <circle cx="200" cy="56" r="34" fill="#FFFFFF" stroke="#6366F1" stroke-width="3"/>
+                <line x1="200" y1="56" x2="200" y2="36" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
+                <line x1="200" y1="56" x2="214" y2="64" stroke="#6366F1" stroke-width="3" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="journal-card-body">
+              <div class="journal-card-meta">
+                <span class="journal-card-tag" style="font-size:11px;">CA firms</span>
+              </div>
+              <div class="journal-card-title">Where CA firms lose hours every week, and how AI gives them back</div>
+              <div class="journal-card-time">3 min read</div>
+            </div>
+          </a>
+
+          <!-- D2C post -->
+          <a href="/blog/d2c-true-margin-per-order.html" class="journal-compact-card reveal reveal-scale delay-2">
+            <div class="journal-card-img" style="background:#EEF2FF;">
+              <svg viewBox="0 0 300 110" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <rect width="300" height="110" fill="#EEF2FF"/>
+                <path d="M60 40 L96 24 L132 40 L132 84 L96 100 L60 84 Z" fill="#FFFFFF" stroke="#6366F1" stroke-width="2"/>
+                <polyline points="60,40 96,56 132,40" fill="none" stroke="#6366F1" stroke-width="2"/>
+                <line x1="96" y1="56" x2="96" y2="100" stroke="#6366F1" stroke-width="2"/>
+                <rect x="170" y="64" width="16" height="30" rx="3" fill="#94A3B8"/>
+                <rect x="194" y="48" width="16" height="46" rx="3" fill="#3B82F6"/>
+                <rect x="218" y="30" width="16" height="64" rx="3" fill="#6366F1"/>
+                <line x1="160" y1="94" x2="246" y2="94" stroke="#94A3B8" stroke-width="2"/>
+              </svg>
+            </div>
+            <div class="journal-card-body">
+              <div class="journal-card-meta">
+                <span class="journal-card-tag" style="font-size:11px;">D2C brands</span>
+              </div>
+              <div class="journal-card-title">Your D2C brand's real problem isn't ads. It's true margin per order.</div>
+              <div class="journal-card-time">3 min read</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         CALL TO ACTION BANNER
+         ======================================================================= -->
+    <section class="cta-banner-wrap" id="contact">
+      <div class="container">
+        <div class="cta-banner-box reveal reveal-scale">
+          <div class="cta-banner-text-side">
+            <span class="cta-banner-tag" style="font-size:11px;">Talk to us</span>
+            <h2 class="cta-banner-h2">Want to talk it through?</h2>
+            <p class="cta-banner-sub">
+              Ask about FurniTrail, book a free 25-minute call about AI and data in your business, or suggest the next sector we should work in.
+            </p>
+          </div>
+          <a href="/contact/" class="btn-hero-primary" style="padding:12px 28px;font-size:14px;">
+            Talk to us <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Matches Mockup)
+       ========================================================================= -->
+  <footer class="site-footer-sec">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <a href="/" class="brand-area" style="font-size:15px;margin-bottom:6px;">
+            <div class="brand-bars" aria-hidden="true" style="height:18px;">
+              <span style="height:10px;"></span><span style="height:18px;"></span><span style="height:7px;"></span>
+            </div>
+            <span>Ideator Labs</span>
+          </a>
+          <div style="font-size:12px;color:var(--text-muted);">A product studio. One sector at a time.</div>
+        </div>
+
+        <nav class="footer-nav-links" aria-label="Footer Navigation">
+          <a href="/products/">Products</a>
+          <a href="/solutions/">Advisory</a>
+          <a href="/industries/">Sectors</a>
+          <a href="/research/">Research</a>
+          <a href="/open-source/">Open Source</a>
+          <a href="/journal/">Journal</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+
+        <div class="footer-social-icons">
+          <a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Ideator Labs. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/sitemap.xml">Sitemap</a>
+        </div>
+      </div>
     </div>
-    <div class="f-col">
-      <h4>Company</h4>
-      <a href="#capabilities">What we do</a>
-      <a href="#method">How we work</a>
-      <a href="#icp">Who we're for</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="f-col">
-      <h4>Trust</h4>
-      <a href="privacy.html">Privacy Policy</a>
-      <a href="terms.html">Terms of Service</a>
-      <a href="security.html">Security &amp; Confidentiality</a>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, journal… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
     </div>
   </div>
-  <div class="f-bot">
-    <span class="copy">© 2026 IDEATOR LABS</span>
-    <span class="f-tag">Honest by design — every number is built from your data, and if there's nothing worth fixing, we say so.</span>
-  </div>
-</footer>
 
-</div>
-
-<a class="vaspill" id="vaspill" href="#findings" aria-label="Size your value at stake">
-  <span class="vp-k">VALUE AT STAKE</span>
-  <span class="vp-v" id="vpv">Size yours →</span>
-</a>
-
-<script>
-/* ---------- value-at-stake model (interactive) ---------- */
-(function(){
-  var rev=0, picks={};
-  var vas=document.getElementById('vas'); if(!vas) return;
-  var pill=document.getElementById('vaspill'), pv=document.getElementById('vpv');
-  var fmt=function(n){ if(n>=950000) return '$'+(n/1000000).toFixed(1).replace(/\.0$/,'')+'M'; if(n>=1000) return '$'+Math.round(n/1000)+'k'; return '$'+Math.round(n); };
-  function totals(){ var lo=0,hi=0,hits=[]; Object.keys(picks).forEach(function(k){ var a=picks[k]; if(a.w>0){ lo+=rev*a.lo/10000*a.w; hi+=rev*a.hi/10000*a.w; hits.push(a);} }); return {lo:lo,hi:hi,hits:hits}; }
-  function paint(card){ var a=picks[card.dataset.sig], v=card.querySelector('.verdict'); if(!a||!v) return;
-    if(a.w>0){ v.className='verdict leak'; v.textContent = rev ? ('AT STAKE · ~'+fmt(rev*a.lo/10000*a.w)+'–'+fmt(rev*a.hi/10000*a.w)+'/yr') : 'set a revenue band to size it'; }
-    else { v.className='verdict ok'; v.textContent='UNDER CONTROL · nothing added'; } }
-  function render(){
-    var n=Object.keys(picks).length, t=totals();
-    if(rev && n>0){
-      vas.hidden=false;
-      document.getElementById('vashead').textContent='INDICATIVE VALUE AT STAKE — '+t.hits.length+' of 6 levers';
-      var list=document.getElementById('vaslist'); list.innerHTML='';
-      t.hits.sort(function(a,b){return (b.hi*b.w)-(a.hi*a.w);}).forEach(function(a){
-        var li=document.createElement('li');
-        var s=document.createElement('span'); s.textContent=a.name+(a.w<1?' (unsure — half weight)':'');
-        var b=document.createElement('b'); b.textContent=fmt(rev*a.lo/10000*a.w)+'–'+fmt(rev*a.hi/10000*a.w)+'/yr';
-        li.appendChild(s); li.appendChild(b); list.appendChild(li);
-      });
-      if(!t.hits.length){ var li=document.createElement('li'); li.textContent='Nothing flagged yet — either impressively tight, or worth a second look.'; list.appendChild(li); }
-      var tot = t.hits.length ? ('≈ '+fmt(t.lo)+' – '+fmt(t.hi)+' / yr') : '—';
-      document.getElementById('vastotal').textContent = tot;
-      if(pv) pv.textContent = t.hits.length ? ('≈ '+fmt(t.lo)+'–'+fmt(t.hi)+'/yr') : 'under control ✓';
-    } else {
-      vas.hidden=true;
-      if(pv) pv.textContent='Size yours →';
-    }
-  }
-  document.querySelectorAll('#revsel .rchips button').forEach(function(btn){
-    btn.addEventListener('click', function(){
-      document.querySelectorAll('#revsel .rchips button').forEach(function(b){b.classList.remove('sel');});
-      btn.classList.add('sel'); rev=parseInt(btn.dataset.rev,10);
-      document.querySelectorAll('.finding[data-sig]').forEach(paint); render();
-    });
-  });
-  document.querySelectorAll('.finding[data-sig]').forEach(function(card){
-    var qrow=card.querySelector('.qrow'); if(!qrow) return;
-    qrow.querySelectorAll('.qb button').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        var a=btn.dataset.a, w = a==='yes'?1:(a==='unsure'?0.5:0);
-        picks[card.dataset.sig]={w:w,lo:+card.dataset.lo,hi:+card.dataset.hi,name:card.dataset.name};
-        qrow.classList.add('answered'); card.classList.toggle('leakon', w>0);
-        paint(card); render();
-      });
-    });
-  });
-  /* floating pill: visible from load, everywhere */
-  if(pill){
-    pill.classList.add('show');
-    pill.addEventListener('click', function(){
-      if(!rev){ var rs=document.getElementById('revsel'); if(rs){ setTimeout(function(){ rs.classList.remove('flash'); void rs.offsetWidth; rs.classList.add('flash'); }, 420); } }
-    });
-  }
-})();
-
-(function(){
-  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  /* scroll reveals + counters */
-  var io = new IntersectionObserver(function(es){
-    es.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); countUp(e.target); }
-    });
-  },{threshold:.15});
-  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
-
-  function countUp(scope){
-    scope.querySelectorAll('[data-count]').forEach(function(el){
-      if(el.dataset.done) return; el.dataset.done = 1;
-      var target = parseInt(el.dataset.count,10), suffix = el.dataset.suffix || '';
-      if(reduced){ el.textContent = target + suffix; return; }
-      var t0 = null, dur = 1300;
-      function tick(ts){
-        if(!t0) t0 = ts;
-        var p = Math.min((ts-t0)/dur,1), eased = 1-Math.pow(1-p,3);
-        el.textContent = Math.round(target*eased) + suffix;
-        if(p<1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    });
-  }
-
-  /* hero constellation */
-  var cv = document.getElementById('net');
-  if(cv && !reduced){
-    var ctx = cv.getContext('2d'), W, H, nodes = [], N = 42, mx=-999, my=-999;
-    function size(){
-      var r = cv.getBoundingClientRect(), d = Math.min(devicePixelRatio||1,2);
-      W = r.width; H = r.height; cv.width = W*d; cv.height = H*d; ctx.setTransform(d,0,0,d,0,0);
-    }
-    size(); addEventListener('resize', size);
-    for(var i=0;i<N;i++) nodes.push({x:Math.random(),y:Math.random(),vx:(Math.random()-.5)*.0004,vy:(Math.random()-.5)*.0004,r:1.2+Math.random()*2});
-    cv.addEventListener('pointermove',function(e){ var r=cv.getBoundingClientRect(); mx=(e.clientX-r.left)/W; my=(e.clientY-r.top)/H; });
-    cv.addEventListener('pointerleave',function(){ mx=-999; my=-999; });
-    /* run only while the hero canvas is on screen (rAF self-pauses on hidden tabs) */
-    var running = false, visible = true;
-    new IntersectionObserver(function(es){
-      visible = es[0].isIntersecting;
-      if(visible && !running){ running = true; requestAnimationFrame(frame); }
-    }).observe(cv);
-    function frame(){
-      if(!visible){ running = false; return; }
-      ctx.clearRect(0,0,W,H);
-      for(var i=0;i<N;i++){
-        var n = nodes[i];
-        n.x += n.vx; n.y += n.vy;
-        if(n.x<0||n.x>1) n.vx*=-1; if(n.y<0||n.y>1) n.vy*=-1;
-        var dxm = mx-n.x, dym = my-n.y, dm = Math.hypot(dxm,dym);
-        if(dm < .25){ n.x += dxm*.001; n.y += dym*.001; }
-      }
-      ctx.lineWidth = .6;
-      for(var a=0;a<N;a++) for(var b=a+1;b<N;b++){
-        var dx=(nodes[a].x-nodes[b].x)*W, dy=(nodes[a].y-nodes[b].y)*H, d=Math.hypot(dx,dy);
-        if(d<105){ ctx.globalAlpha=(1-d/105)*.3; ctx.strokeStyle='#E7C878'; ctx.beginPath();
-          ctx.moveTo(nodes[a].x*W,nodes[a].y*H); ctx.lineTo(nodes[b].x*W,nodes[b].y*H); ctx.stroke(); }
-      }
-      for(var j=0;j<N;j++){
-        var n2=nodes[j];
-        ctx.globalAlpha=.9; ctx.fillStyle = j%3 ? '#E7C878' : '#F4F5F7';
-        ctx.beginPath(); ctx.arc(n2.x*W,n2.y*H,n2.r,0,6.283); ctx.fill();
-      }
-      ctx.globalAlpha=1;
-      requestAnimationFrame(frame);
-    }
-  }
-})();
-</script>
-<script>
-(function(){var el=document.getElementById('hsigt');if(!el)return;
- if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent='the diagnostic is free — yours to keep';return;}
- var ph=['the diagnostic is free — yours to keep','no number worth chasing? we say so','find · prove · build · compound'];
- var pi=0,ci=0,del=false;
- function t(){var p=ph[pi];
-  if(!del){ci++;el.textContent=p.slice(0,ci);if(ci>=p.length){del=true;return setTimeout(t,2000);}}
-  else{ci--;el.textContent=p.slice(0,ci);if(ci<=0){del=false;pi=(pi+1)%ph.length;return setTimeout(t,320);}}
-  setTimeout(t,del?30:52);}
- el.textContent='';setTimeout(t,450);})();
-</script>
+  <script src="assets/js/main.js?v=20261117d"></script>
+</body>
+</html>

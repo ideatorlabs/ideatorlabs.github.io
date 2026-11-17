@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research: CORTEX, YAMCP, Brain and Reflex | Ideator Labs</title>
+  <meta name="description" content="What Ideator Labs is researching: CORTEX, an open-source framework that includes YAMCP; Brain, private research; and Reflex, an open data-engine concept.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/research/">
+
+  <!-- Open Graph / social -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="Research: CORTEX, YAMCP, Brain and Reflex | Ideator Labs">
+  <meta property="og:description" content="What Ideator Labs is researching: CORTEX, an open-source framework that includes YAMCP; Brain, private research; and Reflex, an open data-engine concept.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/research/">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Research: CORTEX, YAMCP, Brain and Reflex | Ideator Labs">
+  <meta name="twitter:description" content="What Ideator Labs is researching: CORTEX, an open-source framework that includes YAMCP; Brain, private research; and Reflex, an open data-engine concept.">
+  <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261117d">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "url": "https://ideatorlabs.github.io/research/",
+  "name": "Research: CORTEX, YAMCP, Brain and Reflex | Ideator Labs",
+  "description": "What Ideator Labs is researching: CORTEX, an open-source framework that includes YAMCP; Brain, private research; and Reflex, an open data-engine concept.",
+  "publisher": {
+    "@type": "Organization",
+    "@id": "https://ideatorlabs.github.io/#organization",
+    "name": "Ideator Labs",
+    "url": "https://ideatorlabs.github.io/",
+    "email": "ideatorlabs.ai@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/ideator-labs",
+      "https://github.com/ideatorlabs"
+    ]
+  },
+  "hasPart": [
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "CORTEX",
+      "description": "Open-source Python framework for LLM agents, tool servers and agent-to-agent messaging. Includes YAMCP, a Model Context Protocol tool server.",
+      "codeRepository": "https://github.com/ideatorlabs/cortex",
+      "programmingLanguage": "Python",
+      "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@id": "https://ideatorlabs.github.io/#organization"
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOPBAR NAVIGATION
+       ========================================================================= -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <div class="brand-bars" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <span>Ideator Labs</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="/products/">Products</a>
+        <a href="/solutions/">Advisory</a>
+        <a href="/industries/">Sectors</a>
+        <a href="/research/" class="active">Research</a>
+        <a href="/open-source/">Open Source</a>
+        <a href="/journal/">Journal</a>
+        <a href="/about/">About</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="/products/">Products</a>
+    <a href="/solutions/">Advisory</a>
+    <a href="/industries/">Sectors</a>
+    <a href="/research/" class="active">Research</a>
+    <a href="/open-source/">Open Source</a>
+    <a href="/journal/">Journal</a>
+    <a href="/about/">About</a>
+    <a href="/contact/" style="color:var(--accent-purple)">Talk to us &rarr;</a>
+  </div>
+
+  <main>
+    <!-- Page header -->
+    <section style="background:var(--bg-secondary);border-bottom:1px solid var(--border-light);padding:72px 0 60px;">
+      <div class="container reveal">
+        <span class="sec-eyebrow">Research</span>
+        <h1 class="sec-title" style="max-width:24ch;">What we're working on before it becomes a product.</h1>
+        <p class="sec-subtitle" style="max-width:720px;">
+          Research is where we try ideas first. Some of it is public on GitHub and some is private. None of it is a finished product yet, and we don't have results to report. Here is what each piece is.
+        </p>
+      </div>
+    </section>
+
+    <!-- Research items -->
+    <section style="padding:72px 0;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:32px;">
+
+          <!-- CORTEX -->
+          <article class="card reveal" id="cortex" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Open source</span>
+                <h2 style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">CORTEX</h2>
+              </div>
+              <span class="badge-pill badge-open">Public on GitHub &middot; Early</span>
+            </div>
+            <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;max-width:760px;">
+              CORTEX is an open-source framework for building software around large language models (LLMs): agents, the tools they call, and the messages agents send each other. It is written in Python and published under the MIT License.
+            </p>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:10px;">The README lists four parts, each with its own status:</p>
+            <ul style="list-style:none;padding:0;margin:0 0 22px;display:grid;gap:8px;font-size:14.5px;color:var(--text-secondary);">
+              <li><strong style="color:var(--text-primary);">YAMCP</strong>: a tool server that works over several connection types. In testing (v0.1).</li>
+              <li><strong style="color:var(--text-primary);">A2A</strong>: messages between agents. Coming soon.</li>
+              <li><strong style="color:var(--text-primary);">Schema</strong>: one builder for API and function specs. Drafting.</li>
+              <li><strong style="color:var(--text-primary);">Planner</strong>: decides which tools and agents to call for a multi-step task. On the roadmap.</li>
+            </ul>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://github.com/ideatorlabs/cortex" target="_blank" rel="noopener" class="btn-hero-primary">View CORTEX on GitHub &#8599;</a>
+              <a href="/open-source/#cortex" class="arrow-link">Open source page &rarr;</a>
+            </div>
+          </article>
+
+          <!-- YAMCP -->
+          <article class="card reveal" id="yamcp" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Part of CORTEX</span>
+                <h2 style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">YAMCP</h2>
+              </div>
+              <span class="badge-pill badge-open">In testing &middot; v0.1</span>
+            </div>
+            <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;margin-bottom:22px;max-width:760px;">
+              YAMCP (&ldquo;Yet Another Model Context Protocol&rdquo;) is the tool server inside CORTEX. You wrap an API or a piece of business logic as a tool, and an AI agent can find it and call it. New tools are added as plugins, and the server can be reached over HTTP, WebSocket or the command line. It is built with FastAPI and Pydantic.
+            </p>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://github.com/ideatorlabs/cortex/tree/main/yamcp" target="_blank" rel="noopener" class="arrow-link">YAMCP folder on GitHub &#8599;</a>
+              <a href="/open-source/#yamcp" class="arrow-link">Open source page &rarr;</a>
+            </div>
+          </article>
+
+          <!-- Brain -->
+          <article class="card reveal" id="brain" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Private research</span>
+                <h2 style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">Brain</h2>
+              </div>
+              <span class="badge-pill badge-res">Private</span>
+            </div>
+            <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;margin:0;max-width:760px;">
+              Brain is private research into how AI assistants can remember useful context over long pieces of work. It isn't public and isn't for sale. If it turns into something worth sharing, we'll publish it here.
+            </p>
+          </article>
+
+          <!-- Reflex -->
+          <article class="card reveal" id="reflex" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:16px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Concept</span>
+                <h2 style="font-size:24px;font-weight:700;letter-spacing:-0.02em;">Reflex</h2>
+              </div>
+              <span class="badge-pill badge-res">Open concept</span>
+            </div>
+            <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;max-width:760px;">
+              Reflex is an open concept for a data engine that runs itself. It is an idea we are working through, not a product. It has five stages:
+            </p>
+            <p style="font-family:var(--font-mono);font-size:13px;font-weight:700;color:var(--accent-purple);letter-spacing:0.04em;margin-bottom:22px;">
+              Declare &rarr; Plan &rarr; Run &rarr; Heal &rarr; Learn
+            </p>
+            <a href="/products/#reflex" class="arrow-link">Read about the Reflex concept &rarr;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- From research to product -->
+    <section style="background:var(--bg-secondary);border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);padding:60px 0;">
+      <div class="container reveal">
+        <div style="border-left:3px solid var(--accent-purple);padding:8px 24px;">
+          <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;">How research turns into products</h2>
+          <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;max-width:700px;margin:0;">
+            We research a problem, build a small prototype, and only then decide whether it should become a product. Most ideas stop at the first or second step, and that's fine. <a href="/about/#how-we-work" class="arrow-link">How we work &rarr;</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta-banner-wrap" style="padding-top:40px;padding-bottom:80px;">
+      <div class="container">
+        <div class="cta-banner-box reveal reveal-scale">
+          <div class="cta-banner-text-side">
+            <span class="cta-banner-tag" style="font-size:11px;">Questions or ideas</span>
+            <h2 class="cta-banner-h2">Want to talk about any of this?</h2>
+            <p class="cta-banner-sub">Open an issue on GitHub for CORTEX, or write to us about anything else.</p>
+          </div>
+          <a href="/contact/" class="btn-hero-primary" style="padding:12px 28px;font-size:14px;">
+            Write to us <span class="arrow-slide">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Matches Mockup)
+       ========================================================================= -->
+  <footer class="site-footer-sec">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <a href="/" class="brand-area" style="font-size:15px;margin-bottom:6px;">
+            <div class="brand-bars" aria-hidden="true" style="height:18px;">
+              <span style="height:10px;"></span><span style="height:18px;"></span><span style="height:7px;"></span>
+            </div>
+            <span>Ideator Labs</span>
+          </a>
+          <div style="font-size:12px;color:var(--text-muted);">A product studio. One sector at a time.</div>
+        </div>
+
+        <nav class="footer-nav-links" aria-label="Footer Navigation">
+          <a href="/products/">Products</a>
+          <a href="/solutions/">Advisory</a>
+          <a href="/industries/">Sectors</a>
+          <a href="/research/">Research</a>
+          <a href="/open-source/">Open Source</a>
+          <a href="/journal/">Journal</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+
+        <div class="footer-social-icons">
+          <a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Ideator Labs. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/security.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, journal… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/main.js?v=20261117d"></script>
+</body>
+</html>

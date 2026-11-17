@@ -1,0 +1,404 @@
+/**
+ * IDEATOR LABS — Global JavaScript Engine
+ * Search index, interactive Value-at-Stake calculator, mobile navigation,
+ * and accessible UI interactions.
+ */
+
+(function () {
+  'use strict';
+
+  // -------------------------------------------------------------------------
+  // 1. Mobile Drawer Navigation
+  // -------------------------------------------------------------------------
+  const navToggle = document.getElementById('mobileNavToggle');
+  const mobileDrawer = document.getElementById('mobileDrawer');
+
+  if (navToggle && mobileDrawer) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = mobileDrawer.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    mobileDrawer.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // -------------------------------------------------------------------------
+  // 2. Global Instant Search Index & Dialog
+  // -------------------------------------------------------------------------
+  const searchIndex = [
+    { title: "Ideator Labs home", category: "Home", url: "/", desc: "A product studio and AI and data advisory. Ready-to-run software for one sector at a time." },
+    { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
+    { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail (building), PollenRev (private beta) and Reflex (research)." },
+    { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "Software for furniture showrooms: visitor shortlists, 3D views, WhatsApp follow-up, daily summary. Building, not launched yet." },
+    { title: "FurniTrail early access", category: "Products", url: "/products/furnitrail/#early-access", desc: "We're talking to furniture showroom owners before launch. No pricing yet." },
+    { title: "Reflex", category: "Research", url: "/products/#reflex", desc: "An open concept for a data engine that runs itself: declare, plan, run, heal, learn." },
+    { title: "PollenRev", category: "Products", url: "/products/pollenrev/", desc: "Sales software for small businesses: finds leads, writes outreach, tracks deals. Private beta." },
+    { title: "Advisory", category: "Advisory", url: "/solutions/", desc: "A free 25-minute call, then a fixed-fee diagnostic that shows where time or margin is lost and what to fix first." },
+    { title: "Sectors we work in", category: "Sectors", url: "/industries/", desc: "Furniture retail, accounting and CA firms, and D2C brands." },
+    { title: "Furniture retail", category: "Sectors", url: "/industries/#furniture", desc: "Showroom visitors who leave to think it over, and how FurniTrail helps keep in touch." },
+    { title: "Accounting and CA firms", category: "Sectors", url: "/industries/#accounting", desc: "Bill matching, re-typing into Tally and chasing documents. Advisory." },
+    { title: "D2C brands", category: "Sectors", url: "/industries/#d2c", desc: "Knowing the real margin on each order after returns, shipping and fees. Advisory." },
+    { title: "Suggest the next sector", category: "Sectors", url: "/industries/#next-sector", desc: "How we pick the next sector, and how to suggest one." },
+    { title: "Research", category: "Research", url: "/research/", desc: "What we are studying, what is public and what is still private." },
+    { title: "CORTEX", category: "Open Source", url: "/open-source/#cortex", desc: "Open-source toolkit for connecting AI agents and the tools they use. Public on GitHub." },
+    { title: "YAMCP", category: "Open Source", url: "/open-source/#yamcp", desc: "Part of CORTEX: a framework for building Model Context Protocol (MCP) servers." },
+    { title: "Open source", category: "Open Source", url: "/open-source/", desc: "Code we share publicly on GitHub." },
+    { title: "Journal", category: "Journal", url: "/journal/", desc: "Short, practical reads on where firms lose time and margin." },
+    { title: "Where CA firms lose hours every week, and how AI gives them back", category: "Journal", url: "/blog/ca-firms-reclaim-hours-with-ai.html", desc: "Where a CA firm's week goes: GST matching, document chasing and Tally re-keying." },
+    { title: "D2C brands: true margin per order", category: "Journal", url: "/blog/d2c-true-margin-per-order.html", desc: "Why the real problem is often not ads but not knowing the margin on each order." },
+    { title: "About", category: "Company", url: "/about/", desc: "Who we are and how we work." },
+    { title: "Contact", category: "Company", url: "/contact/", desc: "Email us, ask for FurniTrail early access, book a free 25-minute call or suggest a sector." }
+  ];
+
+  const searchTrigger = document.getElementById('searchTrigger');
+  const searchBackdrop = document.getElementById('searchModalBackdrop');
+  const searchInput = document.getElementById('globalSearchInput');
+  const searchResults = document.getElementById('searchResultsList');
+
+  function openSearch() {
+    if (!searchBackdrop) return;
+    searchBackdrop.classList.add('open');
+    if (searchInput) {
+      searchInput.value = '';
+      renderSearchResults(searchIndex);
+      setTimeout(() => searchInput.focus(), 50);
+    }
+  }
+
+  function closeSearch() {
+    if (!searchBackdrop) return;
+    searchBackdrop.classList.remove('open');
+  }
+
+  function renderSearchResults(items) {
+    if (!searchResults) return;
+    if (items.length === 0) {
+      searchResults.innerHTML = '<div style="padding:24px;text-align:center;color:var(--text-muted);font-size:14px;">No matching results found. Try another search term.</div>';
+      return;
+    }
+    searchResults.innerHTML = items.map(item => `
+      <a class="search-result-item" href="${item.url}">
+        <span class="search-result-category">${item.category}</span>
+        <div class="search-result-title">${item.title}</div>
+        <div class="search-result-desc">${item.desc}</div>
+      </a>
+    `).join('');
+  }
+
+  if (searchTrigger) {
+    searchTrigger.addEventListener('click', openSearch);
+  }
+
+  if (searchBackdrop) {
+    searchBackdrop.addEventListener('click', (e) => {
+      if (e.target === searchBackdrop) closeSearch();
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      if (!q) {
+        renderSearchResults(searchIndex);
+        return;
+      }
+      const filtered = searchIndex.filter(item => 
+        item.title.toLowerCase().includes(q) ||
+        item.category.toLowerCase().includes(q) ||
+        item.desc.toLowerCase().includes(q)
+      );
+      renderSearchResults(filtered);
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      if (searchBackdrop && searchBackdrop.classList.contains('open')) {
+        closeSearch();
+      } else {
+        openSearch();
+      }
+    }
+    if (e.key === 'Escape' && searchBackdrop && searchBackdrop.classList.contains('open')) {
+      closeSearch();
+    }
+  });
+
+  // -------------------------------------------------------------------------
+  // 3. Interactive Value-at-Stake Calculator (VALUE OS™)
+  // -------------------------------------------------------------------------
+  const calcContainer = document.getElementById('vasCalculator');
+  if (calcContainer) {
+    let currentRev = 12000000; // Default $5-25M
+    const picks = {};
+
+    const formatCurrency = (n) => {
+      if (n >= 1000000) return '$' + (n / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+      if (n >= 1000) return '$' + Math.round(n / 1000) + 'k';
+      return '$' + Math.round(n);
+    };
+
+    const updateCalculator = () => {
+      let lo = 0;
+      let hi = 0;
+      const flaggedItems = [];
+
+      Object.keys(picks).forEach((key) => {
+        const item = picks[key];
+        if (item.weight > 0) {
+          const itemLo = (currentRev * item.loBasis / 10000) * item.weight;
+          const itemHi = (currentRev * item.hiBasis / 10000) * item.weight;
+          lo += itemLo;
+          hi += itemHi;
+          flaggedItems.push({ name: item.name, lo: itemLo, hi: itemHi, weight: item.weight });
+        }
+      });
+
+      const totalNumberEl = document.getElementById('vasTotalNumber');
+      const breakdownListEl = document.getElementById('vasBreakdownList');
+      const leversFlaggedCountEl = document.getElementById('vasFlaggedCount');
+
+      if (totalNumberEl) {
+        if (flaggedItems.length > 0) {
+          totalNumberEl.textContent = `≈ ${formatCurrency(lo)} – ${formatCurrency(hi)} / yr`;
+        } else {
+          totalNumberEl.textContent = 'Select levers to quantify';
+        }
+      }
+
+      if (leversFlaggedCountEl) {
+        leversFlaggedCountEl.textContent = `${flaggedItems.length} of 6 levers flagged`;
+      }
+
+      if (breakdownListEl) {
+        if (flaggedItems.length === 0) {
+          breakdownListEl.innerHTML = '<li style="padding:8px 0;color:var(--text-muted);font-size:13.5px;">No margin leaks flagged yet. Select options above to model your value at stake.</li>';
+        } else {
+          breakdownListEl.innerHTML = flaggedItems.map(item => `
+            <li style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px dashed var(--border-light);font-size:13.5px;color:var(--text-secondary);">
+              <span>${item.name} ${item.weight < 1 ? '<span style="font-size:11px;color:var(--text-muted);">(half weight)</span>' : ''}</span>
+              <strong style="font-family:var(--font-mono);color:var(--accent-primary);">${formatCurrency(item.lo)} – ${formatCurrency(item.hi)}/yr</strong>
+            </li>
+          `).join('');
+        }
+      }
+    };
+
+    // Revenue Chip selection
+    const revButtons = calcContainer.querySelectorAll('.rev-chip-btn');
+    revButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        revButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentRev = parseInt(btn.dataset.rev, 10);
+        updateCalculator();
+      });
+    });
+
+    // Lever Cards
+    const leverCards = calcContainer.querySelectorAll('.lever-card');
+    leverCards.forEach((card) => {
+      const sig = card.dataset.sig;
+      const lo = parseFloat(card.dataset.lo);
+      const hi = parseFloat(card.dataset.hi);
+      const name = card.dataset.name;
+
+      const buttons = card.querySelectorAll('.lever-btn');
+      buttons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+
+          const ans = btn.dataset.ans;
+          let weight = 0;
+          if (ans === 'yes') weight = 1;
+          else if (ans === 'unsure') weight = 0.5;
+
+          picks[sig] = { weight, loBasis: lo, hiBasis: hi, name };
+          card.classList.toggle('flagged', weight > 0);
+          updateCalculator();
+        });
+      });
+    });
+
+    // Initialize with two common levers selected for realistic demonstration
+    const defaultLevers = ['margin', 'manual'];
+    leverCards.forEach((card) => {
+      const sig = card.dataset.sig;
+      if (defaultLevers.includes(sig)) {
+        const yesBtn = card.querySelector('.lever-btn[data-ans="yes"]');
+        if (yesBtn) {
+          yesBtn.click();
+        }
+      }
+    });
+  }
+
+  // -------------------------------------------------------------------------
+  // 4. Smooth Scroll Spy & Topbar Elevation
+  // -------------------------------------------------------------------------
+  const topbar = document.querySelector('.topbar');
+  if (topbar) {
+    const handleScroll = () => {
+      if (window.scrollY > 15) {
+        topbar.classList.add('scrolled');
+      } else {
+        topbar.classList.remove('scrolled');
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+  }
+
+  // -------------------------------------------------------------------------
+  // 5. High-Performance IntersectionObserver Scroll-Reveal Engine
+  // -------------------------------------------------------------------------
+  const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+  if (revealElements.length > 0 && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // Optional: once revealed, unobserve to free resources
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.12,
+      rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback for environments without IntersectionObserver
+    revealElements.forEach(el => el.classList.add('revealed'));
+  }
+
+  // -------------------------------------------------------------------------
+  // 6. Interactive 3D Perspective Tilt on Hero Illustration
+  // -------------------------------------------------------------------------
+  const heroWrap = document.querySelector('.hero-wrap');
+  const heroGraphic = document.querySelector('.hero-graphic-wrap img');
+
+  if (heroWrap && heroGraphic && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let ticking = false;
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    const onMouseMove = (e) => {
+      const rect = heroWrap.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+
+      // Subtle, refined tilt limits: max 5 degrees
+      targetX = (y / (rect.height / 2)) * -5;
+      targetY = (x / (rect.width / 2)) * 6;
+
+      if (!ticking) {
+        requestAnimationFrame(updateTilt);
+        ticking = true;
+      }
+    };
+
+    const updateTilt = () => {
+      // Damped interpolation for silky smooth spring motion
+      currentX += (targetX - currentX) * 0.1;
+      currentY += (targetY - currentY) * 0.1;
+
+      heroGraphic.style.transform = `perspective(1000px) rotateX(${currentX.toFixed(2)}deg) rotateY(${currentY.toFixed(2)}deg) translateY(-4px)`;
+
+      if (Math.abs(targetX - currentX) > 0.05 || Math.abs(targetY - currentY) > 0.05) {
+        requestAnimationFrame(updateTilt);
+      } else {
+        ticking = false;
+      }
+    };
+
+    const onMouseLeave = () => {
+      targetX = 0;
+      targetY = 0;
+      if (!ticking) {
+        requestAnimationFrame(updateTilt);
+        ticking = true;
+      }
+      setTimeout(() => {
+        heroGraphic.style.transform = '';
+      }, 350);
+    };
+
+    heroWrap.addEventListener('mousemove', onMouseMove, { passive: true });
+    heroWrap.addEventListener('mouseleave', onMouseLeave, { passive: true });
+  }
+
+  // -------------------------------------------------------------------------
+  // 7. Animated Number Counters (Telemetry & Metrics)
+  // -------------------------------------------------------------------------
+  const counterElements = document.querySelectorAll('[data-counter]');
+  if (counterElements.length > 0 && 'IntersectionObserver' in window) {
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const targetNum = parseFloat(el.getAttribute('data-counter'));
+          const prefix = el.getAttribute('data-prefix') || '';
+          const suffix = el.getAttribute('data-suffix') || '';
+          const duration = parseInt(el.getAttribute('data-duration') || '1400', 10);
+          const decimals = el.getAttribute('data-decimals') ? parseInt(el.getAttribute('data-decimals'), 10) : 0;
+
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            // Ease-out cubic: 1 - (1 - progress)^3
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            const currentVal = easeOut * targetNum;
+
+            el.textContent = prefix + (decimals > 0 ? currentVal.toFixed(decimals) : Math.round(currentVal)) + suffix;
+
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            } else {
+              el.textContent = prefix + (decimals > 0 ? targetNum.toFixed(decimals) : targetNum) + suffix;
+            }
+          };
+
+          window.requestAnimationFrame(step);
+          observer.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counterElements.forEach(el => counterObserver.observe(el));
+  }
+
+
+  // -------------------------------------------------------------------------
+  // Card spotlight: a soft light follows the cursor on cards (desktop only)
+  // -------------------------------------------------------------------------
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.querySelectorAll('main .card, main .step-card').forEach((card) => {
+      card.addEventListener('pointermove', (e) => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      }, { passive: true });
+      card.addEventListener('pointerleave', () => {
+        card.style.removeProperty('--mx');
+        card.style.removeProperty('--my');
+      }, { passive: true });
+    });
+  }
+
+})();
+
