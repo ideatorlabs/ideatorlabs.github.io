@@ -35,24 +35,29 @@
   const searchIndex = [
     { title: "Ideator Labs home", category: "Home", url: "/", desc: "A product studio and AI and data advisory. Ready-to-run software for one sector at a time." },
     { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
-    { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail (building), PollenRev (private beta) and Reflex (research)." },
-    { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "Software for furniture showrooms: visitor shortlists, 3D views, WhatsApp follow-up, daily summary. Building, not launched yet." },
-    { title: "FurniTrail early access", category: "Products", url: "/products/furnitrail/#early-access", desc: "We're talking to furniture showroom owners before launch. No pricing yet." },
-    { title: "Reflex", category: "Research", url: "/products/#reflex", desc: "An open concept for a data engine that runs itself: declare, plan, run, heal, learn." },
+    { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail (building) and PollenRev (private beta)." },
+    { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "Software for furniture showrooms: visitor shortlists, 3D views, WhatsApp follow-up, daily summary. Early access open." },
+    { title: "FurniTrail early access", category: "Products", url: "/products/furnitrail/#early-access", desc: "Early access is open to furniture showrooms; they see it first and help shape it." },
     { title: "PollenRev", category: "Products", url: "/products/pollenrev/", desc: "Sales software for small businesses: finds leads, writes outreach, tracks deals. Private beta." },
     { title: "Advisory", category: "Advisory", url: "/solutions/", desc: "A free 25-minute call, then a fixed-fee diagnostic that shows where time or margin is lost and what to fix first." },
-    { title: "Sectors we work in", category: "Sectors", url: "/industries/", desc: "Furniture retail, accounting and CA firms, and D2C brands." },
+    { title: "Sectors we work in", category: "Sectors", url: "/industries/", desc: "Furniture retail, accounting and CA firms, D2C brands, and clinics." },
     { title: "Furniture retail", category: "Sectors", url: "/industries/#furniture", desc: "Showroom visitors who leave to think it over, and how FurniTrail helps keep in touch." },
     { title: "Accounting and CA firms", category: "Sectors", url: "/industries/#accounting", desc: "Bill matching, re-typing into Tally and chasing documents. Advisory." },
+    { title: "Clinics and healthcare", category: "Sectors", url: "/industries/#healthcare", desc: "Less re-typing at the front desk, reminders on time, simpler reports. Advisory." },
     { title: "D2C brands", category: "Sectors", url: "/industries/#d2c", desc: "Knowing the real margin on each order after returns, shipping and fees. Advisory." },
     { title: "Suggest the next sector", category: "Sectors", url: "/industries/#next-sector", desc: "How we pick the next sector, and how to suggest one." },
     { title: "Research", category: "Research", url: "/research/", desc: "What we are studying, what is public and what is still private." },
     { title: "CORTEX", category: "Open Source", url: "/open-source/#cortex", desc: "Open-source toolkit for connecting AI agents and the tools they use. Public on GitHub." },
+    { title: "Brain", category: "Research", url: "/research/#brain", desc: "Experiments toward an open-source AI companion modelled on how the human brain works." },
     { title: "YAMCP", category: "Open Source", url: "/open-source/#yamcp", desc: "Part of CORTEX: a framework for building Model Context Protocol (MCP) servers." },
+    { title: "Faultbell", category: "Open Source", url: "/open-source/#faultbell", desc: "Exception alerts for Python services and cron jobs, in Discord, Slack, Teams, email and more." },
+    { title: "Greenline", category: "Open Source", url: "/open-source/#greenline", desc: "Self-hosted engine for WhatsApp Business messaging across many businesses." },
+    { title: "TillSync", category: "Open Source", url: "/open-source/#tillsync", desc: "Pull customers and bills from POS systems, Sheets and CSV into one clean shape." },
+    { title: "Nudgewright", category: "Open Source", url: "/open-source/#nudgewright", desc: "Writes one short personal customer message from real facts, and says why." },
     { title: "Open source", category: "Open Source", url: "/open-source/", desc: "Code we share publicly on GitHub." },
-    { title: "Journal", category: "Journal", url: "/journal/", desc: "Short, practical reads on where firms lose time and margin." },
-    { title: "Where CA firms lose hours every week, and how AI gives them back", category: "Journal", url: "/blog/ca-firms-reclaim-hours-with-ai.html", desc: "Where a CA firm's week goes: GST matching, document chasing and Tally re-keying." },
-    { title: "D2C brands: true margin per order", category: "Journal", url: "/blog/d2c-true-margin-per-order.html", desc: "Why the real problem is often not ads but not knowing the margin on each order." },
+    { title: "Blog", category: "Blog", url: "/blog/", desc: "Short, practical reads on where firms lose time and margin." },
+    { title: "Where CA firms lose hours every week, and how AI gives them back", category: "Blog", url: "/blog/ca-firms-reclaim-hours-with-ai.html", desc: "Where a CA firm's week goes: GST matching, document chasing and Tally re-keying." },
+    { title: "D2C brands: true margin per order", category: "Blog", url: "/blog/d2c-true-margin-per-order.html", desc: "Why the real problem is often not ads but not knowing the margin on each order." },
     { title: "About", category: "Company", url: "/about/", desc: "Who we are and how we work." },
     { title: "Contact", category: "Company", url: "/contact/", desc: "Email us, ask for FurniTrail early access, book a free 25-minute call or suggest a sector." }
   ];
@@ -398,6 +403,37 @@
         card.style.removeProperty('--my');
       }, { passive: true });
     });
+  }
+
+
+  // -------------------------------------------------------------------------
+  // Floating nav: an ink "lamp" slides under the link you point at,
+  // and rests under the current page's link.
+  // -------------------------------------------------------------------------
+  const navMenu = document.querySelector('.nav-menu');
+  if (navMenu) {
+    const lamp = document.createElement('span');
+    lamp.className = 'nav-lamp';
+    lamp.setAttribute('aria-hidden', 'true');
+    navMenu.prepend(lamp);
+    const links = Array.from(navMenu.querySelectorAll('a'));
+    const active = navMenu.querySelector('a.active');
+    const lightUp = (link) => {
+      links.forEach((a) => a.classList.toggle('is-lit', a === link));
+      if (!link) { lamp.classList.remove('on'); return; }
+      lamp.style.width = link.offsetWidth + 'px';
+      lamp.style.transform = 'translate(' + link.offsetLeft + 'px, -50%)';
+      lamp.classList.add('on');
+    };
+    links.forEach((a) => {
+      a.addEventListener('mouseenter', () => lightUp(a));
+      a.addEventListener('focus', () => lightUp(a));
+    });
+    navMenu.addEventListener('mouseleave', () => lightUp(active));
+    window.addEventListener('resize', () => lightUp(navMenu.querySelector('a.is-lit') || active), { passive: true });
+    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(() => lightUp(active)); } else { lightUp(active); }
+  } else {
+    document.documentElement.classList.add('no-lamp');
   }
 
 })();

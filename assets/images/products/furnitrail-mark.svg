@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="FurniTrail">
+  <!-- house outline, open at the bottom left where the trail leaves -->
+  <path d="M30 80 H82 V45 L50 17 L18 45 V66" fill="none" stroke="#1e4d3b" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- sofa -->
+  <rect x="34" y="45" width="32" height="12" rx="4" fill="#e5782c"/>
+  <rect x="31" y="55" width="38" height="11" rx="3.5" fill="#e5782c"/>
+  <rect x="26" y="50" width="10" height="19" rx="5" fill="#e5782c"/>
+  <rect x="64" y="50" width="10" height="19" rx="5" fill="#e5782c"/>
+  <!-- the trail: a swoosh from inside the house out to the right -->
+  <path d="M8 84 C22 70 46 92 94 74 C78 90 40 98 14 92 C10 91 7 88 8 84 Z" fill="#e5782c"/>
+</svg>

@@ -1,14 +1,13 @@
 # Ideator Labs
 
-> Ideator Labs is an early-stage product studio and AI and data advisory: we build ready-to-run software for one sector at a time, and help firms put AI and data to work through a fixed-fee advisory service.
+> Ideator Labs is a product studio and AI and data advisory: we build ready-to-run software for one sector at a time, and help firms put AI and data to work through a fixed-fee advisory service.
 
-Sectors we work in today: furniture retail (FurniTrail), accounting and CA firms (advisory), and D2C brands (advisory). Next sectors are picked one at a time.
+Sectors we work in today: furniture retail (FurniTrail), accounting and CA firms (advisory), D2C brands (advisory), and clinics and healthcare practices (advisory). Next sectors are picked one at a time.
 
 ## Products
 
 - [Products](https://ideatorlabs.github.io/products/): Overview of what Ideator Labs builds and researches.
-- [FurniTrail by Ideator Labs](https://ideatorlabs.github.io/products/furnitrail/): Software for furniture showrooms, being built and not launched yet. It captures walk-in visitors, sends each a shortlist link with 3 options, lets them view pieces in 3D, follows up on WhatsApp and gives the owner a daily summary. Early access by request.
-- [Reflex](https://ideatorlabs.github.io/products/#reflex): Research. An open concept for a self-running data engine with five stages: declare, plan, run, heal, learn. A concept only.
+- [FurniTrail by Ideator Labs](https://ideatorlabs.github.io/products/furnitrail/): Software for furniture showrooms. Early access open. It captures walk-in visitors, sends each a shortlist link with 3 options, lets them view pieces in 3D, follows up on WhatsApp and gives the owner a daily summary.
 - [PollenRev](https://ideatorlabs.github.io/products/pollenrev/): Sales and marketing software for small and mid-sized businesses. Finds leads, scores them against your ideal customer, writes outreach, proposals and pitch decks, and tracks deals in a pipeline. Private beta.
 
 ## Advisory
@@ -16,16 +15,16 @@ Sectors we work in today: furniture retail (FurniTrail), accounting and CA firms
 - [Advisory](https://ideatorlabs.github.io/solutions/): Starts with a free 25-minute call, then a fixed-fee diagnostic that finds where a business loses time or margin and what to fix first, then an optional build. Method: VALUE OS (Baseline, Diagnose, Quantify, Design, Drive). If the diagnostic finds nothing worth fixing, we say so plainly. Fees are not published.
 - [Sectors](https://ideatorlabs.github.io/industries/): The sectors we work in today and how to suggest the next one.
 
-## Journal
+## Blog
 
-- [Ideator Journal](https://ideatorlabs.github.io/journal/): Plain-language articles on where firms lose time and margin, and how AI and data can help.
+- [Ideator Labs Blog](https://ideatorlabs.github.io/blog/): Plain-language articles on where firms lose time and margin, and how AI and data can help.
 - [Where CA firms lose hours every week, and how AI gives them back](https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html): GST matching, document chasing, re-typing and month-end reports, and how to automate one task at a time.
 - [Your D2C brand's real problem isn't ads, it's true margin per order](https://ideatorlabs.github.io/blog/d2c-true-margin-per-order.html): How to work out what each order really earns after all costs before scaling ad spend.
 
 ## Company
 
 - [About](https://ideatorlabs.github.io/about/): Who Ideator Labs is and how it works.
-- [Research](https://ideatorlabs.github.io/research/): What we are researching: CORTEX and YAMCP (open source), Brain (private research) and Reflex.
+- [Research](https://ideatorlabs.github.io/research/): What we are researching: CORTEX and YAMCP (open source) and Brain (experiments toward an open-source, brain-inspired AI companion, drawing on existing neuroscience and AI research; research, not a product).
 - [Open source](https://ideatorlabs.github.io/open-source/): CORTEX, a public repository that includes YAMCP, a Model Context Protocol server framework; and four Python packages: Greenline (WhatsApp Cloud API engine), TillSync (POS and spreadsheet connectors), Nudgewright (personal customer message lines with reasons) and Faultbell (exception alerts to chat, paging and email).
 - [Contact](https://ideatorlabs.github.io/contact/): Email ideatorlabs.ai@gmail.com, or use the contact form, which opens your own email app.
 - [Privacy policy](https://ideatorlabs.github.io/privacy.html): No cookies or analytics on this site; how emails are used.
