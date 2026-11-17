@@ -33,7 +33,7 @@
   // 2. Global Instant Search Index & Dialog
   // -------------------------------------------------------------------------
   const searchIndex = [
-    { title: "Ideator Labs home", category: "Home", url: "/", desc: "A product studio and AI and data advisory. Ready-to-run software for one sector at a time." },
+    { title: "Ideator Labs home", category: "Home", url: "/", desc: "A studio for AI and data advisory, innovation and business intelligence." },
     { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
     { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail (building) and PollenRev (private beta)." },
     { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "Software for furniture showrooms: visitor shortlists, 3D views, WhatsApp follow-up, daily summary. Early access open." },
@@ -50,7 +50,8 @@
     { title: "CORTEX", category: "Open Source", url: "/open-source/#cortex", desc: "Open-source toolkit for connecting AI agents and the tools they use. Public on GitHub." },
     { title: "Brain", category: "Research", url: "/research/#brain", desc: "Experiments toward an open-source AI companion modelled on how the human brain works." },
     { title: "YAMCP", category: "Open Source", url: "/open-source/#yamcp", desc: "Part of CORTEX: a framework for building Model Context Protocol (MCP) servers." },
-    { title: "Faultbell", category: "Open Source", url: "/open-source/#faultbell", desc: "Exception alerts for Python services and cron jobs, in Discord, Slack, Teams, email and more." },
+    { title: "Faultbell", category: "Open Source", url: "/open-source/#faultbell", desc: "Exception alerts and server watch for Python services and cron jobs, in Discord, Slack, Teams, email and more." },
+    { title: "Leadbell", category: "Open Source", url: "/open-source/#leadbell", desc: "Website lead capture with consent and spam protection, plus sign-up and payment alerts." },
     { title: "Greenline", category: "Open Source", url: "/open-source/#greenline", desc: "Self-hosted engine for WhatsApp Business messaging across many businesses." },
     { title: "TillSync", category: "Open Source", url: "/open-source/#tillsync", desc: "Pull customers and bills from POS systems, Sheets and CSV into one clean shape." },
     { title: "Nudgewright", category: "Open Source", url: "/open-source/#nudgewright", desc: "Writes one short personal customer message from real facts, and says why." },

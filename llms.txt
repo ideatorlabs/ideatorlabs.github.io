@@ -1,6 +1,6 @@
 # Ideator Labs
 
-> Ideator Labs is a product studio and AI and data advisory: we build ready-to-run software for one sector at a time, and help firms put AI and data to work through a fixed-fee advisory service.
+> Ideator Labs is a studio at the intersection of AI and data advisory, innovation and business intelligence: we help businesses use AI and data to decide better, and build the tools and products that make it happen.
 
 Sectors we work in today: furniture retail (FurniTrail), accounting and CA firms (advisory), D2C brands (advisory), and clinics and healthcare practices (advisory). Next sectors are picked one at a time.
 
@@ -25,7 +25,7 @@ Sectors we work in today: furniture retail (FurniTrail), accounting and CA firms
 
 - [About](https://ideatorlabs.github.io/about/): Who Ideator Labs is and how it works.
 - [Research](https://ideatorlabs.github.io/research/): What we are researching: CORTEX and YAMCP (open source) and Brain (experiments toward an open-source, brain-inspired AI companion, drawing on existing neuroscience and AI research; research, not a product).
-- [Open source](https://ideatorlabs.github.io/open-source/): CORTEX, a public repository that includes YAMCP, a Model Context Protocol server framework; and four Python packages: Greenline (WhatsApp Cloud API engine), TillSync (POS and spreadsheet connectors), Nudgewright (personal customer message lines with reasons) and Faultbell (exception alerts to chat, paging and email).
+- [Open source](https://ideatorlabs.github.io/open-source/): CORTEX, a public repository that includes YAMCP, a Model Context Protocol server framework; and five Python packages: Greenline (WhatsApp Cloud API engine), TillSync (POS and spreadsheet connectors), Nudgewright (personal customer message lines with reasons), Faultbell (exception alerts and server watch, to chat, paging and email) and Leadbell (website lead capture with consent, plus sign-up, lead and payment alerts).
 - [Contact](https://ideatorlabs.github.io/contact/): Email ideatorlabs.ai@gmail.com, or use the contact form, which opens your own email app.
 - [Privacy policy](https://ideatorlabs.github.io/privacy.html): No cookies or analytics on this site; how emails are used.
 - [Security](https://ideatorlabs.github.io/security.html): What we commit to when handling client data.

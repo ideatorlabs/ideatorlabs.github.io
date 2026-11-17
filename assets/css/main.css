@@ -1947,3 +1947,13 @@ main [style*="font-family:var(--font-mono)"]:not([style*="background"]):not(code
   .phone-trio { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; gap: 48px; }
   .phone-card.is-raised { transform: none; }
 }
+
+/* Desktop app screens: clean rounded screen, soft shadow, no fake browser chrome */
+.app-screen { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--p-line, #E5E7EB); box-shadow: 0 30px 60px -36px rgba(10, 31, 61, 0.45); background: #FFFFFF; }
+.app-screen img { display: block; width: 100%; height: auto; }
+.screen-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(20px, 3vw, 40px); }
+.screen-card { margin: 0; }
+.screen-card figcaption { margin-top: 18px; font-size: 14.5px; line-height: 1.55; color: var(--text-secondary); }
+.screen-card figcaption strong { display: block; font-size: 17px; color: var(--text-primary); margin: 2px 0 4px; font-weight: 800; letter-spacing: -0.01em; }
+[data-product="pollenrev"] .phone-kicker { color: #3563D5; }
+@media (max-width: 820px) { .screen-pair { grid-template-columns: 1fr; } }

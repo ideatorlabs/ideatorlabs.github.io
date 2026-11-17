@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Open source: CORTEX, YAMCP and Python packages | Ideator Labs</title>
-  <meta name="description" content="Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright and Faultbell, Python packages from our products.">
+  <meta name="description" content="Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright, Faultbell and Leadbell from our products.">
   <link rel="canonical" href="https://ideatorlabs.github.io/open-source/">
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ideator Labs">
   <meta property="og:title" content="Open source: CORTEX, YAMCP and Python packages | Ideator Labs">
-  <meta property="og:description" content="Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright and Faultbell, Python packages from our products.">
+  <meta property="og:description" content="Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright, Faultbell and Leadbell from our products.">
   <meta property="og:url" content="https://ideatorlabs.github.io/open-source/">
   <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Open source: CORTEX, YAMCP and Python packages | Ideator Labs">
-  <meta name="twitter:description" content="Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright and Faultbell, Python packages from our products.">
+  <meta name="twitter:description" content="Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright, Faultbell and Leadbell from our products.">
   <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../assets/css/main.css?v=20261117x">
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261117z">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta name="theme-color" content="#FFFFFF">
@@ -32,7 +32,7 @@
   "@type": "CollectionPage",
   "url": "https://ideatorlabs.github.io/open-source/",
   "name": "Open source: CORTEX, YAMCP and Python packages | Ideator Labs",
-  "description": "Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright and Faultbell, Python packages from our products.",
+  "description": "Open source from Ideator Labs: CORTEX for AI agents and tool servers, plus Greenline, TillSync, Nudgewright, Faultbell and Leadbell from our products.",
   "publisher": {
     "@type": "Organization",
     "@id": "https://ideatorlabs.github.io/#organization",
@@ -169,7 +169,7 @@
         <span class="sec-eyebrow">Open source</span>
         <h1 class="sec-title" style="max-width:24ch;">Open source, built to be used.</h1>
         <p class="sec-subtitle" style="max-width:720px;">
-          Code we use in our own products, published for anyone to use. CORTEX for building AI agents and the tools they call, plus four Python packages: WhatsApp messaging, POS and spreadsheet sync, personal message lines and exception alerts. Clone them, build on them, and send us issues and pull requests. We also publish <a href="#packages">four small Python packages</a>.
+          Code we use in our own products, published for anyone to use. CORTEX for building AI agents and the tools they call, plus five Python packages: WhatsApp messaging, POS and spreadsheet sync, personal message lines, exception alerts with server watch, and lead capture. Clone them, build on them, and send us issues and pull requests. We also publish <a href="#packages">four small Python packages</a>.
         </p>
         <a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" class="btn-hero-secondary">github.com/ideatorlabs &#8599;</a>
       </div>
@@ -264,7 +264,7 @@
         <div class="reveal" style="margin-bottom:28px;">
           <span class="sec-eyebrow">Python packages</span>
           <h2 class="section-heading">Small tools from our products, free to use</h2>
-          <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;max-width:66ch;margin-top:8px;">Four plug-and-play Python packages taken from the software we build. Each has its own documentation, runs on Python 3.10 and newer, is tested on every change and is Apache-2.0 licensed.</p>
+          <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;max-width:66ch;margin-top:8px;">Five plug-and-play Python packages taken from the software we build. Each has its own documentation, runs on Python 3.10 and newer, is tested on every change and is Apache-2.0 licensed.</p>
         </div>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;">
 
@@ -338,13 +338,31 @@
                 </h3>
               </div>
             </div>
-            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Get one clean alert per problem when a Python service or cron job fails, in Discord, Slack, Microsoft Teams, Google Chat, Telegram, PagerDuty or email. Secrets are scrubbed, repeats are grouped, and it never slows a request down.</p>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Get one clean alert per problem when a Python service or cron job fails, in Discord, Slack, Microsoft Teams, Google Chat, Telegram, PagerDuty or email. Secrets are scrubbed, repeats are grouped, and it never slows a request down. Version 0.2 adds a server watch: bursts of errors on a route, memory above 80% and crashes without a clean shutdown each raise an alert.</p>
             <div style="background:#0F172A;border-radius:10px;padding:12px 16px;margin-bottom:18px;font-family:var(--font-mono);font-size:12.5px;color:#CBD5E1;overflow-x:auto;white-space:nowrap;">
               <span style="color:#38BDF8;">$</span> pip install "faultbell @ git+https://github.com/ideatorlabs/faultbell"
             </div>
             <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
               <a href="https://ideatorlabs.github.io/faultbell/" target="_blank" rel="noopener" class="arrow-link">Documentation &#8599;</a>
               <a href="https://github.com/ideatorlabs/faultbell" target="_blank" rel="noopener" class="arrow-link">GitHub &#8599;</a>
+            </div>
+          </article>
+          <article class="card reveal" id="leadbell" style="padding:28px;">
+            <div style="display:flex;gap:16px;align-items:center;margin-bottom:14px;">
+              <svg width="56" height="56" viewBox="0 0 56 56" aria-hidden="true" style="flex:none;"><rect width="56" height="56" rx="13" fill="#14161B"/><path d="M28 15a9 9 0 0 0-9 9v6l-3 4h24l-3-4v-6a9 9 0 0 0-9-9z" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linejoin="round"/><path d="M24.5 38a3.5 3.5 0 0 0 7 0" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/><circle cx="38" cy="17" r="4" fill="#FFFFFF"/></svg>
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:4px;">Lead capture and business alerts</span>
+                <h3 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;margin:0;">
+                  <a href="https://github.com/ideatorlabs/leadbell" target="_blank" rel="noopener" style="color:var(--text-primary);">Leadbell</a>
+                </h3>
+              </div>
+            </div>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Capture website leads properly: required consent with the exact wording version stored, a hidden spam trap, rate limiting and the visitor&rsquo;s first source. Then get one card per sign-up, lead or payment in Discord, Slack or any webhook.</p>
+            <div style="background:#0F172A;border-radius:10px;padding:12px 16px;margin-bottom:18px;font-family:var(--font-mono);font-size:12.5px;color:#CBD5E1;overflow-x:auto;white-space:nowrap;">
+              <span style="color:#38BDF8;">$</span> pip install "leadbell @ git+https://github.com/ideatorlabs/leadbell"
+            </div>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://github.com/ideatorlabs/leadbell" target="_blank" rel="noopener" class="arrow-link">GitHub &#8599;</a>
             </div>
           </article>
 
@@ -420,7 +438,7 @@
             </div>
             <span>Ideator Labs</span>
           </a>
-          <div style="font-size:12px;color:var(--text-muted);">A product studio. One sector at a time.</div>
+          <div style="font-size:12px;color:var(--text-muted);">AI and data advisory, innovation and business intelligence.</div>
         </div>
 
         <nav class="footer-nav-links" aria-label="Footer Navigation">
@@ -469,6 +487,6 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js?v=20261117x"></script>
+  <script src="../assets/js/main.js?v=20261117z"></script>
 </body>
 </html>
