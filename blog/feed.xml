@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ideator Labs blog</title>
+  <link href="https://ideatorlabs.github.io/blog/"/>
+  <link rel="self" href="https://ideatorlabs.github.io/blog/feed.xml"/>
+  <id>https://ideatorlabs.github.io/blog/</id>
+  <updated>2026-11-17T00:00:00Z</updated>
+  <author><name>Ideator Labs</name></author>
+  <entry>
+    <title>Where CA firms lose hours every week, and how AI gives them back</title>
+    <link href="https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html"/>
+    <id>https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html</id>
+    <published>2026-07-27T00:00:00Z</published>
+    <updated>2026-11-17T00:00:00Z</updated>
+    <summary>The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time.</summary>
+    <category term="CA and accounting firms"/>
+  </entry>
+  <entry>
+    <title>Your D2C brand’s real problem isn’t ads, it’s true margin per order</title>
+    <link href="https://ideatorlabs.github.io/blog/d2c-true-margin-per-order.html"/>
+    <id>https://ideatorlabs.github.io/blog/d2c-true-margin-per-order.html</id>
+    <published>2026-07-27T00:00:00Z</published>
+    <updated>2026-11-17T00:00:00Z</updated>
+    <summary>Before you change the ads, find out what each order really leaves you with.</summary>
+    <category term="D2C brands"/>
+  </entry>
+</feed>

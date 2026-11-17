@@ -21,38 +21,68 @@
   <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
   <link rel="stylesheet" href="../assets/css/main.css?v=20261117zd">
   <link rel="icon" href="../favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <meta name="theme-color" content="#FFFFFF">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        "headline": "Where CA firms lose hours every week, and how AI gives them back",
-        "description": "CA firms lose hours to GST matching, chasing client documents and typing entries twice. Where the time goes, what AI can take over, and how to start.",
-        "image": "https://ideatorlabs.github.io/og-image.png",
-        "datePublished": "2026-07-27",
-        "dateModified": "2026-11-17",
-        "author": { "@type": "Organization", "name": "Ideator Labs", "url": "https://ideatorlabs.github.io/" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Ideator Labs",
-          "url": "https://ideatorlabs.github.io/",
-          "logo": { "@type": "ImageObject", "url": "https://ideatorlabs.github.io/icon-512.png" }
-        },
-        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Where CA firms lose hours every week, and how AI gives them back",
+      "description": "CA firms lose hours to GST matching, chasing client documents and typing entries twice. Where the time goes, what AI can take over, and how to start.",
+      "image": "https://ideatorlabs.github.io/og-image.png",
+      "datePublished": "2026-07-27",
+      "dateModified": "2026-11-17",
+      "author": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ideatorlabs.github.io/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ideatorlabs.github.io/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Where CA firms lose hours every week", "item": "https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html" }
-        ]
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html"
       }
-    ]
-  }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ideatorlabs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ideatorlabs.github.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "CA and accounting firms",
+          "item": "https://ideatorlabs.github.io/blog/ca-firms/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Where CA firms lose hours every week, and how AI gives them back",
+          "item": "https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
   <style>
     #readingProgress {
@@ -151,6 +181,7 @@
       gap: 12px;
     }
   </style>
+  <link rel="alternate" type="application/atom+xml" title="Ideator Labs blog" href="/blog/feed.xml">
 </head>
 <body>
 
@@ -206,13 +237,13 @@
     <article class="article-wrap">
       <div class="reveal" style="margin-bottom:32px;">
         <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">
-          <a href="/" style="color:var(--text-muted);">Home</a> &rsaquo;
-          <a href="/blog/" style="color:var(--text-muted);">Blog</a> &rsaquo;
-          <span>CA firms</span>
-        </nav>
+            <a href="/" style="color:var(--text-muted);">Home</a> &rsaquo;
+            <a href="/blog/" style="color:var(--text-muted);">Blog</a> &rsaquo;
+            <a href="/blog/ca-firms/" style="color:var(--text-muted);">CA and accounting firms</a>
+          </nav>
         <div class="article-meta">
           <span class="badge-pill badge-prod">Accounting practice</span>
-          <span class="article-meta-text">Published <time datetime="2026-07-27">27 Jul 2026</time> &middot; Updated <time datetime="2026-11-17">17 Nov 2026</time> &middot; 6 min read</span>
+          <span class="article-meta-text">Published <time datetime="2026-07-27">27 Jul 2026</time> &middot; Updated <time datetime="2026-11-17">17 Nov 2026</time> &middot; 4 min read</span>
         </div>
         <h1 class="sec-title" style="font-size:clamp(30px, 4.2vw, 44px);line-height:1.18;">
           Where CA firms lose hours every week, and how AI gives them back
@@ -286,7 +317,19 @@
           </ul>
         </div>
       </div>
-    </article>
+      <!-- related:start (written by scripts/build_blog.py) -->
+          <aside class="post-related" aria-label="Related articles">
+            <div class="post-related-head"><h2>Related</h2><a class="arrow-link" href="/blog/ca-firms/">More on CA and accounting firms &rarr;</a></div>
+            <div class="blog-grid"><a class="blog-card" href="/blog/d2c-true-margin-per-order.html" data-cluster="d2c">
+            <span class="blog-card-topic">D2C brands</span>
+            <span class="blog-card-title">Your D2C brand’s real problem isn’t ads, it’s true margin per order</span>
+            <span class="blog-card-dek">Before you change the ads, find out what each order really leaves you with.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026</span>
+          </a></div>
+            <p class="post-hww">How this article was researched and checked: <a href="/blog/how-we-write/">How we write</a>.</p>
+          </aside>
+          <!-- related:end -->
+        </article>
   </main>
 
   <!-- Footer -->
