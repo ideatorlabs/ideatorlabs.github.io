@@ -23,37 +23,59 @@
   <meta name="theme-color" content="#FFFFFF">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="assets/css/main.css?v=20261117z">
+  <link rel="stylesheet" href="assets/css/main.css?v=20261117zd">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://ideatorlabs.github.io/#organization",
-        "name": "Ideator Labs",
-        "url": "https://ideatorlabs.github.io/",
-        "logo": "https://ideatorlabs.github.io/icon-512.png",
-        "email": "ideatorlabs.ai@gmail.com",
-        "description": "Ideator Labs is a studio where AI and data advisory, innovation and business intelligence meet, helping businesses see clearly and build what's next.",
-        "sameAs": [
-          "https://www.linkedin.com/company/ideator-labs",
-          "https://github.com/ideatorlabs"
-        ]
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://ideatorlabs.github.io/#website",
-        "url": "https://ideatorlabs.github.io/",
-        "name": "Ideator Labs",
-        "description": "A studio for AI and data advisory, innovation and business intelligence.",
-        "inLanguage": "en",
-        "publisher": { "@id": "https://ideatorlabs.github.io/#organization" }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ideatorlabs.github.io/#organization",
+      "name": "Ideator Labs",
+      "url": "https://ideatorlabs.github.io/",
+      "logo": "https://ideatorlabs.github.io/icon-512.png",
+      "email": "ideatorlabs.ai@gmail.com",
+      "description": "Ideator Labs is a studio where AI and data advisory, innovation and business intelligence meet, helping businesses see clearly and build what's next.",
+      "sameAs": [
+        "https://www.linkedin.com/company/ideator-labs",
+        "https://github.com/ideatorlabs"
+      ],
+      "brand": [
+        {
+          "@type": "Brand",
+          "name": "FurniTrail",
+          "url": "https://ideatorlabs.github.io/products/furnitrail/",
+          "logo": "https://ideatorlabs.github.io/assets/images/products/furnitrail-mark.svg"
+        },
+        {
+          "@type": "Brand",
+          "name": "PollenRev",
+          "url": "https://ideatorlabs.github.io/products/pollenrev/",
+          "logo": "https://ideatorlabs.github.io/assets/images/products/pollenrev-mark.svg"
+        }
+      ],
+      "knowsAbout": [
+        "AI and data advisory",
+        "Business intelligence",
+        "Innovation",
+        "Product development"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ideatorlabs.github.io/#website",
+      "url": "https://ideatorlabs.github.io/",
+      "name": "Ideator Labs",
+      "description": "A studio for AI and data advisory, innovation and business intelligence.",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://ideatorlabs.github.io/#organization"
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -64,9 +86,7 @@
   <header class="topbar">
     <div class="container nav-wrap">
       <a href="/" class="brand-area" aria-label="Ideator Labs Home">
-        <div class="brand-bars" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
+        <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
         <span>Ideator Labs</span>
       </a>
 
@@ -208,7 +228,7 @@
             <span class="section-tag" style="font-size:11px;">Sectors</span>
             <h2 class="section-heading">The sectors we work in today</h2>
             <p class="section-lede" style="margin-bottom:0;max-width:58ch;">
-              We work in a few sectors at a time so we can learn each one properly. One has a product in build; two get our advisory work.
+              Every sector gets our advisory. Some also have products made for them.
             </p>
           </div>
           <a href="/industries/" class="arrow-link">
@@ -217,64 +237,106 @@
         </div>
 
         <div class="industries-6-grid" style="grid-template-columns:repeat(auto-fit, minmax(min(100%, 240px), 1fr));">
-          <!-- 1. Furniture retail -->
-          <a href="/industries/#furniture" class="ind-compact-card reveal reveal-scale delay-1">
+          <!-- 1. Retail -->
+          <a href="/industries/#retail" class="ind-compact-card reveal reveal-scale delay-1">
             <div class="ind-card-body">
               <div class="ind-icon-row">
-                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                  <path d="M4 18v-6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v6"></path><path d="M6 10V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v3"></path><line x1="3" y1="18" x2="21" y2="18"></line><line x1="5" y1="18" x2="5" y2="21"></line><line x1="19" y1="18" x2="19" y2="21"></line>
-                </svg>
-                <span class="pill-badge pill-proto">Building</span>
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"></path><path d="M4 9v11h16V9"></path><path d="M9 20v-6h6v6"></path></svg>
               </div>
-              <div class="ind-title">Furniture retail</div>
-              <div class="ind-desc">FurniTrail, our software for furniture showrooms. Early access is open.</div>
+              <div class="ind-title">Retail</div>
+              <div class="ind-desc">Showrooms and stores where every visitor deserves a follow-up.</div>
+              <div class="use-chips"><span class="use-chip" data-product="furnitrail"><img src="assets/images/products/furnitrail-mark.svg" width="18" height="18" alt="">FurniTrail</span><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
             </div>
           </a>
-
-          <!-- 2. Accounting and CA firms -->
-          <a href="/industries/#accounting" class="ind-compact-card reveal reveal-scale delay-2">
+          <!-- 2. B2B companies and agencies -->
+          <a href="/industries/#b2b" class="ind-compact-card reveal reveal-scale delay-2">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><path d="M3 13h18"></path></svg>
+              </div>
+              <div class="ind-title">B2B companies and agencies</div>
+              <div class="ind-desc">Teams that have to find, reach and win other businesses.</div>
+              <div class="use-chips"><span class="use-chip" data-product="pollenrev"><img src="assets/images/products/pollenrev-mark.svg" width="18" height="18" alt="">PollenRev</span><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
+            </div>
+          </a>
+          <!-- 3. Accounting and CA firms -->
+          <a href="/industries/#accounting" class="ind-compact-card reveal reveal-scale delay-3">
             <div class="ind-card-body">
               <div class="ind-icon-row">
                 <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="8" y1="11" x2="10" y2="11"></line><line x1="14" y1="11" x2="16" y2="11"></line><line x1="8" y1="15" x2="10" y2="15"></line><line x1="14" y1="15" x2="16" y2="15"></line>
                 </svg>
-                <span class="pill-badge pill-demo">Advisory</span>
               </div>
               <div class="ind-title">Accounting and CA firms</div>
               <div class="ind-desc">Finding the hours lost to bill matching, re-typing and chasing documents.</div>
+              <div class="use-chips"><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span><span class="use-chip" data-product="pollenrev"><img src="assets/images/products/pollenrev-mark.svg" width="18" height="18" alt="">PollenRev</span></div>
             </div>
           </a>
-
-          <!-- 3. D2C brands -->
-          <a href="/industries/#d2c" class="ind-compact-card reveal reveal-scale delay-3">
+          <!-- 4. D2C brands -->
+          <a href="/industries/#d2c" class="ind-compact-card reveal reveal-scale delay-4">
             <div class="ind-card-body">
               <div class="ind-icon-row">
                 <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line>
                 </svg>
-                <span class="pill-badge pill-demo">Advisory</span>
               </div>
               <div class="ind-title">D2C brands</div>
               <div class="ind-desc">Working out the real margin on each order, after returns, shipping and fees.</div>
+              <div class="use-chips"><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
             </div>
           </a>
-
-          <!-- 4. Clinics and healthcare -->
-          <a href="/industries/#healthcare" class="ind-compact-card reveal reveal-scale delay-4">
+          <!-- 5. Clinics and healthcare -->
+          <a href="/industries/#healthcare" class="ind-compact-card reveal reveal-scale delay-5">
             <div class="ind-card-body">
               <div class="ind-icon-row">
                 <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                   <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path><path d="M3.5 12h4l2-3 3 6 2-3h6"></path>
                 </svg>
-                <span class="pill-badge pill-demo">Advisory</span>
               </div>
               <div class="ind-title">Clinics and healthcare</div>
-              <div class="ind-desc">Less re-typing at the front desk, reminders that go out on time, and reports without month-end scrambles.</div>
+              <div class="ind-desc">Less re-typing at the front desk, reminders on time, and simpler reports.</div>
+              <div class="use-chips"><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
             </div>
           </a>
 
-          <!-- 5. Suggest the next sector -->
-          <a href="/contact/" class="ind-compact-card reveal reveal-scale delay-5" style="border-style:dashed;">
+<!-- 6. Finance -->
+          <a href="/industries/#finance" class="ind-compact-card reveal reveal-scale delay-1">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10l9-6 9 6"></path><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8"></path><path d="M3 20h18"></path></svg>
+              </div>
+              <div class="ind-title">Finance</div>
+              <div class="ind-desc">Turning documents and spreadsheets into one trusted set of numbers, and fewer hands re-typing them.</div>
+              <div class="use-chips"><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
+            </div>
+          </a>
+
+          <!-- 7. Manufacturing -->
+          <a href="/industries/#manufacturing" class="ind-compact-card reveal reveal-scale delay-2">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 20V10l6 3V10l6 3V6h6v14z"></path><path d="M3 20h18"></path></svg>
+              </div>
+              <div class="ind-title">Manufacturing</div>
+              <div class="ind-desc">Seeing output, downtime and stock as they happen, so problems are caught the same day.</div>
+              <div class="use-chips"><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
+            </div>
+          </a>
+
+          <!-- 8. Logistics and supply chain -->
+          <a href="/industries/#logistics" class="ind-compact-card reveal reveal-scale delay-3">
+            <div class="ind-card-body">
+              <div class="ind-icon-row">
+                <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="12" height="9" rx="1"></rect><path d="M14 10h4l3 3v3h-7z"></path><circle cx="6" cy="18" r="1.8"></circle><circle cx="17" cy="18" r="1.8"></circle></svg>
+              </div>
+              <div class="ind-title">Logistics and supply chain</div>
+              <div class="ind-desc">One view of orders, stock and shipments, with delays flagged before customers notice.</div>
+              <div class="use-chips"><span class="use-chip"><span class="use-dot" aria-hidden="true"></span>Advisory</span></div>
+            </div>
+          </a>
+
+          <!-- 9. Suggest the next sector -->
+          <a href="/contact/?topic=sector" class="ind-compact-card reveal reveal-scale delay-5" style="border-style:dashed;">
             <div class="ind-card-body">
               <div class="ind-icon-row">
                 <svg class="ind-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -291,14 +353,14 @@
     </section>
 
     <!-- =======================================================================
-         PRODUCTS (FurniTrail featured + PollenRev)
+         PRODUCTS (FurniTrail + PollenRev, same card style)
          ======================================================================= -->
     <section class="products-sec" id="products">
       <div class="container prod-split-grid">
         <!-- Left text block -->
         <div class="prod-left-text reveal reveal-left">
           <span class="section-tag" style="font-size:11px;">Products</span>
-          <h2 class="section-heading">What we're building</h2>
+          <h2 class="section-heading">Our products</h2>
           <p class="section-lede">
             Each product gets its own name, its own site and a clear status. Here is where each one stands.
           </p>
@@ -310,7 +372,7 @@
         <!-- Middle featured card: FurniTrail -->
         <div class="prod-featured-box reveal reveal-scale delay-1" data-product="furnitrail">
           <div class="prod-featured-img-wrap" style="background:#FBF5EE;">
-            <img src="assets/images/products/furnitrail/furnitrail-today.png" alt="FurniTrail Today screen listing buyers to follow up (sample data)" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+            <img src="assets/images/products/furnitrail/furnitrail-today-app.png" alt="FurniTrail Today screen listing buyers to follow up (sample data)" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
             <span class="badge-float-left" style="background:rgba(26,29,36,0.92);">Early access open</span>
           </div>
           <div class="prod-featured-body">
@@ -322,21 +384,19 @@
           </div>
         </div>
 
-        <!-- Right side cards: research -->
-        <div class="prod-side-column reveal reveal-right delay-2">
-          <!-- PollenRev -->
-          <a href="/products/pollenrev/" class="prod-mini-card" data-product="pollenrev">
-            <div class="prod-mini-thumb" style="display:flex;align-items:center;justify-content:center;background:#FFFFFF;">
-              <img src="assets/images/products/pollenrev-mark.svg" width="40" height="40" alt="">
-            </div>
-            <div class="prod-mini-info">
-              <div class="prod-mini-header">
-                <span class="prod-mini-title">PollenRev</span>
-                <span class="pill-badge pill-res">Sales &amp; marketing, private beta</span>
-              </div>
-              <p class="prod-mini-desc">Sales software for small businesses: finds leads, writes the first message and tracks every deal.</p>
-            </div>
-          </a>
+        <!-- Second featured card: PollenRev (same banner style) -->
+        <div class="prod-featured-box reveal reveal-scale delay-2" data-product="pollenrev">
+          <div class="prod-featured-img-wrap" style="background:#EEF3FD;">
+            <img src="assets/images/products/pollenrev/pollenrev-dashboard.webp" alt="PollenRev home dashboard with pipeline value, win rate and new leads (sample data)" loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:top left;display:block;">
+            <span class="badge-float-left" style="background:rgba(10,31,61,0.92);">Private beta</span>
+          </div>
+          <div class="prod-featured-body">
+            <h3><span class="pm-lockup"><img class="pm-mark pm-mark-tile" src="assets/images/products/pollenrev-mark.svg" width="32" height="32" alt=""><span class="pm-word pm-pollenrev">Pollen<span>Rev</span></span></span></h3>
+            <p>Sales software for small and mid-sized businesses. It finds leads, scores them against your ideal customer, writes outreach and proposals, and tracks every deal in one pipeline.</p>
+            <a href="/products/pollenrev/" class="btn-hero-primary" style="padding:9px 20px;font-size:12.5px;">
+              See PollenRev <span class="arrow-slide">&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -510,9 +570,7 @@
       <div class="footer-top-row">
         <div>
           <a href="/" class="brand-area" style="font-size:15px;margin-bottom:6px;">
-            <div class="brand-bars" aria-hidden="true" style="height:18px;">
-              <span style="height:10px;"></span><span style="height:18px;"></span><span style="height:7px;"></span>
-            </div>
+            <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
             <span>Ideator Labs</span>
           </a>
           <div style="font-size:12px;color:var(--text-muted);">AI and data advisory, innovation and business intelligence.</div>
@@ -564,6 +622,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=20261117z"></script>
+  <script src="assets/js/main.js?v=20261117zd"></script>
 </body>
 </html>

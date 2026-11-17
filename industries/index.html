@@ -4,20 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sectors we work in — Ideator Labs</title>
-  <meta name="description" content="Sectors Ideator Labs works in: furniture retail (FurniTrail), CA and accounting firms, D2C brands, and clinics and healthcare. Suggest the next sector.">
+  <meta name="description" content="Ideator Labs sectors: retail, B2B, CA firms, D2C, healthcare, finance, manufacturing, logistics and supply chain, with advisory and products.">
   <link rel="canonical" href="https://ideatorlabs.github.io/industries/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ideator Labs">
   <meta property="og:title" content="Sectors we work in — Ideator Labs">
-  <meta property="og:description" content="Sectors Ideator Labs works in: furniture retail (FurniTrail), CA and accounting firms, D2C brands, and clinics and healthcare. Suggest the next sector.">
+  <meta property="og:description" content="Ideator Labs sectors: retail, B2B, CA firms, D2C, healthcare, finance, manufacturing, logistics and supply chain, with advisory and products.">
   <meta property="og:url" content="https://ideatorlabs.github.io/industries/">
   <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../assets/css/main.css?v=20261117z">
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261117zd">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
@@ -33,14 +33,18 @@
         "@id": "https://ideatorlabs.github.io/industries/#webpage",
         "name": "Sectors we work in — Ideator Labs",
         "url": "https://ideatorlabs.github.io/industries/",
-        "description": "The sectors Ideator Labs works in today: furniture retail, accounting and CA firms, D2C brands and healthcare practices, and how we pick the next one.",
+        "description": "The sectors Ideator Labs works in today: retail, B2B companies and agencies, accounting and CA firms, D2C brands and healthcare practices, and how we pick the next one.",
         "isPartOf": { "@id": "https://ideatorlabs.github.io/#website" },
         "publisher": { "@id": "https://ideatorlabs.github.io/#organization" },
         "about": [
-          { "@type": "Thing", "name": "Furniture retail" },
+          { "@type": "Thing", "name": "Retail" },
+          { "@type": "Thing", "name": "B2B companies and agencies" },
           { "@type": "Thing", "name": "Accounting and CA firms" },
           { "@type": "Thing", "name": "D2C brands" },
-          { "@type": "Thing", "name": "Clinics and healthcare practices" }
+          { "@type": "Thing", "name": "Clinics and healthcare practices" },
+          { "@type": "Thing", "name": "Finance" },
+          { "@type": "Thing", "name": "Manufacturing" },
+          { "@type": "Thing", "name": "Logistics and supply chain" }
         ]
       },
       {
@@ -62,9 +66,7 @@
   <header class="topbar">
     <div class="container nav-wrap">
       <a href="/" class="brand-area" aria-label="Ideator Labs Home">
-        <div class="brand-bars" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </div>
+        <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
         <span>Ideator Labs</span>
       </a>
 
@@ -114,13 +116,17 @@
         <span class="sec-eyebrow">Sectors</span>
         <h1 class="sec-title" style="max-width:24ch;">The sectors we work in today</h1>
         <p class="sec-subtitle">
-          We work in a few sectors at a time so we can learn each one properly. Today that means furniture retail, where we are building a product, and accounting firms, D2C brands and clinics, where we offer advisory.
+          Each sector below shows the products made for it and how our advisory helps. Every sector gets advisory; some also have their own product.
         </p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;">
-          <a href="#furniture" class="btn-hero-secondary">Furniture retail</a>
+          <a href="#retail" class="btn-hero-secondary">Retail</a>
+          <a href="#b2b" class="btn-hero-secondary">B2B companies and agencies</a>
           <a href="#accounting" class="btn-hero-secondary">Accounting and CA firms</a>
           <a href="#d2c" class="btn-hero-secondary">D2C brands</a>
           <a href="#healthcare" class="btn-hero-secondary">Clinics and healthcare</a>
+          <a href="#finance" class="btn-hero-secondary">Finance</a>
+          <a href="#manufacturing" class="btn-hero-secondary">Manufacturing</a>
+          <a href="#logistics" class="btn-hero-secondary">Logistics and supply chain</a>
           <a href="#next-sector" class="btn-hero-secondary">The next sector</a>
         </div>
       </div>
@@ -131,14 +137,15 @@
       <div class="container">
         <div style="display:grid;gap:40px;">
 
-          <!-- Sector 1: Furniture retail -->
-          <div class="step-card reveal" id="furniture" style="padding:36px;">
+          <!-- Sector 1: Retail -->
+          <div class="step-card reveal" id="retail" style="padding:36px;">
+            <span id="furniture" aria-hidden="true"></span>
             <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
               <div>
-                <span class="sec-eyebrow" style="margin-bottom:6px;">Furniture retail</span>
-                <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Furniture showrooms</h2>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Showrooms and stores</span>
+                <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Retail</h2>
               </div>
-              <span class="badge-pill badge-proto">Product: FurniTrail, building</span>
+              <div class="use-chips"><a class="use-chip" href="/products/furnitrail/" data-product="furnitrail"><img src="../assets/images/products/furnitrail-mark.svg" width="18" height="18" alt="">FurniTrail</a><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
               <div>
@@ -151,13 +158,44 @@
                 </ul>
               </div>
               <div>
-                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What we're doing</h3>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Made for retail: FurniTrail</h3>
                 <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;margin-bottom:18px;">
-                  We're building FurniTrail. It records walk-in visitors, sends each one a shortlist of 3 pieces to view in 3D, follows up on WhatsApp and gives the owner a daily summary. Early access is open.
+                  FurniTrail is made for furniture showrooms. It records walk-in visitors, sends each one a shortlist of 3 pieces to view in 3D, follows up on WhatsApp and gives the owner a daily summary. Early access is open.
                 </p>
                 <div style="display:flex;flex-wrap:wrap;gap:12px;">
                   <a href="/products/furnitrail/" class="btn-hero-primary">See FurniTrail <span class="arrow-slide">&rarr;</span></a>
-                  <a href="/contact/" class="btn-hero-secondary">Ask for early access</a>
+                  <a href="/contact/?topic=furnitrail" class="btn-hero-secondary">Ask for early access</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector 2: B2B companies and agencies -->
+          <div class="step-card reveal" id="b2b" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Companies that sell to companies</span>
+                <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">B2B companies and agencies</h2>
+              </div>
+              <div class="use-chips"><a class="use-chip" href="/products/pollenrev/" data-product="pollenrev"><img src="../assets/images/products/pollenrev-mark.svg" width="18" height="18" alt="">PollenRev</a><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What gets in the way</h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+                  <li>&bull; Finding the right businesses to contact takes hours of searching.</li>
+                  <li>&bull; Every message and proposal is written from scratch.</li>
+                  <li>&bull; Leads sit in spreadsheets and chats, and follow-ups get missed.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">Made for B2B: PollenRev</h3>
+                <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;margin-bottom:18px;">
+                  PollenRev finds leads, scores them against your ideal customer, writes outreach and proposals in your brand&rsquo;s voice, and keeps every deal in one pipeline. It&rsquo;s in private beta.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:12px;">
+                  <a href="/products/pollenrev/" class="btn-hero-primary">See PollenRev <span class="arrow-slide">&rarr;</span></a>
+                  <a href="/contact/?topic=pollenrev" class="btn-hero-secondary">Join the beta list</a>
                 </div>
               </div>
             </div>
@@ -170,7 +208,7 @@
                 <span class="sec-eyebrow" style="margin-bottom:6px;">Accounting, CA firms</span>
                 <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Accounting and CA firms</h2>
               </div>
-              <span class="badge-pill badge-open">Advisory</span>
+              <div class="use-chips"><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a><a class="use-chip" href="/products/pollenrev/" data-product="pollenrev"><img src="../assets/images/products/pollenrev-mark.svg" width="18" height="18" alt="">PollenRev</a></div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
               <div>
@@ -202,7 +240,7 @@
                 <span class="sec-eyebrow" style="margin-bottom:6px;">D2C, Consumer brands</span>
                 <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">D2C brands</h2>
               </div>
-              <span class="badge-pill badge-open">Advisory</span>
+              <div class="use-chips"><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
               <div>
@@ -234,7 +272,7 @@
                 <span class="sec-eyebrow" style="margin-bottom:6px;">Healthcare, Clinics and practices</span>
                 <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Clinics and healthcare practices</h2>
               </div>
-              <span class="badge-pill badge-open">Advisory</span>
+              <div class="use-chips"><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
             </div>
             <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
               <div>
@@ -254,6 +292,102 @@
                 <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
                   <a href="/solutions/" class="btn-hero-primary">How our advisory works <span class="arrow-slide">&rarr;</span></a>
                   <a href="/security.html" class="arrow-link">How we handle data <span class="arrow-slide">&rarr;</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector: Finance -->
+          <div class="step-card reveal" id="finance" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Lenders, insurance and wealth firms</span>
+                <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Finance</h2>
+              </div>
+              <div class="use-chips"><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What gets in the way</h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+                  <li>&bull; Customer documents are checked and re-typed by hand.</li>
+                  <li>&bull; Reports for management and regulators are rebuilt from spreadsheets every month.</li>
+                  <li>&bull; Follow-ups on applications and renewals depend on someone remembering.</li>
+                  <li>&bull; Different teams quote different numbers for the same thing.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What we offer</h3>
+                <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;margin-bottom:18px;">
+                  Turning documents and spreadsheets into one trusted set of numbers, and fewer hands re-typing them. It starts with a free 25-minute call, then a fixed-fee diagnostic that shows what to fix first. Building the fix with us is optional.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+                  <a href="/solutions/" class="btn-hero-primary">How our advisory works <span class="arrow-slide">&rarr;</span></a>
+                  <a href="/contact/?topic=advisory" class="arrow-link">Book a free call <span class="arrow-slide">&rarr;</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector: Manufacturing -->
+          <div class="step-card reveal" id="manufacturing" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Plants and workshops</span>
+                <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Manufacturing</h2>
+              </div>
+              <div class="use-chips"><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What gets in the way</h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+                  <li>&bull; Production plans live in spreadsheets that are out of date by lunch.</li>
+                  <li>&bull; Downtime and scrap only show up in the month-end report.</li>
+                  <li>&bull; Purchase, stock and sales numbers sit in different systems.</li>
+                  <li>&bull; Late orders get rushed at extra cost because the delay was spotted late.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What we offer</h3>
+                <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;margin-bottom:18px;">
+                  Seeing output, downtime and stock as they happen, so problems are caught the same day. It starts with a free 25-minute call, then a fixed-fee diagnostic that shows what to fix first. Building the fix with us is optional.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+                  <a href="/solutions/" class="btn-hero-primary">How our advisory works <span class="arrow-slide">&rarr;</span></a>
+                  <a href="/contact/?topic=advisory" class="arrow-link">Book a free call <span class="arrow-slide">&rarr;</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sector: Logistics and supply chain -->
+          <div class="step-card reveal" id="logistics" style="padding:36px;">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:18px;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:6px;">Transport, warehousing and distribution</span>
+                <h2 style="font-size:24px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;">Logistics and supply chain</h2>
+              </div>
+              <div class="use-chips"><a class="use-chip" href="/solutions/"><span class="use-dot" aria-hidden="true"></span>Advisory</a></div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What gets in the way</h3>
+                <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+                  <li>&bull; Shipment status is chased by phone and email.</li>
+                  <li>&bull; Delays are found out after the customer complains.</li>
+                  <li>&bull; Stock, orders and deliveries don&rsquo;t match across systems.</li>
+                  <li>&bull; The real cost of moving each order isn&rsquo;t clear.</li>
+                </ul>
+              </div>
+              <div>
+                <h3 style="font-size:15px;font-weight:700;color:var(--text-primary);margin-bottom:8px;">What we offer</h3>
+                <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;margin-bottom:18px;">
+                  One view of orders, stock and shipments, with delays flagged before customers notice. It starts with a free 25-minute call, then a fixed-fee diagnostic that shows what to fix first. Building the fix with us is optional.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+                  <a href="/solutions/" class="btn-hero-primary">How our advisory works <span class="arrow-slide">&rarr;</span></a>
+                  <a href="/contact/?topic=advisory" class="arrow-link">Book a free call <span class="arrow-slide">&rarr;</span></a>
                 </div>
               </div>
             </div>
@@ -306,9 +440,7 @@
       <div class="footer-top-row">
         <div>
           <a href="/" class="brand-area" style="font-size:15px;margin-bottom:6px;">
-            <div class="brand-bars" aria-hidden="true" style="height:18px;">
-              <span style="height:10px;"></span><span style="height:18px;"></span><span style="height:7px;"></span>
-            </div>
+            <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
             <span>Ideator Labs</span>
           </a>
           <div style="font-size:12px;color:var(--text-muted);">AI and data advisory, innovation and business intelligence.</div>
@@ -360,6 +492,6 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js?v=20261117z"></script>
+  <script src="../assets/js/main.js?v=20261117zd"></script>
 </body>
 </html>

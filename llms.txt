@@ -2,7 +2,7 @@
 
 > Ideator Labs is a studio at the intersection of AI and data advisory, innovation and business intelligence: we help businesses use AI and data to decide better, and build the tools and products that make it happen.
 
-Sectors we work in today: furniture retail (FurniTrail), accounting and CA firms (advisory), D2C brands (advisory), and clinics and healthcare practices (advisory). Next sectors are picked one at a time.
+Sectors we work in today: retail (FurniTrail), B2B companies and agencies (PollenRev), accounting and CA firms, D2C brands, clinics and healthcare practices, finance, manufacturing, and logistics and supply chain; advisory in every sector. Next sectors are picked one at a time.
 
 ## Products
 
