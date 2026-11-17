@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Open source: CORTEX and YAMCP | Ideator Labs</title>
+  <title>Open source: CORTEX, YAMCP and Python packages | Ideator Labs</title>
   <meta name="description" content="CORTEX is the open-source Python framework from Ideator Labs for LLM agents and tool servers. It includes YAMCP, an MCP tool server. MIT License, early stage.">
   <link rel="canonical" href="https://ideatorlabs.github.io/open-source/">
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ideator Labs">
-  <meta property="og:title" content="Open source: CORTEX and YAMCP | Ideator Labs">
+  <meta property="og:title" content="Open source: CORTEX, YAMCP and Python packages | Ideator Labs">
   <meta property="og:description" content="CORTEX is the open-source Python framework from Ideator Labs for LLM agents and tool servers. It includes YAMCP, an MCP tool server. MIT License, early stage.">
   <meta property="og:url" content="https://ideatorlabs.github.io/open-source/">
   <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Open source: CORTEX and YAMCP | Ideator Labs">
+  <meta name="twitter:title" content="Open source: CORTEX, YAMCP and Python packages | Ideator Labs">
   <meta name="twitter:description" content="CORTEX is the open-source Python framework from Ideator Labs for LLM agents and tool servers. It includes YAMCP, an MCP tool server. MIT License, early stage.">
   <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
 
@@ -31,7 +31,7 @@
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   "url": "https://ideatorlabs.github.io/open-source/",
-  "name": "Open source: CORTEX and YAMCP | Ideator Labs",
+  "name": "Open source: CORTEX, YAMCP and Python packages | Ideator Labs",
   "description": "CORTEX is the open-source Python framework from Ideator Labs for LLM agents and tool servers. It includes YAMCP, an MCP tool server. MIT License, early stage.",
   "publisher": {
     "@type": "Organization",
@@ -52,6 +52,54 @@
       "codeRepository": "https://github.com/ideatorlabs/cortex",
       "programmingLanguage": "Python",
       "license": "https://opensource.org/licenses/MIT",
+      "author": {
+        "@id": "https://ideatorlabs.github.io/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Greenline",
+      "description": "WhatsApp Cloud API engine. Run WhatsApp Business messaging for many businesses from your own server. It replies inside the 24-hour window, falls back to an approved template outside it, checks signed webhooks, honours STOP and START, and keeps a running cost per message.",
+      "codeRepository": "https://github.com/ideatorlabs/greenline",
+      "url": "https://ideatorlabs.github.io/greenline/",
+      "programmingLanguage": "Python",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "author": {
+        "@id": "https://ideatorlabs.github.io/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "TillSync",
+      "description": "POS and spreadsheet connectors. Pull customers and bills from point-of-sale systems, JSON APIs, Google Sheets and CSV or Excel files into one clean shape. It guesses which column is which, explains each guess and lets you correct it.",
+      "codeRepository": "https://github.com/ideatorlabs/tillsync",
+      "url": "https://ideatorlabs.github.io/tillsync/",
+      "programmingLanguage": "Python",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "author": {
+        "@id": "https://ideatorlabs.github.io/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Nudgewright",
+      "description": "Personal message lines, with reasons. Write one short, personal line for a customer from the facts you really have: a festival this week, their usual order, the offer the owner set. It never invents an offer, keeps sensitive businesses to plain wording, and says why it wrote what it wrote.",
+      "codeRepository": "https://github.com/ideatorlabs/nudgewright",
+      "url": "https://ideatorlabs.github.io/nudgewright/",
+      "programmingLanguage": "Python",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "author": {
+        "@id": "https://ideatorlabs.github.io/#organization"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "name": "Faultbell",
+      "description": "Exception alerts for Python. Get one clean alert per problem when a Python service or cron job fails, in Discord, Slack, Microsoft Teams, Google Chat, Telegram, PagerDuty or email. Secrets are scrubbed, repeats are grouped, and it never slows a request down.",
+      "codeRepository": "https://github.com/ideatorlabs/faultbell",
+      "url": "https://ideatorlabs.github.io/faultbell/",
+      "programmingLanguage": "Python",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
       "author": {
         "@id": "https://ideatorlabs.github.io/#organization"
       }
@@ -121,7 +169,7 @@
         <span class="sec-eyebrow">Open source</span>
         <h1 class="sec-title" style="max-width:24ch;">The code we publish on GitHub.</h1>
         <p class="sec-subtitle" style="max-width:720px;">
-          Today we publish one open-source project: CORTEX, which includes YAMCP. It is early, it is MIT-licensed, and issues and ideas are welcome.
+          We publish CORTEX, an early framework for AI agents with YAMCP inside (MIT-licensed), and <a href="#packages">four small Python packages</a> (Apache-2.0). Issues and ideas are welcome.
         </p>
         <a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" class="btn-hero-secondary">github.com/ideatorlabs &#8599;</a>
       </div>
@@ -204,6 +252,100 @@
               YAMCP is a Model Context Protocol (MCP) tool server. You wrap an API or a piece of business logic as a tool, and an AI agent can find it and call it. Tools are added as plugins, without changing the core. It can be reached over HTTP, WebSocket or the command line, and it is built with FastAPI and Pydantic. It lives in the <code style="font-family:var(--font-mono);font-size:13px;">yamcp</code> folder of the CORTEX repository; it is not a separate package.
             </p>
             <a href="https://github.com/ideatorlabs/cortex/tree/main/yamcp" target="_blank" rel="noopener" class="arrow-link">YAMCP folder and docs on GitHub &#8599;</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Python packages -->
+    <section id="packages" style="padding:0 0 72px;">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:28px;">
+          <span class="sec-eyebrow">Python packages</span>
+          <h2 class="section-heading">Small tools from our products, free to use</h2>
+          <p style="font-size:15px;color:var(--text-secondary);line-height:1.65;max-width:66ch;margin-top:8px;">Four plug-and-play Python packages taken from the software we build. Each has its own documentation, runs on Python 3.10 and newer, is tested on every change and is Apache-2.0 licensed.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;">
+
+          <article class="card reveal" id="greenline" style="padding:28px;--accent:#10B981;--accent-soft:#D1FAE5;--accent-line:linear-gradient(90deg,#10B981,#0EA5E9);">
+            <div style="display:flex;gap:16px;align-items:center;margin-bottom:14px;">
+              <img src="/assets/images/open-source/greenline.png" alt="" width="56" height="56" loading="lazy" style="border-radius:13px;flex:none;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:4px;">WhatsApp Cloud API engine</span>
+                <h3 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;margin:0;">
+                  <a href="https://ideatorlabs.github.io/greenline/" target="_blank" rel="noopener" style="color:var(--text-primary);">Greenline</a>
+                </h3>
+              </div>
+            </div>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Run WhatsApp Business messaging for many businesses from your own server. It replies inside the 24-hour window, falls back to an approved template outside it, checks signed webhooks, honours STOP and START, and keeps a running cost per message.</p>
+            <div style="background:#0F172A;border-radius:10px;padding:12px 16px;margin-bottom:18px;font-family:var(--font-mono);font-size:12.5px;color:#CBD5E1;overflow-x:auto;white-space:nowrap;">
+              <span style="color:#38BDF8;">$</span> pip install "greenline @ git+https://github.com/ideatorlabs/greenline"
+            </div>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://ideatorlabs.github.io/greenline/" target="_blank" rel="noopener" class="arrow-link">Documentation &#8599;</a>
+              <a href="https://github.com/ideatorlabs/greenline" target="_blank" rel="noopener" class="arrow-link">GitHub &#8599;</a>
+            </div>
+          </article>
+
+          <article class="card reveal delay-1" id="tillsync" style="padding:28px;--accent:#0EA5E9;--accent-soft:#E0F2FE;--accent-line:linear-gradient(90deg,#0EA5E9,#6366F1);">
+            <div style="display:flex;gap:16px;align-items:center;margin-bottom:14px;">
+              <img src="/assets/images/open-source/tillsync.png" alt="" width="56" height="56" loading="lazy" style="border-radius:13px;flex:none;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:4px;">POS and spreadsheet connectors</span>
+                <h3 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;margin:0;">
+                  <a href="https://ideatorlabs.github.io/tillsync/" target="_blank" rel="noopener" style="color:var(--text-primary);">TillSync</a>
+                </h3>
+              </div>
+            </div>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Pull customers and bills from point-of-sale systems, JSON APIs, Google Sheets and CSV or Excel files into one clean shape. It guesses which column is which, explains each guess and lets you correct it.</p>
+            <div style="background:#0F172A;border-radius:10px;padding:12px 16px;margin-bottom:18px;font-family:var(--font-mono);font-size:12.5px;color:#CBD5E1;overflow-x:auto;white-space:nowrap;">
+              <span style="color:#38BDF8;">$</span> pip install "tillsync @ git+https://github.com/ideatorlabs/tillsync"
+            </div>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://ideatorlabs.github.io/tillsync/" target="_blank" rel="noopener" class="arrow-link">Documentation &#8599;</a>
+              <a href="https://github.com/ideatorlabs/tillsync" target="_blank" rel="noopener" class="arrow-link">GitHub &#8599;</a>
+            </div>
+          </article>
+
+          <article class="card reveal delay-2" id="nudgewright" style="padding:28px;--accent:#8B5CF6;--accent-soft:#EDE9FE;--accent-line:linear-gradient(90deg,#8B5CF6,#0EA5E9);">
+            <div style="display:flex;gap:16px;align-items:center;margin-bottom:14px;">
+              <img src="/assets/images/open-source/nudgewright.png" alt="" width="56" height="56" loading="lazy" style="border-radius:13px;flex:none;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:4px;">Personal message lines, with reasons</span>
+                <h3 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;margin:0;">
+                  <a href="https://ideatorlabs.github.io/nudgewright/" target="_blank" rel="noopener" style="color:var(--text-primary);">Nudgewright</a>
+                </h3>
+              </div>
+            </div>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Write one short, personal line for a customer from the facts you really have: a festival this week, their usual order, the offer the owner set. It never invents an offer, keeps sensitive businesses to plain wording, and says why it wrote what it wrote.</p>
+            <div style="background:#0F172A;border-radius:10px;padding:12px 16px;margin-bottom:18px;font-family:var(--font-mono);font-size:12.5px;color:#CBD5E1;overflow-x:auto;white-space:nowrap;">
+              <span style="color:#38BDF8;">$</span> pip install "nudgewright @ git+https://github.com/ideatorlabs/nudgewright"
+            </div>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://ideatorlabs.github.io/nudgewright/" target="_blank" rel="noopener" class="arrow-link">Documentation &#8599;</a>
+              <a href="https://github.com/ideatorlabs/nudgewright" target="_blank" rel="noopener" class="arrow-link">GitHub &#8599;</a>
+            </div>
+          </article>
+
+          <article class="card reveal delay-3" id="faultbell" style="padding:28px;--accent:#F43F5E;--accent-soft:#FFE4E6;--accent-line:linear-gradient(90deg,#F43F5E,#8B5CF6);">
+            <div style="display:flex;gap:16px;align-items:center;margin-bottom:14px;">
+              <img src="/assets/images/open-source/faultbell.png" alt="" width="56" height="56" loading="lazy" style="border-radius:13px;flex:none;">
+              <div>
+                <span class="sec-eyebrow" style="margin-bottom:4px;">Exception alerts for Python</span>
+                <h3 style="font-size:20px;font-weight:700;letter-spacing:-0.02em;margin:0;">
+                  <a href="https://ideatorlabs.github.io/faultbell/" target="_blank" rel="noopener" style="color:var(--text-primary);">Faultbell</a>
+                </h3>
+              </div>
+            </div>
+            <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.65;margin-bottom:16px;">Get one clean alert per problem when a Python service or cron job fails, in Discord, Slack, Microsoft Teams, Google Chat, Telegram, PagerDuty or email. Secrets are scrubbed, repeats are grouped, and it never slows a request down.</p>
+            <div style="background:#0F172A;border-radius:10px;padding:12px 16px;margin-bottom:18px;font-family:var(--font-mono);font-size:12.5px;color:#CBD5E1;overflow-x:auto;white-space:nowrap;">
+              <span style="color:#38BDF8;">$</span> pip install "faultbell @ git+https://github.com/ideatorlabs/faultbell"
+            </div>
+            <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap;">
+              <a href="https://ideatorlabs.github.io/faultbell/" target="_blank" rel="noopener" class="arrow-link">Documentation &#8599;</a>
+              <a href="https://github.com/ideatorlabs/faultbell" target="_blank" rel="noopener" class="arrow-link">GitHub &#8599;</a>
+            </div>
           </article>
 
         </div>
