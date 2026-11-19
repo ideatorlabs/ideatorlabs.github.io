@@ -398,6 +398,10 @@ img {
   box-shadow: 0 20px 48px -10px rgba(26, 29, 36, 0.16);
 }
 
+/* Hand-built animated scene (assets/images/hero-scene.svg): it moves on its own, so no float or card shadow */
+.hero-graphic-wrap img.hero-scene,
+.hero-graphic-wrap:hover img.hero-scene { max-width: 560px; border-radius: 0; box-shadow: none; animation: none; }
+
 /* ==========================================================================
    OUR APPROACH (Split 2-Column with 3 Horizontal Steps)
    ========================================================================== */

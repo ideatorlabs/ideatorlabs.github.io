@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 560 420" role="img" aria-labelledby="t">
+<title id="t">Business data from orders, ad spend and the ledger flows into Ideator Labs and comes out as a weekly read: what changed, why, and what to do next</title>
+<style>
+  .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 9.5px; letter-spacing: .14em; fill: #5B6B8C; font-weight: 600; }
+  .card { fill: #FFFFFF; stroke: #D9E5F5; stroke-width: 1; filter: url(#lift); }
+  .skel { fill: #E6EEF9; }
+  .ink { fill: #3B6FE0; }
+  .cy { fill: #22B8CF; }
+  .wire { fill: none; stroke: #9DB8E6; stroke-width: 1.4; stroke-dasharray: 4 6; animation: flow 1.6s linear infinite; }
+  .mover { fill: #3B6FE0; }
+  @keyframes flow { to { stroke-dashoffset: -40; } }
+
+  .blink { animation: blink 2.4s ease-in-out infinite; }
+  .b2 { animation-delay: .8s; } .b3 { animation-delay: 1.6s; }
+  @keyframes blink { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+
+  .float { animation: float 6s ease-in-out infinite; }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+  .shadow { transform-box: fill-box; transform-origin: center; animation: shadow 6s ease-in-out infinite; }
+  @keyframes shadow { 0%, 100% { transform: scaleX(1); opacity: .07; } 50% { transform: scaleX(.9); opacity: .045; } }
+
+  .bar { transform-box: fill-box; transform-origin: 50% 100%; animation: bar 4.2s cubic-bezier(.45,0,.2,1) infinite; }
+  .bar2 { animation-delay: .5s; } .bar3 { animation-delay: 1s; }
+  @keyframes bar { 0%, 100% { transform: scaleY(1); } 35% { transform: scaleY(1.16); } 65% { transform: scaleY(.88); } }
+  .net { stroke-dasharray: 20; animation: draw 1.4s ease .3s both; }
+  @keyframes draw { from { stroke-dashoffset: 20; } to { stroke-dashoffset: 0; } }
+  .ping { transform-box: fill-box; transform-origin: center; animation: ping 2.8s ease-out infinite; }
+  @keyframes ping { 0% { transform: scale(1); opacity: .5; } 100% { transform: scale(3.4); opacity: 0; } }
+
+  .orbit { transform-origin: 300px 210px; animation: spin 48s linear infinite; }
+  .orbit-rev { transform-origin: 300px 210px; animation: spin 30s linear infinite reverse; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .chart { stroke-dasharray: 150; animation: chart 7s ease-in-out infinite; }
+  @keyframes chart { 0% { stroke-dashoffset: 150; } 30%, 88% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
+  .chart-end { animation: pop 7s ease-in-out infinite; }
+  @keyframes pop { 0%, 28% { opacity: 0; } 32%, 88% { opacity: 1; } 100% { opacity: 0; } }
+  .tick { stroke-dasharray: 14; animation: tick 7s ease-in-out infinite; }
+  .t2 { animation-name: tick2; } .t3 { animation-name: tick3; }
+  @keyframes tick  { 0%, 34% { stroke-dashoffset: 14; } 40%, 88% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+  @keyframes tick2 { 0%, 44% { stroke-dashoffset: 14; } 50%, 88% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+  @keyframes tick3 { 0%, 54% { stroke-dashoffset: 14; } 60%, 88% { stroke-dashoffset: 0; opacity: 1; } 100% { opacity: 0; } }
+
+  .step-dot { animation: step 9s cubic-bezier(.65,0,.35,1) infinite; }
+  @keyframes step { 0%, 22% { transform: translateX(0); } 33%, 55% { transform: translateX(140px); } 66%, 92% { transform: translateX(280px); } 100% { transform: translateX(0); opacity: 0; } }
+  .lbl-on { opacity: 0; animation: 9s ease infinite; }
+  .on1 { animation-name: on1; } .on2 { animation-name: on2; } .on3 { animation-name: on3; }
+  @keyframes on1 { 0%, 24% { opacity: 1; } 30%, 100% { opacity: 0; } }
+  @keyframes on2 { 0%, 31% { opacity: 0; } 35%, 57% { opacity: 1; } 63%, 100% { opacity: 0; } }
+  @keyframes on3 { 0%, 64% { opacity: 0; } 68%, 92% { opacity: 1; } 98%, 100% { opacity: 0; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    .mover, .ping { display: none; }
+  }
+</style>
+<defs>
+  <linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6F9FE"/><stop offset="1" stop-color="#E8F0FB"/></linearGradient>
+  <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3B6FE0"/><stop offset="1" stop-color="#22B8CF"/></linearGradient>
+  <linearGradient id="barg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#3B6FE0"/><stop offset="1" stop-color="#22B8CF"/></linearGradient>
+  <linearGradient id="hexfill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEF5FE"/></linearGradient>
+  <filter id="lift" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#3B6FE0" flood-opacity=".10"/></filter>
+  <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#D3E0F3"/></pattern>
+  <path id="w1" d="M164 89 C200 89 196 185 231 185"/>
+  <path id="w2" d="M164 195 C200 195 196 210 231 210"/>
+  <path id="w3" d="M164 301 C200 301 196 235 231 235"/>
+  <path id="w4" d="M370 210 L402 210"/>
+</defs>
+
+<rect x="0" y="0" width="560" height="420" rx="22" fill="url(#wash)"/>
+<rect x="0" y="0" width="560" height="420" rx="22" fill="url(#dots)" opacity=".7"/>
+
+<!-- orbits around the studio mark -->
+<g class="orbit"><circle cx="300" cy="210" r="106" fill="none" stroke="#B9CDEE" stroke-width="1" stroke-dasharray="2 7"/></g>
+<g class="orbit-rev"><circle cx="300" cy="210" r="128" fill="none" stroke="#D3E0F3" stroke-width="1"/><circle cx="300" cy="82" r="3.5" fill="#3B6FE0"/><circle cx="428" cy="210" r="2.5" fill="#22B8CF"/></g>
+
+<!-- sources -->
+<g class="sans">
+  <rect class="card" x="16" y="52" width="148" height="74" rx="12"/>
+  <text class="mono" x="32" y="76">ORDERS</text>
+  <circle class="cy blink" cx="146" cy="73" r="3.5"/>
+  <rect class="skel" x="32" y="89" width="84" height="6" rx="3"/><rect class="ink" x="122" y="89" width="22" height="6" rx="3" opacity=".85"/>
+  <rect class="skel" x="32" y="103" width="62" height="6" rx="3"/><rect class="skel" x="100" y="103" width="30" height="6" rx="3"/>
+
+  <rect class="card" x="16" y="158" width="148" height="74" rx="12"/>
+  <text class="mono" x="32" y="182">AD SPEND</text>
+  <circle class="cy blink b2" cx="146" cy="179" r="3.5"/>
+  <rect class="skel" x="32" y="195" width="58" height="6" rx="3"/><rect class="ink" x="96" y="195" width="34" height="6" rx="3" opacity=".85"/>
+  <rect class="skel" x="32" y="209" width="96" height="6" rx="3"/>
+
+  <rect class="card" x="16" y="264" width="148" height="74" rx="12"/>
+  <text class="mono" x="32" y="288">LEDGER</text>
+  <circle class="cy blink b3" cx="146" cy="285" r="3.5"/>
+  <rect class="skel" x="32" y="301" width="70" height="6" rx="3"/><rect class="skel" x="108" y="301" width="36" height="6" rx="3"/>
+  <rect class="skel" x="32" y="315" width="48" height="6" rx="3"/><rect class="ink" x="86" y="315" width="18" height="6" rx="3" opacity=".85"/>
+</g>
+
+<!-- data flowing in and out -->
+<use xlink:href="#w1" class="wire"/><use xlink:href="#w2" class="wire"/><use xlink:href="#w3" class="wire"/><use xlink:href="#w4" class="wire"/>
+<circle class="mover" r="3"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath xlink:href="#w1"/></animateMotion></circle>
+<circle class="mover" r="3"><animateMotion dur="2.6s" begin=".9s" repeatCount="indefinite"><mpath xlink:href="#w2"/></animateMotion></circle>
+<circle class="mover" r="3"><animateMotion dur="2.6s" begin="1.7s" repeatCount="indefinite"><mpath xlink:href="#w3"/></animateMotion></circle>
+<circle class="mover" r="3"><animateMotion dur="1.3s" begin=".4s" repeatCount="indefinite"><mpath xlink:href="#w4"/></animateMotion></circle>
+
+<!-- the studio mark, large -->
+<ellipse class="shadow" cx="300" cy="306" rx="66" ry="9" fill="#3B6FE0"/>
+<g class="float">
+  <g transform="translate(207.25 117.25) scale(5.797)">
+    <path d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z" fill="url(#hexfill)" stroke="url(#brand)" stroke-width=".7" stroke-linejoin="round"/>
+    <path class="net" d="M11 15.2 16 9.4l5 3.8z" fill="none" stroke="#3B6FE0" stroke-width=".28" stroke-linejoin="round" opacity=".6"/>
+    <rect fill="url(#barg)" class="bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/>
+    <rect fill="url(#barg)" class="bar bar2" x="14.5" y="12.4" width="3" height="11" rx="1.5"/>
+    <rect fill="url(#barg)" class="bar bar3" x="19.5" y="15" width="3" height="8.4" rx="1.5"/>
+    <circle class="ink" cx="11" cy="15.2" r="1.5"/>
+    <circle class="cy" cx="21" cy="13.2" r="1.5"/>
+    <circle class="ping" cx="16" cy="9.4" r="1.9" fill="none" stroke="#22B8CF" stroke-width=".3"/>
+    <circle class="ink" cx="16" cy="9.4" r="1.9"/>
+  </g>
+</g>
+
+<!-- the weekly read -->
+<g class="sans">
+  <rect class="card" x="404" y="92" width="140" height="236" rx="14"/>
+  <text class="mono" x="420" y="117">WEEKLY READ</text>
+  <line x1="420" y1="200" x2="528" y2="200" stroke="#E6EEF9" stroke-width="1"/>
+  <line x1="420" y1="172" x2="528" y2="172" stroke="#EEF3FB" stroke-width="1"/>
+  <line x1="420" y1="144" x2="528" y2="144" stroke="#EEF3FB" stroke-width="1"/>
+  <path class="chart" d="M420 192 L441 183 L462 188 L484 166 L506 172 L528 148" fill="none" stroke="url(#brand)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle class="chart-end" cx="528" cy="148" r="3.5" fill="#22B8CF"/>
+  <line x1="420" y1="216" x2="528" y2="216" stroke="#E6EEF9"/>
+
+  <circle cx="428" cy="238" r="7.5" fill="#F3F7FE" stroke="#C9D8F0"/><path class="tick" d="M424.5 238.2 l2.4 2.4 l4.6 -5" fill="none" stroke="#3B6FE0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="443" y="242" font-size="11" fill="#1E2A44" font-weight="600">What changed</text>
+  <circle cx="428" cy="267" r="7.5" fill="#F3F7FE" stroke="#C9D8F0"/><path class="tick t2" d="M424.5 267.2 l2.4 2.4 l4.6 -5" fill="none" stroke="#3B6FE0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="443" y="271" font-size="11" fill="#1E2A44" font-weight="600">Why it changed</text>
+  <circle cx="428" cy="296" r="7.5" fill="#F3F7FE" stroke="#C9D8F0"/><path class="tick t3" d="M424.5 296.2 l2.4 2.4 l4.6 -5" fill="none" stroke="#3B6FE0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="443" y="300" font-size="11" fill="#1E2A44" font-weight="600">What to do next</text>
+</g>
+
+<!-- how we build -->
+<g class="sans">
+  <line x1="140" y1="374" x2="420" y2="374" stroke="#C9D8F0" stroke-width="1.4"/>
+  <circle cx="140" cy="374" r="5" fill="#FFFFFF" stroke="#9DB8E6" stroke-width="1.4"/>
+  <circle cx="280" cy="374" r="5" fill="#FFFFFF" stroke="#9DB8E6" stroke-width="1.4"/>
+  <circle cx="420" cy="374" r="5" fill="#FFFFFF" stroke="#9DB8E6" stroke-width="1.4"/>
+  <circle class="step-dot mover" cx="140" cy="374" r="5"/>
+  <g font-size="12" text-anchor="middle" fill="#8A9BBB">
+    <text x="140" y="400">Research</text><text x="280" y="400">Prototype</text><text x="420" y="400">Product</text>
+  </g>
+  <g font-size="12" text-anchor="middle" fill="#2F5BC7" font-weight="600">
+    <text class="lbl-on on1" x="140" y="400">Research</text><text class="lbl-on on2" x="280" y="400">Prototype</text><text class="lbl-on on3" x="420" y="400">Product</text>
+  </g>
+</g>
+</svg>
