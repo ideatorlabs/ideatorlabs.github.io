@@ -37,18 +37,20 @@
     { title: "Blog", category: "Blog", url: "/blog/", desc: "Plain articles on AI, data, business intelligence and our sectors." },
     { title: "CA and accounting firms articles", category: "Blog", url: "/blog/ca-firms/", desc: "Where accounting practices lose hours to matching, re-typing and chasing, and how to win them back." },
     { title: "D2C brands articles", category: "Blog", url: "/blog/d2c/", desc: "The real margin on each order, after returns, shipping, fees and ads." },
+    { title: "FurniTrail articles", category: "Blog", url: "/blog/furnitrail/", desc: "For furniture showroom owners: turning walk-in visitors into buyers with timely, personal follow-up." },
     { title: "Where CA firms lose hours every week, and how AI gives them back", category: "Blog", url: "/blog/ca-firms-reclaim-hours-with-ai.html", desc: "The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time." },
     { title: "Your D2C brand\u2019s real problem isn\u2019t ads, it\u2019s true margin per order", category: "Blog", url: "/blog/d2c-true-margin-per-order.html", desc: "Before you change the ads, find out what each order really leaves you with." },
+    { title: "Why furniture showrooms lose walk-in buyers, and how to follow up", category: "Blog", url: "/blog/furnitrail/furniture-showroom-walk-in-follow-up.html", desc: "What to capture at the door, what to send, and when." },
     // blog:end
     { title: "Ideator Labs home", category: "Home", url: "/", desc: "A studio for AI and data advisory, innovation and business intelligence." },
     { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
-    { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail (early access) and PollenRev (private beta)." },
-    { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "Software for furniture showrooms: visitor shortlists, WhatsApp follow-up, daily summary. Early access open." },
-    { title: "FurniTrail early access", category: "Products", url: "/products/furnitrail/#early-access", desc: "Early access is open to furniture showrooms; they see it first and help shape it." },
-    { title: "PollenRev", category: "Products", url: "/products/pollenrev/", desc: "Sales software for small businesses: finds leads, writes outreach, tracks deals. Private beta." },
+    { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail for furniture showrooms and PollenRev sales software for small businesses." },
+    { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "From browsing to belonging. Each showroom buyer gets one page in your name: shortlist, proposal, order, delivery, review and referral." },
+    { title: "FurniTrail demo", category: "Products", url: "/products/furnitrail/#demo", desc: "Book a demo and see FurniTrail with your own pieces, from walk-in to review." },
+    { title: "PollenRev", category: "Products", url: "/products/pollenrev/", desc: "Sales software for small businesses: finds leads, writes outreach, tracks deals." },
     { title: "Advisory", category: "Advisory", url: "/solutions/", desc: "A free 25-minute call, then a fixed-fee diagnostic that shows where time or margin is lost and what to fix first." },
     { title: "Sectors we work in", category: "Sectors", url: "/industries/", desc: "Retail, B2B companies and agencies, accounting and CA firms, D2C brands, and clinics." },
-    { title: "Retail", category: "Sectors", url: "/industries/#retail", desc: "Showroom visitors who leave to think it over, and how FurniTrail helps keep in touch." },
+    { title: "Retail", category: "Sectors", url: "/industries/#retail", desc: "Showroom visitors who leave to think it over, and how FurniTrail takes them from walk-in to happy home." },
     { title: "B2B companies and agencies", category: "Sectors", url: "/industries/#b2b", desc: "Finding, reaching and winning other businesses. PollenRev and advisory." },
     { title: "Accounting and CA firms", category: "Sectors", url: "/industries/#accounting", desc: "Bill matching, re-typing into Tally and chasing documents. Advisory." },
     { title: "Clinics and healthcare", category: "Sectors", url: "/industries/#healthcare", desc: "Less re-typing at the front desk, reminders on time, simpler reports. Advisory." },
@@ -68,7 +70,7 @@
     { title: "Nudgewright", category: "Open Source", url: "/open-source/#nudgewright", desc: "Writes one short personal customer message from real facts, and says why." },
     { title: "Open source", category: "Open Source", url: "/open-source/", desc: "Code we share publicly on GitHub." },
     { title: "About", category: "Company", url: "/about/", desc: "Who we are and how we work." },
-    { title: "Contact", category: "Company", url: "/contact/", desc: "Email us, ask for FurniTrail early access, book a free 25-minute call or suggest a sector." }
+    { title: "Contact", category: "Company", url: "/contact/", desc: "Email or call us, book a FurniTrail or PollenRev demo, book a free 25-minute call or suggest a sector." }
   ];
 
   const searchTrigger = document.getElementById('searchTrigger');

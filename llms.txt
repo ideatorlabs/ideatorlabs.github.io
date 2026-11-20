@@ -7,8 +7,8 @@ Sectors we work in today: retail (FurniTrail), B2B companies and agencies (Polle
 ## Products
 
 - [Products](https://ideatorlabs.github.io/products/): Overview of what Ideator Labs builds and researches.
-- [FurniTrail by Ideator Labs](https://ideatorlabs.github.io/products/furnitrail/): Software for furniture showrooms. Early access open. It captures walk-in visitors, sends each a shortlist link with 3 options, lets buyers share it with family and book a visit on WhatsApp, follows up on WhatsApp and gives the owner a daily summary.
-- [PollenRev](https://ideatorlabs.github.io/products/pollenrev/): PollenRev is sales software for small and mid-sized businesses. It finds leads on Google Maps, OpenStreetMap, Google search, Instagram and LinkedIn, scores them against your ideal customer, writes outreach, proposals and pitch decks in your brand’s voice, and tracks each deal in a sales pipeline. Private beta.
+- [FurniTrail by Ideator Labs](https://ideatorlabs.github.io/products/furnitrail/): Customer journey software for furniture showrooms. Tagline: From browsing to belonging. For the buyer who says "we'll come back with family": they get one page in the showroom's own name with the pieces they liked (shortlist), then a proposal they can accept, then their order on its way, then delivery and a thank-you that asks for a review, plus a page to refer a friend. Every morning the showroom team's Today list shows who needs them. Book a demo through the contact page.
+- [PollenRev](https://ideatorlabs.github.io/products/pollenrev/): PollenRev is sales software for small and mid-sized businesses. It finds leads on Google Maps, OpenStreetMap, Google search, Instagram and LinkedIn, scores them against your ideal customer, writes outreach, proposals and pitch decks in your brand’s voice, and tracks each deal in a sales pipeline. Book a demo through the contact page.
 
 ## Advisory
 
@@ -21,15 +21,17 @@ Sectors we work in today: retail (FurniTrail), B2B companies and agencies (Polle
 - [How we write](https://ideatorlabs.github.io/blog/how-we-write/): How articles are researched, checked and corrected.
 - [CA and accounting firms](https://ideatorlabs.github.io/blog/ca-firms/): Where accounting practices lose hours to matching, re-typing and chasing, and how to win them back.
 - [D2C brands](https://ideatorlabs.github.io/blog/d2c/): The real margin on each order, after returns, shipping, fees and ads.
+- [FurniTrail](https://ideatorlabs.github.io/blog/furnitrail/): For furniture showroom owners: turning walk-in visitors into buyers with timely, personal follow-up.
 - [Where CA firms lose hours every week, and how AI gives them back](https://ideatorlabs.github.io/blog/ca-firms-reclaim-hours-with-ai.html): The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time.
 - [Your D2C brand’s real problem isn’t ads, it’s true margin per order](https://ideatorlabs.github.io/blog/d2c-true-margin-per-order.html): Before you change the ads, find out what each order really leaves you with.
+- [Why furniture showrooms lose walk-in buyers, and how to follow up](https://ideatorlabs.github.io/blog/furnitrail/furniture-showroom-walk-in-follow-up.html): What to capture at the door, what to send, and when.
 
 ## Company
 
 - [About](https://ideatorlabs.github.io/about/): Who Ideator Labs is and how it works.
 - [Research](https://ideatorlabs.github.io/research/): What we are researching: CORTEX and YAMCP (open source) and Brain (experiments toward an open-source, brain-inspired AI companion, drawing on existing neuroscience and AI research; research, not a product).
 - [Open source](https://ideatorlabs.github.io/open-source/): CORTEX, a public repository that includes YAMCP, a Model Context Protocol server framework; and five Python packages: Greenline (WhatsApp Cloud API engine), TillSync (POS and spreadsheet connectors), Nudgewright (personal customer message lines with reasons), Faultbell (exception alerts and server watch, to chat, paging and email) and Leadbell (website lead capture with consent, plus sign-up, lead and payment alerts).
-- [Contact](https://ideatorlabs.github.io/contact/): Email ideatorlabs.ai@gmail.com, or use the contact form, which opens your own email app.
+- [Contact](https://ideatorlabs.github.io/contact/): Email ideatorlabs.ai@gmail.com, call +91 73269 70981, or use the contact form, which opens your own email app.
 - [Privacy policy](https://ideatorlabs.github.io/privacy.html): No cookies or analytics on this site; how emails are used.
 - [Security](https://ideatorlabs.github.io/security.html): What we commit to when handling client data.
 - [Terms of use](https://ideatorlabs.github.io/terms.html): Simple terms for using the site.
