@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 560 420" role="img" aria-labelledby="t">
-<title id="t">Business data from orders, ad spend and the ledger flows into Ideator Labs and comes out as a weekly read: what changed, why, and what to do next</title>
+<title id="t">Data from sales, operations and finance flows into Ideator Labs and comes out as insight: what changed, why, and what to do next, from research to prototype to product</title>
 <style>
   .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
   .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 9.5px; letter-spacing: .14em; fill: #5B6B8C; font-weight: 600; }
@@ -78,19 +78,19 @@
 <!-- sources -->
 <g class="sans">
   <rect class="card" x="16" y="52" width="148" height="74" rx="12"/>
-  <text class="mono" x="32" y="76">ORDERS</text>
+  <text class="mono" x="32" y="76">SALES</text>
   <circle class="cy blink" cx="146" cy="73" r="3.5"/>
   <rect class="skel" x="32" y="89" width="84" height="6" rx="3"/><rect class="ink" x="122" y="89" width="22" height="6" rx="3" opacity=".85"/>
   <rect class="skel" x="32" y="103" width="62" height="6" rx="3"/><rect class="skel" x="100" y="103" width="30" height="6" rx="3"/>
 
   <rect class="card" x="16" y="158" width="148" height="74" rx="12"/>
-  <text class="mono" x="32" y="182">AD SPEND</text>
+  <text class="mono" x="32" y="182">OPERATIONS</text>
   <circle class="cy blink b2" cx="146" cy="179" r="3.5"/>
   <rect class="skel" x="32" y="195" width="58" height="6" rx="3"/><rect class="ink" x="96" y="195" width="34" height="6" rx="3" opacity=".85"/>
   <rect class="skel" x="32" y="209" width="96" height="6" rx="3"/>
 
   <rect class="card" x="16" y="264" width="148" height="74" rx="12"/>
-  <text class="mono" x="32" y="288">LEDGER</text>
+  <text class="mono" x="32" y="288">FINANCE</text>
   <circle class="cy blink b3" cx="146" cy="285" r="3.5"/>
   <rect class="skel" x="32" y="301" width="70" height="6" rx="3"/><rect class="skel" x="108" y="301" width="36" height="6" rx="3"/>
   <rect class="skel" x="32" y="315" width="48" height="6" rx="3"/><rect class="ink" x="86" y="315" width="18" height="6" rx="3" opacity=".85"/>
@@ -122,7 +122,7 @@
 <!-- the weekly read -->
 <g class="sans">
   <rect class="card" x="404" y="92" width="140" height="236" rx="14"/>
-  <text class="mono" x="420" y="117">WEEKLY READ</text>
+  <text class="mono" x="420" y="117">INSIGHTS</text>
   <line x1="420" y1="200" x2="528" y2="200" stroke="#E6EEF9" stroke-width="1"/>
   <line x1="420" y1="172" x2="528" y2="172" stroke="#EEF3FB" stroke-width="1"/>
   <line x1="420" y1="144" x2="528" y2="144" stroke="#EEF3FB" stroke-width="1"/>
