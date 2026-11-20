@@ -19,7 +19,7 @@
   <meta name="twitter:title" content="Your D2C brand's real problem isn't ads, it's true margin per order">
   <meta name="twitter:description" content="Many D2C brands can't see what each order earns after product, shipping, fees, returns and ads. How to work out true margin per order before you scale.">
   <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
-  <link rel="stylesheet" href="../assets/css/main.css?v=20261117ze">
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261120b">
   <link rel="icon" href="../favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -234,7 +234,7 @@
   </div>
 
   <main>
-    <article class="article-wrap">
+    <article class="article-wrap post-grid">
       <div class="reveal" style="margin-bottom:32px;">
         <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">
             <a href="/" style="color:var(--text-muted);">Home</a> &rsaquo;
@@ -252,7 +252,10 @@
           Before you change the ads, find out what each order really leaves you with.
         </p>
       </div>
-
+      <!-- cover:start (written by scripts/build_blog.py) -->
+      <figure class="post-cover" data-cluster="d2c"><img src="/assets/images/blog/d2c-true-margin-per-order.svg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+      <nav class="post-toc" aria-label="In this article"><span class="post-toc-title">In this article</span><ol><li><a href="#why-margin-per-order-is-hard-to-see">Why margin per order is hard to see</a></li><li><a href="#how-to-work-out-true-margin-per-order">How to work out true margin per order</a></li><li><a href="#what-one-data-layer-does">What one data layer does</a></li><li><a href="#how-to-start">How to start</a></li><li><a href="#how-we-can-help">How we can help</a></li></ol></nav>
+      <!-- cover:end -->
       <div class="article-content reveal reveal-up delay-1">
         <p>For many D2C brands, the thing holding growth back is not the ads. It is not knowing how much each order really earns once product cost, packing, shipping, payment fees, returns and ad spend are taken out. Until you can see that margin per order, by product and by channel, you can&rsquo;t tell which ads and products deserve more money.</p>
 
@@ -265,7 +268,7 @@
           </ul>
         </div>
 
-        <h2>Why margin per order is hard to see</h2>
+        <h2 id="why-margin-per-order-is-hard-to-see">Why margin per order is hard to see</h2>
         <p>Your store shows revenue. Meta and Google each show the sales they think they drove. Courier and warehouse charges, RTO (return to origin) fees and payment gateway fees arrive as separate invoices or sit in spreadsheets. Nobody sees all of it for one order.</p>
         <ul>
           <li><strong>Ad platforms overlap.</strong> Each platform takes credit using its own rules, so the same order can show up as a win in more than one dashboard. Spend gets moved on numbers that don&rsquo;t add up.</li>
@@ -274,7 +277,7 @@
           <li><strong>Reports take hours to build.</strong> Someone exports CSV files from each tool every week and stitches them together by hand, and the sheet is out of date soon after.</li>
         </ul>
 
-        <h2>How to work out true margin per order</h2>
+        <h2 id="how-to-work-out-true-margin-per-order">How to work out true margin per order</h2>
         <p>Start with what the customer paid, then take out every cost that order caused:</p>
         <ul>
           <li>Money received, after discounts (and before GST)</li>
@@ -287,7 +290,7 @@
           <p><strong>For example</strong> (made-up numbers, to show the sum, all before GST): an order brings in &#8377;1,000 after discount. Product cost is &#8377;400, packing &#8377;30, shipping &#8377;70 and the gateway fee &#8377;20. Ad spend per order on that channel is &#8377;250. If 1 in 10 orders comes back and each return costs you &#8377;150, that is &#8377;15 per order. The order leaves you &#8377;215, not the &#8377;1,000 the store dashboard shows. Run the same sum per product and per channel and the picture often changes.</p>
         </div>
 
-        <h2>What one data layer does</h2>
+        <h2 id="what-one-data-layer-does">What one data layer does</h2>
         <p>You don&rsquo;t need another dashboard subscription. You need your numbers in one place:</p>
         <ul>
           <li><strong>Pull the data in.</strong> Orders from your store, fees from your payment gateway, charges from your courier or warehouse, and spend from your ad accounts, all into one database.</li>
@@ -295,7 +298,7 @@
           <li><strong>Show what earns money.</strong> A simple view of which products and channels make money after all costs, so spend decisions rest on numbers you trust.</li>
         </ul>
 
-        <h2>How to start</h2>
+        <h2 id="how-to-start">How to start</h2>
         <ol>
           <li><strong>Take last month&rsquo;s orders</strong> and the matching invoices from your courier, gateway and ad accounts.</li>
           <li><strong>Work out margin per order</strong> for your top-selling products using the sum above.</li>
@@ -303,7 +306,7 @@
           <li><strong>Automate the sum</strong> only once you trust it by hand.</li>
         </ol>
 
-        <h2>How we can help</h2>
+        <h2 id="how-we-can-help">How we can help</h2>
         <p>Our advisory starts with a free 25-minute call. If there is something worth looking at, a fixed-fee diagnostic finds where your brand loses margin and what to fix first. If the diagnostic doesn&rsquo;t find something worth fixing, we say so plainly.</p>
 
         <div class="step-card article-cta">
@@ -322,15 +325,21 @@
           <aside class="post-related" aria-label="Related articles">
             <div class="post-related-head"><h2>Related</h2><a class="arrow-link" href="/blog/d2c/">More on D2C brands &rarr;</a></div>
             <div class="blog-grid"><a class="blog-card" href="/blog/ca-firms-reclaim-hours-with-ai.html" data-cluster="ca-firms">
+            <span class="blog-card-cover"><img src="/assets/images/blog/ca-firms-reclaim-hours-with-ai.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
             <span class="blog-card-topic">CA and accounting firms</span>
             <span class="blog-card-title">Where CA firms lose hours every week, and how AI gives them back</span>
             <span class="blog-card-dek">The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time.</span>
-            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
           </a><a class="blog-card" href="/blog/furnitrail/furniture-showroom-walk-in-follow-up.html" data-cluster="furnitrail">
+            <span class="blog-card-cover"><img src="/assets/images/blog/furniture-showroom-walk-in-follow-up.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
             <span class="blog-card-topic">FurniTrail</span>
             <span class="blog-card-title">Why furniture showrooms lose walk-in buyers, and how to follow up</span>
             <span class="blog-card-dek">What to capture at the door, what to send, and when.</span>
-            <span class="blog-card-meta">7 min read &middot; 19 Nov 2026</span>
+            <span class="blog-card-meta">7 min read &middot; 19 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
           </a></div>
             <p class="post-hww">How this article was researched and checked: <a href="/blog/how-we-write/">How we write</a>.</p>
           </aside>

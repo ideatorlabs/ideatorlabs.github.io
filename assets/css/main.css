@@ -2015,21 +2015,79 @@ a.use-chip:hover { border-color: var(--p-line, #CBD5E1); transform: translateY(-
 .blog-topic-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
 .blog-topic-head h3 { font-size: 19px; font-weight: 700; color: var(--text-primary); }
 .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 18px; }
-.blog-card { display: flex; flex-direction: column; gap: 8px; padding: 22px; border-radius: 16px; background: #FFFFFF; border: 1px solid var(--border-light); text-decoration: none; color: inherit; transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, border-color .3s ease; }
-a.blog-card:hover { transform: translateY(-3px); border-color: #CBD5E1; box-shadow: 0 16px 34px -20px rgba(15, 23, 42, 0.35); }
-.blog-card-topic { font-family: Georgia, "Iowan Old Style", serif; font-style: italic; font-size: 15px; color: #64748B; }
-.blog-card-title { font-size: 18px; font-weight: 700; line-height: 1.35; color: var(--text-primary); letter-spacing: -0.01em; }
+/* Blog: magazine cards with cover art (assets/images/blog, written by scripts/blog_covers.py) */
+.blog-card { display: flex; flex-direction: column; border-radius: 20px; background: #FFFFFF; border: 1px solid var(--border-light); text-decoration: none; color: inherit; overflow: hidden; transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+a.blog-card:hover { transform: translateY(-4px); border-color: #C9D8F0; box-shadow: 0 22px 44px -26px rgba(37, 79, 170, 0.45); }
+.blog-card-cover { display: block; background: #EEF3FB; border-bottom: 1px solid var(--border-light); overflow: hidden; }
+.blog-card-cover img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 630; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+a.blog-card:hover .blog-card-cover img { transform: scale(1.035); }
+.blog-card-body { display: flex; flex-direction: column; gap: 8px; padding: 20px 22px 22px; flex: 1; }
+.blog-card-topic { font-family: Georgia, "Iowan Old Style", serif; font-style: italic; font-size: 15px; color: #3563D5; }
+.blog-card-title { font-size: 18.5px; font-weight: 750; line-height: 1.32; color: var(--text-primary); letter-spacing: -0.015em; }
 .blog-card-dek { font-size: 14px; line-height: 1.6; color: var(--text-secondary); flex: 1; }
-.blog-card-meta { font-size: 13px; color: var(--text-muted); }
-.blog-card-big { padding: 32px; }
-.blog-card-big .blog-card-title { font-size: clamp(22px, 2.6vw, 30px); }
-.blog-card-big .blog-card-dek { font-size: 16px; max-width: 70ch; }
-.blog-card-next { background: var(--bg-secondary); border-style: dashed; }
-.blog-card[data-cluster="furnitrail"] .blog-card-topic { color: #A94F16; }
+.blog-card-meta { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--text-muted); padding-top: 12px; margin-top: 4px; border-top: 1px dashed var(--border-light); }
+.blog-card-go { color: var(--text-primary); font-weight: 650; transition: transform .2s ease; }
+a.blog-card:hover .blog-card-go { transform: translateX(3px); }
+.blog-card-flag { align-self: flex-start; font: 700 10.5px/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; color: #FFFFFF; background: linear-gradient(135deg, #3B6FE0, #22B8CF); padding: 6px 10px; border-radius: 999px; margin-bottom: 4px; }
+.blog-card-big { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.blog-card-big .blog-card-cover { border-bottom: 0; border-right: 1px solid var(--border-light); }
+.blog-card-big .blog-card-cover img { height: 100%; }
+.blog-card-big .blog-card-body { padding: 36px 36px 32px; justify-content: center; gap: 12px; }
+.blog-card-big .blog-card-title { font-size: clamp(24px, 2.6vw, 32px); line-height: 1.2; letter-spacing: -0.025em; }
+.blog-card-big .blog-card-dek { font-size: 16px; flex: 0; }
+.blog-mast h1 em { font-style: normal; background: linear-gradient(135deg, #3B6FE0, #22B8CF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.blog-mast { background: radial-gradient(900px 300px at 85% -10%, rgba(34, 184, 207, .10), transparent 70%), radial-gradient(700px 260px at 0% 0%, rgba(59, 111, 224, .08), transparent 70%), var(--bg-secondary); }
+.blog-section-head { display: flex; align-items: center; gap: 16px; margin-bottom: 18px; }
+.blog-section-head h2 { font-size: 22px; font-weight: 750; letter-spacing: -0.02em; margin: 0; white-space: nowrap; }
+.blog-section-head::after { content: ""; flex: 1; height: 1px; background: var(--border-light); }
+.blog-topic-group { margin-top: 8px; margin-bottom: 22px; }
+.blog-topic-group h3 { font-family: Georgia, "Iowan Old Style", serif; font-style: italic; font-weight: 400; font-size: 17px; color: var(--text-muted); margin-bottom: 12px; }
+.blog-topic-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; }
+.blog-topic-tile { display: flex; gap: 16px; align-items: flex-start; padding: 18px; border-radius: 18px; background: #FFFFFF; border: 1px solid var(--border-light); text-decoration: none; color: inherit; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.blog-topic-tile:hover { transform: translateY(-3px); border-color: #C9D8F0; box-shadow: 0 16px 34px -24px rgba(37, 79, 170, 0.45); }
+.blog-topic-tile img { flex: 0 0 auto; border-radius: 14px; }
+.blog-topic-tile > span { display: flex; flex-direction: column; gap: 4px; }
+.blog-topic-name { font-weight: 700; font-size: 16px; color: var(--text-primary); }
+.blog-topic-intro { font-size: 13.5px; line-height: 1.55; color: var(--text-secondary); }
+.blog-topic-count { font-size: 13px; font-weight: 650; color: #3563D5; margin-top: 4px; }
+.blog-hub-title { display: flex; align-items: center; gap: 18px; }
+.blog-hub-title img { border-radius: 16px; box-shadow: 0 12px 26px -18px rgba(37, 79, 170, .6); }
+.blog-hub-title .sec-title { margin-bottom: 0; }
+.blog-card[data-cluster="furnitrail"] .blog-card-topic, .blog-topic-tile[data-cluster="furnitrail"] .blog-topic-count { color: #A94F16; }
+.blog-card[data-cluster="furnitrail"] .blog-card-flag { background: linear-gradient(135deg, #1E4D3B, #E5782C); }
 .blog-card[data-cluster="pollenrev"] .blog-card-topic { color: #3563D5; }
 .post-related { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-light); }
 .post-related-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
 .post-related-head h2 { font-size: 20px; font-weight: 700; margin: 0; }
 .post-hww { font-size: 13.5px; color: var(--text-muted); margin-top: 18px; }
+/* Blog posts: cover, sticky "In this article" list (both written by scripts/build_blog.py) */
+main article.article-wrap.post-grid { max-width: 1120px; display: grid; grid-template-columns: minmax(0, 1fr) 250px; column-gap: 56px; align-items: start; }
+main article.post-grid > * { grid-column: 1 / -1; }
+main article.post-grid > .article-content { grid-column: 1; grid-row: 3; max-width: 740px; }
+main article.post-grid > .post-toc { grid-column: 2; grid-row: 3; position: sticky; top: 104px; }
+main article.post-grid > .post-related { grid-column: 1 / -1; }
+.post-cover { margin: 4px 0 40px; border-radius: 22px; overflow: hidden; border: 1px solid var(--border-light); background: #EEF3FB; }
+.post-cover img { display: block; width: 100%; height: auto; aspect-ratio: 1200 / 430; object-fit: cover; }
+.post-toc { border-left: 2px solid #E1E9F6; padding: 4px 0 4px 18px; font-size: 14px; }
+.post-toc-title { display: block; font: 700 11px/1 ui-monospace, "SF Mono", Menlo, Consolas, monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px; }
+.post-toc ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; counter-reset: toc; }
+.post-toc li { counter-increment: toc; display: flex; gap: 10px; line-height: 1.4; }
+.post-toc li::before { content: counter(toc, decimal-leading-zero); font: 600 11.5px/1.7 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: #3B6FE0; }
+.post-toc a { color: var(--text-secondary); text-decoration: none; }
+.post-toc a:hover { color: var(--text-primary); }
+.post-cover[data-cluster="furnitrail"] { background: #F7F1E8; }
+.article-content h2[id] { scroll-margin-top: 110px; }
+.article-takeaways { box-shadow: 0 14px 30px -26px rgba(37, 79, 170, .55); }
+@media (max-width: 1000px) {
+  main article.article-wrap.post-grid { display: block; max-width: 760px; }
+  .post-toc { position: static; margin: 0 0 32px; padding: 16px 18px; border: 1px solid var(--border-light); border-radius: 14px; background: var(--bg-secondary); }
+  .post-cover { margin-bottom: 28px; border-radius: 16px; }
+}
+@media (max-width: 760px) {
+  .blog-card-big { display: flex; }
+  .blog-card-big .blog-card-cover { border-right: 0; border-bottom: 1px solid var(--border-light); }
+  .blog-card-big .blog-card-body { padding: 22px; }
+  .post-cover img { aspect-ratio: 1200 / 630; }
+}
 .hww h2 { font-size: 20px; font-weight: 700; margin: 28px 0 8px; color: var(--text-primary); }
 .hww p { font-size: 15.5px; line-height: 1.75; color: var(--text-secondary); }
