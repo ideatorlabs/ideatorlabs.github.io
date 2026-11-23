@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profora: true profit per order for D2C brands</title>
+  <meta name="description" content="Profora shows D2C brands the true profit on every order after RTO, COD fees, shipping and GST, the break-even ROAS, and what to fix each week.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/products/profora/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="Profora: true profit per order for D2C brands">
+  <meta property="og:description" content="Profora shows D2C brands the true profit on every order after RTO, COD fees, shipping and GST, the break-even ROAS, and what to fix each week.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/products/profora/">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261122a">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://ideatorlabs.github.io/products/profora/#software",
+      "name": "Profora",
+      "alternateName": "Profora by Ideator Labs",
+      "url": "https://ideatorlabs.github.io/products/profora/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Profit analytics for D2C ecommerce brands",
+      "operatingSystem": "Web",
+      "description": "Profora shows D2C brands their true profit. Upload the exports you already have from Shopify, your courier and your ad accounts, and see the profit on every order after RTO, COD fees, shipping, packaging, gateway fees and GST, next to the ROAS your ads must report to pay for themselves.",
+      "image": "https://ideatorlabs.github.io/assets/images/products/profora/profora-report.webp",
+      "audience": {
+        "@type": "BusinessAudience",
+        "audienceType": "D2C ecommerce brands selling on their own store"
+      },
+      "creator": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ideatorlabs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Products",
+          "item": "https://ideatorlabs.github.io/products/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Profora",
+          "item": "https://ideatorlabs.github.io/products/profora/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- =========================================================================
+       TOPBAR NAVIGATION
+       ========================================================================= -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
+        <span>Ideator Labs</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="/products/" class="active">Products</a>
+        <a href="/solutions/">Advisory</a>
+        <a href="/industries/">Sectors</a>
+        <a href="/research/">Research</a>
+        <a href="/open-source/">Open Source</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about/">About</a>
+      </nav>
+
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="/products/" class="active">Products</a>
+    <a href="/solutions/">Advisory</a>
+    <a href="/industries/">Sectors</a>
+    <a href="/research/">Research</a>
+    <a href="/open-source/">Open Source</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <a href="/contact/" style="color:var(--accent-purple)">Talk to us &rarr;</a>
+  </div>
+
+  <main data-product="profora">
+    <!-- Page Header -->
+    <section style="background:var(--bg-secondary);border-bottom:1px solid var(--border-light);padding:56px 0 60px;">
+      <div class="container">
+        <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--text-muted);margin-bottom:24px;">
+          <a href="/products/" style="color:var(--accent-blue);font-weight:600;">Products</a>
+          <span aria-hidden="true" style="margin:0 6px;">/</span>
+          <span aria-current="page">Profora</span>
+        </nav>
+        <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr));gap:40px;align-items:center;">
+          <div>
+            <div style="margin-bottom:14px;"><span class="pm-lockup"><img class="pm-mark" src="../../assets/images/products/profora-mark.svg" width="52" height="52" alt=""><span class="pm-word pm-profora">Pro<span>fora</span></span></span></div>
+            <span class="sec-eyebrow">Profora by Ideator Labs, D2C brands</span>
+            <h1 class="sec-title" style="max-width:22ch;">See what each order really left you</h1>
+            <p class="sec-subtitle" style="margin-bottom:18px;">
+              Profora shows D2C brands their true profit. Upload the exports you already have from Shopify, your courier and your ad accounts, and see the profit on every order after RTO, COD fees, shipping, packaging, gateway fees and GST, next to the ROAS your ads must report to pay for themselves.
+            </p>
+            <p style="margin-bottom:24px;">
+              <span class="badge-pill badge-proto">For D2C brands</span>
+            </p>
+            <div class="hero-actions">
+              <a href="/contact/?topic=profora" class="btn-hero-primary">
+                Book a demo <span class="arrow-slide">&rarr;</span>
+              </a>
+              <a href="#how-it-works" class="btn-hero-secondary">
+                How it works
+              </a>
+            </div>
+          </div>
+          <div>
+            <figure class="app-screen"><img src="../../assets/images/products/profora/profora-report.webp" alt="Profora profit check: profit after ads, profit per settled order, RTO rate, reported and real ROAS, and break-even ROAS (sample data)" width="2400" height="1500"></figure>
+            <p style="font-size:12px;color:var(--text-muted);margin-top:10px;">Screen shows sample data, for illustration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for + the problem -->
+    <section style="padding:72px 0 32px;">
+      <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
+        <div class="step-card reveal" id="who" style="padding:32px;">
+          <span class="sec-eyebrow">Who it&rsquo;s for</span>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">Brands that sell on their own store</h2>
+          <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+            <li>&bull; Brands on Shopify with real Meta and Google ad spend</li>
+            <li>&bull; Brands with a good share of cash-on-delivery orders</li>
+            <li>&bull; Founders and growth heads who still watch the numbers</li>
+          </ul>
+        </div>
+        <div class="step-card reveal" id="problem" style="padding:32px;">
+          <span class="sec-eyebrow">The problem</span>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">If the ads look good but the bank doesn&rsquo;t</h2>
+          <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+            <li>&bull; Meta and Google report a healthy ROAS, but little money is left.</li>
+            <li>&bull; COD orders count as sales on day one, then some come back undelivered.</li>
+            <li>&bull; Each return costs shipping both ways, packaging and fees, and nobody adds it up.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" style="padding:48px 0 32px;">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:28px;">
+          <span class="sec-eyebrow">How it works</span>
+          <h2 class="sec-title" style="font-size:clamp(24px, 3vw, 32px);">5 steps, from your files to what to do</h2>
+        </div>
+        <ol style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr));gap:20px;">
+          <li class="step-card reveal delay-1" style="padding:24px;">
+            <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">1</div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Upload your exports</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Shopify orders, a courier report, Meta and Google ad spend and your product costs, as CSV or Excel.</p>
+          </li>
+          <li class="step-card reveal delay-2" style="padding:24px;">
+            <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">2</div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Match every order</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Each order is matched to what the courier did with it. Anything that can&rsquo;t be matched is listed with the reason.</p>
+          </li>
+          <li class="step-card reveal delay-3" style="padding:24px;">
+            <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">3</div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">See true profit</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Profit per order, product, campaign and pincode, counted once the courier has delivered, returned or lost the order.</p>
+          </li>
+          <li class="step-card reveal delay-4" style="padding:24px;">
+            <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">4</div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Know your break-even</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">The ROAS your ads must report to pay for themselves, next to the ROAS Meta and Google report.</p>
+          </li>
+          <li class="step-card reveal delay-5" style="padding:24px;">
+            <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">5</div>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Read the week</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">What changed, why it changed and what to do next, with the rows behind every sentence.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Screens -->
+    <section id="screens" style="padding:40px 0 24px;">
+      <div class="container">
+        <div class="reveal" style="margin-bottom:24px;">
+          <span class="sec-eyebrow">A look inside</span>
+          <h2 class="sec-title" style="font-size:clamp(24px, 3vw, 32px);">Profit first, then what to fix</h2>
+          <p class="sec-subtitle" style="margin-bottom:0;">Screens from Profora. Every name, number and amount on them is sample data, made up for illustration.</p>
+        </div>
+        <div class="screen-pair">
+          <figure class="screen-card reveal">
+            <figure class="app-screen"><img src="../../assets/images/products/profora/profora-report.webp" alt="Profora profit check: profit after ads, profit per settled order, RTO rate, reported and real ROAS, and break-even ROAS (sample data)" width="2400" height="1500" loading="lazy"></figure>
+            <figcaption><span class="phone-kicker">Profit check</span><strong>The number that matters first</strong>Profit after ads, the RTO rate, the ROAS your ads report against the real one, and your break-even.</figcaption>
+          </figure>
+          <figure class="screen-card reveal delay-1">
+            <figure class="app-screen"><img src="../../assets/images/products/profora/profora-campaigns.webp" alt="Profora campaigns table: spend, platform ROAS, ROAS after RTO and profit, each marked above or below break-even (sample data)" width="2400" height="1500" loading="lazy"></figure>
+            <figcaption><span class="phone-kicker">Campaigns</span><strong>Which campaigns pay for themselves</strong>Every campaign against your break-even ROAS, with its profit after RTO.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data + demo -->
+    <section style="padding:48px 0 32px;">
+      <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
+        <div class="step-card reveal" id="data" style="padding:32px;">
+          <span class="sec-eyebrow">Your data</span>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">Your files aren&rsquo;t kept</h2>
+          <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;">
+            Files are read in memory to build the report, then dropped. There&rsquo;s no database behind it, and buyer details become a one-way key used only to tell first orders from repeat buyers.
+          </p>
+        </div>
+        <div class="step-card reveal" id="demo" style="padding:32px;">
+          <span class="sec-eyebrow">Book a demo</span>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">What a demo looks like</h2>
+          <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
+            <li>&bull; Tell us your store and the couriers you use.</li>
+            <li>&bull; We set up a short call and walk you through Profora.</li>
+            <li>&bull; We share pricing on the call, before anything costs money.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="cta-banner-wrap" style="padding-top:40px;padding-bottom:80px;">
+      <div class="container">
+        <div class="cta-banner-box reveal reveal-scale">
+          <div class="cta-banner-text-side">
+            <span class="cta-banner-tag" style="font-size:11px;">Book a demo</span>
+            <h2 class="cta-banner-h2">Want to know your true profit per order?</h2>
+            <p class="cta-banner-sub">
+              Write to us with your store and the couriers you use. We&rsquo;ll reply to set up a short demo.
+            </p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <a href="/contact/?topic=profora" class="btn-hero-primary" style="padding:12px 28px;font-size:14px;">
+              Book a demo <span class="arrow-slide">&rarr;</span>
+            </a>
+            <a href="/products/" class="btn-hero-secondary">
+              All products
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER (Matches Mockup)
+       ========================================================================= -->
+  <footer class="site-footer-sec">
+    <div class="container">
+      <div class="footer-top-row">
+        <div>
+          <a href="/" class="brand-area" style="font-size:15px;margin-bottom:6px;">
+            <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
+            <span>Ideator Labs</span>
+          </a>
+          <div style="font-size:12px;color:var(--text-muted);">AI and data advisory, innovation and business intelligence.</div>
+        </div>
+
+        <nav class="footer-nav-links" aria-label="Footer Navigation">
+          <a href="/products/">Products</a>
+          <a href="/solutions/">Advisory</a>
+          <a href="/industries/">Sectors</a>
+          <a href="/research/">Research</a>
+          <a href="/open-source/">Open Source</a>
+          <a href="/blog/">Blog</a>
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+
+        <div class="footer-social-icons">
+          <a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>&copy; 2026 Ideator Labs. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="/privacy.html">Privacy</a>
+          <a href="/terms.html">Terms</a>
+          <a href="/security.html">Security</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, blog… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <script src="../../assets/js/main.js?v=20261122a"></script>
+</body>
+</html>

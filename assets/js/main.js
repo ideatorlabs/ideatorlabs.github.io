@@ -44,10 +44,20 @@
     // blog:end
     { title: "Ideator Labs home", category: "Home", url: "/", desc: "A studio for AI and data advisory, innovation and business intelligence." },
     { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
-    { title: "Products", category: "Products", url: "/products/", desc: "FurniTrail for furniture showrooms and PollenRev sales software for small businesses." },
+    { title: "Products", category: "Products", url: "/products/", desc: "One product for each sector: FurniTrail, PollenRev, Docketbox, Profora, CareCadence, ClinicVitals, Cashtrail, StockCompass, Taktline and FreightProof." },
     { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "From browsing to belonging. Each showroom buyer gets one page in your name: shortlist, proposal, order, delivery, review and referral." },
     { title: "FurniTrail demo", category: "Products", url: "/products/furnitrail/#demo", desc: "Book a demo and see FurniTrail with your own pieces, from walk-in to review." },
     { title: "PollenRev", category: "Products", url: "/products/pollenrev/", desc: "Sales software for small businesses: finds leads, writes outreach, tracks deals." },
+    // products:start (written by scripts/product_pages.py)
+    { title: "Profora", category: "Products", url: "/products/profora/", desc: "True profit per order for D2C brands, after RTO, COD fees, shipping and GST, with the break-even ROAS for every campaign." },
+    { title: "FreightProof", category: "Products", url: "/products/freightproof/", desc: "Freight bill audit for shippers without a TMS: every bill line checked against its LR and the agreed rate, with what to question in rupees." },
+    { title: "StockCompass", category: "Products", url: "/products/stockcompass/", desc: "Stock and cash planning on Tally exports: what runs out before the next delivery, what sits unsold, when to reorder and which supplier is late." },
+    { title: "Taktline", category: "Products", url: "/products/taktline/", desc: "Downtime for plants from shift sheets, stoppage logs or a phone form: lost hours by machine, shift and reason, OEE, and what to fix first." },
+    { title: "Docketbox", category: "Products", url: "/products/docketbox/", desc: "Client document chaser for CA firms: a private upload link per client, a board of what’s in, missing and late, and reminders on your schedule." },
+    { title: "Cashtrail", category: "Products", url: "/products/cashtrail/", desc: "Bank statement analysis for lenders: a balance check on every statement, every transaction sorted, and income, EMIs, bounces and red flags on one page." },
+    { title: "CareCadence", category: "Products", url: "/products/carecadence/", desc: "Patient recall for clinics: who is due back for check-ups, follow-ups and vaccine doses, a today list for the desk, and who came back each week." },
+    { title: "ClinicVitals", category: "Products", url: "/products/clinicvitals/", desc: "Revenue and collections for clinics: revenue per doctor and service, money pending with patients and insurers by age, and claims by insurer." },
+    // products:end
     { title: "Advisory", category: "Advisory", url: "/solutions/", desc: "A free 25-minute call, then a fixed-fee diagnostic that shows where time or margin is lost and what to fix first." },
     { title: "Sectors we work in", category: "Sectors", url: "/industries/", desc: "Retail, B2B companies and agencies, accounting and CA firms, D2C brands, and clinics." },
     { title: "Retail", category: "Sectors", url: "/industries/#retail", desc: "Showroom visitors who leave to think it over, and how FurniTrail takes them from walk-in to happy home." },
@@ -70,7 +80,7 @@
     { title: "Nudgewright", category: "Open Source", url: "/open-source/#nudgewright", desc: "Writes one short personal customer message from real facts, and says why." },
     { title: "Open source", category: "Open Source", url: "/open-source/", desc: "Code we share publicly on GitHub." },
     { title: "About", category: "Company", url: "/about/", desc: "Who we are and how we work." },
-    { title: "Contact", category: "Company", url: "/contact/", desc: "Email or call us, book a FurniTrail or PollenRev demo, book a free 25-minute call or suggest a sector." }
+    { title: "Contact", category: "Company", url: "/contact/", desc: "Email or call us, book a product demo, book a free 25-minute call or suggest a sector." }
   ];
 
   const searchTrigger = document.getElementById('searchTrigger');

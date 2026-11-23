@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="FreightProof">
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="#B45309"/>
+  <path d="M14 46 L28 18 M50 46 L36 18" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" opacity=".85"/>
+  <path d="M32 22 v5 M32 32 v5 M32 42 v5" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="47" cy="17" r="6" fill="#1F2937"/>
+  <path d="M44.5 17 l2 2 l3.5 -4" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

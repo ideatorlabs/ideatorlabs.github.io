@@ -2091,3 +2091,59 @@ main article.post-grid > .post-related { grid-column: 1 / -1; }
 }
 .hww h2 { font-size: 20px; font-weight: 700; margin: 28px 0 8px; color: var(--text-primary); }
 .hww p { font-size: 15.5px; line-height: 1.75; color: var(--text-secondary); }
+
+/* =========================================================================
+   SECTOR PRODUCTS (2026-11-22): each in its own app colours, as in the app.
+   Pages and lists are written by scripts/product_pages.py.
+   ========================================================================= */
+[data-product="profora"]      { --p: #2350C8; --p-ink: #1B3FA0; --p-soft: #E9EFFC; --p-line: #C7D5F5; }
+[data-product="freightproof"] { --p: #B45309; --p-ink: #8F4007; --p-soft: #FDF1E4; --p-line: #F3D3AE; }
+[data-product="stockcompass"] { --p: #4338CA; --p-ink: #3730A3; --p-soft: #EEF0FD; --p-line: #CBCEF6; }
+[data-product="taktline"]     { --p: #C2410C; --p-ink: #9A3412; --p-soft: #FFF1EA; --p-line: #F6C9B3; }
+[data-product="docketbox"]    { --p: #0F766E; --p-ink: #115E59; --p-soft: #E6F4F1; --p-line: #B7DED6; }
+[data-product="cashtrail"]    { --p: #047857; --p-ink: #065F46; --p-soft: #E7F5EF; --p-line: #B5DFCB; }
+[data-product="carecadence"]  { --p: #BE123C; --p-ink: #9F1239; --p-soft: #FFF1F2; --p-line: #FECDD3; }
+[data-product="clinicvitals"] { --p: #6D28D9; --p-ink: #5B21B6; --p-soft: #F3EEFD; --p-line: #D9C8F7; }
+:is(.pm-profora, .pm-freightproof, .pm-stockcompass, .pm-taktline, .pm-docketbox, .pm-cashtrail, .pm-carecadence, .pm-clinicvitals) { font-family: var(--font-sans); color: #0F172A; }
+.pm-profora span { color: #2350C8; }
+.pm-freightproof span { color: #B45309; }
+.pm-stockcompass span { color: #4338CA; }
+.pm-taktline span { color: #C2410C; }
+.pm-docketbox span { color: #0F766E; }
+.pm-cashtrail span { color: #047857; }
+.pm-carecadence span { color: #BE123C; }
+.pm-clinicvitals span { color: #6D28D9; }
+:is([data-product="profora"], [data-product="freightproof"], [data-product="stockcompass"], [data-product="taktline"], [data-product="docketbox"], [data-product="cashtrail"], [data-product="carecadence"], [data-product="clinicvitals"]) .phone-kicker { color: var(--p); }
+.use-chip:is([data-product="profora"], [data-product="freightproof"], [data-product="stockcompass"], [data-product="taktline"], [data-product="docketbox"], [data-product="cashtrail"], [data-product="carecadence"], [data-product="clinicvitals"]) { color: var(--p-ink); }
+.screen-pair.screen-trio { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, .55fr); align-items: start; }
+.screen-trio .phone-frame img, .prod-tile .phone-frame img { border-radius: 26px; }
+@media (max-width: 1000px) { .screen-pair.screen-trio { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 820px) { .screen-pair.screen-trio { grid-template-columns: 1fr; } }
+
+/* Products page: one tile per sector product */
+.prod-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.prod-tile { display: flex; flex-direction: column; min-width: 0; background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 20px; overflow: hidden; transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
+.prod-tile:hover { border-color: var(--p-line); box-shadow: 0 18px 36px -20px color-mix(in srgb, var(--p) 45%, transparent); transform: translateY(-2px); }
+.prod-tile-shot { display: block; background: var(--p-soft); border-bottom: 1px solid var(--p-line); padding: 18px 18px 0; }
+.prod-tile-shot img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: top left; border-radius: 10px 10px 0 0; box-shadow: 0 -2px 18px -10px rgba(15, 23, 42, .35); }
+.prod-tile-body { padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.prod-tile-body .sec-eyebrow { align-self: flex-start; margin-bottom: 12px; }
+.prod-tile-body h3 { font-size: 24px; margin: 0 0 10px; }
+.prod-tile-body p { font-size: 14.5px; line-height: 1.65; color: var(--text-secondary); margin: 0 0 20px; flex: 1; }
+.prod-tile-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.prod-tile-actions a { padding: 10px 18px; font-size: 13.5px; }
+@media (max-width: 860px) { .prod-grid { grid-template-columns: 1fr; } }
+
+/* Home: a row of the sector products under the two featured ones */
+.prod-line-sec { padding: 0 0 72px; }
+.prod-line-h { font-size: 15px; font-weight: 700; color: var(--text-secondary); letter-spacing: -0.01em; margin: 0 0 16px; }
+.prod-line { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
+.prod-line-item { display: flex; gap: 12px; align-items: flex-start; min-width: 0; padding: 16px; background: #FFFFFF; border: 1px solid var(--border-light); border-radius: 16px; text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+.prod-line-item:hover { border-color: var(--p-line); transform: translateY(-2px); }
+.prod-line-item img { flex: none; border-radius: 10px; }
+.prod-line-item span { min-width: 0; }
+.prod-line-item strong { display: block; font-size: 15px; color: var(--text-primary); }
+.prod-line-item small { display: block; font-size: 12px; color: var(--p-ink); font-weight: 600; margin: 2px 0 6px; }
+.prod-line-item em { display: block; font-style: normal; font-size: 13px; line-height: 1.45; color: var(--text-secondary); }
+@media (max-width: 1000px) { .prod-line { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .prod-line { grid-template-columns: 1fr; } }

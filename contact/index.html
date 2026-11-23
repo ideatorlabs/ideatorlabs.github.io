@@ -4,23 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Ideator Labs</title>
-  <meta name="description" content="Write to Ideator Labs to book a FurniTrail or PollenRev demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com.">
+  <meta name="description" content="Write to Ideator Labs to book a product demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com or call +91 73269 70981.">
   <link rel="canonical" href="https://ideatorlabs.github.io/contact/">
 
   <!-- Open Graph / social -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ideator Labs">
   <meta property="og:title" content="Contact Ideator Labs">
-  <meta property="og:description" content="Write to Ideator Labs to book a FurniTrail or PollenRev demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com.">
+  <meta property="og:description" content="Write to Ideator Labs to book a product demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com or call +91 73269 70981.">
   <meta property="og:url" content="https://ideatorlabs.github.io/contact/">
   <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Contact Ideator Labs">
-  <meta name="twitter:description" content="Write to Ideator Labs to book a FurniTrail or PollenRev demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com.">
+  <meta name="twitter:description" content="Write to Ideator Labs to book a product demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com or call +91 73269 70981.">
   <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../assets/css/main.css?v=20261120b">
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261122a">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -45,7 +45,7 @@
   "@type": "ContactPage",
   "url": "https://ideatorlabs.github.io/contact/",
   "name": "Contact Ideator Labs",
-  "description": "Write to Ideator Labs to book a FurniTrail or PollenRev demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com.",
+  "description": "Write to Ideator Labs to book a product demo, a free 25-minute advisory call, or suggest a sector. Email ideatorlabs.ai@gmail.com or call +91 73269 70981.",
   "mainEntity": {
     "@type": "Organization",
     "@id": "https://ideatorlabs.github.io/#organization",
@@ -152,6 +152,14 @@
                 <select id="cf-topic" name="topic">
                   <option value="FurniTrail demo">FurniTrail demo</option>
                   <option value="PollenRev demo">PollenRev demo</option>
+                  <option value="Profora demo">Profora demo</option>
+                  <option value="FreightProof demo">FreightProof demo</option>
+                  <option value="StockCompass demo">StockCompass demo</option>
+                  <option value="Taktline demo">Taktline demo</option>
+                  <option value="Docketbox demo">Docketbox demo</option>
+                  <option value="Cashtrail demo">Cashtrail demo</option>
+                  <option value="CareCadence demo">CareCadence demo</option>
+                  <option value="ClinicVitals demo">ClinicVitals demo</option>
                   <option value="Advisory call (free 25 minutes)" selected>Advisory call (free 25 minutes)</option>
                   <option value="Suggest a sector">Suggest a sector</option>
                   <option value="Something else">Something else</option>
@@ -217,7 +225,7 @@
               <h2 style="font-size:17px;font-weight:700;margin-bottom:14px;">What happens next</h2>
               <ul style="list-style:none;padding:0;margin:0;font-size:14px;color:var(--text-secondary);line-height:1.7;display:grid;gap:10px;">
                 <li><strong style="color:var(--text-primary);">Advisory call:</strong> we reply by email to find a time for the free 25-minute call.</li>
-                <li><strong style="color:var(--text-primary);">FurniTrail or PollenRev demo:</strong> we reply by email to find a time and walk you through it on a short call.</li>
+                <li><strong style="color:var(--text-primary);">A product demo:</strong> we reply by email to find a time and walk you through it on a short call.</li>
                 <li><strong style="color:var(--text-primary);">A sector idea:</strong> we read every suggestion. It helps us decide where to go next.</li>
               </ul>
             </div>
@@ -236,11 +244,19 @@
         var hints = {
           'FurniTrail demo': "Your showroom's name and city, and how you follow up with walk-in visitors today.",
           'PollenRev demo': 'What you sell, who you sell to, and how you find customers today.',
+          "Profora demo": "Your store, roughly how many orders a month, and the couriers you use.",
+          "FreightProof demo": "How many transporters you use, roughly how many bills a month, and how they reach you.",
+          "StockCompass demo": "What you make or distribute, roughly how many items, and whether you use Tally or another ERP.",
+          "Taktline demo": "Your lines and machines, and how you record stoppages today.",
+          "Docketbox demo": "Roughly how many clients, which services, and how you collect documents today.",
+          "Cashtrail demo": "What kind of loans you give, and roughly how many files you read a month.",
+          "CareCadence demo": "Your clinic’s speciality, and how you call patients back today.",
+          "ClinicVitals demo": "Your clinic or centre, and the billing software you use.",
           'Advisory call (free 25 minutes)': "One process that eats your team's time, or one number you don't trust.",
           'Suggest a sector': 'Which kind of business, and what slows it down day to day.',
           'Something else': 'How can we help?'
         };
-        var keys = { furnitrail: 'FurniTrail demo', pollenrev: 'PollenRev demo', advisory: 'Advisory call (free 25 minutes)', sector: 'Suggest a sector', other: 'Something else' };
+        var keys = { furnitrail: 'FurniTrail demo', pollenrev: 'PollenRev demo', profora: 'Profora demo', freightproof: 'FreightProof demo', stockcompass: 'StockCompass demo', taktline: 'Taktline demo', docketbox: 'Docketbox demo', cashtrail: 'Cashtrail demo', carecadence: 'CareCadence demo', clinicvitals: 'ClinicVitals demo', advisory: 'Advisory call (free 25 minutes)', sector: 'Suggest a sector', other: 'Something else' };
 
         function setHint() { message.placeholder = hints[topic.value] || ''; }
 
@@ -332,6 +348,6 @@
     </div>
   </div>
 
-  <script src="../assets/js/main.js?v=20261120a"></script>
+  <script src="../assets/js/main.js?v=20261122a"></script>
 </body>
 </html>
