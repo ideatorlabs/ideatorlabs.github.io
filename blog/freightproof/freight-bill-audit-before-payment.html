@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audit freight bills before you pay | Ideator Labs</title>
+  <meta name="description" content="Where transporter bills overcharge Indian shippers: duplicate LRs, wrong rates, detention, fuel surcharge and weight. How to check bills and recover the money.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/blog/freightproof/freight-bill-audit-before-payment.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="Where freight bills go wrong for Indian shippers, and how to recover the money">
+  <meta property="og:description" content="Where transporter bills overcharge Indian shippers: duplicate LRs, wrong rates, detention, fuel surcharge and weight. How to check bills and recover the money.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/blog/freightproof/freight-bill-audit-before-payment.html">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta property="article:published_time" content="2026-11-24">
+  <meta property="article:modified_time" content="2026-11-24">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Where freight bills go wrong for Indian shippers, and how to recover the money">
+  <meta name="twitter:description" content="Where transporter bills overcharge Indian shippers: duplicate LRs, wrong rates, detention, fuel surcharge and weight. How to check bills and recover the money.">
+  <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261124c">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#FFFFFF">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "How to audit freight bills before you pay a transporter",
+      "description": "Where transporter bills overcharge Indian shippers: duplicate LRs, wrong rates, detention, fuel surcharge and weight. How to check bills and recover the money.",
+      "image": "https://ideatorlabs.github.io/og-image.png",
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://ideatorlabs.github.io/products/freightproof/#software",
+        "name": "FreightProof"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ideatorlabs.github.io/blog/freightproof/freight-bill-audit-before-payment.html"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ideatorlabs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ideatorlabs.github.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FreightProof",
+          "item": "https://ideatorlabs.github.io/blog/freightproof/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "How to audit freight bills before you pay a transporter",
+          "item": "https://ideatorlabs.github.io/blog/freightproof/freight-bill-audit-before-payment.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Should I hold a whole transporter bill if one line is wrong?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hold only the disputed amount where you can, and pay the rest on time. For a micro or small transporter, the MSMED Act sets a payment limit of 45 days from acceptance, so send a written objection within 15 days of delivery. Ask your CA how a part-disputed bill is treated."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can a shipper issue a GST credit note for an overcharge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Under section 34 of the CGST Act the supplier, here the transporter, issues the credit note, and must declare it by 30 November after the financial year of the supply. A commercial settlement or set-off against a later bill is the other route; confirm the treatment with your CA."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    #readingProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #14161B;
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+    .article-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .article-meta-text {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .article-content {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .article-content h2 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin: 40px 0 16px;
+    }
+    .article-content p {
+      margin-bottom: 20px;
+    }
+    .article-content details {
+      border-bottom: 1px solid var(--border-light);
+      padding: 10px 0;
+    }
+    .article-content summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .article-content details p {
+      margin: 10px 0 6px;
+    }
+    .article-content ul,
+    .article-content ol {
+      margin: 0 0 24px 24px;
+      display: grid;
+      gap: 10px;
+    }
+    .article-content li strong {
+      color: var(--text-primary);
+    }
+    .article-content a {
+      color: var(--accent-purple);
+      font-weight: 600;
+    }
+    .article-takeaways {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-left: 3px solid var(--accent-purple);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px 4px;
+      margin: 8px 0 32px;
+    }
+    .article-takeaways h2 {
+      font-size: 17px;
+      margin: 0 0 10px;
+    }
+    .article-example {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 20px 24px 4px;
+      margin: 8px 0 28px;
+      font-size: 15.5px;
+    }
+    .article-sources {
+      border-top: 1px solid var(--border-light);
+      margin-top: 40px;
+      padding-top: 8px;
+      font-size: 14px;
+    }
+    .article-sources h2 {
+      font-size: 17px;
+      margin: 20px 0 10px;
+    }
+    .article-cta {
+      background: var(--bg-secondary);
+      margin: 48px 0 0;
+      padding: 32px;
+      border: 1px solid #CBD5E1;
+    }
+    .article-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+  <link rel="alternate" type="application/atom+xml" title="Ideator Labs blog" href="/blog/feed.xml">
+</head>
+<body>
+
+  <div id="readingProgress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
+        <span>Ideator Labs</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation" data-shell="2"><div class="nx-drop"><a href="/products/" aria-haspopup="true">Products<svg class="nx-chev" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nx-panel nx-wide" role="group" aria-label="Products"><p class="nx-head">Products by sector</p><ul class="nx-grid"><li><a class="nx-item" href="/products/furnitrail/"><span class="nx-mono" style="--mc:#1E4D3B;width:30px;height:30px" aria-hidden="true">F</span><span><b>FurniTrail</b><small>Showroom operations for furniture stores</small></span></a></li><li><a class="nx-item" href="/products/plumbline/"><span class="nx-mono" style="--mc:#0E3B43;width:30px;height:30px" aria-hidden="true">P</span><span><b>Plumbline</b><small>Operations suite for QSR and café chains</small></span></a></li><li><a class="nx-item" href="/products/chairside/"><span class="nx-mono" style="--mc:#6B2D55;width:30px;height:30px" aria-hidden="true">C</span><span><b>Chairside</b><small>Packages, due-backs and commission for salons</small></span></a></li><li><a class="nx-item" href="/products/pollenrev/"><span class="nx-mono" style="--mc:#3563D5;width:30px;height:30px" aria-hidden="true">P</span><span><b>PollenRev</b><small>Lead finding, outreach and deal pipeline</small></span></a></li><li><a class="nx-item" href="/products/docketbox/"><span class="nx-mono" style="--mc:#0F766E;width:30px;height:30px" aria-hidden="true">D</span><span><b>Docketbox</b><small>Compliance task tracker for CA firms</small></span></a></li><li><a class="nx-item" href="/products/profora/"><span class="nx-mono" style="--mc:#2350C8;width:30px;height:30px" aria-hidden="true">P</span><span><b>Profora</b><small>Profit leak tracking for D2C brands</small></span></a></li><li><a class="nx-item" href="/products/carecadence/"><span class="nx-mono" style="--mc:#BE123C;width:30px;height:30px" aria-hidden="true">C</span><span><b>CareCadence</b><small>Follow-ups, dues and claims for clinics</small></span></a></li><li><a class="nx-item" href="/products/cashtrail/"><span class="nx-mono" style="--mc:#047857;width:30px;height:30px" aria-hidden="true">C</span><span><b>Cashtrail</b><small>Bank statement review for credit teams</small></span></a></li><li><a class="nx-item" href="/products/taktline/"><span class="nx-mono" style="--mc:#C2410C;width:30px;height:30px" aria-hidden="true">T</span><span><b>Taktline</b><small>Stops, maintenance and stock for plants</small></span></a></li><li><a class="nx-item" href="/products/freightproof/"><span class="nx-mono" style="--mc:#B45309;width:30px;height:30px" aria-hidden="true">F</span><span><b>FreightProof</b><small>Freight bill claims tracked to recovery</small></span></a></li></ul><a class="nx-all" href="/products/">All products &rarr;</a></div></div><a href="/solutions/">Advisory</a><div class="nx-drop"><a href="/industries/" aria-haspopup="true">Sectors<svg class="nx-chev" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nx-panel" role="group" aria-label="Sectors"><p class="nx-head">Who we build for</p><ul class="nx-list"><li><a class="nx-item nx-plain" href="/industries/#furniture"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Furniture showrooms</b></a></li><li><a class="nx-item nx-plain" href="/industries/#chains"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>QSR and café chains</b></a></li><li><a class="nx-item nx-plain" href="/industries/#salons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Salons and spas</b></a></li><li><a class="nx-item nx-plain" href="/industries/#retail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Sales teams and agencies</b></a></li><li><a class="nx-item nx-plain" href="/industries/#accounting"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>CA firms</b></a></li><li><a class="nx-item nx-plain" href="/industries/#healthcare"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Clinics</b></a></li><li><a class="nx-item nx-plain" href="/industries/#finance"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Lenders and credit teams</b></a></li><li><a class="nx-item nx-plain" href="/industries/#manufacturing"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Manufacturing plants</b></a></li><li><a class="nx-item nx-plain" href="/industries/#logistics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Logistics and freight</b></a></li></ul><a class="nx-all" href="/industries/">All sectors &rarr;</a></div></div><a href="/research/">Research</a><a href="/open-source/">Open source</a><a href="/blog/" class="active">Blog</a><a href="/about/">About</a></nav>
+
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobileDrawer" data-shell="2"><details class="md-group"><summary>Products</summary><a class="md-sub" href="/products/furnitrail/"><span class="nx-mono" style="--mc:#1E4D3B;width:22px;height:22px" aria-hidden="true">F</span>FurniTrail</a><a class="md-sub" href="/products/plumbline/"><span class="nx-mono" style="--mc:#0E3B43;width:22px;height:22px" aria-hidden="true">P</span>Plumbline</a><a class="md-sub" href="/products/chairside/"><span class="nx-mono" style="--mc:#6B2D55;width:22px;height:22px" aria-hidden="true">C</span>Chairside</a><a class="md-sub" href="/products/pollenrev/"><span class="nx-mono" style="--mc:#3563D5;width:22px;height:22px" aria-hidden="true">P</span>PollenRev</a><a class="md-sub" href="/products/docketbox/"><span class="nx-mono" style="--mc:#0F766E;width:22px;height:22px" aria-hidden="true">D</span>Docketbox</a><a class="md-sub" href="/products/profora/"><span class="nx-mono" style="--mc:#2350C8;width:22px;height:22px" aria-hidden="true">P</span>Profora</a><a class="md-sub" href="/products/carecadence/"><span class="nx-mono" style="--mc:#BE123C;width:22px;height:22px" aria-hidden="true">C</span>CareCadence</a><a class="md-sub" href="/products/cashtrail/"><span class="nx-mono" style="--mc:#047857;width:22px;height:22px" aria-hidden="true">C</span>Cashtrail</a><a class="md-sub" href="/products/taktline/"><span class="nx-mono" style="--mc:#C2410C;width:22px;height:22px" aria-hidden="true">T</span>Taktline</a><a class="md-sub" href="/products/freightproof/"><span class="nx-mono" style="--mc:#B45309;width:22px;height:22px" aria-hidden="true">F</span>FreightProof</a><a class="md-sub" href="/products/">All products &rarr;</a></details><a href="/industries/">Sectors</a><a href="/solutions/">Advisory</a><a href="/research/">Research</a><a href="/open-source/">Open source</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/" class="md-cta">Talk to us &rarr;</a></div>
+
+  <main>
+    <article class="article-wrap post-grid">
+      <div class="reveal" style="margin-bottom:32px;">
+        <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">
+            <a href="/" style="color:var(--text-muted);">Home</a> &rsaquo;
+            <a href="/blog/" style="color:var(--text-muted);">Blog</a> &rsaquo;
+            <a href="/blog/freightproof/" style="color:var(--text-muted);">FreightProof</a>
+          </nav>
+        <div class="article-meta">
+          <span class="article-meta-text"><em>Logistics and freight</em></span>
+          <span class="article-meta-text">Published <time datetime="2026-11-24">24 Nov 2026</time> &middot; Updated <time datetime="2026-11-24">24 Nov 2026</time> &middot; 8 min read</span>
+        </div>
+        <h1 class="sec-title" style="font-size:clamp(30px, 4.2vw, 44px);line-height:1.18;">
+          How to audit freight bills before you pay a transporter
+        </h1>
+        <p class="sec-subtitle" style="font-size:18px;margin-bottom:0;">
+          Five places bills go wrong, how to check each one, and how to get overpayments back.
+        </p>
+      </div>
+      <!-- cover:start (written by scripts/build_blog.py) -->
+      <figure class="post-cover" data-cluster="freightproof"><img src="/assets/images/blog/freight-bill-audit-before-payment.svg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+      <nav class="post-toc" aria-label="In this article"><span class="post-toc-title">In this article</span><ol><li><a href="#in-short">In short</a></li><li><a href="#where-do-freight-bills-go-wrong">Where do freight bills go wrong?</a></li><li><a href="#how-do-duplicate-lrs-get-paid-twice">How do duplicate LRs get paid twice?</a></li><li><a href="#how-does-a-wrong-rate-get-through">How does a wrong rate get through?</a></li><li><a href="#is-a-detention-charge-fair">Is a detention charge fair?</a></li><li><a href="#how-do-you-check-a-fuel-surcharge">How do you check a fuel surcharge?</a></li><li><a href="#how-are-weight-disputes-settled">How are weight disputes settled?</a></li><li><a href="#how-do-you-audit-before-paying-and-recover-the-rest">How do you audit before paying, and recover what was overpaid?</a></li><li><a href="#how-does-freightproof-do-this">How does FreightProof do this?</a></li><li><a href="#questions-owners-ask">Questions finance and logistics heads ask</a></li></ol></nav>
+      <!-- cover:end -->
+      <div class="article-content reveal reveal-up delay-1">
+        <p>Transporter bills go wrong in five ordinary ways: the same LR billed twice, a rate that is not the one in force, extra charges with no proof, a fuel surcharge worked out on the wrong base, and weight that is not what was loaded. The fix is to check every line against the LR record and the rate card before payment, hold only the amount in doubt, and track each overcharge as a claim until a credit note or set-off lands in the books.</p>
+
+        <div class="article-takeaways">
+          <h2 id="in-short">In short</h2>
+          <ul>
+            <li>Check each bill line against its LR and the rate card version in force on the LR date, then against past bills for the same LR.</li>
+            <li>Raise a claim before you pay. Public audit data shows overcharges raised late are collected less often.</li>
+            <li>A claim needs an owner, a deadline, evidence and a recorded credit note or set-off, or it will stall.</li>
+          </ul>
+        </div>
+
+        <h2 id="where-do-freight-bills-go-wrong">Where do freight bills go wrong?</h2>
+        <p>Most Indian transporters are small. Around 75% of truck operators own fewer than five trucks (<a href="https://redseer.com/articles/unlocking-growth-in-indias-fragmented-trucking-sector/" target="_blank" rel="noopener">Redseer</a>), so rate cards sit in emails, LR copies arrive by hand and bills are often built from memory.</p>
+        <p>No public Indian study measures how much of a shipper&rsquo;s freight bill is wrong. A freight-audit software vendor, RoaDo, publishes its own estimates as a share of invoice value: rate misapplied 2&ndash;4%, extra charges 1&ndash;3%, fuel surcharge 0.5&ndash;2%, weight 2&ndash;5% (<a href="https://roado.tech/blog/freight-bill-audit-and-reconciliation-the-enterprise-guide-to-recovering-5-12-of-transport-spend/" target="_blank" rel="noopener">RoaDo guide</a>). These are vendor claims, not audited findings. Measure your own bills before you trust any of them.</p>
+
+        <h2 id="how-do-duplicate-lrs-get-paid-twice">How do duplicate LRs get paid twice?</h2>
+        <p>A duplicate is usually not a copy of the same bill. It is the same LR on a later bill, a re-issued bill after a rate change, or a supplementary bill that repeats a trip. A US materials-handling article puts double billing at up to 2% of invoices (<a href="https://www.mmh.com/article/average_savings_found_after_a_freight_bill_audit" target="_blank" rel="noopener">Modern Materials Handling</a>); it gives no Indian figure.</p>
+        <p>The check is simple and tiring by hand: every LR number on a new bill must be searched in earlier bills from that transporter, not only the last one. Keep a ledger of bill lines by LR, and look back a year or more.</p>
+
+        <h2 id="how-does-a-wrong-rate-get-through">How does a wrong rate get through?</h2>
+        <p>A contract is revised and the transporter bills at the old rate, or the wrong vehicle size or slab is used. The test is the rate card version in force on the <em>LR date</em>, not on the bill date or today.</p>
+        <div class="article-example">
+          <p><strong>Example sum</strong> (made-up numbers): the rate card says &#8377;29,500 for a lane and truck size, and the bill line says &#8377;32,000. The claim is &#8377;2,500 on that LR. Ten such lines in a month is &#8377;25,000, small each time and large over a year.</p>
+        </div>
+
+        <h2 id="is-a-detention-charge-fair">Is a detention charge fair?</h2>
+        <p>Only if the contract allows it and the hours are shown. One trucking booking platform says the free window is typically 2 to 4 hours at each point, with &#8377;200&ndash;500 an hour after that depending on truck size, and that detention should appear as a separate line with the hours documented (<a href="https://truckguru.co.in/blog/?p=1867" target="_blank" rel="noopener">TruckGuru</a>). There is no national standard, so your own contract decides.</p>
+        <p>Ask for the gate-in and gate-out times or the dated POD. A detention line with no times is a question, not a payable amount.</p>
+
+        <h2 id="how-do-you-check-a-fuel-surcharge">How do you check a fuel surcharge?</h2>
+        <p>First find out which method your contract uses. One carrier&rsquo;s published rate card sets fuel surcharge at 10% of base freight and says it is not fixed and may change with diesel prices (<a href="https://help.eshopbox.com/en/articles/11495306-eshopbox-cargo-shipping-service" target="_blank" rel="noopener">Eshopbox Cargo</a>). Truckload contracts often index freight to diesel by a factor; a vendor blog quotes a transporters&rsquo; association leader saying most customers still use factors of 0.4 to 0.5, while the association proposed 0.65 (<a href="https://www.freightfox.ai/blog/the-fuel-adjustment-factor-in-freight-contracts-is-broken" target="_blank" rel="noopener">FreightFox</a>).</p>
+        <p>If your contract does not state the base price, the factor and the date the price is read, the surcharge cannot be audited. Write those three things into the rate card.</p>
+
+        <h2 id="how-are-weight-disputes-settled">How are weight disputes settled?</h2>
+        <p>Part-load bills charge on the higher of actual and volumetric weight. The same Eshopbox card sets a minimum chargeable weight of 20 kg and 1 CFT as 6 kg, with CFT worked out as length &times; breadth &times; height in cm divided by 27,000, and labour union charges &ldquo;chargeable as actuals&rdquo; (<a href="https://help.eshopbox.com/en/articles/11495306-eshopbox-cargo-shipping-service" target="_blank" rel="noopener">Eshopbox Cargo</a>). Other carriers use other rules, so use the ones in your own contract.</p>
+        <p>Compare the billed weight with the weight on the LR and your dispatch record. If the LR shows less than the bill, that is the claim.</p>
+
+        <h2 id="how-do-you-audit-before-paying-and-recover-the-rest">How do you audit before paying, and recover what was overpaid?</h2>
+        <ol>
+          <li><strong>Match every line</strong> to its LR record, the rate card version in force on that date and earlier bills.</li>
+          <li><strong>Open a claim for each unsupported amount</strong> with the bill line, the contract row, the working and the source files kept as they were.</li>
+          <li><strong>Give each claim an owner and a date</strong> for deciding, sending and settling, with a named person above them when it slips.</li>
+          <li><strong>Send one pack per transporter</strong> with every claim, its evidence and a reply-by date, written plainly. Small transporters are partners, not targets.</li>
+          <li><strong>Hold the claimed amount</strong> from the next payment run, and pay the undisputed rest.</li>
+          <li><strong>Close on the books.</strong> Record the credit note or set-off, and have a second person check it against Tally or the transporter ledger.</li>
+        </ol>
+        <p>Speed matters. A US General Services Administration audit of federal freight found under 10% of overcharges uncollected when raised within 400 days of payment, over 25% at 600 to 799 days, and nearly 35% at 800 days or more (<a href="https://www.gsaig.gov/sites/default/files/audit-reports/A120169_1.pdf" target="_blank" rel="noopener">GSA Inspector General, 2014</a>). That is US federal data, not Indian.</p>
+        <p>Two rules shape how you recover. Only the transporter can issue a GST credit note, and it must be declared by 30 November after the financial year of the supply (<a href="https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/acts/2017_CGST_act/active/chapter7/section34_v1.00.html" target="_blank" rel="noopener">CGST Act, section 34</a>). And for micro and small transporters, payment is due by the agreed date, at most 45 days from acceptance, with compound interest at three times the bank rate if late; acceptance is deemed after 15 days unless you object in writing (<a href="https://prsindia.org/files/bills_acts/acts_parliament/2006/the-micro-small-and-medium-enterprises-development-act-2006.pdf" target="_blank" rel="noopener">MSMED Act 2006, sections 2, 15 and 16</a>). Raise claims fast, in writing, and have your CA confirm the treatment.</p>
+
+        <h2 id="how-does-freightproof-do-this">How does FreightProof do this?</h2>
+        <p>FreightProof checks bills against LR records and rate cards, including the rate card version in force on the LR date and the past 400 days of that transporter&rsquo;s bills for repeats. Each unsupported amount becomes a claim with an owner, a deadline and frozen evidence, and open claims are held back on the pay list. A claim closes only when a credit note or set-off is recorded and a second person checks it. A bill line with no LR record gets no weight or detention claim, and reading gate times from dispatch is planned, not built.</p>
+
+        <h2 id="questions-owners-ask">Questions finance and logistics heads ask</h2>
+        <details>
+          <summary>Should I hold a whole transporter bill if one line is wrong?</summary>
+          <p>Hold only the disputed amount where you can, and pay the rest on time. For a micro or small transporter, the MSMED Act sets a payment limit of 45 days from acceptance, so send a written objection within 15 days of delivery. Ask your CA how a part-disputed bill is treated.</p>
+        </details>
+        <details>
+          <summary>Can a shipper issue a GST credit note for an overcharge?</summary>
+          <p>No. Under section 34 of the CGST Act the supplier, here the transporter, issues the credit note, and must declare it by 30 November after the financial year of the supply. A commercial settlement or set-off against a later bill is the other route; confirm the treatment with your CA.</p>
+        </details>
+
+        <div class="step-card article-cta">
+          <span class="sec-eyebrow">FreightProof by Ideator Labs</span>
+          <h3 style="font-size:22px;font-weight:700;color:var(--text-primary);margin-bottom:10px;">Want every overcharge tracked until it is recovered?</h3>
+          <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">
+            FreightProof is software for Indian manufacturers and distributors that buy road freight from several transporters. It matches bills to LRs and rate cards, opens a claim for each overcharge, and holds that amount back until a credit note or set-off is recorded. By Ideator Labs.
+          </p>
+          <div class="article-cta-actions">
+            <a href="/products/freightproof/" class="btn-pill btn-primary">See FreightProof <span class="arrow-slide">&rarr;</span></a>
+            <a href="/industries/#logistics" class="btn-pill btn-secondary">Logistics advisory</a>
+          </div>
+        </div>
+
+        <div class="article-sources">
+          <h2>Sources</h2>
+          <ul>
+            <li>Redseer, <a href="https://redseer.com/articles/unlocking-growth-in-indias-fragmented-trucking-sector/" target="_blank" rel="noopener">Unlocking growth in India&rsquo;s fragmented trucking sector</a>: &ldquo;Around 75% of truck operators in India own fewer than five trucks&rdquo; (checked 2026-11-24).</li>
+            <li>RoaDo (freight-audit vendor), <a href="https://roado.tech/blog/freight-bill-audit-and-reconciliation-the-enterprise-guide-to-recovering-5-12-of-transport-spend/" target="_blank" rel="noopener">Freight bill audit and reconciliation</a>: error ranges by type, vendor claims (checked 2026-11-24).</li>
+            <li>Modern Materials Handling, <a href="https://www.mmh.com/article/average_savings_found_after_a_freight_bill_audit" target="_blank" rel="noopener">Average savings found after a freight bill audit</a>: double billing may affect up to 2% of invoices; no country given (checked 2026-11-24).</li>
+            <li>TruckGuru (booking platform), <a href="https://truckguru.co.in/blog/?p=1867" target="_blank" rel="noopener">Detention charges in truck transport</a>: 2&ndash;4 free hours, &#8377;200&ndash;500 an hour, separate invoice line (checked 2026-11-24).</li>
+            <li>Eshopbox, <a href="https://help.eshopbox.com/en/articles/11495306-eshopbox-cargo-shipping-service" target="_blank" rel="noopener">Eshopbox Cargo shipping service</a>: one carrier&rsquo;s rate card, with fuel surcharge, 20 kg minimum, volumetric weight and union charges (checked 2026-11-24).</li>
+            <li>FreightFox (freight software vendor), <a href="https://www.freightfox.ai/blog/the-fuel-adjustment-factor-in-freight-contracts-is-broken" target="_blank" rel="noopener">The fuel adjustment factor in freight contracts is broken</a>: factors of 0.4 to 0.5 against 0.65 proposed by AITWA (checked 2026-11-24).</li>
+            <li>GSA Office of Inspector General, <a href="https://www.gsaig.gov/sites/default/files/audit-reports/A120169_1.pdf" target="_blank" rel="noopener">Audit of the Postpayment Audit Process, A120169</a> (31 March 2014): uncollected overcharges by lag since payment; US federal freight (checked 2026-11-24).</li>
+            <li>CBIC, <a href="https://taxinformation.cbic.gov.in/content/html/tax_repository/gst/acts/2017_CGST_act/active/chapter7/section34_v1.00.html" target="_blank" rel="noopener">CGST Act, section 34</a>: credit note by the supplier, declared by 30 November after the financial year (checked 2026-11-24).</li>
+            <li>PRS India, <a href="https://prsindia.org/files/bills_acts/acts_parliament/2006/the-micro-small-and-medium-enterprises-development-act-2006.pdf" target="_blank" rel="noopener">MSMED Act, 2006</a>: sections 2(b), 15 and 16: 45-day limit, deemed acceptance, compound interest (checked 2026-11-24).</li>
+          </ul>
+        </div>
+        <p>Read next: <a href="/blog/freightproof/">all FreightProof articles</a> &middot; <a href="/industries/#logistics">logistics</a> &middot; <a href="/products/freightproof/">FreightProof</a>.</p>
+      </div>
+          <!-- related:start (written by scripts/build_blog.py) -->
+          <aside class="post-related" aria-label="Related articles">
+            <div class="post-related-head"><h2>Related</h2><a class="arrow-link" href="/blog/freightproof/">More on FreightProof &rarr;</a></div>
+            <div class="blog-grid"><a class="blog-card" href="/blog/ca-firms-reclaim-hours-with-ai.html" data-cluster="ca-firms">
+            <span class="blog-card-cover"><img src="/assets/images/blog/ca-firms-reclaim-hours-with-ai.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">CA and accounting firms</span>
+            <span class="blog-card-title">Where CA firms lose hours every week, and how AI gives them back</span>
+            <span class="blog-card-dek">The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a><a class="blog-card" href="/blog/d2c-true-margin-per-order.html" data-cluster="d2c">
+            <span class="blog-card-cover"><img src="/assets/images/blog/d2c-true-margin-per-order.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">D2C brands</span>
+            <span class="blog-card-title">Your D2C brand’s real problem isn’t ads, it’s true margin per order</span>
+            <span class="blog-card-dek">Before you change the ads, find out what each order really leaves you with.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a><a class="blog-card" href="/blog/furnitrail/furniture-showroom-walk-in-follow-up.html" data-cluster="furnitrail">
+            <span class="blog-card-cover"><img src="/assets/images/blog/furniture-showroom-walk-in-follow-up.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">FurniTrail</span>
+            <span class="blog-card-title">Why furniture showrooms lose walk-in buyers, and how to follow up</span>
+            <span class="blog-card-dek">What to capture at the door, what to send, and when.</span>
+            <span class="blog-card-meta">7 min read &middot; 19 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a></div>
+            <p class="post-hww">How this article was researched and checked: <a href="/blog/how-we-write/">How we write</a>.</p>
+          </aside>
+          <!-- related:end -->
+        </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-sec fx" data-shell="2"><div class="container"><div class="fx-top"><div class="fx-brand"><a href="/" class="brand-area" aria-label="Ideator Labs home"><svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg><span>Ideator Labs</span></a><p>A studio for AI and data advisory, innovation and business intelligence. We build workflow products for sectors that still run on spreadsheets and WhatsApp.</p><div class="fx-social"><a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a><a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></div></div><div class="fx-cols"><div class="fx-col"><p class="fx-h">Products</p><ul><li><a href="/products/furnitrail/">FurniTrail</a></li><li><a href="/products/plumbline/">Plumbline</a></li><li><a href="/products/chairside/">Chairside</a></li><li><a href="/products/pollenrev/">PollenRev</a></li><li><a href="/products/docketbox/">Docketbox</a></li><li><a href="/products/profora/">Profora</a></li><li><a href="/products/carecadence/">CareCadence</a></li><li><a href="/products/cashtrail/">Cashtrail</a></li><li><a href="/products/taktline/">Taktline</a></li><li><a href="/products/freightproof/">FreightProof</a></li><li><a href="/products/">All products</a></li></ul></div><div class="fx-col"><p class="fx-h">Sectors</p><ul><li><a href="/industries/#furniture">Furniture showrooms</a></li><li><a href="/industries/#chains">QSR and café chains</a></li><li><a href="/industries/#salons">Salons and spas</a></li><li><a href="/industries/#retail">Sales teams and agencies</a></li><li><a href="/industries/#accounting">CA firms</a></li><li><a href="/industries/#healthcare">Clinics</a></li><li><a href="/industries/#finance">Lenders and credit teams</a></li><li><a href="/industries/#manufacturing">Manufacturing plants</a></li><li><a href="/industries/#logistics">Logistics and freight</a></li></ul></div><div class="fx-col"><p class="fx-h">Advisory</p><ul><li><a href="/solutions/">AI and data advisory</a></li><li><a href="/research/">Research</a></li><li><a href="/open-source/">Open source</a></li><li><a href="/open-source/#cortex">CORTEX</a></li><li><a href="/open-source/#yamcp">YAMCP</a></li></ul></div><div class="fx-col"><p class="fx-h">Resources</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/how-we-write/">How we write</a></li><li><a href="/blog/feed.xml">RSS feed</a></li><li><a href="/llms.txt">llms.txt</a></li></ul></div><div class="fx-col"><p class="fx-h">Company</p><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Book a demo</a></li><li><a href="/security.html">Security</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div></div></div><div class="footer-bottom-row"><div>&copy; 2026 Ideator Labs. Made in India.</div><div class="footer-legal-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/sitemap.xml">Sitemap</a></div></div></div></footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, blog… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js?v=20261124b"></script>
+  <script>
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('readingProgress');
+      if (!bar) return;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>

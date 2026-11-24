@@ -35,12 +35,30 @@
   const searchIndex = [
     // blog:start (written by scripts/build_blog.py)
     { title: "Blog", category: "Blog", url: "/blog/", desc: "Plain articles on AI, data, business intelligence and our sectors." },
+    { title: "Innovation articles", category: "Blog", url: "/blog/innovation/", desc: "Picking, testing and shipping new tools without a big IT project, and knowing when not to." },
     { title: "CA and accounting firms articles", category: "Blog", url: "/blog/ca-firms/", desc: "Where accounting practices lose hours to matching, re-typing and chasing, and how to win them back." },
     { title: "D2C brands articles", category: "Blog", url: "/blog/d2c/", desc: "The real margin on each order, after returns, shipping, fees and ads." },
     { title: "FurniTrail articles", category: "Blog", url: "/blog/furnitrail/", desc: "For furniture showroom owners: turning walk-in visitors into buyers with timely, personal follow-up." },
+    { title: "Plumbline articles", category: "Blog", url: "/blog/plumbline/", desc: "For QSR and caf\u00e9 chain operators: audits, stock variance, cash and supply across every outlet, each issue closed with proof." },
+    { title: "Chairside articles", category: "Blog", url: "/blog/chairside/", desc: "For salon and spa owners: packages, regular clients coming back on time, and commission everyone trusts." },
+    { title: "Docketbox articles", category: "Blog", url: "/blog/docketbox/", desc: "For CA firms: every client deadline, paper and approval tracked until the return is filed." },
+    { title: "Profora articles", category: "Blog", url: "/blog/profora/", desc: "For D2C founders: finding the products, campaigns and pincodes that lose money, and fixing them." },
+    { title: "CareCadence articles", category: "Blog", url: "/blog/carecadence/", desc: "For private clinics: follow-up visits, unpaid balances and insurer claims that don't slip." },
+    { title: "Cashtrail articles", category: "Blog", url: "/blog/cashtrail/", desc: "For credit teams at NBFCs and DSAs: reviewing bank statements quickly and catching tampering." },
+    { title: "Taktline articles", category: "Blog", url: "/blog/taktline/", desc: "For plant owners and managers: machine stops, maintenance and stock tracked to a verified close." },
+    { title: "FreightProof articles", category: "Blog", url: "/blog/freightproof/", desc: "For logistics and finance teams: checking transporter bills and recovering overcharges." },
     { title: "Where CA firms lose hours every week, and how AI gives them back", category: "Blog", url: "/blog/ca-firms-reclaim-hours-with-ai.html", desc: "The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time." },
     { title: "Your D2C brand\u2019s real problem isn\u2019t ads, it\u2019s true margin per order", category: "Blog", url: "/blog/d2c-true-margin-per-order.html", desc: "Before you change the ads, find out what each order really leaves you with." },
     { title: "Why furniture showrooms lose walk-in buyers, and how to follow up", category: "Blog", url: "/blog/furnitrail/furniture-showroom-walk-in-follow-up.html", desc: "What to capture at the door, what to send, and when." },
+    { title: "How to tell if a new tool will pay off in your business", category: "Blog", url: "/blog/evaluate-technology-for-your-business.html", desc: "A simple way to judge a tool against how things work today." },
+    { title: "Why clinics lose follow-ups, balances and claims, and how to keep each one moving", category: "Blog", url: "/blog/carecadence/clinic-follow-ups-balances-claims.html", desc: "Give every recall, balance and claim an owner, a due date and proof, until a visit, payment or settlement closes it." },
+    { title: "How credit teams spot edited bank statements before sanction", category: "Blog", url: "/blog/cashtrail/spot-edited-bank-statements-before-sanction.html", desc: "The checks that catch an edited statement, and the notes and sign-off that prove you ran them." },
+    { title: "Why salons lose regular clients and money on packages and commission, and how to stop it", category: "Blog", url: "/blog/chairside/salon-packages-due-back-commission.html", desc: "Three leaks in one salon: clients who drift away, package uses nobody can prove, and commission argued at month-end." },
+    { title: "How CA firms miss GST, TDS and ROC due dates, what it costs, and how to stop", category: "Blog", url: "/blog/docketbox/ca-firm-due-date-tracking-gst-tds-roc.html", desc: "What a late GST, TDS or ROC filing costs, and how firms keep every return on time." },
+    { title: "How to audit freight bills before you pay a transporter", category: "Blog", url: "/blog/freightproof/freight-bill-audit-before-payment.html", desc: "Five places bills go wrong, how to check each one, and how to get overpayments back." },
+    { title: "Where QSR chains lose money between outlets", category: "Blog", url: "/blog/plumbline/qsr-chain-money-leaks-between-outlets.html", desc: "Four leaks that show up outlet by outlet, and a weekly routine to catch each one." },
+    { title: "Find the SKUs, ads and COD pincodes that lose money", category: "Blog", url: "/blog/profora/find-loss-making-skus-campaigns-cod-pincodes.html", desc: "Where a D2C brand loses money after returns, RTO, shipping and fees, and what to do about each." },
+    { title: "Cut machine downtime and late deliveries", category: "Blog", url: "/blog/taktline/measure-machine-downtime-late-deliveries.html", desc: "What to log on the floor, what to review each week and what it costs, for plants that keep their books in Tally." },
     // blog:end
     { title: "Ideator Labs home", category: "Home", url: "/", desc: "A studio for AI and data advisory, innovation and business intelligence." },
     { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
@@ -49,7 +67,7 @@
     { title: "PollenRev", category: "Products", url: "/products/pollenrev/", desc: "Sales software for small businesses: finds leads, writes outreach, tracks deals." },
     // products:start (written by scripts/product_pages.py)
     { title: "FurniTrail", category: "Products", url: "/products/furnitrail/", desc: "Showroom operations for furniture stores: quotations, follow-ups, advances, delivery jobs and service tickets, each with an owner, a deadline, proof and escalation." },
-    { title: "Plumbline", category: "Products", url: "/products/plumbline/", desc: "Inspections and corrective actions for multi-location chains: phone checklists, and for every failed item a fix with an owner, a deadline and photo proof." },
+    { title: "Plumbline", category: "Products", url: "/products/plumbline/", desc: "Operations suite for QSR and café chains: audits and fixes, stock variance, cash and settlements, supply and dues, licences, training and guest feedback, each issue with an owner and proof." },
     { title: "Chairside", category: "Products", url: "/products/chairside/", desc: "For salon and spa chains: package uses confirmed by the client, a due-back list for the desk, commission from checked services, and a morning summary per outlet." },
     { title: "Docketbox", category: "Products", url: "/products/docketbox/", desc: "Compliance task tracker for CA firms: a task per client, return and period, statutory due dates, papers by link, partner approval, filing proof and escalation." },
     { title: "Profora", category: "Products", url: "/products/profora/", desc: "Profit leak tracking for D2C brands: loss-making products, campaigns and COD pincode areas, each with an owner, a deadline, proof of the fix and a measured payback." },
@@ -437,7 +455,7 @@
     lamp.className = 'nav-lamp';
     lamp.setAttribute('aria-hidden', 'true');
     navMenu.prepend(lamp);
-    const links = Array.from(navMenu.querySelectorAll('a'));
+    const links = Array.from(navMenu.querySelectorAll(':scope > a, :scope > .nx-drop > a'));   // not the links inside the panels
     const active = navMenu.querySelector('a.active');
     const lightUp = (link) => {
       links.forEach((a) => a.classList.toggle('is-lit', a === link));

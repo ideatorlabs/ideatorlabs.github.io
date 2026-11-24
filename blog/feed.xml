@@ -4,8 +4,89 @@
   <link href="https://ideatorlabs.github.io/blog/"/>
   <link rel="self" href="https://ideatorlabs.github.io/blog/feed.xml"/>
   <id>https://ideatorlabs.github.io/blog/</id>
-  <updated>2026-11-19T00:00:00Z</updated>
+  <updated>2026-11-24T00:00:00Z</updated>
   <author><name>Ideator Labs</name></author>
+  <entry>
+    <title>Why clinics lose follow-ups, balances and claims, and how to keep each one moving</title>
+    <link href="https://ideatorlabs.github.io/blog/carecadence/clinic-follow-ups-balances-claims.html"/>
+    <id>https://ideatorlabs.github.io/blog/carecadence/clinic-follow-ups-balances-claims.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>Give every recall, balance and claim an owner, a due date and proof, until a visit, payment or settlement closes it.</summary>
+    <category term="CareCadence"/>
+  </entry>
+  <entry>
+    <title>How credit teams spot edited bank statements before sanction</title>
+    <link href="https://ideatorlabs.github.io/blog/cashtrail/spot-edited-bank-statements-before-sanction.html"/>
+    <id>https://ideatorlabs.github.io/blog/cashtrail/spot-edited-bank-statements-before-sanction.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>The checks that catch an edited statement, and the notes and sign-off that prove you ran them.</summary>
+    <category term="Cashtrail"/>
+  </entry>
+  <entry>
+    <title>Why salons lose regular clients and money on packages and commission, and how to stop it</title>
+    <link href="https://ideatorlabs.github.io/blog/chairside/salon-packages-due-back-commission.html"/>
+    <id>https://ideatorlabs.github.io/blog/chairside/salon-packages-due-back-commission.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>Three leaks in one salon: clients who drift away, package uses nobody can prove, and commission argued at month-end.</summary>
+    <category term="Chairside"/>
+  </entry>
+  <entry>
+    <title>How CA firms miss GST, TDS and ROC due dates, what it costs, and how to stop</title>
+    <link href="https://ideatorlabs.github.io/blog/docketbox/ca-firm-due-date-tracking-gst-tds-roc.html"/>
+    <id>https://ideatorlabs.github.io/blog/docketbox/ca-firm-due-date-tracking-gst-tds-roc.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>What a late GST, TDS or ROC filing costs, and how firms keep every return on time.</summary>
+    <category term="Docketbox"/>
+  </entry>
+  <entry>
+    <title>How to audit freight bills before you pay a transporter</title>
+    <link href="https://ideatorlabs.github.io/blog/freightproof/freight-bill-audit-before-payment.html"/>
+    <id>https://ideatorlabs.github.io/blog/freightproof/freight-bill-audit-before-payment.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>Five places bills go wrong, how to check each one, and how to get overpayments back.</summary>
+    <category term="FreightProof"/>
+  </entry>
+  <entry>
+    <title>Where QSR chains lose money between outlets</title>
+    <link href="https://ideatorlabs.github.io/blog/plumbline/qsr-chain-money-leaks-between-outlets.html"/>
+    <id>https://ideatorlabs.github.io/blog/plumbline/qsr-chain-money-leaks-between-outlets.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>Four leaks that show up outlet by outlet, and a weekly routine to catch each one.</summary>
+    <category term="Plumbline"/>
+  </entry>
+  <entry>
+    <title>Find the SKUs, ads and COD pincodes that lose money</title>
+    <link href="https://ideatorlabs.github.io/blog/profora/find-loss-making-skus-campaigns-cod-pincodes.html"/>
+    <id>https://ideatorlabs.github.io/blog/profora/find-loss-making-skus-campaigns-cod-pincodes.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>Where a D2C brand loses money after returns, RTO, shipping and fees, and what to do about each.</summary>
+    <category term="Profora"/>
+  </entry>
+  <entry>
+    <title>Cut machine downtime and late deliveries</title>
+    <link href="https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html"/>
+    <id>https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html</id>
+    <published>2026-11-24T00:00:00Z</published>
+    <updated>2026-11-24T00:00:00Z</updated>
+    <summary>What to log on the floor, what to review each week and what it costs, for plants that keep their books in Tally.</summary>
+    <category term="Taktline"/>
+  </entry>
+  <entry>
+    <title>How to tell if a new tool will pay off in your business</title>
+    <link href="https://ideatorlabs.github.io/blog/evaluate-technology-for-your-business.html"/>
+    <id>https://ideatorlabs.github.io/blog/evaluate-technology-for-your-business.html</id>
+    <published>2026-11-23T00:00:00Z</published>
+    <updated>2026-11-23T00:00:00Z</updated>
+    <summary>A simple way to judge a tool against how things work today.</summary>
+    <category term="Innovation"/>
+  </entry>
   <entry>
     <title>Why furniture showrooms lose walk-in buyers, and how to follow up</title>
     <link href="https://ideatorlabs.github.io/blog/furnitrail/furniture-showroom-walk-in-follow-up.html"/>

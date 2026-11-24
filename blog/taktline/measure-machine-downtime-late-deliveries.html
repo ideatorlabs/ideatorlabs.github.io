@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cut machine downtime and late deliveries | Ideator Labs</title>
+  <meta name="description" content="Log every unplanned stop and late supplier order, review five numbers weekly, and cut downtime without an ERP project. What to log, review and pay.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="Cut machine downtime and late deliveries">
+  <meta property="og:description" content="Log every unplanned stop and late supplier order, review five numbers weekly, and cut downtime without an ERP project. What to log, review and pay.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta property="article:published_time" content="2026-11-24">
+  <meta property="article:modified_time" content="2026-11-24">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cut machine downtime and late deliveries">
+  <meta name="twitter:description" content="Log every unplanned stop and late supplier order, review five numbers weekly, and cut downtime without an ERP project. What to log, review and pay.">
+  <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261124c">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#FFFFFF">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "Cut machine downtime and late deliveries",
+      "description": "Log every unplanned stop and late supplier order, review five numbers weekly, and cut downtime without an ERP project. What to log, review and pay.",
+      "image": "https://ideatorlabs.github.io/og-image.png",
+      "datePublished": "2026-11-24",
+      "dateModified": "2026-11-24",
+      "about": {
+        "@type": "SoftwareApplication",
+        "@id": "https://ideatorlabs.github.io/products/taktline/#software",
+        "name": "Taktline"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ideatorlabs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ideatorlabs.github.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Taktline",
+          "item": "https://ideatorlabs.github.io/blog/taktline/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Cut machine downtime and late deliveries",
+          "item": "https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need sensors or an ERP to measure downtime?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. A stop log kept by the operator at the machine, a shift-end check of output against run time, and the purchase order dates already in your accounts are enough to start."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long should a stop be before we log it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pick one rule and write it down. The OEE site gives an example policy of a reason for any downtime longer than two minutes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good supplier on-time rate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no single standard for Indian plants that we found. Measure each supplier against its confirmed date, line by line, for two months and set the target from that."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    #readingProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #14161B;
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+    .article-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .article-meta-text {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .article-content {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .article-content h2 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin: 40px 0 16px;
+    }
+    .article-content p {
+      margin-bottom: 20px;
+    }
+    .article-content details {
+      border-bottom: 1px solid var(--border-light);
+      padding: 10px 0;
+    }
+    .article-content summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .article-content details p {
+      margin: 10px 0 6px;
+    }
+    .article-content ul,
+    .article-content ol {
+      margin: 0 0 24px 24px;
+      display: grid;
+      gap: 10px;
+    }
+    .article-content li strong {
+      color: var(--text-primary);
+    }
+    .article-content a {
+      color: var(--accent-purple);
+      font-weight: 600;
+    }
+    .article-takeaways {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-left: 3px solid var(--accent-purple);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px 4px;
+      margin: 8px 0 32px;
+    }
+    .article-takeaways h2 {
+      font-size: 17px;
+      margin: 0 0 10px;
+    }
+    .article-example {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 20px 24px 4px;
+      margin: 8px 0 28px;
+      font-size: 15.5px;
+    }
+    .article-sources {
+      border-top: 1px solid var(--border-light);
+      margin-top: 40px;
+      padding-top: 8px;
+      font-size: 14px;
+    }
+    .article-sources h2 {
+      font-size: 17px;
+      margin: 20px 0 10px;
+    }
+    .article-cta {
+      background: var(--bg-secondary);
+      margin: 48px 0 0;
+      padding: 32px;
+      border: 1px solid #CBD5E1;
+    }
+    .article-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+  <link rel="alternate" type="application/atom+xml" title="Ideator Labs blog" href="/blog/feed.xml">
+</head>
+<body>
+
+  <div id="readingProgress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
+        <span>Ideator Labs</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation" data-shell="2"><div class="nx-drop"><a href="/products/" aria-haspopup="true">Products<svg class="nx-chev" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nx-panel nx-wide" role="group" aria-label="Products"><p class="nx-head">Products by sector</p><ul class="nx-grid"><li><a class="nx-item" href="/products/furnitrail/"><span class="nx-mono" style="--mc:#1E4D3B;width:30px;height:30px" aria-hidden="true">F</span><span><b>FurniTrail</b><small>Showroom operations for furniture stores</small></span></a></li><li><a class="nx-item" href="/products/plumbline/"><span class="nx-mono" style="--mc:#0E3B43;width:30px;height:30px" aria-hidden="true">P</span><span><b>Plumbline</b><small>Operations suite for QSR and café chains</small></span></a></li><li><a class="nx-item" href="/products/chairside/"><span class="nx-mono" style="--mc:#6B2D55;width:30px;height:30px" aria-hidden="true">C</span><span><b>Chairside</b><small>Packages, due-backs and commission for salons</small></span></a></li><li><a class="nx-item" href="/products/pollenrev/"><span class="nx-mono" style="--mc:#3563D5;width:30px;height:30px" aria-hidden="true">P</span><span><b>PollenRev</b><small>Lead finding, outreach and deal pipeline</small></span></a></li><li><a class="nx-item" href="/products/docketbox/"><span class="nx-mono" style="--mc:#0F766E;width:30px;height:30px" aria-hidden="true">D</span><span><b>Docketbox</b><small>Compliance task tracker for CA firms</small></span></a></li><li><a class="nx-item" href="/products/profora/"><span class="nx-mono" style="--mc:#2350C8;width:30px;height:30px" aria-hidden="true">P</span><span><b>Profora</b><small>Profit leak tracking for D2C brands</small></span></a></li><li><a class="nx-item" href="/products/carecadence/"><span class="nx-mono" style="--mc:#BE123C;width:30px;height:30px" aria-hidden="true">C</span><span><b>CareCadence</b><small>Follow-ups, dues and claims for clinics</small></span></a></li><li><a class="nx-item" href="/products/cashtrail/"><span class="nx-mono" style="--mc:#047857;width:30px;height:30px" aria-hidden="true">C</span><span><b>Cashtrail</b><small>Bank statement review for credit teams</small></span></a></li><li><a class="nx-item" href="/products/taktline/"><span class="nx-mono" style="--mc:#C2410C;width:30px;height:30px" aria-hidden="true">T</span><span><b>Taktline</b><small>Stops, maintenance and stock for plants</small></span></a></li><li><a class="nx-item" href="/products/freightproof/"><span class="nx-mono" style="--mc:#B45309;width:30px;height:30px" aria-hidden="true">F</span><span><b>FreightProof</b><small>Freight bill claims tracked to recovery</small></span></a></li></ul><a class="nx-all" href="/products/">All products &rarr;</a></div></div><a href="/solutions/">Advisory</a><div class="nx-drop"><a href="/industries/" aria-haspopup="true">Sectors<svg class="nx-chev" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nx-panel" role="group" aria-label="Sectors"><p class="nx-head">Who we build for</p><ul class="nx-list"><li><a class="nx-item nx-plain" href="/industries/#furniture"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Furniture showrooms</b></a></li><li><a class="nx-item nx-plain" href="/industries/#chains"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>QSR and café chains</b></a></li><li><a class="nx-item nx-plain" href="/industries/#salons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Salons and spas</b></a></li><li><a class="nx-item nx-plain" href="/industries/#retail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Sales teams and agencies</b></a></li><li><a class="nx-item nx-plain" href="/industries/#accounting"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>CA firms</b></a></li><li><a class="nx-item nx-plain" href="/industries/#healthcare"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Clinics</b></a></li><li><a class="nx-item nx-plain" href="/industries/#finance"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Lenders and credit teams</b></a></li><li><a class="nx-item nx-plain" href="/industries/#manufacturing"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Manufacturing plants</b></a></li><li><a class="nx-item nx-plain" href="/industries/#logistics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Logistics and freight</b></a></li></ul><a class="nx-all" href="/industries/">All sectors &rarr;</a></div></div><a href="/research/">Research</a><a href="/open-source/">Open source</a><a href="/blog/" class="active">Blog</a><a href="/about/">About</a></nav>
+
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobileDrawer" data-shell="2"><details class="md-group"><summary>Products</summary><a class="md-sub" href="/products/furnitrail/"><span class="nx-mono" style="--mc:#1E4D3B;width:22px;height:22px" aria-hidden="true">F</span>FurniTrail</a><a class="md-sub" href="/products/plumbline/"><span class="nx-mono" style="--mc:#0E3B43;width:22px;height:22px" aria-hidden="true">P</span>Plumbline</a><a class="md-sub" href="/products/chairside/"><span class="nx-mono" style="--mc:#6B2D55;width:22px;height:22px" aria-hidden="true">C</span>Chairside</a><a class="md-sub" href="/products/pollenrev/"><span class="nx-mono" style="--mc:#3563D5;width:22px;height:22px" aria-hidden="true">P</span>PollenRev</a><a class="md-sub" href="/products/docketbox/"><span class="nx-mono" style="--mc:#0F766E;width:22px;height:22px" aria-hidden="true">D</span>Docketbox</a><a class="md-sub" href="/products/profora/"><span class="nx-mono" style="--mc:#2350C8;width:22px;height:22px" aria-hidden="true">P</span>Profora</a><a class="md-sub" href="/products/carecadence/"><span class="nx-mono" style="--mc:#BE123C;width:22px;height:22px" aria-hidden="true">C</span>CareCadence</a><a class="md-sub" href="/products/cashtrail/"><span class="nx-mono" style="--mc:#047857;width:22px;height:22px" aria-hidden="true">C</span>Cashtrail</a><a class="md-sub" href="/products/taktline/"><span class="nx-mono" style="--mc:#C2410C;width:22px;height:22px" aria-hidden="true">T</span>Taktline</a><a class="md-sub" href="/products/freightproof/"><span class="nx-mono" style="--mc:#B45309;width:22px;height:22px" aria-hidden="true">F</span>FreightProof</a><a class="md-sub" href="/products/">All products &rarr;</a></details><a href="/industries/">Sectors</a><a href="/solutions/">Advisory</a><a href="/research/">Research</a><a href="/open-source/">Open source</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/" class="md-cta">Talk to us &rarr;</a></div>
+
+  <main>
+    <article class="article-wrap post-grid">
+      <div class="reveal" style="margin-bottom:32px;">
+        <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">
+            <a href="/" style="color:var(--text-muted);">Home</a> &rsaquo;
+            <a href="/blog/" style="color:var(--text-muted);">Blog</a> &rsaquo;
+            <a href="/blog/taktline/" style="color:var(--text-muted);">Taktline</a>
+          </nav>
+        <div class="article-meta">
+          <span class="article-meta-text"><em>Manufacturing plants</em></span>
+          <span class="article-meta-text">Published <time datetime="2026-11-24">24 Nov 2026</time> &middot; Updated <time datetime="2026-11-24">24 Nov 2026</time> &middot; 9 min read</span>
+        </div>
+        <h1 class="sec-title" style="font-size:clamp(30px, 4.2vw, 44px);line-height:1.18;">
+          Cut machine downtime and late deliveries
+        </h1>
+        <p class="sec-subtitle" style="font-size:18px;margin-bottom:0;">
+          What to log on the floor, what to review each week and what it costs, for plants that keep their books in Tally.
+        </p>
+      </div>
+      <!-- cover:start (written by scripts/build_blog.py) -->
+      <figure class="post-cover" data-cluster="taktline"><img src="/assets/images/blog/measure-machine-downtime-late-deliveries.svg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+      <nav class="post-toc" aria-label="In this article"><span class="post-toc-title">In this article</span><ol><li><a href="#in-short">In short</a></li><li><a href="#why-is-downtime-hard-to-see-in-a-small-plant">Why is downtime hard to see in a small plant?</a></li><li><a href="#what-should-operators-log-on-the-floor">What should operators log on the floor?</a></li><li><a href="#how-do-you-find-the-stops-nobody-wrote-down">How do you find the stops nobody wrote down?</a></li><li><a href="#how-do-you-track-late-supplier-deliveries">How do you track late supplier deliveries?</a></li><li><a href="#what-should-you-review-every-week">What should you review every week?</a></li><li><a href="#what-does-this-cost-a-plant">What does this cost a plant?</a></li><li><a href="#how-does-taktline-do-this">How does Taktline do this?</a></li><li><a href="#questions-owners-ask">Questions owners ask</a></li></ol></nav>
+      <!-- cover:end -->
+      <div class="article-content reveal reveal-up delay-1">
+        <p>Measure downtime by writing down every unplanned stop at the machine with its time and one reason, and measure supplier lateness by comparing each order line&rsquo;s due date with the day the goods arrived. You can do both without an ERP project, using a phone or a register, and the Tally data you already keep. Then review the same few numbers every week and act on the biggest repeat cause.</p>
+
+        <div class="article-takeaways">
+          <h2 id="in-short">In short</h2>
+          <ul>
+            <li>Log four things for every stop: machine, start and end time, one reason from a short list, and the item that was missing if the reason was material.</li>
+            <li>Check each shift&rsquo;s output against run time. The minutes the output cannot explain are stops nobody wrote down.</li>
+            <li>Review five numbers weekly: lost hours and top cause, repeat breakdowns, time to fix, shortage stops and supplier on-time share.</li>
+          </ul>
+        </div>
+
+        <h2 id="why-is-downtime-hard-to-see-in-a-small-plant">Why is downtime hard to see in a small plant?</h2>
+        <p>The losses that add up are small and unwritten. An Indian trade-press piece on OEE describes &ldquo;short, undocumented stoppages&rdquo; and unlogged waiting time as losses that look insignificant one by one, and says data entered by hand and reviewed at the end of a shift confirms a loss but cannot prevent it happening again (<a href="https://www.printweek.in/features/why-oee-fails-as-a-decision-tool-on-indias-factory-floors-61525" target="_blank" rel="noopener">PrintWeek, 22 January 2026</a>). We found no Indian figure for how much goes unrecorded, so we quote none.</p>
+        <p>Small firms have less room to absorb it. In a BCG and ACMA survey of auto-component makers, 42% of small-company leaders said they spend most or all of their time firefighting, and two-thirds of small firms had no qualified second source for most critical inputs (<a href="https://www.autocarpro.in/news/acma-survey-small-suppliers-carry-twice-the-risk-134447" target="_blank" rel="noopener">Autocar Professional, 2 September 2026</a>; sample size not stated). Only 21% of surveyed MSMEs reported using ERP or customised business software (<a href="https://www.policycircle.org/industry/ai-adoption-lift-msme-productivity/amp/" target="_blank" rel="noopener">Policy Circle on a CII and ISB study</a>; the article gives no survey date). Start with a habit, not a project.</p>
+
+        <h2 id="what-should-operators-log-on-the-floor">What should operators log on the floor?</h2>
+        <p>Log it where the machine is, when it happens, in a few taps or one line. If logging takes longer than the stop, it will not be logged. Four fields are enough:</p>
+        <ol>
+          <li><strong>Machine.</strong> The same names every time.</li>
+          <li><strong>Start and end time.</strong> Not an estimate at shift end. A timer or a clock glance at the moment.</li>
+          <li><strong>One reason from a short list.</strong> Breakdown, changeover, no material, no operator, quality stop, other. Free text turns into a dozen spellings of the same cause.</li>
+          <li><strong>The item, if the reason is material.</strong> This is the link most registers miss: the stop points to the part that ran out and the order it was waiting for.</li>
+        </ol>
+        <p>Fix the smallest stop you will log. The OEE site gives an example policy of requiring a reason for any downtime longer than two minutes, and notes that the threshold is flexible (<a href="https://www.oee.com/six-big-losses/" target="_blank" rel="noopener">OEE.com, six big losses</a>). It also files equipment failure and setup under availability loss, and minor stops under performance loss.</p>
+
+        <h2 id="how-do-you-find-the-stops-nobody-wrote-down">How do you find the stops nobody wrote down?</h2>
+        <p>Compare what the machine should have made with what it made. At shift end, take planned minutes, subtract the logged stops, and work out how many minutes the output actually needed at the machine&rsquo;s normal rate. The gap is unaccounted time.</p>
+        <div class="article-example">
+          <p><strong>Example</strong> (made-up numbers): a press is planned for 480 minutes and has 50 minutes of logged stops, so it ran 430 minutes. Its normal rate is 10 parts a minute and it made 3,600 good and rejected parts, which needs 360 minutes. The gap is 70 minutes. Ask what happened on that press and write the stop down.</p>
+        </div>
+        <p>In the first two weeks logged minutes will rise. The register was missing stops; the plant did not get worse. Keep those two weeks as your baseline.</p>
+
+        <h2 id="how-do-you-track-late-supplier-deliveries">How do you track late supplier deliveries?</h2>
+        <p>Count order lines, not whole orders. For each line, compare the due date with the day the goods receipt was booked. On-time delivery is the lines received on or before the due date divided by the lines due, times 100 (one vendor&rsquo;s plain statement of the formula: <a href="https://sourceday.com/blog/on-time-delivery-metrics/" target="_blank" rel="noopener">SourceDay</a>, a vendor source). Decide once whether to measure against the date you asked for or the one the supplier confirmed (the same source recommends the confirmed date), whether grace days count, and how a part-delivered line scores.</p>
+        <p>If your purchase orders and goods receipts are in Tally, you already hold both dates. Export them or read them from Tally, and group late lines by supplier with days late and the value still to come. Then link each material stop to the supplier of the item that ran out. That ties a stopped press to a supplier&rsquo;s record, the number to bring to your next call with them.</p>
+
+        <h2 id="what-should-you-review-every-week">What should you review every week?</h2>
+        <p>Review the same five numbers each week for 20 minutes, owner and plant head together, and pick one repeat cause to remove.</p>
+        <ol>
+          <li><strong>Lost hours and the top three causes.</strong> From the stop log, not memory.</li>
+          <li><strong>Repeat breakdowns.</strong> The same machine and fault twice in a week is a maintenance finding, not bad luck.</li>
+          <li><strong>Time to fix.</strong> Mean time to repair is total downtime divided by the number of failures; mean time between failures is operating time divided by the number of failures (<a href="https://www.ibm.com/think/topics/mttr-vs-mtbf" target="_blank" rel="noopener">IBM</a>).</li>
+          <li><strong>Shortage stops.</strong> Minutes lost for want of material, and which items.</li>
+          <li><strong>Supplier on-time share.</strong> Per supplier, from the receipts.</li>
+        </ol>
+        <p>For context, OEE multiplies availability, performance and quality; the commonly quoted world-class figure is 85%, made of 90%, 95% and 99%, and the same page says typical manufacturers sit near 60% (<a href="https://www.oee.com/world-class-oee/" target="_blank" rel="noopener">OEE.com</a>). Your own eight-week trend says more.</p>
+        <p>Every item you act on needs an owner, a date and proof of the fix, such as a photo or a reading, checked by someone other than the person who did the work. A vendor survey of 1,200 maintenance professionals found 56% of facilities spend most of their maintenance time on unplanned work. (<a href="https://www.getmaintainx.com/blog/preventive-on-paper-reactive-in-practice" target="_blank" rel="noopener">MaintainX, November 2024</a>; vendor survey, global). Write the fix down and have someone else check it.</p>
+
+        <h2 id="what-does-this-cost-a-plant">What does this cost a plant?</h2>
+        <p>With a register and a spreadsheet, the cost is supervisor time: a few minutes per shift to close the shift and 20 minutes a week for the review. Software adds a fee and removes the typing.</p>
+        <p>Taktline needs no sensor hardware: operators log stops on a phone, and stock comes from your Tally exports. We share pricing on a short call, before anything costs money. A useful test for any tool: compare its monthly fee with the machine-hours your own log shows you losing.</p>
+
+        <h2 id="how-does-taktline-do-this">How does Taktline do this?</h2>
+        <p>Taktline turns each machine stop that cost time, each fault found on a start-of-shift check, each item at its reorder point and each late supplier order into an action with an owner, a deadline and proof. An action closes only when it is verified: by a second person, or when the purchase order or goods receipt appears in Tally. The phone works offline, supervisors see unaccounted minutes at shift close, and the owner gets a morning screen and a weekly results page counted only from what was logged. Taktline reads Tally and never writes to it.</p>
+
+        <h2 id="questions-owners-ask">Questions owners ask</h2>
+        <details>
+          <summary>Do I need sensors or an ERP to measure downtime?</summary>
+          <p>No. A stop log kept by the operator at the machine, a shift-end check of output against run time, and the purchase order dates already in your accounts are enough to start.</p>
+        </details>
+        <details>
+          <summary>How long should a stop be before we log it?</summary>
+          <p>Pick one rule and write it down. The OEE site gives an example policy of a reason for any downtime longer than two minutes.</p>
+        </details>
+        <details>
+          <summary>What is a good supplier on-time rate?</summary>
+          <p>There is no single standard for Indian plants that we found. Measure each supplier against its confirmed date, line by line, for two months and set the target from that.</p>
+        </details>
+
+        <div class="step-card article-cta">
+          <span class="sec-eyebrow">Taktline by Ideator Labs</span>
+          <h3 style="font-size:22px;font-weight:700;color:var(--text-primary);margin-bottom:10px;">Want stops and late orders closed with proof?</h3>
+          <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">
+            Taktline is plant operations software for Indian manufacturers on Tally. Machine stops, maintenance findings, reorders and late deliveries are tracked to a verified close, and anything overdue is raised to the owner. By Ideator Labs.
+          </p>
+          <div class="article-cta-actions">
+            <a href="/products/taktline/" class="btn-pill btn-primary">See Taktline <span class="arrow-slide">&rarr;</span></a>
+            <a href="/industries/#manufacturing" class="btn-pill btn-secondary">Manufacturing advisory</a>
+          </div>
+        </div>
+
+        <div class="article-sources">
+          <h2>Sources</h2>
+          <ul>
+            <li>PrintWeek India, <a href="https://www.printweek.in/features/why-oee-fails-as-a-decision-tool-on-indias-factory-floors-61525" target="_blank" rel="noopener">Why OEE fails as a decision tool on India&rsquo;s factory floors</a> (22 January 2026): undocumented short stoppages; manual end-of-shift entry (checked 2026-11-24).</li>
+            <li>Autocar Professional, <a href="https://www.autocarpro.in/news/acma-survey-small-suppliers-carry-twice-the-risk-134447" target="_blank" rel="noopener">ACMA survey: small suppliers carry twice the risk</a> (2 September 2026), from the BCG and ACMA report <em>Beyond Resilience</em>: 42% of small-company leaders firefighting; two-thirds without a qualified second source; sample size not stated (checked 2026-11-24).</li>
+            <li>Policy Circle, <a href="https://www.policycircle.org/industry/ai-adoption-lift-msme-productivity/amp/" target="_blank" rel="noopener">AI adoption lifts MSME productivity</a>, on a CII and ISB study of 2,919 enterprises: 21% use ERP or customised business software; no survey date given (checked 2026-11-24).</li>
+            <li>OEE.com, <a href="https://www.oee.com/six-big-losses/" target="_blank" rel="noopener">The six big losses</a>: loss categories; example policy of a reason for downtime over two minutes (checked 2026-11-24).</li>
+            <li>OEE.com, <a href="https://www.oee.com/world-class-oee/" target="_blank" rel="noopener">World-class OEE</a>: 85% as 90% availability, 95% performance, 99% quality; typical near 60%; discrete manufacturing (checked 2026-11-24).</li>
+            <li>IBM, <a href="https://www.ibm.com/think/topics/mttr-vs-mtbf" target="_blank" rel="noopener">MTTR vs. MTBF</a>: formulas for both (checked 2026-11-24).</li>
+            <li>SourceDay, <a href="https://sourceday.com/blog/on-time-delivery-metrics/" target="_blank" rel="noopener">On-time delivery metrics</a>: on-time delivery formula; supplier-confirmed date; vendor source (checked 2026-11-24).</li>
+            <li>MaintainX, <a href="https://www.getmaintainx.com/blog/preventive-on-paper-reactive-in-practice" target="_blank" rel="noopener">Preventive on paper, reactive in practice</a> (5 November 2024): 56% and 87%, from the vendor&rsquo;s survey of 1,200 maintenance professionals; global, vendor survey (checked 2026-11-24).</li>
+            <li>Taktline prices and features: Ideator Labs, <a href="/products/taktline/">Taktline</a> (our own product).</li>
+          </ul>
+        </div>
+        <p>Read next: <a href="/blog/taktline/">all Taktline articles</a> &middot; <a href="/industries/#manufacturing">manufacturing</a> &middot; <a href="/products/taktline/">Taktline</a>.</p>
+      </div>
+          <!-- related:start (written by scripts/build_blog.py) -->
+          <aside class="post-related" aria-label="Related articles">
+            <div class="post-related-head"><h2>Related</h2><a class="arrow-link" href="/blog/taktline/">More on Taktline &rarr;</a></div>
+            <div class="blog-grid"><a class="blog-card" href="/blog/ca-firms-reclaim-hours-with-ai.html" data-cluster="ca-firms">
+            <span class="blog-card-cover"><img src="/assets/images/blog/ca-firms-reclaim-hours-with-ai.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">CA and accounting firms</span>
+            <span class="blog-card-title">Where CA firms lose hours every week, and how AI gives them back</span>
+            <span class="blog-card-dek">The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a><a class="blog-card" href="/blog/d2c-true-margin-per-order.html" data-cluster="d2c">
+            <span class="blog-card-cover"><img src="/assets/images/blog/d2c-true-margin-per-order.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">D2C brands</span>
+            <span class="blog-card-title">Your D2C brand’s real problem isn’t ads, it’s true margin per order</span>
+            <span class="blog-card-dek">Before you change the ads, find out what each order really leaves you with.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a><a class="blog-card" href="/blog/furnitrail/furniture-showroom-walk-in-follow-up.html" data-cluster="furnitrail">
+            <span class="blog-card-cover"><img src="/assets/images/blog/furniture-showroom-walk-in-follow-up.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">FurniTrail</span>
+            <span class="blog-card-title">Why furniture showrooms lose walk-in buyers, and how to follow up</span>
+            <span class="blog-card-dek">What to capture at the door, what to send, and when.</span>
+            <span class="blog-card-meta">7 min read &middot; 19 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a></div>
+            <p class="post-hww">How this article was researched and checked: <a href="/blog/how-we-write/">How we write</a>.</p>
+          </aside>
+          <!-- related:end -->
+        </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-sec fx" data-shell="2"><div class="container"><div class="fx-top"><div class="fx-brand"><a href="/" class="brand-area" aria-label="Ideator Labs home"><svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg><span>Ideator Labs</span></a><p>A studio for AI and data advisory, innovation and business intelligence. We build workflow products for sectors that still run on spreadsheets and WhatsApp.</p><div class="fx-social"><a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a><a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></div></div><div class="fx-cols"><div class="fx-col"><p class="fx-h">Products</p><ul><li><a href="/products/furnitrail/">FurniTrail</a></li><li><a href="/products/plumbline/">Plumbline</a></li><li><a href="/products/chairside/">Chairside</a></li><li><a href="/products/pollenrev/">PollenRev</a></li><li><a href="/products/docketbox/">Docketbox</a></li><li><a href="/products/profora/">Profora</a></li><li><a href="/products/carecadence/">CareCadence</a></li><li><a href="/products/cashtrail/">Cashtrail</a></li><li><a href="/products/taktline/">Taktline</a></li><li><a href="/products/freightproof/">FreightProof</a></li><li><a href="/products/">All products</a></li></ul></div><div class="fx-col"><p class="fx-h">Sectors</p><ul><li><a href="/industries/#furniture">Furniture showrooms</a></li><li><a href="/industries/#chains">QSR and café chains</a></li><li><a href="/industries/#salons">Salons and spas</a></li><li><a href="/industries/#retail">Sales teams and agencies</a></li><li><a href="/industries/#accounting">CA firms</a></li><li><a href="/industries/#healthcare">Clinics</a></li><li><a href="/industries/#finance">Lenders and credit teams</a></li><li><a href="/industries/#manufacturing">Manufacturing plants</a></li><li><a href="/industries/#logistics">Logistics and freight</a></li></ul></div><div class="fx-col"><p class="fx-h">Advisory</p><ul><li><a href="/solutions/">AI and data advisory</a></li><li><a href="/research/">Research</a></li><li><a href="/open-source/">Open source</a></li><li><a href="/open-source/#cortex">CORTEX</a></li><li><a href="/open-source/#yamcp">YAMCP</a></li></ul></div><div class="fx-col"><p class="fx-h">Resources</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/how-we-write/">How we write</a></li><li><a href="/blog/feed.xml">RSS feed</a></li><li><a href="/llms.txt">llms.txt</a></li></ul></div><div class="fx-col"><p class="fx-h">Company</p><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Book a demo</a></li><li><a href="/security.html">Security</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div></div></div><div class="footer-bottom-row"><div>&copy; 2026 Ideator Labs. Made in India.</div><div class="footer-legal-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/sitemap.xml">Sitemap</a></div></div></div></footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, blog… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js?v=20261124b"></script>
+  <script>
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('readingProgress');
+      if (!bar) return;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>
