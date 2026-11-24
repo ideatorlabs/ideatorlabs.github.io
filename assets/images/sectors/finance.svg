@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 240" role="img" aria-labelledby="t">
-<title id="t">Applications, documents and ledgers become one trusted set of numbers</title>
+<title id="t">Statements, flags and sign-offs become decisions you can defend</title>
 <style>
   .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 700; letter-spacing: .12em; fill: #4A5B7E; }
   .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: #1E2A44; font-weight: 600; }
@@ -29,17 +29,17 @@
 <path class="wire" d="M230 191.5 C368.0 191.5, 368.0 120.0, 500.0 120.0"/>
 <path class="wire" d="M620.0 120.0 L810.0 120.0"/>
 <rect class="card" x="40" y="25.5" width="190" height="46" rx="11"/>
-<text class="mono" x="56" y="47.5" font-size="13">APPLICATIONS</text>
+<text class="mono" x="56" y="47.5" font-size="13">STATEMENTS</text>
 <rect class="skel" x="56" y="56.5" width="91" height="6" rx="3"/>
 <rect x="155" y="56.5" width="42" height="6" rx="3" fill="#3B6FE0" opacity=".8"/>
 <circle class="blink b1" cx="214" cy="39.5" r="4" fill="#22B8CF"/>
 <rect class="card" x="40" y="97.0" width="190" height="46" rx="11"/>
-<text class="mono" x="56" y="119.0" font-size="13">DOCUMENTS</text>
+<text class="mono" x="56" y="119.0" font-size="13">FLAGS</text>
 <rect class="skel" x="56" y="128.0" width="91" height="6" rx="3"/>
 <rect x="155" y="128.0" width="42" height="6" rx="3" fill="#3B6FE0" opacity=".8"/>
 <circle class="blink b2" cx="214" cy="111.0" r="4" fill="#22B8CF"/>
 <rect class="card" x="40" y="168.5" width="190" height="46" rx="11"/>
-<text class="mono" x="56" y="190.5" font-size="13">LEDGERS</text>
+<text class="mono" x="56" y="190.5" font-size="13">SIGN-OFF</text>
 <rect class="skel" x="56" y="199.5" width="91" height="6" rx="3"/>
 <rect x="155" y="199.5" width="42" height="6" rx="3" fill="#3B6FE0" opacity=".8"/>
 <circle class="blink b3" cx="214" cy="182.5" r="4" fill="#22B8CF"/>
@@ -47,12 +47,12 @@
 <circle cx="560.0" cy="120.0" r="54" fill="url(#brand)" filter="url(#lift)"/>
 <g transform="translate(529.0 89.0) scale(1.294)" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19 24 8l18 11z"/><path d="M12 22v13M20 22v13M28 22v13M36 22v13M6 40h36"/></g></g>
 <rect class="card" x="810.0" y="50.0" width="270" height="140" rx="14"/>
-<text class="mono" x="828.0" y="80.0" font-size="13">ONE VIEW</text>
+<text class="mono" x="828.0" y="80.0" font-size="13">DECIDED</text>
 <path d="M828.0 108.0 l49 -8 l43 6 l54 -14 l54 -4" fill="none" stroke="url(#brand)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="837.0" cy="137.0" r="9" fill="#EAF1FD"/>
 <path class="tick t1" d="M832.5 137.0 l3 3 l6 -6" fill="none" stroke="#3B6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text class="sans" x="854.0" y="142.0" font-size="15">One trusted number</text>
+<text class="sans" x="854.0" y="142.0" font-size="15">Edited PDFs caught</text>
 <circle cx="837.0" cy="163.0" r="9" fill="#EAF1FD"/>
 <path class="tick t2" d="M832.5 163.0 l3 3 l6 -6" fill="none" stroke="#3B6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text class="sans" x="854.0" y="168.0" font-size="15">Risks flagged early</text>
+<text class="sans" x="854.0" y="168.0" font-size="15">Two-person sign-off</text>
 </svg>

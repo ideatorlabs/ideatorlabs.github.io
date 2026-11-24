@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FreightProof: freight bill audit for shippers</title>
-  <meta name="description" content="FreightProof checks each transporter bill line against its LR and the agreed rate, lists what to question with the rupees involved, and shows true cost per lane.">
+  <title>FreightProof: freight bill claims for shippers</title>
+  <meta name="description" content="FreightProof checks transporter bills against LRs and rate cards, opens a claim for each overcharge and tracks it to a credit note.">
   <link rel="canonical" href="https://ideatorlabs.github.io/products/freightproof/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Ideator Labs">
-  <meta property="og:title" content="FreightProof: freight bill audit for shippers">
-  <meta property="og:description" content="FreightProof checks each transporter bill line against its LR and the agreed rate, lists what to question with the rupees involved, and shows true cost per lane.">
+  <meta property="og:title" content="FreightProof: freight bill claims for shippers">
+  <meta property="og:description" content="FreightProof checks transporter bills against LRs and rate cards, opens a claim for each overcharge and tracks it to a credit note.">
   <meta property="og:url" content="https://ideatorlabs.github.io/products/freightproof/">
   <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../../assets/css/main.css?v=20261122a">
+  <link rel="stylesheet" href="../../assets/css/main.css?v=20261124a">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -36,13 +36,13 @@
       "alternateName": "FreightProof by Ideator Labs",
       "url": "https://ideatorlabs.github.io/products/freightproof/",
       "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Freight bill audit and freight cost analytics",
+      "applicationSubCategory": "Freight bill claims and payment holds for shippers",
       "operatingSystem": "Web",
-      "description": "FreightProof audits freight bills for manufacturers and distributors that book trucks without a transport management system. Upload transporter bills, the LR register, your rate card and Tally’s sales register, and see every bill line matched, what to question and what each lane really costs.",
-      "image": "https://ideatorlabs.github.io/assets/images/products/freightproof/freightproof-report.webp",
+      "description": "FreightProof is for manufacturers and distributors that buy road freight from several transporters without a transport management system. Each bill is checked against the LR register and the rate card in force on the LR date, and each overcharge becomes a claim with an owner, a deadline and its evidence. Open claims are held back on the pay list until the transporter issues a credit note or agrees a set-off.",
+      "image": "https://ideatorlabs.github.io/assets/images/products/freightproof/freightproof-claims.webp",
       "audience": {
         "@type": "BusinessAudience",
-        "audienceType": "Manufacturers and distributors that ship by truck without a transport management system"
+        "audienceType": "Manufacturers and distributors that buy road freight without a transport management system"
       },
       "creator": {
         "@type": "Organization",
@@ -141,10 +141,10 @@
         <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 340px), 1fr));gap:40px;align-items:center;">
           <div>
             <div style="margin-bottom:14px;"><span class="pm-lockup"><img class="pm-mark" src="../../assets/images/products/freightproof-mark.svg" width="52" height="52" alt=""><span class="pm-word pm-freightproof">Freight<span>Proof</span></span></span></div>
-            <span class="sec-eyebrow">FreightProof by Ideator Labs, Logistics and supply chain</span>
-            <h1 class="sec-title" style="max-width:22ch;">Check every freight bill before you pay it</h1>
+            <span class="sec-eyebrow">Logistics and supply chain</span>
+            <h1 class="sec-title" style="max-width:22ch;">Freight bill audit and claims for shippers</h1>
             <p class="sec-subtitle" style="margin-bottom:18px;">
-              FreightProof audits freight bills for manufacturers and distributors that book trucks without a transport management system. Upload transporter bills, the LR register, your rate card and Tally&rsquo;s sales register, and see every bill line matched, what to question and what each lane really costs.
+              FreightProof is for manufacturers and distributors that buy road freight from several transporters without a transport management system. Each bill is checked against the LR register and the rate card in force on the LR date, and each overcharge becomes a claim with an owner, a deadline and its evidence. Open claims are held back on the pay list until the transporter issues a credit note or agrees a set-off.
             </p>
             <p style="margin-bottom:24px;">
               <span class="badge-pill badge-proto">For shippers</span>
@@ -159,7 +159,7 @@
             </div>
           </div>
           <div>
-            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-report.webp" alt="FreightProof audit: the rupees to question at the top, then the weekly read (sample data)" width="2400" height="1500"></figure>
+            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-claims.webp" alt="FreightProof claims list: found claims with due date, transporter, bill and LR, the overcharge and its owner (sample data)" width="2400" height="1500"></figure>
             <p style="font-size:12px;color:var(--text-muted);margin-top:10px;">Screen shows sample data, for illustration.</p>
           </div>
         </div>
@@ -171,20 +171,20 @@
       <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
         <div class="step-card reveal" id="who" style="padding:32px;">
           <span class="sec-eyebrow">Who it&rsquo;s for</span>
-          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">Shippers who check freight bills by hand</h2>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">Shippers paying many transporters</h2>
           <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
             <li>&bull; Manufacturers shipping full and part truckloads through several transporters</li>
-            <li>&bull; Distributors with rate cards in Excel or email</li>
-            <li>&bull; Accounts teams that check bills against LRs by hand</li>
+            <li>&bull; Distributors with rate cards in Excel and bills by email</li>
+            <li>&bull; Finance and logistics teams that decide which bill amounts to pay</li>
           </ul>
         </div>
         <div class="step-card reveal" id="problem" style="padding:32px;">
           <span class="sec-eyebrow">The problem</span>
-          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">If freight bills get paid after a quick look</h2>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">Overcharges are found late, or not recovered</h2>
           <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
-            <li>&bull; Nobody has time to check every LR against the rate card.</li>
-            <li>&bull; Detention, loading and other extra charges arrive without proof.</li>
-            <li>&bull; No one knows what a lane really costs per tonne or per unit.</li>
+            <li>&bull; Bills are checked line by line in Excel against LRs and rate cards.</li>
+            <li>&bull; Old rates, extra charges without proof and LRs billed twice reach payment.</li>
+            <li>&bull; Disputed amounts are tracked by phone and email, so credit notes go missing.</li>
           </ul>
         </div>
       </div>
@@ -195,33 +195,33 @@
       <div class="container">
         <div class="reveal" style="margin-bottom:28px;">
           <span class="sec-eyebrow">How it works</span>
-          <h2 class="sec-title" style="font-size:clamp(24px, 3vw, 32px);">5 steps, from your files to what to do</h2>
+          <h2 class="sec-title" style="font-size:clamp(24px, 3vw, 32px);">How FreightProof works</h2>
         </div>
         <ol style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 210px), 1fr));gap:20px;">
           <li class="step-card reveal delay-1" style="padding:24px;">
             <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">1</div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Upload your files</h3>
-            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Transporter bills in Excel, CSV or PDF, the LR register, the agreed rate card and Tally&rsquo;s sales register.</p>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Bills come in</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Transporters email bills to the company's own address. Each line is matched to its LR and the rate card version in force on the LR date.</p>
           </li>
           <li class="step-card reveal delay-2" style="padding:24px;">
             <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">2</div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Match every line</h3>
-            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Each bill line is matched to its LR and its agreed rate. Lines that don&rsquo;t match are listed with the reason.</p>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Claims open</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Each amount the contract or LR record does not support becomes a claim with its evidence, an owner and a decide-by date.</p>
           </li>
           <li class="step-card reveal delay-3" style="padding:24px;">
             <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">3</div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">See what to question</h3>
-            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Rates above contract, LRs billed twice, extra charges without proof, weight or distance that doesn&rsquo;t tie, and late deliveries.</p>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Approve and send</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">The logistics head approves or drops each claim with a reason, then sends one proof pack per transporter.</p>
           </li>
           <li class="step-card reveal delay-4" style="padding:24px;">
             <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">4</div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Know the true cost</h3>
-            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Cost per lane, transporter and customer, per tonne and per unit, as billed and at contract.</p>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Hold and chase</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">Open claims are held back on the pay list. Steps that slip are escalated to the logistics and finance heads by day.</p>
           </li>
           <li class="step-card reveal delay-5" style="padding:24px;">
             <div class="step-icon-bubble" style="font-weight:700;font-size:15px;margin-bottom:14px;">5</div>
-            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Read the week</h3>
-            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">What changed, why it changed and what to do next, with the rows behind every sentence.</p>
+            <h3 style="font-size:16px;font-weight:700;color:var(--text-primary);margin-bottom:6px;">Close on the books</h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.6;">A credit note or set-off is recorded, and a second person checks it against the books before the claim closes.</p>
           </li>
         </ol>
       </div>
@@ -231,18 +231,22 @@
     <section id="screens" style="padding:40px 0 24px;">
       <div class="container">
         <div class="reveal" style="margin-bottom:24px;">
-          <span class="sec-eyebrow">A look inside</span>
-          <h2 class="sec-title" style="font-size:clamp(24px, 3vw, 32px);">What to question, line by line</h2>
+          <span class="sec-eyebrow">Screens</span>
+          <h2 class="sec-title" style="font-size:clamp(24px, 3vw, 32px);">Claims, evidence and the pay list</h2>
           <p class="sec-subtitle" style="margin-bottom:0;">Screens from FreightProof. Every name, number and amount on them is sample data, made up for illustration.</p>
         </div>
         <div class="screen-pair">
           <figure class="screen-card reveal">
-            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-report.webp" alt="FreightProof audit: the rupees to question at the top, then the weekly read (sample data)" width="2400" height="1500" loading="lazy"></figure>
-            <figcaption><span class="phone-kicker">Audit</span><strong>The total to question</strong>What the bills ask for beyond the contract, then the weekly read of what changed and what to do.</figcaption>
+            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-claims.webp" alt="FreightProof claims list: found claims with due date, transporter, bill and LR, the overcharge and its owner (sample data)" width="2400" height="1500" loading="lazy"></figure>
+            <figcaption><span class="phone-kicker">Logistics head</span><strong>Claims to decide</strong>Every found claim with its amount, due date and owner, approved or dropped in a batch.</figcaption>
           </figure>
           <figure class="screen-card reveal delay-1">
-            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-question.webp" alt="FreightProof findings table: rate above contract, billed twice, extra charges, weight and distance that do not tie, late delivery, each with lines, rupees and what to do (sample data)" width="2400" height="1500" loading="lazy"></figure>
-            <figcaption><span class="phone-kicker">Findings</span><strong>Each finding with its next step</strong>The lines, the rupees involved and what to ask the transporter, with the rows behind each one.</figcaption>
+            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-claim.webp" alt="FreightProof claim page: the bill line as billed, the contract rate and version, the LR record and the next step (sample data)" width="2400" height="1500" loading="lazy"></figure>
+            <figcaption><span class="phone-kicker">Evidence</span><strong>Why each amount is questioned</strong>The bill line, the contract row and rate card version, the LR record, the source file's fingerprint and the transporter's reply.</figcaption>
+          </figure>
+          <figure class="screen-card reveal">
+            <figure class="app-screen"><img src="../../assets/images/products/freightproof/freightproof-pay.webp" alt="FreightProof pay list: each bill with the amount held on open claims and the amount to pay now (sample data)" width="2400" height="1500" loading="lazy"></figure>
+            <figcaption><span class="phone-kicker">Accounts</span><strong>What to pay, and what to hold</strong>Each unpaid bill with the amount held on open claims, with a warning for micro and small transporters near 45 days.</figcaption>
           </figure>
         </div>
       </div>
@@ -253,9 +257,9 @@
       <div class="container" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(min(100%, 300px), 1fr));gap:28px;">
         <div class="step-card reveal" id="data" style="padding:32px;">
           <span class="sec-eyebrow">Your data</span>
-          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">Your files aren&rsquo;t kept</h2>
+          <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">How your data is handled</h2>
           <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.7;">
-            Bills are read in memory to build the audit, then dropped. There&rsquo;s no database, and PDF bills are read on the server through their text layer, with no outside AI service. GST treatment that looks wrong is flagged for your CA, never decided.
+            Bills, LR registers, rate cards and claims are stored in your company's own workspace, visible only to your logins. Each file is kept by its SHA-256 fingerprint, and every step on a claim is written to a hash-chained log that cannot be edited. Bills are read on the server; nothing is sent to an outside AI or OCR service, and FreightProof never emails your transporters. GST and MSME points are flagged for your CA, never decided. History is loaded by file import when you start.
           </p>
         </div>
         <div class="step-card reveal" id="demo" style="padding:32px;">
@@ -263,7 +267,7 @@
           <h2 style="font-size:22px;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;margin-bottom:14px;">What a demo looks like</h2>
           <ul style="list-style:none;padding:0;margin:0;font-size:14.5px;color:var(--text-secondary);line-height:1.8;">
             <li>&bull; Tell us how many transporters you use and how bills reach you.</li>
-            <li>&bull; We set up a short call and walk you through FreightProof.</li>
+            <li>&bull; We set up a short call and walk you through FreightProof with sample data.</li>
             <li>&bull; We share pricing on the call, before anything costs money.</li>
           </ul>
         </div>
@@ -276,9 +280,9 @@
         <div class="cta-banner-box reveal reveal-scale">
           <div class="cta-banner-text-side">
             <span class="cta-banner-tag" style="font-size:11px;">Book a demo</span>
-            <h2 class="cta-banner-h2">Paying freight bills without checking them?</h2>
+            <h2 class="cta-banner-h2">Book a FreightProof demo</h2>
             <p class="cta-banner-sub">
-              Write to us with how many transporters you use and how bills reach you. We&rsquo;ll reply to set up a short demo.
+              Write to us with how many transporters you use and how bills reach you. We'll reply to set up a short demo.
             </p>
           </div>
           <div style="display:flex;flex-wrap:wrap;gap:12px;">

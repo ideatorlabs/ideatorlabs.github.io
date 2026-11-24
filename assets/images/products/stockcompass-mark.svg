@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="StockCompass">
-  <rect x="2" y="2" width="60" height="60" rx="16" fill="#4338CA"/>
-  <rect x="13" y="36" width="17" height="15" rx="3" fill="#FFFFFF" opacity=".85"/>
-  <rect x="34" y="36" width="17" height="15" rx="3" fill="#FFFFFF" opacity=".55"/>
-  <rect x="23.5" y="17" width="17" height="15" rx="3" fill="#F2B53A"/>
-</svg>

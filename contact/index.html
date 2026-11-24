@@ -20,7 +20,7 @@
   <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
 
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="../assets/css/main.css?v=20261122a">
+  <link rel="stylesheet" href="../assets/css/main.css?v=20261124a">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -151,15 +151,15 @@
                 <label for="cf-topic">What's this about?</label>
                 <select id="cf-topic" name="topic">
                   <option value="FurniTrail demo">FurniTrail demo</option>
+                  <option value="Plumbline demo">Plumbline demo</option>
+                  <option value="Chairside demo">Chairside demo</option>
                   <option value="PollenRev demo">PollenRev demo</option>
-                  <option value="Profora demo">Profora demo</option>
-                  <option value="FreightProof demo">FreightProof demo</option>
-                  <option value="StockCompass demo">StockCompass demo</option>
-                  <option value="Taktline demo">Taktline demo</option>
                   <option value="Docketbox demo">Docketbox demo</option>
-                  <option value="Cashtrail demo">Cashtrail demo</option>
+                  <option value="Profora demo">Profora demo</option>
                   <option value="CareCadence demo">CareCadence demo</option>
-                  <option value="ClinicVitals demo">ClinicVitals demo</option>
+                  <option value="Cashtrail demo">Cashtrail demo</option>
+                  <option value="Taktline demo">Taktline demo</option>
+                  <option value="FreightProof demo">FreightProof demo</option>
                   <option value="Advisory call (free 25 minutes)" selected>Advisory call (free 25 minutes)</option>
                   <option value="Suggest a sector">Suggest a sector</option>
                   <option value="Something else">Something else</option>
@@ -242,21 +242,21 @@
         var topic = document.getElementById('cf-topic');
         var message = document.getElementById('cf-message');
         var hints = {
-          'FurniTrail demo': "Your showroom's name and city, and how you follow up with walk-in visitors today.",
-          'PollenRev demo': 'What you sell, who you sell to, and how you find customers today.',
+          "FurniTrail demo": "Your branches, how many salespeople, and how you handle deliveries.",
+          "Plumbline demo": "How many outlets, company-owned or franchised, and how audits and fixes are tracked today.",
+          "Chairside demo": "How many outlets you run, and which POS you use.",
+          "PollenRev demo": "",
+          "Docketbox demo": "Roughly how many clients, which returns you file, and how you track due dates and papers today.",
           "Profora demo": "Your store, roughly how many orders a month, and the couriers you use.",
+          "CareCadence demo": "Your clinic's speciality, and how you follow up patients and balances today.",
+          "Cashtrail demo": "What loans you give, how many applications a month, and how statements are reviewed today.",
+          "Taktline demo": "Your machines and shifts, whether you use Tally, and how you record stops today.",
           "FreightProof demo": "How many transporters you use, roughly how many bills a month, and how they reach you.",
-          "StockCompass demo": "What you make or distribute, roughly how many items, and whether you use Tally or another ERP.",
-          "Taktline demo": "Your lines and machines, and how you record stoppages today.",
-          "Docketbox demo": "Roughly how many clients, which services, and how you collect documents today.",
-          "Cashtrail demo": "What kind of loans you give, and roughly how many files you read a month.",
-          "CareCadence demo": "Your clinic’s speciality, and how you call patients back today.",
-          "ClinicVitals demo": "Your clinic or centre, and the billing software you use.",
           'Advisory call (free 25 minutes)': "One process that eats your team's time, or one number you don't trust.",
           'Suggest a sector': 'Which kind of business, and what slows it down day to day.',
           'Something else': 'How can we help?'
         };
-        var keys = { furnitrail: 'FurniTrail demo', pollenrev: 'PollenRev demo', profora: 'Profora demo', freightproof: 'FreightProof demo', stockcompass: 'StockCompass demo', taktline: 'Taktline demo', docketbox: 'Docketbox demo', cashtrail: 'Cashtrail demo', carecadence: 'CareCadence demo', clinicvitals: 'ClinicVitals demo', advisory: 'Advisory call (free 25 minutes)', sector: 'Suggest a sector', other: 'Something else' };
+        var keys = { furnitrail: 'FurniTrail demo', plumbline: 'Plumbline demo', chairside: 'Chairside demo', pollenrev: 'PollenRev demo', docketbox: 'Docketbox demo', profora: 'Profora demo', carecadence: 'CareCadence demo', cashtrail: 'Cashtrail demo', taktline: 'Taktline demo', freightproof: 'FreightProof demo', advisory: 'Advisory call (free 25 minutes)', sector: 'Suggest a sector', other: 'Something else' };
 
         function setHint() { message.placeholder = hints[topic.value] || ''; }
 

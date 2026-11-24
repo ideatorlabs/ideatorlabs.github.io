@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 240" role="img" aria-labelledby="t">
-<title id="t">Orders, courier reports and ad spend become the true margin per order</title>
+<title id="t">Orders, courier reports and ad spend become losses found and fixed</title>
 <style>
   .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-weight: 700; letter-spacing: .12em; fill: #4A5B7E; }
   .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; fill: #1E2A44; font-weight: 600; }
@@ -51,7 +51,7 @@
 <path d="M828.0 108.0 l49 -8 l43 6 l54 -14 l54 -4" fill="none" stroke="url(#brand)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
 <circle cx="837.0" cy="137.0" r="9" fill="#EAF1FD"/>
 <path class="tick t1" d="M832.5 137.0 l3 3 l6 -6" fill="none" stroke="#3B6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<text class="sans" x="854.0" y="142.0" font-size="15">Profit after returns</text>
+<text class="sans" x="854.0" y="142.0" font-size="15">Leaks tracked to a fix</text>
 <circle cx="837.0" cy="163.0" r="9" fill="#EAF1FD"/>
 <path class="tick t2" d="M832.5 163.0 l3 3 l6 -6" fill="none" stroke="#3B6FE0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <text class="sans" x="854.0" y="168.0" font-size="15">Break-even ROAS</text>
