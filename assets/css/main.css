@@ -2053,9 +2053,19 @@ a.blog-card:hover .blog-card-go { transform: translateX(3px); }
 .blog-hub-title { display: flex; align-items: center; gap: 18px; }
 .blog-hub-title img { border-radius: 16px; box-shadow: 0 12px 26px -18px rgba(37, 79, 170, .6); }
 .blog-hub-title .sec-title { margin-bottom: 0; }
-.blog-card[data-cluster="furnitrail"] .blog-card-topic, .blog-topic-tile[data-cluster="furnitrail"] .blog-topic-count { color: #A94F16; }
-.blog-card[data-cluster="furnitrail"] .blog-card-flag { background: linear-gradient(135deg, #1E4D3B, #E5782C); }
-.blog-card[data-cluster="pollenrev"] .blog-card-topic { color: #3563D5; }
+/* Product topics wear the product's colours on cards, topic tiles and covers (same palette as scripts/blog_covers.py). */
+[data-cluster="furnitrail"]   { --bc: #A94F16; --bc-a: #1E4D3B; --bc-b: #E5782C; --bc-wash: #F7F1E8; }
+[data-cluster="plumbline"]    { --bc: #0E3B43; --bc-a: #0E3B43; --bc-b: #F2A33A; --bc-wash: #E4F1EE; }
+[data-cluster="chairside"]    { --bc: #6B2D55; --bc-a: #542343; --bc-b: #A3527F; --bc-wash: #F6ECF2; }
+[data-cluster="docketbox"]    { --bc: #0F766E; --bc-a: #0F4F4A; --bc-b: #14857C; --bc-wash: #E6F4F1; }
+[data-cluster="profora"]      { --bc: #2350C8; --bc-a: #1B3FA0; --bc-b: #4C7BE8; --bc-wash: #E9EFFC; }
+[data-cluster="carecadence"]  { --bc: #BE123C; --bc-a: #9F1239; --bc-b: #E8496D; --bc-wash: #FFF1F2; }
+[data-cluster="cashtrail"]    { --bc: #047857; --bc-a: #065F46; --bc-b: #10A37A; --bc-wash: #E7F5EF; }
+[data-cluster="taktline"]     { --bc: #C2410C; --bc-a: #2B2F36; --bc-b: #C2410C; --bc-wash: #FFF1EA; }
+[data-cluster="freightproof"] { --bc: #B45309; --bc-a: #8F4007; --bc-b: #D97706; --bc-wash: #FDF1E4; }
+[data-cluster="pollenrev"]    { --bc: #3563D5; --bc-a: #1D3F73; --bc-b: #3563D5; --bc-wash: #EEF3FD; }
+.blog-card[data-cluster] .blog-card-topic, .blog-topic-tile[data-cluster] .blog-topic-count { color: var(--bc, #3563D5); }
+.blog-card[data-cluster] .blog-card-flag { background: linear-gradient(135deg, var(--bc-a, #3B6FE0), var(--bc-b, #22B8CF)); }
 .post-related { margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--border-light); }
 .post-related-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px; }
 .post-related-head h2 { font-size: 20px; font-weight: 700; margin: 0; }
@@ -2075,7 +2085,7 @@ main article.post-grid > .post-related { grid-column: 1 / -1; }
 .post-toc li::before { content: counter(toc, decimal-leading-zero); font: 600 11.5px/1.7 ui-monospace, "SF Mono", Menlo, Consolas, monospace; color: #3B6FE0; }
 .post-toc a { color: var(--text-secondary); text-decoration: none; }
 .post-toc a:hover { color: var(--text-primary); }
-.post-cover[data-cluster="furnitrail"] { background: #F7F1E8; }
+.post-cover[data-cluster] { background: var(--bc-wash, #EEF3FB); }
 .article-content h2[id] { scroll-margin-top: 110px; }
 .article-takeaways { box-shadow: 0 14px 30px -26px rgba(37, 79, 170, .55); }
 @media (max-width: 1000px) {
