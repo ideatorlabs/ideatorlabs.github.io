@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What is stock variance in a restaurant? | Ideator Labs</title>
+  <meta name="description" content="Stock variance is the gap between what a restaurant should have used and what it did use: the formula, a worked example, the causes and the limit.">
+  <link rel="canonical" href="https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Ideator Labs">
+  <meta property="og:title" content="What is stock variance in a restaurant, and how do you work it out?">
+  <meta property="og:description" content="Stock variance is the gap between what a restaurant should have used and what it did use: the formula, a worked example, the causes and the limit.">
+  <meta property="og:url" content="https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html">
+  <meta property="og:image" content="https://ideatorlabs.github.io/og-image.png">
+  <meta property="article:published_time" content="2026-11-27">
+  <meta property="article:modified_time" content="2026-11-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="What is stock variance in a restaurant, and how do you work it out?">
+  <meta name="twitter:description" content="Stock variance is the gap between what a restaurant should have used and what it did use: the formula, a worked example, the causes and the limit.">
+  <meta name="twitter:image" content="https://ideatorlabs.github.io/og-image.png">
+  <link rel="stylesheet" href="/assets/css/main.css?v=20261125a">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#FFFFFF">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "headline": "What is stock variance in a restaurant, and how do you work it out?",
+      "description": "Stock variance is the gap between what a restaurant should have used and what it did use: the formula, a worked example, the causes and the limit.",
+      "image": "https://ideatorlabs.github.io/og-image.png",
+      "datePublished": "2026-11-27",
+      "dateModified": "2026-11-27",
+      "about": {
+        "@type": "Thing",
+        "name": "Stock variance in restaurants"
+      },
+      "mentions": {
+        "@type": "SoftwareApplication",
+        "@id": "https://ideatorlabs.github.io/products/plumbline/#software",
+        "name": "Plumbline"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html"
+      },
+      "author": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://ideatorlabs.github.io/#organization",
+        "name": "Ideator Labs",
+        "url": "https://ideatorlabs.github.io/"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://ideatorlabs.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://ideatorlabs.github.io/blog/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "QSR and café chains",
+          "item": "https://ideatorlabs.github.io/blog/qsr-chains/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "What is stock variance in a restaurant, and how do you work it out?",
+          "item": "https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the formula for stock variance?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Variance = actual use minus theoretical use. Actual use is opening stock plus purchases minus closing stock. Theoretical use is units sold multiplied by the recipe quantity. Divide the variance by theoretical use for a percentage, and multiply it by the cost per unit for rupees."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a good stock variance for a restaurant?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "There is no official figure. One Indian POS vendor calls a gap under 2 percentage points of food cost normal and says above 3 to 4 points needs investigating, but that is a vendor rule of thumb. Set your own limit per item from four weeks of your own counts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between stock variance and wastage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Wastage is stock you saw being thrown away and wrote down. Variance is what is still missing after recorded sales and recorded wastage are accounted for. Logging wastage with a reason shrinks the unexplained variance and shows you which part is really unknown."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    #readingProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: #14161B;
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s ease;
+    }
+    .article-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .article-meta-text {
+      font-size: 12.5px;
+      color: var(--text-muted);
+    }
+    .article-content {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .article-content h2 {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin: 40px 0 16px;
+    }
+    .article-content p {
+      margin-bottom: 20px;
+    }
+    .article-content details {
+      border-bottom: 1px solid var(--border-light);
+      padding: 10px 0;
+    }
+    .article-content summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .article-content details p {
+      margin: 10px 0 6px;
+    }
+    .article-content ul,
+    .article-content ol {
+      margin: 0 0 24px 24px;
+      display: grid;
+      gap: 10px;
+    }
+    .article-content li strong {
+      color: var(--text-primary);
+    }
+    .article-content a {
+      color: var(--accent-purple);
+      font-weight: 600;
+    }
+    .article-takeaways {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-left: 3px solid var(--accent-purple);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px 4px;
+      margin: 8px 0 32px;
+    }
+    .article-takeaways h2 {
+      font-size: 17px;
+      margin: 0 0 10px;
+    }
+    .article-example {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 20px 24px 4px;
+      margin: 8px 0 28px;
+      font-size: 15.5px;
+    }
+    .article-sources {
+      border-top: 1px solid var(--border-light);
+      margin-top: 40px;
+      padding-top: 8px;
+      font-size: 14px;
+    }
+    .article-sources h2 {
+      font-size: 17px;
+      margin: 20px 0 10px;
+    }
+    .article-cta {
+      background: var(--bg-secondary);
+      margin: 48px 0 0;
+      padding: 32px;
+      border: 1px solid #CBD5E1;
+    }
+    .article-cta-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  </style>
+  <link rel="alternate" type="application/atom+xml" title="Ideator Labs blog" href="/blog/feed.xml">
+</head>
+<body>
+
+  <div id="readingProgress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <a href="/" class="brand-area" aria-label="Ideator Labs Home">
+        <svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg>
+        <span>Ideator Labs</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation" data-shell="2"><div class="nx-drop"><a href="/products/" aria-haspopup="true">Products<svg class="nx-chev" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nx-panel nx-wide" role="group" aria-label="Products"><p class="nx-head">Products by sector</p><ul class="nx-grid"><li><a class="nx-item" href="/products/furnitrail/"><span class="nx-mono" style="--mc:#1E4D3B;width:30px;height:30px" aria-hidden="true">F</span><span><b>FurniTrail</b><small>Showroom operations for furniture stores</small></span></a></li><li><a class="nx-item" href="/products/plumbline/"><span class="nx-mono" style="--mc:#0E3B43;width:30px;height:30px" aria-hidden="true">P</span><span><b>Plumbline</b><small>Operations suite for QSR and café chains</small></span></a></li><li><a class="nx-item" href="/products/chairside/"><span class="nx-mono" style="--mc:#6B2D55;width:30px;height:30px" aria-hidden="true">C</span><span><b>Chairside</b><small>Packages, due-backs and commission for salons</small></span></a></li><li><a class="nx-item" href="/products/pollenrev/"><span class="nx-mono" style="--mc:#3563D5;width:30px;height:30px" aria-hidden="true">P</span><span><b>PollenRev</b><small>Lead finding, outreach and deal pipeline</small></span></a></li><li><a class="nx-item" href="/products/docketbox/"><span class="nx-mono" style="--mc:#0F766E;width:30px;height:30px" aria-hidden="true">D</span><span><b>Docketbox</b><small>Compliance task tracker for CA firms</small></span></a></li><li><a class="nx-item" href="/products/profora/"><span class="nx-mono" style="--mc:#2350C8;width:30px;height:30px" aria-hidden="true">P</span><span><b>Profora</b><small>Profit leak tracking for D2C brands</small></span></a></li><li><a class="nx-item" href="/products/carecadence/"><span class="nx-mono" style="--mc:#BE123C;width:30px;height:30px" aria-hidden="true">C</span><span><b>CareCadence</b><small>Follow-ups, dues and claims for clinics</small></span></a></li><li><a class="nx-item" href="/products/cashtrail/"><span class="nx-mono" style="--mc:#047857;width:30px;height:30px" aria-hidden="true">C</span><span><b>Cashtrail</b><small>Bank statement review for credit teams</small></span></a></li><li><a class="nx-item" href="/products/taktline/"><span class="nx-mono" style="--mc:#C2410C;width:30px;height:30px" aria-hidden="true">T</span><span><b>Taktline</b><small>Stops, maintenance and stock for plants</small></span></a></li><li><a class="nx-item" href="/products/freightproof/"><span class="nx-mono" style="--mc:#B45309;width:30px;height:30px" aria-hidden="true">F</span><span><b>FreightProof</b><small>Freight bill claims tracked to recovery</small></span></a></li></ul><a class="nx-all" href="/products/">All products &rarr;</a></div></div><a href="/solutions/">Advisory</a><div class="nx-drop"><a href="/industries/" aria-haspopup="true">Sectors<svg class="nx-chev" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5 6 7.5 9 4.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="nx-panel" role="group" aria-label="Sectors"><p class="nx-head">Who we build for</p><ul class="nx-list"><li><a class="nx-item nx-plain" href="/industries/#furniture"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Furniture showrooms</b></a></li><li><a class="nx-item nx-plain" href="/industries/#chains"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>QSR and café chains</b></a></li><li><a class="nx-item nx-plain" href="/industries/#salons"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Salons and spas</b></a></li><li><a class="nx-item nx-plain" href="/industries/#retail"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Sales teams and agencies</b></a></li><li><a class="nx-item nx-plain" href="/industries/#accounting"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>CA firms</b></a></li><li><a class="nx-item nx-plain" href="/industries/#healthcare"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Clinics</b></a></li><li><a class="nx-item nx-plain" href="/industries/#finance"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Lenders and credit teams</b></a></li><li><a class="nx-item nx-plain" href="/industries/#manufacturing"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Manufacturing plants</b></a></li><li><a class="nx-item nx-plain" href="/industries/#logistics"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg><b>Logistics and freight</b></a></li></ul><a class="nx-all" href="/industries/">All sectors &rarr;</a></div></div><a href="/research/">Research</a><a href="/open-source/">Open source</a><a href="/blog/" class="active">Blog</a><a href="/about/">About</a></nav>
+
+      <div class="nav-right">
+        <button class="btn-search" id="searchTrigger" aria-label="Search (Cmd+K)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <a href="/contact/" class="btn-nav-cta">
+          Talk to us &rarr;
+        </a>
+        <button class="nav-toggle-btn" id="mobileNavToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobileDrawer" data-shell="2"><details class="md-group"><summary>Products</summary><a class="md-sub" href="/products/furnitrail/"><span class="nx-mono" style="--mc:#1E4D3B;width:22px;height:22px" aria-hidden="true">F</span>FurniTrail</a><a class="md-sub" href="/products/plumbline/"><span class="nx-mono" style="--mc:#0E3B43;width:22px;height:22px" aria-hidden="true">P</span>Plumbline</a><a class="md-sub" href="/products/chairside/"><span class="nx-mono" style="--mc:#6B2D55;width:22px;height:22px" aria-hidden="true">C</span>Chairside</a><a class="md-sub" href="/products/pollenrev/"><span class="nx-mono" style="--mc:#3563D5;width:22px;height:22px" aria-hidden="true">P</span>PollenRev</a><a class="md-sub" href="/products/docketbox/"><span class="nx-mono" style="--mc:#0F766E;width:22px;height:22px" aria-hidden="true">D</span>Docketbox</a><a class="md-sub" href="/products/profora/"><span class="nx-mono" style="--mc:#2350C8;width:22px;height:22px" aria-hidden="true">P</span>Profora</a><a class="md-sub" href="/products/carecadence/"><span class="nx-mono" style="--mc:#BE123C;width:22px;height:22px" aria-hidden="true">C</span>CareCadence</a><a class="md-sub" href="/products/cashtrail/"><span class="nx-mono" style="--mc:#047857;width:22px;height:22px" aria-hidden="true">C</span>Cashtrail</a><a class="md-sub" href="/products/taktline/"><span class="nx-mono" style="--mc:#C2410C;width:22px;height:22px" aria-hidden="true">T</span>Taktline</a><a class="md-sub" href="/products/freightproof/"><span class="nx-mono" style="--mc:#B45309;width:22px;height:22px" aria-hidden="true">F</span>FreightProof</a><a class="md-sub" href="/products/">All products &rarr;</a></details><a href="/industries/">Sectors</a><a href="/solutions/">Advisory</a><a href="/research/">Research</a><a href="/open-source/">Open source</a><a href="/blog/">Blog</a><a href="/about/">About</a><a href="/contact/" class="md-cta">Talk to us &rarr;</a></div>
+
+  <main>
+
+    <article class="article-wrap post-grid">
+      <div class="reveal" style="margin-bottom:32px;">
+        <nav aria-label="Breadcrumb" style="font-size:13px;color:var(--text-muted);margin-bottom:16px;">
+            <a href="/" style="color:var(--text-muted);">Home</a> &rsaquo;
+            <a href="/blog/" style="color:var(--text-muted);">Blog</a> &rsaquo;
+            <a href="/blog/qsr-chains/" style="color:var(--text-muted);">QSR and café chains</a>
+          </nav>
+        <div class="article-meta">
+          <span class="article-meta-text"><em>QSR and caf&eacute; chains</em></span>
+          <span class="article-meta-text">Published <time datetime="2026-11-27">27 Nov 2026</time> &middot; Updated <time datetime="2026-11-27">27 Nov 2026</time> &middot; 8 min read</span>
+        </div>
+        <h1 class="sec-title" style="font-size:clamp(30px, 4.2vw, 44px);line-height:1.18;">
+          What is stock variance in a restaurant, and how do you work it out?
+        </h1>
+        <p class="sec-subtitle" style="font-size:18px;margin-bottom:0;">
+          The formula, a worked example, what causes the gap and how big is too big.
+        </p>
+      </div>
+      <!-- cover:start (written by scripts/build_blog.py) -->
+      <figure class="post-cover" data-cluster="qsr-chains"><img src="/assets/images/blog/what-is-stock-variance-in-a-restaurant.svg" alt="" width="1200" height="630" fetchpriority="high"></figure>
+      <nav class="post-toc" aria-label="In this article"><span class="post-toc-title">In this article</span><ol><li><a href="#in-short">In short</a></li><li><a href="#what-is-stock-variance">What is stock variance in a restaurant?</a></li><li><a href="#how-do-you-work-it-out">How do you work out stock variance?</a></li><li><a href="#quantity-rupees-or-percent">Should you track variance in quantity, rupees or percent?</a></li><li><a href="#what-causes-stock-variance">What causes stock variance?</a></li><li><a href="#how-much-variance-is-normal">How much stock variance is normal?</a></li><li><a href="#does-it-matter-for-gst-or-fssai">Does stock variance matter for GST or FSSAI?</a></li><li><a href="#how-often-should-you-check">How often should a chain check stock variance?</a></li><li><a href="#questions-owners-ask">Questions owners ask</a></li></ol></nav>
+      <!-- cover:end -->
+      <div class="article-content reveal reveal-up delay-1">
+        <p>Stock variance is the gap between what a restaurant should have used and what it actually used, item by item, over a set period. What it should have used is items sold multiplied by the recipe quantity. What it actually used is opening stock plus purchases minus closing stock. The difference, in kilos and in rupees, is stock you cannot account for.</p>
+
+        <div class="article-takeaways">
+          <h2 id="in-short">In short</h2>
+          <ul>
+            <li>Actual use = opening stock + purchases &minus; closing stock. Theoretical use = items sold &times; recipe quantity. Variance = actual &minus; theoretical.</li>
+            <li>Work it out for your 15 to 40 costliest ingredients every week, in quantity and in rupees, and chase the biggest rupee gaps first.</li>
+            <li>There is no official &ldquo;normal&rdquo; variance. Count for four weeks, learn what is normal for each outlet, then question anything past that.</li>
+          </ul>
+        </div>
+
+        <h2 id="what-is-stock-variance">What is stock variance in a restaurant?</h2>
+        <p>It is the stock that left your kitchen without a sale to show for it. Software vendors also call it food cost variance, consumption variance or &ldquo;actual vs theoretical&rdquo;. Restaurant365, for example, reports it as actual against theoretical in both quantities and dollars (<a href="https://docs.restaurant365.com/docs/food-variance-report" target="_blank" rel="noopener">Restaurant365 docs</a>).</p>
+        <p>A positive variance means you used more than the recipes allow. A negative one, using less than the recipes allow, is not good news either: it usually means a recipe is wrong, a sale was rung up for the wrong item, or a count was off.</p>
+
+        <h2 id="how-do-you-work-it-out">How do you work out stock variance?</h2>
+        <ol>
+          <li><strong>Pick the period and the items.</strong> One week, and the ingredients that cost you most: proteins, cheese, oil, dairy, drinks.</li>
+          <li><strong>Find actual use.</strong> Opening stock (last period&rsquo;s closing count) plus everything received, minus this period&rsquo;s closing count.</li>
+          <li><strong>Find theoretical use.</strong> For each menu item, units sold from the POS multiplied by the recipe quantity of that ingredient, added up across the menu.</li>
+          <li><strong>Subtract.</strong> Actual minus theoretical is the variance in units. Divide by theoretical for a percentage.</li>
+          <li><strong>Price it.</strong> Multiply the unit variance by the cost per unit to get rupees.</li>
+        </ol>
+        <p>Here is an example with made-up figures, not a measured result. An outlet opens the week with 40 kg of paneer, receives 120 kg and closes with 30 kg, so it used 130 kg. It sold 1,000 portions that each take 120 g by recipe, so it should have used 120 kg. The variance is 10 kg, 8.3% over the recipe. At &#8377;380 a kg, that is &#8377;3,800 of paneer in one week that nobody can explain.</p>
+        <p>Petpooja&rsquo;s guide to consumption reports uses the same columns: opening stock, received, closing stock, consumption, theoretical consumption and the variance you investigate (<a href="https://blog.petpooja.com/procurement-cost-control/build-consumption-report-columns-and-steps/" target="_blank" rel="noopener">Petpooja</a>, a POS vendor).</p>
+
+        <h2 id="quantity-rupees-or-percent">Should you track variance in quantity, rupees or percent?</h2>
+        <p>Use all three, for different jobs. Quantity tells the kitchen what went wrong (&ldquo;10 kg of paneer&rdquo;). Rupees tell you which gap to chase first, because 5% on paneer costs far more than 5% on onions. Percent lets you compare outlets of different sizes.</p>
+        <p>Some owners track it at the food cost level instead: actual food cost as a share of sales minus theoretical food cost as a share of sales. That gives one number per outlet, but it hides which ingredient moved, so keep the item view underneath it.</p>
+
+        <h2 id="what-causes-stock-variance">What causes stock variance?</h2>
+        <p>Most gaps come from a short list, and each has a different fix:</p>
+        <ul>
+          <li><strong>Portions:</strong> crew serving more than the recipe, often at rush hour.</li>
+          <li><strong>Waste nobody wrote down:</strong> spoiled batches, dropped trays, returned dishes, staff meals, trial batches.</li>
+          <li><strong>Receiving:</strong> short or wrong deliveries signed for, or goods received but never entered.</li>
+          <li><strong>Old data:</strong> a recipe quantity or a purchase price that is out of date.</li>
+          <li><strong>Counting:</strong> a wrong closing count, or units mixed up (kilos against packets).</li>
+          <li><strong>Theft.</strong></li>
+        </ul>
+        <p>Petpooja names the same suspects for an unexplained gap: an out-of-date recipe quantity, stock received but not entered, a spoiled batch with no record, or a wrong closing count (<a href="https://blog.petpooja.com/procurement-cost-control/build-consumption-report-columns-and-steps/" target="_blank" rel="noopener">Petpooja</a>). Theft looks the same as the others in the numbers, so rule out the dull causes before you accuse anyone.</p>
+
+        <h2 id="how-much-variance-is-normal">How much stock variance is normal?</h2>
+        <p>No regulator or standards body sets a number. Vendors publish rules of thumb: Petpooja&rsquo;s glossary calls a gap under 2 percentage points between actual and ideal food cost normal, and says above 3 to 4 points needs investigating (<a href="https://blog.petpooja.com/glossary/food-cost/" target="_blank" rel="noopener">Petpooja glossary</a>, a vendor claim). The same company&rsquo;s consumption-report guide says to judge the gap against your own history rather than a published benchmark.</p>
+        <p>We agree with the second advice. Count the same items for four weeks, see what each outlet&rsquo;s normal looks like, set a limit per item, and ask for an explanation whenever an outlet goes past it.</p>
+
+        <h2 id="does-it-matter-for-gst-or-fssai">Does stock variance matter for GST or FSSAI?</h2>
+        <p>It can touch both. Under section 17(5)(h) of the CGST Act, input tax credit is not available on goods &ldquo;lost, stolen, destroyed, written off&rdquo; or given away as gifts or free samples (<a href="https://cbic-gst.gov.in/pdf/CGST-Act-Updated-30092020.pdf" target="_blank" rel="noopener">CGST Act, CBIC</a>). If your business claims input tax credit, written-off stock may mean reversing credit; ask your CA how it applies to you.</p>
+        <p>On food safety, Schedule 4 Part V of FSSAI&rsquo;s licensing regulations, the part for catering and food service, sets the stock rotation rule as first in, first out, &ldquo;to make sure that older food is used first&rdquo; (<a href="https://fssai.gov.in/upload/uploadfiles/files/Final_Regulations_2010.pdf" target="_blank" rel="noopener">FSSAI regulations</a>). Dated stock and FIFO cut spoilage, which is one of the largest causes of variance you can actually prevent.</p>
+
+        <h2 id="how-often-should-you-check">How often should a chain check stock variance?</h2>
+        <p>Weekly for the top ingredients at every outlet, and daily for the two or three most expensive ones if they are often short. Monthly is too slow: by the time the number arrives, nobody remembers the week it happened. For a chain, the useful view is one outlet, one week, one item, set next to the same outlet&rsquo;s last four weeks. Our article on <a href="/blog/plumbline/qsr-chain-money-leaks-between-outlets.html">where QSR chains lose money between outlets</a> puts variance next to cash, audits and licences in one weekly routine.</p>
+
+        <h2 id="questions-owners-ask">Questions owners ask</h2>
+        <details>
+          <summary>What is the formula for stock variance?</summary>
+          <p>Variance = actual use minus theoretical use. Actual use is opening stock plus purchases minus closing stock. Theoretical use is units sold multiplied by the recipe quantity. Divide the variance by theoretical use for a percentage, and multiply it by the cost per unit for rupees.</p>
+        </details>
+        <details>
+          <summary>What is a good stock variance for a restaurant?</summary>
+          <p>There is no official figure. One Indian POS vendor calls a gap under 2 percentage points of food cost normal and says above 3 to 4 points needs investigating, but that is a vendor rule of thumb. Set your own limit per item from four weeks of your own counts.</p>
+        </details>
+        <details>
+          <summary>What is the difference between stock variance and wastage?</summary>
+          <p>Wastage is stock you saw being thrown away and wrote down. Variance is what is still missing after recorded sales and recorded wastage are accounted for. Logging wastage with a reason shrinks the unexplained variance and shows you which part is really unknown.</p>
+        </details>
+
+        <div class="step-card article-cta">
+          <span class="sec-eyebrow">Plumbline by Ideator Labs</span>
+          <h3 style="font-size:22px;font-weight:700;color:var(--text-primary);margin-bottom:10px;">Want every outlet&rsquo;s variance checked each week?</h3>
+          <p style="font-size:14.5px;color:var(--text-secondary);line-height:1.6;margin-bottom:20px;">
+            Plumbline is an operations suite for QSR and caf&eacute; chains: audits and fixes, stock variance, cash and settlements, supply and dues, licences, training and guest feedback, each issue with an owner and proof. Closing counts and wastage are costed against each outlet&rsquo;s sales, and a variance over your limit needs an explanation.
+          </p>
+          <div class="article-cta-actions">
+            <a href="/products/plumbline/" class="btn-pill btn-primary">See Plumbline <span class="arrow-slide">&rarr;</span></a>
+            <a href="/industries/#chains" class="btn-pill btn-secondary">QSR and caf&eacute; chains</a>
+          </div>
+        </div>
+
+        <div class="article-sources">
+          <h2>Sources</h2>
+          <ul>
+            <li>CBIC, <a href="https://cbic-gst.gov.in/pdf/CGST-Act-Updated-30092020.pdf" target="_blank" rel="noopener">Central Goods and Services Tax Act, 2017 (updated text)</a>, section 17(5)(h): no input tax credit on goods lost, stolen, destroyed, written off or disposed of by way of gift or free samples (checked 2026-11-27). Not tax advice.</li>
+            <li>FSSAI, <a href="https://fssai.gov.in/upload/uploadfiles/files/Final_Regulations_2010.pdf" target="_blank" rel="noopener">Food Safety and Standards Regulations compendium</a>, licensing regulations Schedule 4 Part V (catering and food service establishments): stock rotation is FIFO so older food is used first, to help prevent wastage (checked 2026-11-27).</li>
+            <li>Restaurant365, <a href="https://docs.restaurant365.com/docs/food-variance-report" target="_blank" rel="noopener">Food Variance report</a>: actual against theoretical in quantities and dollars, with a variance cap column; vendor documentation (checked 2026-11-27).</li>
+            <li>Petpooja, <a href="https://blog.petpooja.com/procurement-cost-control/build-consumption-report-columns-and-steps/" target="_blank" rel="noopener">How to build a consumption report: 6 columns and 4 steps</a> (29 September 2026): opening stock, received, closing stock, consumption, theoretical consumption and variance; likely causes of a gap; judge it against your own history. Vendor blog (checked 2026-11-27).</li>
+            <li>Petpooja, <a href="https://blog.petpooja.com/glossary/food-cost/" target="_blank" rel="noopener">Food cost glossary</a>: a gap under 2 percentage points between actual and ideal food cost called normal, above 3 to 4 points worth investigating. Vendor rule of thumb (checked 2026-11-27).</li>
+          </ul>
+        </div>
+        <p>Read next: <a href="/blog/qsr-chains/">all QSR and caf&eacute; chain articles</a> &middot; <a href="/blog/plumbline/qsr-chain-money-leaks-between-outlets.html">where QSR chains lose money between outlets</a> &middot; <a href="/industries/#chains">QSR and caf&eacute; chains</a>.</p>
+      </div>
+  <!-- related:start (written by scripts/build_blog.py) -->
+          <aside class="post-related" aria-label="Related articles">
+            <div class="post-related-head"><h2>Related</h2><a class="arrow-link" href="/blog/qsr-chains/">More on QSR and café chains &rarr;</a></div>
+            <div class="blog-grid"><a class="blog-card" href="/blog/ca-firms-reclaim-hours-with-ai.html" data-cluster="ca-firms">
+            <span class="blog-card-cover"><img src="/assets/images/blog/ca-firms-reclaim-hours-with-ai.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">CA and accounting firms</span>
+            <span class="blog-card-title">Where CA firms lose hours every week, and how AI gives them back</span>
+            <span class="blog-card-dek">The time goes into data work, not advice. Here is where it hides and how to win it back one task at a time.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a><a class="blog-card" href="/blog/d2c-true-margin-per-order.html" data-cluster="d2c">
+            <span class="blog-card-cover"><img src="/assets/images/blog/d2c-true-margin-per-order.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">D2C brands</span>
+            <span class="blog-card-title">Your D2C brand’s real problem isn’t ads, it’s true margin per order</span>
+            <span class="blog-card-dek">Before you change the ads, find out what each order really leaves you with.</span>
+            <span class="blog-card-meta">4 min read &middot; 17 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a><a class="blog-card" href="/blog/furnitrail/furniture-showroom-walk-in-follow-up.html" data-cluster="furnitrail">
+            <span class="blog-card-cover"><img src="/assets/images/blog/furniture-showroom-walk-in-follow-up.svg" alt="" width="1200" height="630" loading="lazy" decoding="async"></span>
+            <span class="blog-card-body">
+            <span class="blog-card-topic">FurniTrail</span>
+            <span class="blog-card-title">Why furniture showrooms lose walk-in buyers, and how to follow up</span>
+            <span class="blog-card-dek">What to capture at the door, what to send, and when.</span>
+            <span class="blog-card-meta">7 min read &middot; 19 Nov 2026<span class="blog-card-go" aria-hidden="true">Read &rarr;</span></span>
+            </span>
+          </a></div>
+            <p class="post-hww">How this article was researched and checked: <a href="/blog/how-we-write/">How we write</a>.</p>
+          </aside>
+          <!-- related:end -->
+        </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer-sec fx" data-shell="2"><div class="container"><div class="fx-top"><div class="fx-brand"><a href="/" class="brand-area" aria-label="Ideator Labs home"><svg class="brand-hex" viewBox="0 0 32 32" aria-hidden="true"><path class="bh-hex" d="M16 2.2 27.9 9.1v13.8L16 29.8 4.1 22.9V9.1z"/><path class="bh-net" d="M11 15.2 16 9.4l5 3.8z"/><rect class="bh-bar" x="9.5" y="17" width="3" height="6.4" rx="1.5"/><rect class="bh-bar" x="14.5" y="12.4" width="3" height="11" rx="1.5"/><rect class="bh-bar" x="19.5" y="15" width="3" height="8.4" rx="1.5"/><circle class="bh-node" cx="11" cy="15.2" r="1.5"/><circle class="bh-node bh-i" cx="16" cy="9.4" r="1.9"/><circle class="bh-node" cx="21" cy="13.2" r="1.5"/></svg><span>Ideator Labs</span></a><p>A studio for AI and data advisory, innovation and business intelligence. We build workflow products for sectors that still run on spreadsheets and WhatsApp.</p><div class="fx-social"><a href="https://github.com/ideatorlabs" target="_blank" rel="noopener" aria-label="GitHub"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a><a href="https://www.linkedin.com/company/ideator-labs" target="_blank" rel="noopener" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a></div></div><div class="fx-cols"><div class="fx-col"><p class="fx-h">Products</p><ul><li><a href="/products/furnitrail/">FurniTrail</a></li><li><a href="/products/plumbline/">Plumbline</a></li><li><a href="/products/chairside/">Chairside</a></li><li><a href="/products/pollenrev/">PollenRev</a></li><li><a href="/products/docketbox/">Docketbox</a></li><li><a href="/products/profora/">Profora</a></li><li><a href="/products/carecadence/">CareCadence</a></li><li><a href="/products/cashtrail/">Cashtrail</a></li><li><a href="/products/taktline/">Taktline</a></li><li><a href="/products/freightproof/">FreightProof</a></li><li><a href="/products/">All products</a></li></ul></div><div class="fx-col"><p class="fx-h">Sectors</p><ul><li><a href="/industries/#furniture">Furniture showrooms</a></li><li><a href="/industries/#chains">QSR and café chains</a></li><li><a href="/industries/#salons">Salons and spas</a></li><li><a href="/industries/#retail">Sales teams and agencies</a></li><li><a href="/industries/#accounting">CA firms</a></li><li><a href="/industries/#healthcare">Clinics</a></li><li><a href="/industries/#finance">Lenders and credit teams</a></li><li><a href="/industries/#manufacturing">Manufacturing plants</a></li><li><a href="/industries/#logistics">Logistics and freight</a></li></ul></div><div class="fx-col"><p class="fx-h">Advisory</p><ul><li><a href="/solutions/">AI and data advisory</a></li><li><a href="/research/">Research</a></li><li><a href="/open-source/">Open source</a></li><li><a href="/open-source/#cortex">CORTEX</a></li><li><a href="/open-source/#yamcp">YAMCP</a></li></ul></div><div class="fx-col"><p class="fx-h">Resources</p><ul><li><a href="/blog/">Blog</a></li><li><a href="/blog/how-we-write/">How we write</a></li><li><a href="/blog/feed.xml">RSS feed</a></li><li><a href="/llms.txt">llms.txt</a></li></ul></div><div class="fx-col"><p class="fx-h">Company</p><ul><li><a href="/about/">About</a></li><li><a href="/contact/">Contact</a></li><li><a href="/contact/">Book a demo</a></li><li><a href="/security.html">Security</a></li><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Terms</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul></div></div></div><div class="footer-bottom-row"><div>&copy; 2026 Ideator Labs. Made in India.</div><div class="footer-legal-links"><a href="/privacy.html">Privacy</a><a href="/terms.html">Terms</a><a href="/sitemap.xml">Sitemap</a></div></div></div></footer>
+
+  <!-- Search Modal -->
+  <div class="search-modal-backdrop" id="searchModalBackdrop" role="dialog" aria-modal="true" aria-label="Site Search">
+    <div class="search-modal">
+      <div class="search-input-box">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="search" id="globalSearchInput" placeholder="Search products, advisory, blog… (Esc to close)" aria-label="Search the site">
+      </div>
+      <div class="search-results-list" id="searchResultsList"></div>
+    </div>
+  </div>
+
+  <script src="/assets/js/main.js?v=20261127a"></script>
+  <script>
+    // Reading Progress Indicator
+    window.addEventListener('scroll', () => {
+      const bar = document.getElementById('readingProgress');
+      if (!bar) return;
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
+      bar.style.width = Math.min(progress, 100) + '%';
+    }, { passive: true });
+  </script>
+</body>
+</html>

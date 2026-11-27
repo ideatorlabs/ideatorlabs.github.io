@@ -4,8 +4,17 @@
   <link href="https://ideatorlabs.github.io/blog/"/>
   <link rel="self" href="https://ideatorlabs.github.io/blog/feed.xml"/>
   <id>https://ideatorlabs.github.io/blog/</id>
-  <updated>2026-11-24T00:00:00Z</updated>
+  <updated>2026-11-27T00:00:00Z</updated>
   <author><name>Ideator Labs</name></author>
+  <entry>
+    <title>What is stock variance in a restaurant, and how do you work it out?</title>
+    <link href="https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html"/>
+    <id>https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html</id>
+    <published>2026-11-27T00:00:00Z</published>
+    <updated>2026-11-27T00:00:00Z</updated>
+    <summary>The formula, a worked example, what causes the gap and how big is too big.</summary>
+    <category term="QSR and café chains"/>
+  </entry>
   <entry>
     <title>Why clinics lose follow-ups, balances and claims, and how to keep each one moving</title>
     <link href="https://ideatorlabs.github.io/blog/carecadence/clinic-follow-ups-balances-claims.html"/>

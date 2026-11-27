@@ -30,6 +30,7 @@ Sectors we work in today, with the product made for each: retail (FurniTrail), m
 - [Ideator Labs blog](https://ideatorlabs.github.io/blog/): Plain-language articles on AI, data engineering, business intelligence and the sectors we work in. Every fact sourced and dated.
 - [How we write](https://ideatorlabs.github.io/blog/how-we-write/): How articles are researched, checked and corrected.
 - [Innovation](https://ideatorlabs.github.io/blog/innovation/): Picking, testing and shipping new tools without a big IT project, and knowing when not to.
+- [QSR and café chains](https://ideatorlabs.github.io/blog/qsr-chains/): Running many outlets on the same numbers: stock variance, cash, audits and licences, outlet by outlet.
 - [CA and accounting firms](https://ideatorlabs.github.io/blog/ca-firms/): Where accounting practices lose hours to matching, re-typing and chasing, and how to win them back.
 - [D2C brands](https://ideatorlabs.github.io/blog/d2c/): The real margin on each order, after returns, shipping, fees and ads.
 - [FurniTrail](https://ideatorlabs.github.io/blog/furnitrail/): For furniture showroom owners: turning walk-in visitors into buyers with timely, personal follow-up.
@@ -53,6 +54,7 @@ Sectors we work in today, with the product made for each: retail (FurniTrail), m
 - [Where QSR chains lose money between outlets](https://ideatorlabs.github.io/blog/plumbline/qsr-chain-money-leaks-between-outlets.html): Four leaks that show up outlet by outlet, and a weekly routine to catch each one.
 - [Find the SKUs, ads and COD pincodes that lose money](https://ideatorlabs.github.io/blog/profora/find-loss-making-skus-campaigns-cod-pincodes.html): Where a D2C brand loses money after returns, RTO, shipping and fees, and what to do about each.
 - [Cut machine downtime and late deliveries](https://ideatorlabs.github.io/blog/taktline/measure-machine-downtime-late-deliveries.html): What to log on the floor, what to review each week and what it costs, for plants that keep their books in Tally.
+- [What is stock variance in a restaurant, and how do you work it out?](https://ideatorlabs.github.io/blog/what-is-stock-variance-in-a-restaurant.html): The formula, a worked example, what causes the gap and how big is too big.
 
 ## Company
 

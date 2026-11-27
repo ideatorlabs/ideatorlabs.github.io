@@ -36,6 +36,7 @@
     // blog:start (written by scripts/build_blog.py)
     { title: "Blog", category: "Blog", url: "/blog/", desc: "Plain articles on AI, data, business intelligence and our sectors." },
     { title: "Innovation articles", category: "Blog", url: "/blog/innovation/", desc: "Picking, testing and shipping new tools without a big IT project, and knowing when not to." },
+    { title: "QSR and caf\u00e9 chains articles", category: "Blog", url: "/blog/qsr-chains/", desc: "Running many outlets on the same numbers: stock variance, cash, audits and licences, outlet by outlet." },
     { title: "CA and accounting firms articles", category: "Blog", url: "/blog/ca-firms/", desc: "Where accounting practices lose hours to matching, re-typing and chasing, and how to win them back." },
     { title: "D2C brands articles", category: "Blog", url: "/blog/d2c/", desc: "The real margin on each order, after returns, shipping, fees and ads." },
     { title: "FurniTrail articles", category: "Blog", url: "/blog/furnitrail/", desc: "For furniture showroom owners: turning walk-in visitors into buyers with timely, personal follow-up." },
@@ -59,6 +60,7 @@
     { title: "Where QSR chains lose money between outlets", category: "Blog", url: "/blog/plumbline/qsr-chain-money-leaks-between-outlets.html", desc: "Four leaks that show up outlet by outlet, and a weekly routine to catch each one." },
     { title: "Find the SKUs, ads and COD pincodes that lose money", category: "Blog", url: "/blog/profora/find-loss-making-skus-campaigns-cod-pincodes.html", desc: "Where a D2C brand loses money after returns, RTO, shipping and fees, and what to do about each." },
     { title: "Cut machine downtime and late deliveries", category: "Blog", url: "/blog/taktline/measure-machine-downtime-late-deliveries.html", desc: "What to log on the floor, what to review each week and what it costs, for plants that keep their books in Tally." },
+    { title: "What is stock variance in a restaurant, and how do you work it out?", category: "Blog", url: "/blog/what-is-stock-variance-in-a-restaurant.html", desc: "The formula, a worked example, what causes the gap and how big is too big." },
     // blog:end
     { title: "Ideator Labs home", category: "Home", url: "/", desc: "A studio for AI and data advisory, innovation and business intelligence." },
     { title: "How we work", category: "Home", url: "/#approach", desc: "Research, then a small working prototype, then a product for that sector." },
